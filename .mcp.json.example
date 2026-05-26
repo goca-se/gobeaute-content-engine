@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "piapp": {
+      "command": "[PREENCHA COM O COMANDO/URL DO PIAPP MCP INTERNO]",
+      "args": [],
+      "env": {
+        "PIAPP_API_KEY": "${PIAPP_API_KEY}"
+      }
+    }
+  }
+}
