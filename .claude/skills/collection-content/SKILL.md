@@ -45,6 +45,18 @@ Carregar também `references/output-paths.md`.
 
 > 🚨 **SEO técnico (estrutura HTML, headings, alt text, performance/CWV, internal linking, schema):** seguir o playbook completo em **`../blog-content/references/seo-playbook.md`**. Pra Collection, usar schema `CollectionPage` ou `ItemList` em vez de `BlogPosting`. Aplicar todas as outras 20 boas práticas — cover image lifestyle, fonte ≥18px, CTAs button-style, alt text descritivo, width/height em imagens.
 
+## 🔒 Shopify safety (INVIOLÁVEL)
+
+> **Princípio do menor escopo**: mutations tocam **apenas** a collection pedida.
+
+- ❌ **NUNCA** tocar collections fora do escopo
+- ❌ **NUNCA** alterar `productsAdd`/`productsRemove` (não mexer em quais produtos estão na collection — só conteúdo editorial)
+- ❌ **NUNCA** mudar `title`, `handle`, `sortOrder`, `rules` (smart collections) sem solicitação explícita
+- ❌ **NUNCA** publicar/despublicar collection sem instrução explícita
+- ✅ Por default, atualizar apenas: `descriptionHtml`, `image` (banner), e metafields do hero/SEO solicitados
+- ✅ Validar handle/ID no pedido antes de qualquer mutation
+- ✅ Reportar inconsistências em outras collections sem corrigir
+
 ### Etapa 4 — Gerar conteúdo
 
 Aplicar tom de voz, validar com compliance.

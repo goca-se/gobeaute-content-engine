@@ -2,16 +2,42 @@
 
 Capa do blog post. Aparece no card do blog, no topo do post e no preview de redes sociais.
 
-> 🚨 **REGRA INVIOLÁVEL — Cover é LIFESTYLE, não produto.**
+> 🚨 **REGRA INVIOLÁVEL #1 — Cover SEMPRE gerada por IA (PiApp), SEMPRE lifestyle institucional.**
 >
-> A cover de um blog editorial é **sempre** uma cena lifestyle institucional da marca: modelo real, ambiente, mood. **NUNCA** é uma foto de produto recortada em fundo branco/transparente — isso é foto de catálogo de e-commerce, não de capa editorial.
+> Toda blog cover **DEVE** ser uma imagem **gerada pelo PiApp** (`generate_image`) seguindo o brand DNA da marca. **NUNCA** usar:
+> - ❌ Foto de produto recortada em fundo branco/transparente (isso é catálogo, não editorial)
+> - ❌ URL de imagem de produto da Shopify CDN (`cdn.shopify.com/.../files/produto.png`)
+> - ❌ Imagem genérica de stock photo
+> - ❌ Foto de produto em mesa/cenário simulando lifestyle
+> - ❌ Composição que mostra a embalagem do produto com label visível
+>
+> ✅ **Sempre**:
+> - Imagem gerada via PiApp `generate_image` com aspect 16:9 (1920×1080)
+> - Cena **lifestyle institucional** alinhada ao brand DNA: modelo real, ambiente, mood
+> - Para Ápice: mulher brasileira com curvatura natural (3A-4C ou 2A-2C onduladas), fundo sólido verde esmeralda `#2E7D60` ou amarelo âmbar `#F5C518`, ombros à mostra, sorriso genuíno, sem produto recortado
+> - Aprovação de prompt antes de gerar (custo de crédito)
+> - Salvar prompt + metadata pra rastreabilidade
 >
 > **Referência visual**: blogs Sallve, Glossier, Granado, Sephora editorial — cover sempre traz pessoa, cena ou ambiente; produto aparece **dentro do artigo** integrado ao texto, nunca como capa.
->
-> ❌ ERRADO: PNG do shampoo recortado sobre fundo branco
-> ✅ CERTO: Mulher cacheada sorrindo com luz natural, modelo em rotina capilar real, still life de ingredientes botânicos
->
-> Se a marca ainda não tem banco de imagens lifestyle, **gere via PiApp** com o prompt template abaixo. Não use foto de produto como fallback — deixe a cover vazia até que a lifestyle esteja pronta.
+
+## 🚦 Workflow obrigatório para gerar cover
+
+1. **Sempre** consultar `brand-context` skill antes de gerar (pega visual DNA, paleta, casting, mood da marca)
+2. Construir prompt seguindo o template abaixo + prompt_modifiers da brand style (`list_brand_styles`)
+3. Apresentar prompt completo pro usuário aprovar
+4. Após "go" explícito → chamar `mcp__piapp__generate_image` (single, 16:9, high)
+5. Pollar `check_jobs` até completar
+6. Setar `article.image.url = [PiApp output URL]` via `articleUpdate`
+7. Salvar prompt + metadata em `conteudos/[marca]/blogs/[slug]/imagens/prompts/cover.meta.json`
+
+## 🚨 Fallback se PiApp não disponível
+
+Se PiApp MCP estiver desconectado/sem créditos:
+- ❌ **NÃO** usar foto de produto da Shopify CDN como substituta
+- ❌ **NÃO** usar foto stock genérica
+- ✅ **SIM**: criar artigo com `image: null` (cover vazia) + adicionar `<figure>` inline no body com placeholder ou texto explicativo
+- ✅ Avisar usuário que PiApp está indisponível e a cover precisa ser gerada/enviada manualmente depois
+- ✅ Adicionar no relatório final: `⚠️ Cover pendente — PiApp indisponível`
 
 ## Inputs
 

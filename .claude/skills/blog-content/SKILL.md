@@ -228,6 +228,45 @@ conteudos/_cache/shopify-resolver/{products,collections}/<handle>.json
 
 ## 🚨 Guardrails
 
+### 🔒 Shopify safety (INVIOLÁVEL)
+
+> **Princípio do menor escopo**: cada mutation no Shopify toca **apenas** o que foi solicitado, nunca mais. Loja em produção = qualquer write não autorizado é incidente.
+
+#### Escopo permitido por ação
+
+| Ação solicitada | Pode tocar | NÃO pode tocar |
+|---|---|---|
+| "Cria blog post" | `articleCreate` com `body`, `title`, `summary`, `author`, `tags`, `image`, `isPublished: false` | Outros artigos, produtos, collections, theme, settings |
+| "Atualiza blog X" | `articleUpdate(id: X)` apenas nos campos pedidos | Outros artigos, qualquer outro recurso |
+| "Publica blog X" | `articleUpdate(id: X, isPublished: true)` | Qualquer outro campo do mesmo artigo (a menos que explícito) |
+| "Refatora N blogs" | `articleUpdate` em **apenas** os IDs listados | Qualquer artigo fora da lista |
+| "Cria PDP" / "atualiza produto" | Recursos do produto especificado | Outros produtos, blogs, collections |
+
+#### Regras NÃO-NEGOCIÁVEIS
+
+- ❌ **NUNCA** rodar mutation em recurso fora do escopo explícito do pedido
+- ❌ **NUNCA** "limpar" / "organizar" / "padronizar" outros recursos por iniciativa própria
+- ❌ **NUNCA** deletar artigos, produtos, collections, files mesmo que pareçam órfãos/duplicados — flagar pro usuário decidir
+- ❌ **NUNCA** mudar `title`, `image`, `handle`, `summary`, `tags`, `publishedAt`, `isPublished` se a tarefa for só "atualizar body" (preservar tudo o resto)
+- ❌ **NUNCA** mudar `isPublished` (publicar/despublicar) sem instrução explícita textual do usuário
+- ❌ **NUNCA** mudar `handle` de artigo já publicado (quebra URL + SEO + backlinks)
+- ❌ **NUNCA** rodar `bulk-update-product-status`, `update-collection`, `update-product` sem solicitação explícita por nome do recurso
+- ❌ **NUNCA** mexer em theme files, settings, navigation, app embeds
+- ❌ **NUNCA** chamar mutations destrutivas (`*Delete`, `*Bulk*`, `themeFilesUpsert` em theme MAIN) sem instrução explícita
+
+#### Antes de cada mutation, validar
+
+1. **O recurso (ID/handle) está no pedido do usuário?** Se não → não tocar
+2. **O campo a alterar está no pedido?** Se não → não tocar (mesmo que pareça "uma melhoria")
+3. **Se a mutation muda mais de 1 recurso de uma vez** (`bulk*`) → exige confirmação explícita
+4. **Se for `isPublished: true`** → confirmar que o usuário disse "publica" / "deixa público" / "ativa" — não inferir de "ok" / "go" / "continua"
+
+#### Em caso de dúvida
+
+- "O usuário pediu X em todos os blogs. Devo aplicar nos blogs com tag Y também?" → **PERGUNTAR**. Não inferir escopo.
+- "Vejo um produto duplicado/inativo enquanto rodo a tarefa." → **REPORTAR**, não corrigir.
+- "O handle Z não existe mas Z-1 existe." → **PERGUNTAR**, não substituir.
+
 ### Dados reais
 - ❌ Inventar imagem, preço, título ou descrição de produto
 - ❌ Gerar imagem via PiApp para `product-cta-card` (sempre Shopify CDN)

@@ -156,6 +156,19 @@ Metafields disponíveis (use exatamente estes slugs em paths):
 - `references/output-paths.md`
 - `references/output-formats.md`
 
+## 🔒 Shopify safety (INVIOLÁVEL)
+
+> **Princípio do menor escopo**: mutations no Shopify tocam **apenas** o produto/metafield explicitamente pedido.
+
+- ❌ **NUNCA** tocar produtos fora do escopo (ID/handle não no pedido)
+- ❌ **NUNCA** mudar `title`, `vendor`, `productType`, `status`, `tags`, `variants`, `price` se a tarefa é "enriquecer PDP" (apenas metafields do conteúdo)
+- ❌ **NUNCA** mexer em outros metafields que não os solicitados (ex: pedido "atualiza FAQ" não toca "descricao")
+- ❌ **NUNCA** chamar `bulk-update-product-status`, `productUpdate` fora do produto explicitado
+- ❌ **NUNCA** alterar estoque, inventário, variantes
+- ❌ **NUNCA** publicar/despublicar produto sem instrução explícita
+- ✅ Antes de cada mutation: validar ID e campo no pedido — se não estão, parar e perguntar
+- ✅ Reportar (não corrigir) inconsistências achadas em outros produtos durante a tarefa
+
 ## 🎯 SEO técnico
 
 > 🚨 Seguir o playbook completo em **`../blog-content/references/seo-playbook.md`** — adaptado pra PDP:
