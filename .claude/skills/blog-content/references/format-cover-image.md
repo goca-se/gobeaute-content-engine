@@ -2,122 +2,183 @@
 
 Capa do blog post. Aparece no card do blog, no topo do post e no preview de redes sociais.
 
-> 🚨 **REGRA INVIOLÁVEL #1 — Cover SEMPRE gerada por IA (PiApp), SEMPRE lifestyle institucional.**
+> 🚨 **REGRA INVIOLÁVEL #1 — Cover SEMPRE gerada por IA (PiApp), SEMPRE lifestyle institucional adaptada AO BRAND CONTEXT.**
 >
-> Toda blog cover **DEVE** ser uma imagem **gerada pelo PiApp** (`generate_image`) seguindo o brand DNA da marca. **NUNCA** usar:
-> - ❌ Foto de produto recortada em fundo branco/transparente (isso é catálogo, não editorial)
-> - ❌ URL de imagem de produto da Shopify CDN (`cdn.shopify.com/.../files/produto.png`)
-> - ❌ Imagem genérica de stock photo
-> - ❌ Foto de produto em mesa/cenário simulando lifestyle
-> - ❌ Composição que mostra a embalagem do produto com label visível
+> Toda blog cover **DEVE** ser uma imagem **gerada pelo PiApp** (`generate_image`) com prompt **construído dinamicamente a partir do bundle do brand-context** da marca em questão. **NUNCA** hardcoded pra uma marca específica.
 >
-> ✅ **Sempre**:
+> ❌ NÃO USAR:
+> - Foto de produto recortada em fundo branco/transparente (catálogo, não editorial)
+> - URL de imagem de produto da Shopify CDN (`cdn.shopify.com/.../files/produto.png`)
+> - Imagem genérica de stock photo
+> - Foto de produto em mesa simulando lifestyle
+> - Composição com embalagem visível
+> - **Prompt hardcoded** (ex: "Brazilian woman with curly hair") sem consultar o brand-context da marca pedida
+>
+> ✅ SEMPRE:
 > - Imagem gerada via PiApp `generate_image` com aspect 16:9 (1920×1080)
-> - Cena **lifestyle institucional** alinhada ao brand DNA: modelo real, ambiente, mood
-> - Para Ápice: mulher brasileira com curvatura natural (3A-4C ou 2A-2C onduladas), fundo sólido verde esmeralda `#2E7D60` ou amarelo âmbar `#F5C518`, ombros à mostra, sorriso genuíno, sem produto recortado
+> - Cena **lifestyle institucional** alinhada ao brand DNA **da marca específica**
+> - Prompt construído a partir de **3 inputs do brand-context**: (1) `prompt_guidelines` da marca, (2) `colors` da paleta oficial, (3) `negative_prompts`
 > - Aprovação de prompt antes de gerar (custo de crédito)
 > - Salvar prompt + metadata pra rastreabilidade
->
-> **Referência visual**: blogs Sallve, Glossier, Granado, Sephora editorial — cover sempre traz pessoa, cena ou ambiente; produto aparece **dentro do artigo** integrado ao texto, nunca como capa.
 
-## 🚦 Workflow obrigatório para gerar cover
+---
 
-1. **Sempre** consultar `brand-context` skill antes de gerar (pega visual DNA, paleta, casting, mood da marca)
-2. Construir prompt seguindo o template abaixo + prompt_modifiers da brand style (`list_brand_styles`)
-3. Apresentar prompt completo pro usuário aprovar
-4. Após "go" explícito → chamar `mcp__piapp__generate_image` (single, 16:9, high)
-5. Pollar `check_jobs` até completar
-6. Setar `article.image.url = [PiApp output URL]` via `articleUpdate`
-7. Salvar prompt + metadata em `conteudos/[marca]/blogs/[slug]/imagens/prompts/cover.meta.json`
+## 🚦 Workflow obrigatório (brand-adaptive)
 
-## 🚨 Fallback se PiApp não disponível
+### Passo 1 — Carregar brand-context da marca
 
-Se PiApp MCP estiver desconectado/sem créditos:
-- ❌ **NÃO** usar foto de produto da Shopify CDN como substituta
-- ❌ **NÃO** usar foto stock genérica
-- ✅ **SIM**: criar artigo com `image: null` (cover vazia) + adicionar `<figure>` inline no body com placeholder ou texto explicativo
-- ✅ Avisar usuário que PiApp está indisponível e a cover precisa ser gerada/enviada manualmente depois
-- ✅ Adicionar no relatório final: `⚠️ Cover pendente — PiApp indisponível`
+**Antes de qualquer coisa**, consultar a skill `brand-context` ou chamar `mcp__piapp__get_brand_profile(brand_id)` pra puxar:
 
-## Inputs
+| Campo | O que é | Como usar no prompt |
+|---|---|---|
+| `prompt_guidelines` | Descrição rica de subject/setting/lighting/casting pré-aprovada | Subject + Setting base do prompt |
+| `colors` | Paleta hex oficial (primary, accent, photo background, etc.) | Cores literais no prompt (ex: "solid background #2E7D60") |
+| `negative_prompts` | Lista do que NÃO incluir | Anexar ao final do prompt como exclusões |
+| `tone_of_voice` | Tom da marca | Define o **mood** da cena |
+| `target_audience` | Persona-alvo | Define gênero/idade/etnia do modelo se aplicável |
+| `styles[]` | Brand styles registrados (ex: "Crespo Power", "NUTRI WAVES") | Se houver style relevante ao tema do blog, usar `prompt_modifiers` daquele style |
 
-- ✅ Brand visual DNA + paleta (do bundle)
-- ✅ Tema do post
-- ✅ Mood (educativo/inspiracional/promocional)
-- ✅ Cena visual proposta (perguntar se não claro)
+### Passo 2 — Detectar marca + selecionar style apropriado
+
+- Brand vem do contexto do blog post (`brand-context/[marca]/`)
+- Se a marca tem múltiplos `styles` (Ápice tem "Crespo Power" e "NUTRI WAVES"), escolher o style que **combina com o tema do blog post**:
+  - Blog sobre cabelo cacheado/crespo → style "Crespo Power"
+  - Blog sobre cabelo ondulado → style "NUTRI WAVES"
+  - Blog genérico sem foco em curvatura → usar `prompt_guidelines` base
+- Para outras marcas (Barbours, Kokeshi, etc.) → usar `prompt_guidelines` da marca + styles da marca quando existir
+
+### Passo 3 — Construir prompt do template universal
+
+```
+Editorial high-quality photography.
+
+Subject: [BLOG_SUBJECT — derivado do tema do post + persona da marca].
+
+Setting: [SETTING — pego do prompt_guidelines da marca: ambiente, fundo, superfície, cor de fundo se aplicável].
+
+Casting (if person): [CASTING — pego do prompt_guidelines da marca: etnia/gênero/idade/expressão típicas da marca].
+
+Lighting: [LIGHTING — pego do prompt_guidelines da marca: tipo de luz que a marca usa].
+
+Composition: editorial wide shot 16:9, negative space on [top OR bottom third] for title overlay, [composição típica da marca].
+
+Mood: [BLOG_MOOD — derivado do tom do post + tone_of_voice da marca].
+
+Brand palette: [hex codes da paleta da marca, ex: primary + photo_bg do colors].
+
+[Opcional: prompt_modifiers do style escolhido (ex: para Ápice Crespo Power)]
+
+NEGATIVE: no text overlay, no logos, no product packaging with visible labels, [negative_prompts da marca].
+```
+
+### Passo 4 — Apresentar prompt + aprovação
+
+Mostrar pro usuário:
+```
+🎨 Prompt cover blog "[título]" (marca: [marca], style: [style ou "base"])
+
+Model: gemini-2.5-flash-image
+Aspect: 16:9 (1920x1080)
+Quality: high
+Cost: ~3 créditos
+
+[PROMPT COMPLETO]
+
+Confirma? (sim/ajustar/abortar)
+```
+
+### Passo 5 — Gerar via PiApp
+
+Após aprovação explícita:
+```python
+mcp__piapp__generate_image(
+  prompt=PROMPT_FINAL,
+  aspect_ratio="16:9",
+  quality="high",
+  model="gemini-2.5-flash-image"  # ou null pra auto-select
+)
+```
+
+### Passo 6 — Pollar + atualizar
+
+- `check_jobs` até status=completed
+- `articleUpdate(article: {image: {url, altText}})` na Shopify
+- Salvar `cover.meta.json` em `conteudos/[marca]/blogs/[slug]/imagens/prompts/`
 
 ---
 
 ## 📐 Specs
 
-- Aspect: **16:9** (1920x1080)
+- Aspect: **16:9** (1920×1080)
 - Quality: **high**
-- Tool: **`generate_image`** (single)
-
-### Por que 16:9?
-- Funciona como capa de post (Shopify Blog padrão)
-- Funciona como og:image pra link preview em redes sociais
-- Funciona como banner no card de blog
+- Tool: **`generate_image`** (single, nunca batch pra cover)
 
 ---
 
-## 🎨 Template prompt (passar pra piapp-image-gen)
+## 🎨 Como o prompt fica adaptado por marca (exemplos derivados de `prompt_guidelines`)
 
-```
-Photorealistic high-quality editorial photography.
+> ⚠️ Os exemplos abaixo são DERIVADOS dinamicamente dos `prompt_guidelines` de cada marca no PiApp. Não são hardcoded — eles refletem o que o `get_brand_profile()` retorna pra cada marca hoje. Se o brandbook mudar, o prompt muda automaticamente.
 
-Subject: [BLOG_TOPIC_VISUAL — described concretely].
+### Ápice (slug: `apice`)
+- **DNA visual da marca**: "mulher brasileira com curvatura natural (crespo 3A-4C ou cacheado), volume generoso, ombros à mostra sem roupas visíveis, expressão de alegria genuína, fundo sólido unicolor de alto contraste (verde esmeralda #2E7D60 OU amarelo âmbar #F5C518), luz de estúdio difusa e frontal com preenchimento quente, energia celebratória"
+- **Style "Crespo Power"** (cabelo crespo 3A-4C) → coils volumosas, modelo ébano-médio, energia empoderada
+- **Style "NUTRI WAVES"** (cabelo ondulado 2A-2C) → ondas naturais com movimento, leveza, fundo branco com toques laranja
+- **Cover exemplo**: blog sobre frizz → "mulher brasileira sorrindo com cachos 3B/3C, fundo verde esmeralda sólido, luz difusa quente, espaço inferior pra título"
 
-Setting: [LIFESTYLE_SCENE matching blog theme].
-Lighting: [WARM_NATURAL_LIGHTING aligned with brand].
-Composition: editorial wide shot, room for title overlay (top or bottom third clear).
+### Barbours (slug: `barbours`)
+- **DNA**: grooming masculino brasileiro, ambiente bathroom limpo, mood profissional/confiante, paleta monocrome com acento de madeira
+- **Cover exemplo**: blog sobre barba → "homem brasileiro confiante em ambiente bathroom limpo após rotina de grooming, luz profissional quente, paleta monochrome com madeira em foco, ombros enquadrados"
 
-Aspect ratio: 16:9. Quality: high.
+### Rituária (slug: `rituaria`)
+- **DNA**: serenidade ritualística, still life com elementos naturais (chá, flores secas, linho), paleta verde/dourado, luz golden hour
+- **Cover exemplo**: blog sobre ritual matinal → "cena serena de bem-estar, mãos segurando xícara cerâmica de chá sobre superfície de linho, luz golden hour, flores secas em desfoque, paleta verde mineral + dourado"
 
-Mood: [BLOG_MOOD — inviting, informative, brand-aligned].
+### Lescent (slug: `lescent`)
+- **DNA**: skincare matinal feminino, ambiente fresco/airy, paleta rosa/ivory, luz da janela suave
+- **Cover exemplo**: blog sobre sérum → "cena de skincare matinal com luz suave de janela, close-up de frasco com conta-gotas em mão feminina sobre vanity, atmosfera fresca e airy, paleta rosa + ivory"
 
-NO text. NO logos. NO product packaging with visible labels.
+### Kokeshi (slug: `kokeshi`)
+- **DNA**: skincare K-beauty/J-beauty, flat lay delicado, paleta pastel rosa + ivory, glass-skin glow, estética kute/kawaii com personalidade brasileira
+- **Cover exemplo**: blog sobre rotina coreana → "flat lay delicado de skincare com tons pastel rosa e ivory, prato cerâmico com texturas brilhantes de skincare, luz natural suave, estética glass-skin"
 
-Style consistent with [BRAND_NAME]: [BRAND_VISUAL_DNA].
-```
+### By Samia (slug: `bysamia`)
+- **DNA**: lifestyle aspiracional premium, mulher em ambiente sofisticado, paleta neutra com acentos dourados
+- **Cover exemplo**: blog sobre suplemento → "cena lifestyle aspiracional, mulher em robe de linho em janela ensolarada, paleta neutra sofisticada com acentos dourados, atmosfera matinal premium"
+
+### Auá (slug: `aua`)
+- **DNA**: brasilidade amazônica, elementos botânicos da Amazônia, texturas orgânicas, paleta de tons terrosos, luz brasileira dourada
+- **Cover exemplo**: blog sobre ingrediente amazônico → "ambiente brasileiro natural com elementos botânicos da Amazônia, texturas orgânicas, paleta de tons terrosos, luz dourada brasileira, sem pessoas"
 
 ---
 
-## 📝 Exemplos de "subject" por tema
+## 🚨 Fallback se PiApp indisponível
 
-### Hair Care no verão (Ápice)
-> "Brazilian woman in her 30s with type 3B/3C curly hair, smiling softly, outdoor warm light, sun-kissed natural setting, beach or tropical vegetation in soft focus"
-
-### Skincare matinal (Lescent)
-> "Soft morning light scene of skincare routine, close-up of dropper bottle in feminine hand near vanity, fresh airy atmosphere, no visible labels"
-
-### Bem-estar ritual (Rituária)
-> "Serene wellness scene, hands cradling a ceramic cup of herbal tea on linen surface, soft golden hour light, dried flowers and natural textures in background"
-
-### Grooming masculino (Barbour's)
-> "Confident Brazilian man in his 30s in clean bathroom setting, fresh after grooming routine, warm professional lighting, monochrome aesthetic with wood accent"
-
-### Skincare K-beauty (Kokeshi)
-> "Delicate skincare flat lay with pastel pink and ivory tones, ceramic dish with glossy skincare textures, soft natural light, glass-skin glow aesthetic"
-
-### Lifestyle premium (By Samia)
-> "Aspirational lifestyle scene, woman in linen robe at sun-drenched window with herbal supplement, sophisticated neutral palette with gold accents"
-
-### Brasilidade Amazônica (Auá)
-> "Natural Brazilian setting with botanical elements from the Amazon rainforest, organic textures, earth tones, golden brazilian sunlight"
+Se PiApp MCP desconectado/sem créditos:
+- ❌ **NÃO** usar foto de produto da Shopify CDN como substituta
+- ❌ **NÃO** usar foto stock genérica
+- ❌ **NÃO** pegar imagem de cover de outra marca
+- ✅ **SIM**: criar artigo com `image: null` + flag de pendência
+- ✅ Avisar usuário: "PiApp indisponível, cover pendente — gerar antes de publicar"
+- ✅ Report final: `⚠️ Cover pendente — PiApp indisponível`
 
 ---
 
 ## 🚨 Guardrails
 
+- ❌ Hardcoded prompt sem ler brand-context primeiro
+- ❌ Usar prompt da marca X pra cover da marca Y
 - ❌ Texto/letra dentro da imagem (overlay é frontend)
-- ❌ Embalagem com logo visível
+- ❌ Logo da marca visível
+- ❌ Embalagem de produto com label visível
 - ❌ Pessoas reais identificáveis (celebridades)
-- ❌ Composição que não deixa espaço pra overlay de título
+- ❌ Composição sem negative space pra título
 - ❌ Mood divergente do tom do artigo
+- ❌ Cores fora da paleta oficial da marca
+- ✅ Sempre carregar brand-context bundle ANTES de construir prompt
+- ✅ Sempre incluir `negative_prompts` da marca no final do prompt
+- ✅ Sempre usar hex codes literais da paleta da marca
 - ✅ Negative space pra título (topo ou base do terço)
-- ✅ Paleta da marca
-- ✅ Mood coerente com o tom editorial
+- ✅ Mood coerente com tom editorial + tone_of_voice da marca
 
 ---
 
@@ -138,22 +199,38 @@ conteudos/[marca]/blogs/[slug]/
 ```json
 {
   "purpose": "blog-cover",
-  "brand": "apice",
-  "blog_slug": "cuidados-com-cachos-no-verao",
+  "brand": "[marca]",
+  "brand_style_used": "[Crespo Power | NUTRI WAVES | null se base]",
+  "blog_slug": "[slug do post]",
   "tool": "generate_image",
+  "model": "gemini-2.5-flash-image",
   "aspect_ratio": "16:9",
   "quality": "high",
+  "prompt": "[prompt completo enviado]",
+  "brand_context_version": "[hash ou data do brandbook.md usado]",
+  "negative_prompts_applied": "[negative_prompts da marca]",
+  "palette_applied": "[hex codes usados]",
   "job_id": "...",
   "output_url": "...",
-  "generated_at": "2026-XX-XX",
+  "generated_at": "[ISO datetime]",
   "title_overlay_position": "bottom-third"
 }
 ```
 
+A inclusão do `brand_context_version` garante traceability: se mudar o brandbook, fica óbvio quais covers foram geradas com qual versão.
+
+---
+
 ## ✅ Checklist
 
+- [ ] `brand-context` consultado ANTES de construir o prompt?
+- [ ] Prompt usa `prompt_guidelines` da marca (não hardcoded)?
+- [ ] Paleta hex literal da marca no prompt?
+- [ ] `negative_prompts` da marca aplicados?
+- [ ] Style apropriado ao tema selecionado (se a marca tem múltiplos)?
 - [ ] 16:9?
 - [ ] Espaço pra overlay de título?
-- [ ] Sem texto/logo na imagem?
-- [ ] Mood alinhado com o artigo?
-- [ ] Paleta da marca?
+- [ ] Sem texto/logo/produto recortado?
+- [ ] Mood alinhado com tom do artigo + tom da marca?
+- [ ] Aprovação explícita antes de gastar créditos?
+- [ ] Metadata salva com `brand_context_version`?
