@@ -143,3 +143,51 @@ conteudos/[marca]/produtos/[slug]/modo-de-uso/textos/
 - [ ] Sem números/claims sem fonte?
 - [ ] Composição não inventada?
 - [ ] Tamanho adequado?
+
+---
+
+## 🔌 Publicação no Shopify — 3 rich_text metafields
+
+> Este formato cobre **3 metafields rich_text separados** no produto. Cada um é independente — não tem metaobjeto. Use `metafieldsSet` direto.
+
+### Esquemas (autoritativos)
+
+| Campo editorial | Metafield Shopify | Label no admin | Tipo |
+|---|---|---|---|
+| Composição (INCI) | `custom.caracteristicas` | `[Info] Composição` | `rich_text_field` |
+| Modo de uso | `custom.how_to_use` | `[Info] Modo de uso` | `rich_text_field` |
+| Precauções / advertências | `custom.como_usar` | `Precauções` (legado, nome confuso) | `rich_text_field` |
+
+> ⚠️ **Não confundir** `custom.como_usar` (rich_text com precauções) com `custom.como_usar_session_pdp` (`[Section] Como usar` — esse é o de passos+imagem, ver `format-como-usar.md`).
+
+### Workflow
+
+1. Salvar texto em markdown em `conteudos/[marca]/produtos/[slug]/composicao/textos/content.md` (e equivalentes pra `modo-de-uso/` e `precaucoes/`)
+2. Converter cada texto pra **Rich Text JSON** (`{"type":"root","children":[{"type":"paragraph","children":[{"type":"text","value":"..."}]}]}`)
+3. `metafieldsSet` num único shot pros 3:
+
+```graphql
+mutation SetDescricao($metafields: [MetafieldsSetInput!]!) {
+  metafieldsSet(metafields: $metafields) {
+    metafields { id namespace key type }
+    userErrors { field message code }
+  }
+}
+```
+
+Variables:
+```json
+{
+  "metafields": [
+    { "ownerId": "<PRODUCT_GID>", "namespace": "custom", "key": "caracteristicas", "type": "rich_text_field", "value": "<RICH_TEXT_JSON_COMPOSICAO>" },
+    { "ownerId": "<PRODUCT_GID>", "namespace": "custom", "key": "how_to_use",      "type": "rich_text_field", "value": "<RICH_TEXT_JSON_USO>" },
+    { "ownerId": "<PRODUCT_GID>", "namespace": "custom", "key": "como_usar",       "type": "rich_text_field", "value": "<RICH_TEXT_JSON_PRECAUCOES>" }
+  ]
+}
+```
+
+### 🔒 Safety
+- ✅ Tocar apenas os 3 metafields do produto pedido
+- ❌ Nunca tocar `description` (campo nativo do produto) — é controlado em outro lugar
+- ✅ Composição vem do INCI oficial — nunca inventar
+- ✅ Precauções seguem ANVISA — "em caso de irritação, suspender o uso", "manter longe do alcance de crianças", etc.

@@ -5,6 +5,22 @@ description: Generate content for Gobeaute brand collections (product groupings/
 
 # Collection Content — Conteúdo de Coleções
 
+> 🔒 **REGRA INVIOLÁVEL #0 — PERSISTIR LOCAL ANTES DE QUALQUER MUTATION SHOPIFY.**
+>
+> **NUNCA** chame `collectionUpdate`, `metafieldsSet`, `fileCreate` ou qualquer mutation do Shopify ANTES de ter salvo o conteúdo em disco em `conteudos/[marca]/collections/[collection-slug]/`.
+>
+> **Ordem obrigatória** (sem exceção):
+> 1. `Write` → `conteudos/[marca]/collections/[slug]/textos/{hero,description,seo,thumbnail-meta}.{md,json}` conforme aplicável
+> 2. `Write` → `conteudos/[marca]/collections/[slug]/textos/shopify-payload.json` (variables prontas pras mutations)
+> 3. **Só depois** disparar `collectionUpdate`/`metafieldsSet`/etc.
+> 4. Após sucesso: `Write` → `conteudos/[marca]/collections/[slug]/shopify-result.json` com IDs + timestamp
+>
+> **Por quê é inviolável**: Shopify não tem trash/restore. Disco local é a ÚNICA cópia recuperável. Padrão estabelecido após perda de 12+ blogs Kokeshi em mai/2026 por refactor que pulou esse passo.
+>
+> **Sub-agents**: ao delegar via `Agent`, o prompt **DEVE** repetir essa ordem. Não delegue "atualiza descrição da collection X" sem mandar "salva em `conteudos/` primeiro".
+>
+> **Verificação obrigatória antes da mutation**: confira via `Read`/`Glob` que `conteudos/[marca]/collections/[slug]/textos/` existe com os arquivos do escopo. Se não existe → STOP, salve antes.
+
 Skill especializada em conteúdo de páginas de collection (agrupamentos/categorias de produtos).
 
 ## 🎯 Quando esta skill ativa
@@ -44,6 +60,18 @@ Se faltar:
 Carregar também `references/output-paths.md`.
 
 > 🚨 **SEO técnico (estrutura HTML, headings, alt text, performance/CWV, internal linking, schema):** seguir o playbook completo em **`../blog-content/references/seo-playbook.md`**. Pra Collection, usar schema `CollectionPage` ou `ItemList` em vez de `BlogPosting`. Aplicar todas as outras 20 boas práticas — cover image lifestyle, fonte ≥18px, CTAs button-style, alt text descritivo, width/height em imagens.
+
+## 🔒 Shopify safety (INVIOLÁVEL)
+
+> **Princípio do menor escopo**: mutations tocam **apenas** a collection pedida.
+
+- ❌ **NUNCA** tocar collections fora do escopo
+- ❌ **NUNCA** alterar `productsAdd`/`productsRemove` (não mexer em quais produtos estão na collection — só conteúdo editorial)
+- ❌ **NUNCA** mudar `title`, `handle`, `sortOrder`, `rules` (smart collections) sem solicitação explícita
+- ❌ **NUNCA** publicar/despublicar collection sem instrução explícita
+- ✅ Por default, atualizar apenas: `descriptionHtml`, `image` (banner), e metafields do hero/SEO solicitados
+- ✅ Validar handle/ID no pedido antes de qualquer mutation
+- ✅ Reportar inconsistências em outras collections sem corrigir
 
 ### Etapa 4 — Gerar conteúdo
 

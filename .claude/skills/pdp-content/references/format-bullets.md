@@ -86,3 +86,123 @@ conteudos/[marca]/produtos/[slug]/descricao-curta/textos/
 - [ ] Máximo de 5 bullets?
 - [ ] Compliance ANVISA?
 - [ ] Tom de voz da marca?
+
+---
+
+## 🔌 Publicação no Shopify — metaobjeto `product_benefit` + metafield `custom.product_info_benefits`
+
+> O tema da loja consome este formato via metafield de produto **`custom.product_info_benefits`** (label visível: `[Info] Descrição curta + bullet points`). Tipo `metaobject_reference` (**singular** — UM metaobjeto por produto) que aponta pra um metaobjeto do tipo **`product_benefit`**.
+
+### Esquemas (autoritativos)
+
+**Metafield definition** (no produto):
+```yaml
+namespace: custom
+key: product_info_benefits
+name: "[Info] Descrição curta + bullet points"
+type: metaobject_reference
+metaobject_definition_id: gid://shopify/MetaobjectDefinition/4836294863
+```
+
+**Metaobject definition** `product_benefit`:
+```yaml
+type: product_benefit
+display_name_key: beneficios
+fields:
+  - key: descricao         # rich_text — descrição curta editorial
+    type: rich_text_field
+  - key: titulo_destacado  # rich_text — título com destaque visual (ex: "POROS MINIMIZADOS")
+    type: rich_text_field
+  - key: beneficios        # list.single_line_text — os 5 bullets
+    type: list.single_line_text_field
+  - key: cor_bullet_point  # 🚫 DEIXAR VAZIO ("") — emoji no texto substitui
+    type: color
+```
+
+### 🚫 Convenção Goshop (estabelecida 2026-05-27)
+
+**NÃO usar `cor_bullet_point`** — sempre passar `value: ""` no campo. A diferenciação visual deve vir de **emoji semântico no início de cada item** da lista `beneficios`.
+
+**Por quê**: bullets só com cor genérica viram ruído visual; emojis específicos comunicam o benefício imediatamente + alinham com a estética kawaii POP Kokeshi.
+
+**Mapa de emojis sugeridos**:
+
+| Tipo de benefício | Emoji |
+|---|---|
+| Hidratação / água | 💧 |
+| Regeneração / cicatrização | 🌹 ou 🔄 |
+| Anti-idade / firmeza | 💪 ou 💎 |
+| Glow / luminosidade | ✨ |
+| Refrescância / mentol | ❄️ |
+| Pele oleosa / controle | 🌸 |
+| Antioxidante / natural | 🌿 |
+| Olhos | 👁️ |
+| Vegano / planta | 🌱 |
+| Cruelty-free | 🐰 |
+| Ritual K-beauty | 👘 |
+| Composição / kit | 💎 |
+
+Exemplo correto:
+```json
+{
+  "beneficios": [
+    "💧 Hidratação intensa enquanto você dorme",
+    "✨ Suaviza manchas e linhas de expressão",
+    "🌸 Para todos os tipos de pele",
+    "💎 Inspirado nos rituais asiáticos"
+  ],
+  "cor_bullet_point": ""
+}
+```
+
+### Workflow (3 passos)
+
+1. Salvar local em `conteudos/[marca]/produtos/[slug]/descricao-curta/textos/content.json`
+2. Criar metaobjeto:
+
+```graphql
+mutation CreateBenefits($metaobject: MetaobjectCreateInput!) {
+  metaobjectCreate(metaobject: $metaobject) {
+    metaobject { id handle }
+    userErrors { field message code }
+  }
+}
+```
+
+Variables:
+```json
+{
+  "metaobject": {
+    "type": "product_benefit",
+    "handle": "<slug-do-produto>-benefits",
+    "fields": [
+      { "key": "descricao", "value": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Descrição curta editorial de 1-2 frases\"}]}]}" },
+      { "key": "titulo_destacado", "value": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"PELE DE PORCELANA\",\"bold\":true}]}]}" },
+      { "key": "beneficios", "value": "[\"Hidratação profunda\",\"Uniformização do tom\",\"Efeito glass-skin\",\"Não-comedogênico\",\"Vegano\"]" },
+      { "key": "cor_bullet_point", "value": "" }
+    ]
+  }
+}
+```
+
+> ⚠️ `beneficios` é `list.single_line_text_field` — value precisa ser string JSON de array. `descricao` e `titulo_destacado` são `rich_text_field` — value precisa ser string JSON Rich Text.
+
+3. Anexar ao produto via `metafieldsSet`:
+
+```json
+{
+  "metafields": [{
+    "ownerId": "<PRODUCT_GID>",
+    "namespace": "custom",
+    "key": "product_info_benefits",
+    "type": "metaobject_reference",
+    "value": "<METAOBJECT_GID>"
+  }]
+}
+```
+
+### 🔒 Safety
+- ✅ Tocar apenas `custom.product_info_benefits` do produto pedido
+- ❌ Não tocar `custom.benefits` (esse é outro metafield, rich_text de benefícios longos)
+- ✅ Se já existe metaobjeto linkado: `metaobjectUpdate` no GID existente (preserva histórico) OU substituir com novo GID
+- ✅ Cor do bullet point deve estar dentro da paleta da marca (consultar brand-context)

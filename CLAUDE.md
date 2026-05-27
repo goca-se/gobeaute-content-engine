@@ -36,6 +36,30 @@ Hierarquia:
 
 ## 🚨 Regras de comportamento INVIOLÁVEIS
 
+### 🔒 #0 — Persistir local ANTES de qualquer mutation Shopify
+
+**REGRA GLOBAL** que se aplica a TODA skill que toca Shopify (`blog-content`, `pdp-content`, `collection-content`, `component-content`, qualquer skill futura).
+
+**NUNCA** chame mutation do Shopify (`articleCreate`, `articleUpdate`, `metaobjectCreate`, `metaobjectUpdate`, `metafieldsSet`, `productUpdate`, `collectionUpdate`, `fileCreate`, etc.) ANTES de ter salvo o conteúdo em `conteudos/[marca]/[tipo]/[entidade]/`.
+
+**Ordem obrigatória** (sem exceção):
+1. `Write` → `conteudos/[marca]/[tipo]/[entidade]/textos/*.{md,json}` (markdown + estruturado)
+2. `Write` → `conteudos/[marca]/[tipo]/[entidade]/conteudo-html/*.html` (se a mutation manda HTML, ex: blog body)
+3. `Write` → `conteudos/[marca]/[tipo]/[entidade]/textos/shopify-payload.json` (variables prontas pras mutations — útil pra replay)
+4. **Só depois** dispare as mutations
+5. Após sucesso: `Write` → `conteudos/[marca]/[tipo]/[entidade]/shopify-result.json` com IDs/GIDs + timestamp + handles
+
+**Por quê é inviolável**:
+- Shopify **não tem trash/restore** de articles, metaobjects ou metafields deletados
+- O disco local em `conteudos/` é a ÚNICA cópia recuperável
+- Em mai/2026 perdemos 12+ blogs da Kokeshi por refactor em batch que pulou esse passo
+
+**Sub-agents (Agent tool)**: ao delegar trabalho que envolva Shopify, o prompt **DEVE** repetir essa ordem explicitamente. Não delegue "atualiza no Shopify" sem mandar "salva em `conteudos/` primeiro".
+
+**Verificação obrigatória antes da mutation**: usar `Read`/`Glob` pra confirmar que `conteudos/[marca]/[tipo]/[entidade]/textos/` existe e está populado. Se não existe → STOP, salve antes.
+
+Cada SKILL.md das skills de conteúdo carrega essa regra como REGRA INVIOLÁVEL #0 — leia lá pros paths específicos do tipo (blogs vs pdp vs collection).
+
 ### Quando faltar informação → PERGUNTAR
 
 Se em qualquer ponto faltar:
