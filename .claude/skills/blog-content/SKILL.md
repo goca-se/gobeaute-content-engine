@@ -5,6 +5,23 @@ description: Generate rich, visually engaging blog content for Gobeaute brands �
 
 # Blog Content — Artigos Editoriais
 
+> 🔒 **REGRA INVIOLÁVEL #0 — PERSISTIR LOCAL ANTES DE QUALQUER MUTATION SHOPIFY.**
+>
+> **NUNCA** chame `articleCreate`, `articleUpdate`, `metafieldsSet`, `fileCreate` ou qualquer mutation do Shopify ANTES de ter salvo o conteúdo em disco em `conteudos/[marca]/blogs/[slug]/`.
+>
+> **Ordem obrigatória** (sem exceção):
+> 1. `Write` → `conteudos/[marca]/blogs/[slug]/textos/article.md` (markdown editorial)
+> 2. `Write` → `conteudos/[marca]/blogs/[slug]/textos/article.json` (estruturado: title, lead, blocks, cta, seo)
+> 3. `Write` → `conteudos/[marca]/blogs/[slug]/conteudo-html/article.html` (HTML final IDÊNTICO ao body que vai pro Shopify)
+> 4. **Só depois** disparar `articleCreate`/`articleUpdate`
+> 5. Após sucesso: `Write` → `conteudos/[marca]/blogs/[slug]/shopify-result.json` com `{article_id, handle, image_gid, published_at}`
+>
+> **Por quê é inviolável**: Shopify não tem trash/restore de artigos deletados. O disco local é a ÚNICA cópia recuperável. Em mai/2026 a Kokeshi perdeu 12+ blogs por refactor em batch que pulou esse passo.
+>
+> **Sub-agents**: ao delegar refactor/criação pra `Agent`, o prompt **DEVE** repetir essa ordem explicitamente. Não delegue "atualiza no Shopify" sem mandar "salva em `conteudos/` primeiro".
+>
+> **Verificação obrigatória antes da mutation**: confira via `Read`/`Glob` que `conteudos/[marca]/blogs/[slug]/textos/article.md` existe e tem conteúdo. Se não existe → STOP, salve antes.
+
 Skill especializada em produzir blog posts completos: texto + imagens + HTML + publicação Shopify como `unpublished` pra validação humana. Modo single (1 blog) ou batch (N blogs). Mínimo de gates de aprovação, retries built-in.
 
 ## 🎯 Quando esta skill ativa

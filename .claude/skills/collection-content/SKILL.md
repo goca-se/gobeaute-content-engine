@@ -5,6 +5,22 @@ description: Generate content for Gobeaute brand collections (product groupings/
 
 # Collection Content — Conteúdo de Coleções
 
+> 🔒 **REGRA INVIOLÁVEL #0 — PERSISTIR LOCAL ANTES DE QUALQUER MUTATION SHOPIFY.**
+>
+> **NUNCA** chame `collectionUpdate`, `metafieldsSet`, `fileCreate` ou qualquer mutation do Shopify ANTES de ter salvo o conteúdo em disco em `conteudos/[marca]/collections/[collection-slug]/`.
+>
+> **Ordem obrigatória** (sem exceção):
+> 1. `Write` → `conteudos/[marca]/collections/[slug]/textos/{hero,description,seo,thumbnail-meta}.{md,json}` conforme aplicável
+> 2. `Write` → `conteudos/[marca]/collections/[slug]/textos/shopify-payload.json` (variables prontas pras mutations)
+> 3. **Só depois** disparar `collectionUpdate`/`metafieldsSet`/etc.
+> 4. Após sucesso: `Write` → `conteudos/[marca]/collections/[slug]/shopify-result.json` com IDs + timestamp
+>
+> **Por quê é inviolável**: Shopify não tem trash/restore. Disco local é a ÚNICA cópia recuperável. Padrão estabelecido após perda de 12+ blogs Kokeshi em mai/2026 por refactor que pulou esse passo.
+>
+> **Sub-agents**: ao delegar via `Agent`, o prompt **DEVE** repetir essa ordem. Não delegue "atualiza descrição da collection X" sem mandar "salva em `conteudos/` primeiro".
+>
+> **Verificação obrigatória antes da mutation**: confira via `Read`/`Glob` que `conteudos/[marca]/collections/[slug]/textos/` existe com os arquivos do escopo. Se não existe → STOP, salve antes.
+
 Skill especializada em conteúdo de páginas de collection (agrupamentos/categorias de produtos).
 
 ## 🎯 Quando esta skill ativa
