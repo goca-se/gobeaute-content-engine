@@ -330,3 +330,40 @@ conteudos/[marca]/produtos/[slug]/section-efficacy/
 | Padrão Goshop | Legado | **Atual — usar este** |
 
 **Migração**: pra produto novo, sempre usar `section_efficacy`. Pra produtos antigos com `eficiencia_do_produto`, criar `section_efficacy` em paralelo e (quando o tema render dos dois) deprecar o antigo via instrução explícita do usuário.
+
+---
+
+## 🔁 Convenções Goshop (estabelecidas 2026-05-27)
+
+### 1. Status default: ACTIVE (não DRAFT)
+
+**Sempre** criar `eficiencia_item` com `capabilities.publishable.status: "ACTIVE"`. Não deixar em DRAFT — o tema só renderiza ACTIVE, e DRAFT exige passo extra de aprovação manual no admin.
+
+```json
+{
+  "metaobject": {
+    "type": "eficiencia_item",
+    "handle": "<product-slug>-<purpose>",
+    "capabilities": { "publishable": { "status": "ACTIVE" } },
+    "fields": [...]
+  }
+}
+```
+
+### 2. Handle naming: `<product-slug>-<purpose>`
+
+Pra metaobjetos **específicos** de produto: sempre prefixar com slug do produto pra evitar confusão entre lojas/produtos.
+
+✅ Bom: `kit-pele-plena-nota-judgeme`, `creme-gel-gota-toque-refrescante`, `rosa-mosqueta-100-vitamina-a`
+❌ Ruim: `nota-judgeme` (genérico — vai confundir entre N produtos)
+
+Pra metaobjetos **universais reusáveis** (badges genéricos): handle simples sem prefixo, ex: `vegano-e-cruelty-free`, `ingredientes-naturais`.
+
+### 3. Audit periódico
+
+Antes de finalizar a sessão, rodar audit:
+```graphql
+query { metaobjects(type: "eficiencia_item", first: 50) {
+  edges { node { id handle capabilities { publishable { status } } } } } }
+```
+Se aparecer algum DRAFT que deveria estar ACTIVE → `metaobjectUpdate` com `capabilities.publishable.status: "ACTIVE"`.

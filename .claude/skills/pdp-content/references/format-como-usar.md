@@ -151,3 +151,107 @@ conteudos/[marca]/produtos/[slug]/como-usar/
 - [ ] Tom de voz da marca?
 - [ ] Produtos complementares (se citados) existem?
 - [ ] Imagem sem texto/logo?
+
+---
+
+## 🔌 Publicação no Shopify — metaobjeto `como_usar` + metafield `custom.como_usar_session_pdp`
+
+> O tema consome este formato via metafield **`custom.como_usar_session_pdp`** (label: `[Section] Como usar`). Tipo `metaobject_reference` (**singular**) apontando pra UM metaobjeto `como_usar`.
+
+> ⚠️ **Não confundir** com `custom.como_usar` (rich_text de Precauções — outro metafield, outro propósito; ver `format-descricao.md`).
+
+### Esquemas (autoritativos)
+
+**Metafield definition**:
+```yaml
+namespace: custom
+key: como_usar_session_pdp
+name: "[Section] Como usar"
+type: metaobject_reference
+metaobject_definition_id: gid://shopify/MetaobjectDefinition/5423562959
+```
+
+**Metaobject definition** `como_usar`:
+```yaml
+type: como_usar
+display_name_key: steps
+description: "Conteúdo que será utilizado no metafield 'Como usar (session)' e renderizado na section Goshop How to Use PDP"
+capabilities:
+  publishable: true   # Active/Draft nativo
+fields:
+  - key: file    # imagem OU vídeo demonstrativo
+    type: file_reference
+    required: false
+  - key: steps   # lista de passos (strings)
+    type: list.single_line_text_field
+    required: false
+```
+
+> ⚠️ `displayNameKey: steps` é list → **handle auto-gerado concatena todos os passos** e estoura 255 chars. **SEMPRE** passar `handle` explícito no `metaobjectCreate` (ex: `como-usar-<slug-do-produto>`).
+
+### Workflow (4 passos)
+
+1. [Opcional] Gerar imagem via `piapp-image-gen` com `purpose: pdp-how-to-use`, aspect 1:1, brand-aligned
+2. Upload pra Shopify Files via `fileCreate` → pollar até READY → coletar `MediaImage` GID
+3. Criar metaobjeto `como_usar` com `handle` explícito + `publishable.status: ACTIVE`:
+
+```json
+{
+  "metaobject": {
+    "type": "como_usar",
+    "handle": "como-usar-<product-slug>",
+    "capabilities": { "publishable": { "status": "ACTIVE" } },
+    "fields": [
+      { "key": "file",  "value": "gid://shopify/MediaImage/<ID>" },
+      { "key": "steps", "value": "[\"Lave o rosto\",\"Aplique o tônico\",\"Coloque uma pequena quantidade\",\"Massageie em movimentos circulares\",\"Use à noite\"]" }
+    ]
+  }
+}
+```
+
+4. Anexar ao produto:
+
+```json
+{
+  "metafields": [{
+    "ownerId": "<PRODUCT_GID>",
+    "namespace": "custom",
+    "key": "como_usar_session_pdp",
+    "type": "metaobject_reference",
+    "value": "<METAOBJECT_GID>"
+  }]
+}
+```
+
+### 🔒 Safety
+- ✅ Tocar apenas `custom.como_usar_session_pdp`
+- ❌ Nunca tocar `custom.como_usar` (precauções legais) ou `custom.how_to_use` (modo de uso texto simples)
+- ✅ Steps: 5-8 passos idealmente, ação clara primeiro, contexto depois
+- ✅ Se já existe metaobjeto linkado: `metaobjectUpdate` no GID existente (preserva histórico)
+- ✅ Linguagem ANVISA-safe: "aplique", "massageie", "espalhe" — não "trata", "cura", "elimina"
+
+### 📐 Reference do produto Hidratante Pele de Porcelana
+Tem 6 passos populados — use como template de tom + escopo + estilo.
+
+---
+
+## 🔁 Convenções Goshop (estabelecidas 2026-05-27)
+
+### Status default: ACTIVE (não DRAFT)
+
+**Sempre** criar metaobjeto `como_usar` com `capabilities.publishable.status: "ACTIVE"`. Não deixar em DRAFT.
+
+```json
+{
+  "metaobject": {
+    "type": "como_usar",
+    "handle": "<product-slug>-como-usar",
+    "capabilities": { "publishable": { "status": "ACTIVE" } },
+    "fields": [...]
+  }
+}
+```
+
+### Handle naming: `<product-slug>-como-usar`
+
+Como `displayNameKey: steps` gera handle longo (concatenação das steps que estoura 255 chars), **sempre passar handle explícito** com slug do produto. Ex: `kit-pele-plena-como-usar`, `rosa-mosqueta-100-como-usar`.
