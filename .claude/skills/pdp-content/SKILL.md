@@ -5,6 +5,23 @@ description: Generate enriched Product Detail Page (PDP) content for Gobeaute br
 
 # PDP Content — Enriquecimento de Páginas de Produto
 
+> 🔒 **REGRA INVIOLÁVEL #0 — PERSISTIR LOCAL ANTES DE QUALQUER MUTATION SHOPIFY.**
+>
+> **NUNCA** chame `metaobjectCreate`, `metaobjectUpdate`, `metafieldsSet`, `fileCreate`, `productUpdate` ou qualquer mutation do Shopify ANTES de ter salvo o conteúdo em disco em `conteudos/[marca]/produtos/[produto-slug]/[metafield]/`.
+>
+> **Ordem obrigatória** (sem exceção):
+> 1. `Write` → `conteudos/[marca]/produtos/[slug]/[metafield]/textos/content.md` (markdown humano)
+> 2. `Write` → `conteudos/[marca]/produtos/[slug]/[metafield]/textos/content.json` (estruturado)
+> 3. `Write` → `conteudos/[marca]/produtos/[slug]/[metafield]/textos/shopify-payload.json` (variables prontas pras mutations)
+> 4. **Só depois** disparar `metaobjectCreate`/`metafieldsSet`/etc.
+> 5. Após sucesso: `Write` → `conteudos/[marca]/produtos/[slug]/[metafield]/shopify-result.json` com GIDs criados + timestamp
+>
+> **Por quê é inviolável**: Shopify não tem trash/restore de metaobjetos deletados. Se o usuário deletar (ou bug apagar), o disco local é a ÚNICA cópia. Padrão estabelecido após perda de 12+ blogs Kokeshi em mai/2026 por refactor em batch que pulou esse passo.
+>
+> **Sub-agents**: ao delegar via `Agent`, o prompt **DEVE** repetir essa ordem. Não delegue "popula metafield X" sem mandar "salva em `conteudos/` primeiro".
+>
+> **Verificação obrigatória antes da mutation**: confira via `Read`/`Glob` que `conteudos/[marca]/produtos/[slug]/[metafield]/textos/content.md` existe e tem conteúdo. Se não existe → STOP, salve antes.
+
 Skill especializada em gerar os 7 formatos de conteúdo de PDP das marcas Gobeaute.
 
 ## 🎯 Quando esta skill ativa
@@ -42,6 +59,7 @@ Identifique qual reference carregar:
 | Descrição curta + Bullets | `references/format-bullets.md` |
 | Ícones de benefício | `references/format-icones.md` |
 | Antes/Depois | `references/format-antes-depois.md` |
+| **[Section] Eficiência do Produto** (cards flexíveis numérico+badge — padrão Goshop atual) | `references/format-section-efficacy.md` |
 | FAQ | `references/format-faq.md` |
 | Como Usar | `references/format-como-usar.md` |
 | Ingredientes | `references/format-ingredientes.md` |
@@ -150,6 +168,7 @@ Metafields disponíveis (use exatamente estes slugs em paths):
 - `references/format-bullets.md`
 - `references/format-icones.md`
 - `references/format-antes-depois.md`
+- `references/format-section-efficacy.md` ← **padrão Goshop atual** pra `[Section] Eficiência do Produto` (`custom.section_efficacy` → metaobjeto `eficiencia_item`, lista flexível com cards numéricos + badges)
 - `references/format-faq.md`
 - `references/format-como-usar.md`
 - `references/format-ingredientes.md`
