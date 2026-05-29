@@ -1,122 +1,264 @@
 # Brandbook — By Samia
 
-> 📌 Fontes: 3 PDFs oficiais By Samia (2024): `Guia de Marca BY SAMIA 2024`, `Estética da marca - BY SAMIA` (refresh by Lureness) e `By Samia_1.pdf` (logo). Complementado com scraping do site bysamia.com.br em 2026-05-27 (catálogo completo, produtos.json, collections.json, descrições de produtos).
+> 📌 Populado a partir de 3 fontes: (1) `Guia de Marca BY SAMIA 2024` (guideline visual oficial), (2) `Estética da marca - BY SAMIA` (refresh by Lureness), (3) site oficial **bysamia.com.br** — catálogo completo, products.json, collections.json, descrições de produtos (scraping 2026-05-27). O arquivo `one page by samia.pdf` está protegido por senha e não pôde ser lido — incorporar quando a senha for fornecida.
 
 ---
 
 ## 1. Identidade da marca
 
-**Nome**: By Samia (BY SAMIA®)
-**Categoria**: Bem-estar / Aromaterapia — **Óleos Essenciais + Cosméticos Naturais + Aromacologia**
-**Tagline oficial**: *Bem estar em gotas* (clássica) / *A pausa que ativa o bem-estar* (refresh)
-**Fundação**: 2000 (desde 2001 com pionerismo em qualidade — selo "SINCE 2000")
-**Domínio**: bysamia.com.br
-**Plataforma**: Shopify
+**Nome:** By Samia (BY SAMIA®)
 
-**Posicionamento em uma frase**: Marca brasileira de bem-estar integral baseada em aromaterapia e óleos essenciais — produtos 100% naturais, veganos, cruelty-free, com rigoroso controle de qualidade e práticas sustentáveis, que convidam à pausa ativa e à reconexão com a natureza.
+**Categoria:** Bem-estar / Aromaterapia — Óleos Essenciais + Cosméticos Naturais + Aromacologia
 
-**Elevator pitch**:
-> A By Samia acredita no poder da pausa para o bem-estar. Da pausa que não é parar, mas reconectar-se — respirar fundo, sentir o corpo, acalmar a mente. Com forte tradição em aromaterapia e óleos essenciais desde 2000, oferecemos produtos naturais que unem ciência, natureza e o cuidado em gotas. Caminhamos ao seu lado, compartilhando nossa jornada de bem-estar.
+**Tagline / assinatura recorrente:** *"Bem estar em gotas"* (clássica) / *"A pausa que ativa o bem-estar"* (refresh)
 
-**Propósito**: *"Fomentar o bem-estar integral através da Aromaterapia, com um olhar compassivo e uma abordagem inovadora."*
+**Fundação:** 2000 — pionerismo em qualidade desde 2001 (selo "SINCE 2000")
 
-**Missão** (refresh): *Ser a pausa que ativa o bem-estar, aonde quer que você esteja.*
-**Visão** (refresh): *Ser a referência em bem-estar a partir da aromacologia no Brasil.*
+**Posicionamento em uma frase:** Marca brasileira de bem-estar sensorial que usa os princípios da aromaterapia para transformar momentos simples em rituais de cuidado consciente e sofisticado — equilibrando corpo, mente e ambiente por meio de fragrâncias funcionais e experiências olfativas elegantes.
 
-**Manifesto (refresh "Estética da Marca")**:
-> Acreditamos no poder da pausa para o bem-estar.
-> Da pausa que não é parar, mas sim reconectar-se.
-> Uma pausa para respirar fundo, para sentir o corpo, para acalmar a mente.
-> Uma pausa para nutrir a alma, para despertar os sentidos, para se cuidar com carinho.
-> Acreditamos na beleza dos momentos presentes, na sabedoria que reside em cada instante.
-> Na força da natureza, na energia vital que nos cura e nos transforma.
-> Na conexão humana, no poder do toque, na alegria do compartilhar.
-> Acreditamos na ciência, no conhecimento que ilumina e transforma.
-> Na educação e na capacidade de cada um em ser melhor do que ontem.
-> Caminhamos ao seu lado, compartilhando nossa jornada de bem-estar.
-> Bem vindos a By Samia, a sua pausa ativa para o bem-estar.
+**Por quê existimos (onepager):** Promover bem-estar no cotidiano, transformando momentos simples em rituais de cuidado. Por meio de experiências sensoriais, a marca cria equilíbrio entre corpo, mente e ambiente, elevando o autocuidado a um gesto consciente e sofisticado.
+
+**O que entregamos (onepager):**
+- Produtos de aromaterapia consagrados
+- Soluções de bem-estar para casa e autocuidado pessoal
+- Fórmulas que equilibram corpo, mente e ambiente
+
+**Como somos únicas (onepager):**
+- Aromaterapia como base de criação — não é estética, é propósito
+- Fragrâncias funcionais e sofisticadas
+- Usamos os princípios da aromaterapia para guiar fragrâncias e benefícios emocionais
+- Unimos bem-estar sensorial a experiências olfativas elegantes e contemporâneas
+- Expandimos de forma consistente de aromaterapia para home care e personal care
+
+**Reason to Believe (RTB — onepager):**
+- Marca já reconhecida e validada em aromaterapia
+- Autoridade no uso de fragrâncias com propósito de bem-estar
+- Capacidade de traduzir conceitos terapêuticos em produtos desejáveis
+- Extensão natural de categorias — da aromaterapia ao cuidado pessoal e doméstico
+
+**Propósito:** *"Fomentar o bem-estar integral através da Aromaterapia, com um olhar compassivo e uma abordagem inovadora."*
+
+**Missão:** *"Ser a pausa que ativa o bem-estar, aonde quer que você esteja."*
+
+**Visão:** *"Ser a referência em bem-estar a partir da aromacologia no Brasil."*
+
+**Manifesto:**
+> *Acreditamos no poder da pausa para o bem-estar.*
+> *Da pausa que não é parar, mas sim reconectar-se.*
+> *Uma pausa para respirar fundo, para sentir o corpo, para acalmar a mente.*
+> *Uma pausa para nutrir a alma, para despertar os sentidos, para se cuidar com carinho.*
+> *Acreditamos na beleza dos momentos presentes, na sabedoria que reside em cada instante.*
+> *Na força da natureza, na energia vital que nos cura e nos transforma.*
+> *Na conexão humana, no poder do toque, na alegria do compartilhar.*
+> *Acreditamos na ciência, no conhecimento que ilumina e transforma.*
+> *Na educação e na capacidade de cada um em ser melhor do que ontem.*
+> *Caminhamos ao seu lado, compartilhando nossa jornada de bem-estar.*
+> *Bem vindos à By Samia, a sua pausa ativa para o bem-estar.*
+
+**Diferenciais (proof points reais):**
+- **Tradição desde 2000** — pioneira em qualidade na aromaterapia brasileira (selo "SINCE 2000")
+- **100% naturais, veganos, cruelty-free** — sem parabenos, sulfatos, corantes, silicone ou conservantes artificiais
+- **Óleos essenciais 100% puros** — sem essências artificiais, sem diluição
+- **Carbon Free Brasil** (ID 10016400) — compensação de emissões de carbono certificada
+- **Women's Empowerment Principles** — signatária do Pacto Global da ONU
+- **Movimento Mente em Foco** (ONU) — compromisso com saúde mental
+- **Certificação Orgânico IBD**
+- **Vegan Society / Veganismo Brasil** — certificação vegana reconhecida
+- **Selo BY SAMIA GREEN** — próprio, para produtos de origem vegetal
+- **Embalagens recicláveis + coleta reversa** (Programa Beleza Verde)
+- **Formação em aromaterapia** — educação como pilar da marca (cursos, conteúdo)
+- **137+ produtos catalogados** e **56 collections** no site oficial
+- **Linha profissional (Spa Basics)** — atende terapeutas, esteticistas e atacado
 
 ---
 
 ## 2. Público-alvo
 
-**Persona principal — Mulher de bem-estar**:
-- **Gênero**: Primariamente feminino (inferido de coleções "Especial Mulheres", "Linha Mulher", comunicação visual)
-- **Localização**: Brasil
-- **Estilo de vida**: Busca bem-estar integral, autocuidado, momentos de pausa, conexão com a natureza, estilo de vida saudável e consciente; interessa-se por ritual de skincare, aromaterapia em casa, spa
-- **Motivações de compra**: relaxamento, equilíbrio emocional, sono melhor, cuidado com a pele, presença de mente, rituais cotidianos
-- **Contexto de uso**: Difusores em casa, banho aromático, massagem, roll-on no trabalho, skincare com Spa Basics
+**Persona principal — "Quem vê o autocuidado como ritual, não obrigação":**
+- **Gênero:** Mulheres e homens adultos — a marca atende ambos; a Linha Mulher e coleções "Especial Mulheres" têm foco feminino, mas o portfólio geral (home care, óleos, kits) é unissex
+- **Faixa etária:** 28 a 55 anos
+- **Localização:** Brasil inteiro — e-commerce com alcance nacional
+- **Renda:** Classes A e B — consumidor que valoriza qualidade, significado e experiência acima de preço
+- **Estilo de vida:** Busca equilíbrio na rotina. Aprecia fragrâncias, ambientes bem cuidados e produtos com significado. Vê o cuidado diário como ritual consciente — não como obrigação. Interessado em bem-estar integral, rituais, aromaterapia, yoga, meditação, skincare e casa.
 
-**Públicos secundários identificados pelas coleções**:
-- **Mães / cuidadoras** — coleção "Aromaterapia para Crianças"
-- **Pessoas com lipedema** — coleção "Produtos para Lipedema" (Ativo Slim Detox, Creme Slim)
-- **Terapeutas e esteticistas** — Linha Spa Basics profissional, Creme de Massagem Neutro 1kg (atacado)
-- **Iniciantes em aromaterapia** — coleção "Boas Vindas", Kit Trilogia Essencial ("para quem quer começar")
-- **Quem busca foco/produtividade** — coleções "Memória e Foco", "Mente Ativa"
-- **Amantes de casa** — coleções "Cheiro de Casa Limpa", Room Sprays, Aromatizadores
+**O que busca:**
+- Rituais de autocuidado com produtos que tenham propósito e significado
+- Equilíbrio entre corpo, mente e ambiente no cotidiano
+- Fragrâncias funcionais — que façam sentir algo, não apenas cheirar bem
+- Ingredientes naturais com procedência transparente
+- Sofisticação acessível — elegante sem ser distante, premium sem ser frio
+- Sono de qualidade, equilíbrio emocional, clareza mental, foco
+- Produtos que transformem o ambiente doméstico em espaço de bem-estar
+- Presentear com propósito e cuidado — um kit de aromaterapia comunica intenção
 
----
+**O que rejeita:**
+- Produtos sem propósito ou com ingredientes artificiais/sintéticos
+- Marcas que testam em animais
+- Linguagem clínica, fria, distante — quer cuidado, não prescrição
+- Promessas milagrosas sem base — é informado e desconfia de exageros
+- Urgência e agitação — o oposto do ritual que busca
+- Marcas sem comprometimento ambiental ou social genuíno
+- Produtos genéricos, sem história ou identidade
 
-## 3. Tom de voz
+**Personas secundárias:**
+- **A mãe/cuidadora:** compra para o filho — coleção "Aromaterapia para Crianças". Precisa de segurança, pureza e dosagem correta.
+- **O/A profissional de estética/terapia:** usa Spa Basics profissional, Creme de Massagem Neutro 1kg, Ativo Slim. Eficácia, embalagens práticas, compra por atacado.
+- **O/A iniciante em aromaterapia:** descobriu recentemente, não sabe por onde começar. Os kits curados (Kit Trilogia Essencial, "Boas Vindas") são a porta de entrada ideal.
+- **Quem busca foco e memória:** usa óleos de alecrim, hortelã, lemongrass no trabalho. Coleções "Memória e Foco" e "Mente Ativa".
+- **Quem tem lipedema:** busca Ativo Slim Detox, Creme Slim — público específico e fiel, encontrou uma proposta respeitosa e sem promessas abusivas.
 
-**Arquétipo**: **Cuidador** + toques de **Sábio** (educação aromacológica, ciência por trás dos óleos)
-
-**3 adjetivos que descrevem a voz da marca**:
-1. **Acolhedora e calorosa** — "Bem vindos", "Caminhamos ao seu lado", convida sem pressionar
-2. **Calma e contemplativa** — ritmo lento, convite à pausa, sem urgência
-3. **Informativa e confiável** — educa sobre óleos, INCI, modo de uso, contraindica com responsabilidade
-
-**Atributos completos do brandbook**: Cuidadosa · Calma · Inspiradora · Informativa · Acolhedora · Autêntica · Natural · Confiável · Positiva
-
-**Como FALAMOS**:
-- ✅ Convidando à pausa ativa ("A pausa que ativa o bem-estar")
-- ✅ Falando sobre reconexão, respiração, sentir o corpo, acalmar a mente
-- ✅ Tom acolhedor, próximo, compassivo
-- ✅ Reforçando autenticidade, naturalidade e conexão com a natureza
-- ✅ Educando sobre óleos essenciais, aromaterapia e aromacologia
-- ✅ Linguagem positiva, calma e inspiradora
-- ✅ "Auxilia", "promove sensação de", "convida a", "favorece"
-- ✅ Pronome "você" / "nós" — relação próxima
-- ✅ Referências sensoriais: cheiro, toque, respiração, sensação de calma
-
-**Como NÃO FALAMOS**:
-- ❌ Promessas terapêuticas ou de cura
-- ❌ Tom agressivo, ansioso ou apressado (oposto da "pausa")
-- ❌ Linguagem artificial, distante ou puramente corporativa
-- ❌ Comunicação que desconecte do natural / sustentável
-- ❌ Jargão técnico-farmacêutico sem tradução para o sensorial
-
-**Vocabulário-chave**: bem-estar, pausa, pausa ativa, gotas, óleos essenciais, aromaterapia, aromacologia, natureza, autenticidade, conexão, reconectar, respirar, equilíbrio, calma, cuidado, autocuidado, ritual, sentidos, energia vital, conhecimento, ciência, jornada, compassivo, pureza, sustentável, 100% puro, natural
-
-**Vocabulário banido** (compliance ANVISA + voz da marca):
-- ❌ "Cura", "trata doença", "elimina doença", "substitui medicamento"
-- ❌ "Milagre", "fórmula secreta"
-- ❌ "Emagrece X kg" (promessa quantificada de perda de peso)
-- ❌ "Antidepressivo natural", "ansiolítico natural"
-- ❌ "Anti-inflamatório" isolado (exige registro farmacêutico)
+**Como a By Samia ajuda:**
+Oferece um ecossistema completo de bem-estar sensorial — dos óleos essenciais puros aos cosméticos Spa Basics, dos kits curados para iniciantes às linhas profissionais. Traduz conceitos terapêuticos da aromaterapia em produtos desejáveis, elegantes e com propósito. Propõe rituais que transformam o cotidiano em experiência consciente — com autoridade de quem está no mercado desde 2000 e credenciais reais de pureza e sustentabilidade.
 
 ---
 
-## 4. Identidade visual
+## 3. Personalidade da marca
 
-> ⚠️ Dois brandbooks coexistem com identidades distintas. O "Guia de Marca 2024" = identidade clássica/operacional; "Estética da marca" by Lureness = refresh. **[VALIDAR com time de marca qual está em uso por touchpoint]**
+**Em cinco palavras:** Sofisticada · Acolhedora · Sensorial · Intencional · Elegante sem ser distante
 
-### 4.1 Paleta CLÁSSICA (Guia de Marca 2024)
+> Fonte: onepager estratégico oficial da marca — "Sofisticada, acolhedora, sensorial, intencional, elegante sem ser distante."
 
-**Primárias** — base da marca:
+**Arquétipo predominante:** **Cuidadora + Sábia** — acolhe com elegância (Cuidadora sofisticada) e educa com responsabilidade (Sábia). A By Samia não apenas vende um produto; ela propõe uma intenção, ensina como usar e eleva o gesto cotidiano a ritual consciente.
 
-| Cor | HEX | Quando usar |
+**Se a By Samia fosse uma pessoa:**
+Seria aquela amiga aromaterapeuta que te recebe com ambiente impecável e cheiro de lavanda no ar, sabe o nome científico de cada óleo e explica com calma e precisão — mas sem esnobismo. Sofisticada no gosto, acolhedora na abordagem. Não promete milagre, não pressiona. Quando você sai da conversa, já quer transformar o seu banheiro em um ritual diário.
+
+---
+
+## 4. Tom de voz
+
+**Arquétipo predominante:** **Cuidadora + Sábia** — acolhimento e educação em equilíbrio. Ritmo lento, convidativo, sensorial.
+
+**3 adjetivos que descrevem a voz da marca:**
+1. **Sofisticada e intencional** — cada palavra tem propósito; elegante sem ser distante, premium sem ser fria
+2. **Acolhedora e sensorial** — convida ao ritual, fala de cheiro, toque, respiração, sensação — nunca de produto
+3. **Informativa e confiável** — educa sobre óleos, modo de uso, contraindicações com precisão e responsabilidade
+
+**Atributos completos (brandbook oficial + onepager):** Sofisticada · Acolhedora · Sensorial · Intencional · Elegante sem ser distante · Cuidadosa · Calma · Inspiradora · Informativa · Autêntica · Natural · Confiável · Positiva
+
+---
+
+### Como FALAMOS
+
+- ✅ Convidando à **pausa ativa** — "A pausa que ativa o bem-estar", "Respire. Sinta."
+- ✅ Falando sobre **reconexão**: respiração, sentir o corpo, acalmar a mente, despertar os sentidos
+- ✅ Tom **acolhedor, próximo e compassivo** — "Caminhamos ao seu lado"
+- ✅ **Educando** sobre óleos essenciais, aromaterapia e aromacologia — com precisão, sem jargão desnecessário
+- ✅ Com **linguagem positiva, calma e inspiradora** — nada de urgência, nada de alarme
+- ✅ Usando verbos sensoriais e suaves: "auxilia", "promove sensação de", "convida a", "favorece", "proporciona"
+- ✅ Pronome **"você"** — relação próxima, direta, sem formalidade distante
+- ✅ Em **1ª pessoa do plural** quando a marca se posiciona: "acreditamos", "caminhamos", "nossa missão"
+- ✅ Com **referências sensoriais**: cheiro, toque, respiração, textura, sensação de calma
+- ✅ Com **nomes científicos dos óleos** quando o contexto é educativo (Lavandula angustifolia) — sempre acompanhados do nome popular
+- ✅ Reforçando **autenticidade, naturalidade e conexão com a natureza** em cada touchpoint
+
+---
+
+### Como NÃO FALAMOS
+
+- ❌ Nunca fazer **promessas terapêuticas ou de cura** ("trata", "cura", "elimina doença")
+- ❌ Nunca usar **tom agressivo, ansioso ou apressado** — é o oposto da "pausa" que a marca representa
+- ❌ Nunca usar **linguagem artificial, distante ou puramente corporativa**
+- ❌ Nunca desconectar da natureza e da sustentabilidade na comunicação
+- ❌ Nunca usar **jargão técnico-farmacêutico** sem tradução para o sensorial
+- ❌ Nunca fazer **claims de emagrecimento quantificados** ("emagrece X kg")
+- ❌ Nunca posicionar aromaterapia como **substituta de tratamento médico**
+- ❌ Nunca usar linguagem **de urgência ou escassez agressiva** ("CORRA!", "ÚLTIMA CHANCE!")
+
+---
+
+### Vocabulário-chave
+
+Palavras e expressões que a marca usa com frequência e que constroem identidade:
+
+- bem-estar, pausa, pausa ativa, autocuidado, ritual, jornada
+- gotas, óleos essenciais, aromaterapia, aromacologia, blend, difusor, roll-on
+- natureza, natural, pureza, autenticidade, conexão, reconectar
+- respirar, sentir, calma, equilíbrio, harmonia, energia vital
+- cuidado, compassivo, acolhimento, caminhamos ao seu lado
+- 100% puro, vegano, cruelty-free, sustentável, sem parabenos
+- ciência, conhecimento, educação, aromaterapeuta
+
+---
+
+### Vocabulário banido
+
+(compliance ANVISA + voz da marca):
+- **"Cura"** / **"trata doença"** / **"elimina doença"** / **"substitui medicamento"**
+- **"Milagre"** / **"fórmula secreta"** / **"resultado garantido em X dias"**
+- **"Emagrece X kg"** — promessa quantificada de perda de peso
+- **"Antidepressivo natural"** / **"ansiolítico natural"** — claims terapêuticos proibidos
+- **"Anti-inflamatório"** isolado — exige registro farmacêutico
+- **"Combate ansiedade"** — borderline; preferir "promove sensação de calma"
+- **"Alivia dores musculares"** — proibido para cosmético sem registro
+- **"Elimina edemas"** / **"reduz medidas em X cm"** — claim terapêutico proibido
+
+---
+
+### Pronome / pessoa
+
+- **"você"** quando falamos com a cliente — sempre
+- **"nós" / "nossa" / "a By Samia"** quando a marca se posiciona institucionalmente
+- **"eu"** apenas em conteúdo assinado por Samia (fundadora) — `[VALIDAR existência de conteúdo com voz da fundadora]`
+- Sem "tu", sem "senhora", sem formalidade clínica distante
+
+---
+
+### Estrutura típica de copy
+
+1. **Convite sensorial** — o que o produto faz sentir ("Respire fundo. Sinta a lavanda agir.")
+2. **Benefício aromacológico** — o que o aroma promove ("Favorece o equilíbrio emocional e convida à pausa")
+3. **Ingrediente-âncora** com nome popular + científico quando educativo ("Lavanda — Lavandula angustifolia")
+4. **Credencial de pureza** ("100% puro, sem conservantes artificiais, vegano, cruelty-free")
+5. **CTA acolhedor** ("Descubra", "Inclua na sua rotina", "Comece sua jornada")
+
+**Exemplos no tom certo:**
+- "Uma gota de lavanda no difusor. É tudo que você precisa pra transformar o ambiente em pausa."
+- "Bem-estar em gotas — desde 2000, caminhamos ao seu lado."
+- "Aromaterapia não é tendência. É ciência, é natureza, é cuidado de verdade."
+- "Seu ritual começa aqui. Cada óleo, uma intenção."
+- "A pausa que ativa o bem-estar. Porque cuidar de você não é luxo — é necessidade."
+
+---
+
+### Tom por canal
+
+| Canal | Tom | Particularidade |
 |---|---|---|
-| Branco | `#FFFFFF` | Fundos limpos, respiro |
-| Amarelo claro / pastel | `#F6DF88` | Cor base da marca, fundos suaves |
-| Amarelo forte / dourado | `#FFCE20` | Destaques, palavras de impacto |
-| Cinza claro | `#E1E1E1` | Fundos neutros |
-| Cinza escuro | `#6C6E70` | Tipografia secundária |
-| Preto | `#000000` | Tipografia título, contraste forte |
+| **Site / PDP** | Educativo, sensorial, com credenciais de pureza | Benefício + ingrediente + modo de uso correto + disclaimers |
+| **Instagram** | Acolhedor, visual, inspiracional | Momentos de pausa, rituais, natureza, gotas, mãos segurando frascos |
+| **Blog / Educação** | Informativo, preciso, com autoridade suave | Nome científico, diluição correta, contraindicações, aromacologia |
+| **Email marketing** | Caloroso, rituais sazonais, curadoria | "Sua pausa de hoje", kits para o momento, novidades com calma |
+| **Atendimento** | Empático, prestativo, orientativo | Orienta sobre uso correto sem prescrever; encaminha ao aromaterapeuta |
 
-**Secundárias** (linhas de produto):
+---
 
-| Cor | HEX aproximado | Linha associada |
+## 5. Identidade visual
+
+> ⚠️ Dois sistemas visuais coexistem. O "Guia de Marca 2024" = identidade clássica/operacional. A "Estética da marca" by Lureness = refresh. **[VALIDAR com time de marca qual está em uso por touchpoint antes de gerar qualquer material]**
+
+### Paleta de cores — versão CLÁSSICA (Guia de Marca 2024)
+
+**Cor institucional:**
+
+| Cor | HEX | RGB | Quando usar |
+|---|---|---|---|
+| Amarelo Forte / Dourado | `#FFCE20` | 255, 206, 32 | Cor institucional principal — destaques, palavras de impacto, CTAs |
+
+**Paleta primária (base):**
+
+| Cor | HEX | RGB | Quando usar |
+|---|---|---|---|
+| Branco | `#FFFFFF` | 255, 255, 255 | Fundos limpos, respiro |
+| Amarelo claro / pastel | `#F6DF88` | 246, 223, 136 | Cor base da marca, fundos suaves |
+| Amarelo forte / dourado | `#FFCE20` | 255, 206, 32 | Destaques, CTAs, palavras de impacto |
+| Cinza claro | `#E1E1E1` | 225, 225, 225 | Fundos neutros, separadores |
+| Cinza escuro | `#6C6E70` | 108, 110, 112 | Tipografia secundária, metadados |
+| Preto | `#000000` | 0, 0, 0 | Tipografia de título, contraste forte |
+
+**Paleta secundária por linha de aroma:**
+
+| Cor | HEX aprox. | Linha associada |
 |---|---|---|
 | Amarelo | `#FFD043` | Energizante |
 | Laranja claro | `#EEA44B` | Bem-estar |
@@ -127,9 +269,9 @@
 | Azul claro | `#B2D4D6` | Spa Basics |
 | Verde claro | `#BFDBAF` | Natural / Spa |
 
-> ⚠️ HEX exatos foram digitados no brandbook PDF com inconsistências. Recomendado capturar via eyedrop no arquivo Figma/AI original. Os valores acima são aproximações.
+> ⚠️ HEX exatos foram digitados no brandbook PDF com inconsistências. Capturar via eyedrop no arquivo Figma/AI original antes de usar em produção.
 
-### 4.2 Paleta REFRESH (Estética da marca — Lureness)
+### Paleta de cores — versão REFRESH (Estética da marca — Lureness)
 
 Organizada por mood e elementos da natureza:
 
@@ -142,415 +284,187 @@ Organizada por mood e elementos da natureza:
 | **Ar** | Verde menta → sage → floresta | Linha vegetal |
 | **Água** | Azul céu → médio → marinho | Linha hídrica |
 
-> [VALIDAR] HEX exatos da paleta refresh — amostra visual no PDF, sem valores impressos.
+> `[VALIDAR]` HEX exatos da paleta refresh — apenas amostras visuais no PDF, sem valores impressos.
 
-### 4.3 Tipografia
+**Regras de uso da paleta:**
+- ❌ Não criar cores próprias fora da paleta oficial
+- ❌ Não aplicar amarelo dourado sobre fundo branco sem checar contraste (pode ser insuficiente)
+- ❌ Não alterar os valores/códigos de cor
+- ✅ Amarelo forte como destaque pontual — não saturar o layout
+- ✅ Branco e cinza claro como fundos preferidos para garantir legibilidade
 
-**Versão CLÁSSICA**: Montserrat (Regular + Bold) — textos, artigos, social
-**Versão REFRESH**: Fahkwang (display) + Helvética (body)
+### Tipografia
 
-> [VALIDAR] Decidir qual sistema está em uso por touchpoint.
+- **Versão CLÁSSICA:** Montserrat (Regular + Bold) — textos, artigos, social
+- **Versão REFRESH:** Fahkwang (display, títulos de campanha) + Helvetica (body, textos corridos)
 
-### 4.4 Estilo fotográfico
-
-**Iluminação**: Luz natural, soft, golden hour, luz indireta pela janela
-**Ambientação**: Lifestyle de bem-estar — banheiro, vanity, spa em casa, natureza (folhas, água, flores), pausa cotidiana (cama, banho, varanda)
-**Modelos**: Mulheres brasileiras diversas (etnia, idade), expressão serena, momentos de autocuidado autênticos
-**Cor / mood**: Cremoso, amarelado dourado, sereno, natural, sensorial
-**Elementos recorrentes**: Gotas, pipetas com óleos, folhas verdes, flores (lavanda, calêndula, rosa), água em movimento, mãos segurando frascos, momento de aplicação
-**Evitar**: Estética clínica fria, cores saturadas desconectadas da paleta, modelos genéricos internacionais, agitação visual
-
-### 4.5 Ícones e ilustrações
-
-**Clássico**: Ícones sólidos pretos + line icons; ilustrações botânicas desenhadas a mão (traço orgânico P&B — folhas, lavanda, cítricos)
-**Refresh**: Símbolo proprietário — duas pétalas/folhas formando flor com gota ao centro (fusão Natureza + Extratos). Stroke fino, geométrico, orgânico.
+> `[VALIDAR]` Decidir qual sistema tipográfico está em uso por touchpoint antes de gerar materiais.
 
 ### DNA visual em 1 frase
 
 > Bem-estar em gotas — natureza, pausa e aromaterapia, expressos em amarelo dourado, traços botânicos e elementos orgânicos que convidam à reconexão.
 
+### Estilo fotográfico
+
+- **Iluminação:** Luz natural, soft, golden hour, luz indireta pela janela — nunca estúdio duro
+- **Ambientação:** Lifestyle de bem-estar — banheiro, vanity, spa em casa, natureza (folhas, água, flores), pausa cotidiana (cama, banho, varanda)
+- **Modelos:** Mulheres brasileiras diversas (etnia, idade), expressão serena, momentos de autocuidado autênticos — sem pose de moda
+- **Cor / mood:** Cremoso, amarelado dourado, sereno, natural, sensorial
+- **Elementos recorrentes:** Gotas, pipetas com óleos, folhas verdes, flores (lavanda, calêndula, rosa), água em movimento, mãos segurando frascos, momento de aplicação
+- **O que evitar:** Estética clínica fria, cores saturadas desconectadas da paleta, modelos genéricos internacionais, agitação visual, cenografia artificial
+
+### Ícones e ilustrações
+
+- **Clássico:** Ícones sólidos pretos + line icons; ilustrações botânicas desenhadas à mão (traço orgânico P&B — folhas, lavanda, cítricos)
+- **Refresh:** Símbolo proprietário — duas pétalas/folhas formando flor com gota ao centro (fusão Natureza + Extratos). Stroke fino, geométrico, orgânico.
+
+### Aplicação do logotipo
+
+- **Composição clássica:** Wordmark BY SAMIA — tipografia sem serifa bold, letterspacing amplo, elegante e limpo
+- **Composição refresh:** Símbolo (gota + pétalas) + wordmark
+- **Variações:** Positivo (sobre fundo claro) e Negativo (sobre fundo escuro — versão branca)
+- **Nunca:**
+  - ❌ Mudar a cor do logo fora da paleta oficial
+  - ❌ Escalonar ou distorcer proporções
+  - ❌ Aplicar efeitos (drop shadow, gradiente, brilho)
+  - ❌ Girar o logotipo
+  - ❌ Invadir a área de respiro ao redor do logo
+  - ❌ Usar o símbolo refresh junto com a tipografia clássica (misturar sistemas)
+
 ---
 
-## 5. Linha de produtos
+## 6. Linhas de produto
 
-### 5.1 Sub-marcas / verticais
+### 6.1 Sub-marcas / verticais
 
 | Sub-marca | Foco | Canal |
 |---|---|---|
-| **By Samia** (Aromaterapia) | Óleos essenciais, blends, roll-ons, room sprays — base da marca | B2C + atacado |
+| **By Samia Aromaterapia** | Óleos essenciais puros, blends, roll-ons, room sprays, óleos vegetais — base e núcleo da marca | B2C + atacado |
 | **By Samia Cosmetics (Spa Basics)** | Cosméticos com óleos essenciais — facial, corporal, capilar, pés & mãos | B2C + profissional |
-| **By Samia Educação** | Formação em aromaterapia/aromacologia | Cursos |
+| **By Samia Educação** | Formação em aromaterapia / aromacologia — cursos e conteúdo educativo | Cursos online/presenciais |
 
-### 5.2 Categorias de produtos (site)
+### 6.2 Categorias de produtos
 
 **Óleos Essenciais Puros** (collection: `oleos-essenciais-puros`)
-> Frascos âmbar, 5ml, 10ml ou 15ml. 100% puros, sem conservantes, parabenos ou essências artificiais. Veganos, cruelty-free.
-
-Óleos disponíveis (com handles):
-
-| Produto | Handle |
-|---|---|
-| Óleo Essencial de Lavanda 10ml | `oleo-essencial-de-lavanda-10-ml` |
-| Óleo Essencial de Alecrim 10ml | `oleo-essencial-alecrim-10-ml` |
-| Óleo Essencial de Tea Tree 10ml | `oleo-essencial-de-tea-tree-melaleuca-10ml` |
-| Óleo Essencial de Hortelã Pimenta 10ml | `oleo-essencial-de-hortela-pimenta-10-ml` |
-| Óleo Essencial de Ylang-Ylang 5ml | `oleo-essencial-de-ylang-ylang-5mls` |
-| Óleo Essencial de Bergamota 5ml | `oleo-essencial-de-bergamota-05ml` |
-| Óleo Essencial de Patchouli 5ml | `oleo-essencial-de-patchouli-5ml` |
-| Óleo Essencial de Gerânio Bourbon 5ml | `oleo-essencial-de-geranio-bourbom-5ml` |
-| Óleo Essencial de Limão Siciliano 10ml | `oleo-essencial-de-limao-siciliano-10ml` |
-| Óleo Essencial de Lemongrass 10ml | `oleo-essencial-de-lemongrass-10ml` |
-| Óleo Essencial de Lavanda Bulgária 10ml | `oleo-essencial-de-lavanda-bulgaria-10-ml` |
-| Óleo Essencial de Litsea Cubeba 10ml | `oleo-essencial-de-litsea-cubeba-verbena-tropical-10-ml` |
-| Óleo Essencial de Cedro 10ml | `oleo-essencial-de-cedro-10-ml` |
-| Óleo Essencial de Citronela 10ml | `oleo-essencial-de-citronela-de-10-ml` |
-| Óleo Essencial de Copaíba 10ml | `oleo-essencial-de-copaiba-10-ml` |
-| Óleo Essencial de Cravo 10ml | `oleo-essencial-de-cravo-10-ml` |
-| Óleo Essencial de Erva Doce 5ml | `oleo-essencial-de-erva-doce-5-ml` |
-| Óleo Essencial de Eucalipto Globulos 10ml | `oleo-essencial-de-eucalipto-globulos-10ml` |
-| Óleo Essencial de Eucalipto Radiata 5ml | `oleo-essencial-de-eucalipto-radiata-05-ml` |
-| Óleo Essencial de Gengibre 5ml | `oleo-essencial-de-gengibre-05-ml` |
-| Óleo Essencial de Grapefruit 5ml | `oleo-essencial-de-grapefruit-05ml` |
-| Óleo Essencial de Hortelã do Brasil 10ml | `oleo-essencial-de-hortela-do-brasil-10-ml` |
-| Óleo Essencial de Junípero 5ml | `oleo-essencial-de-junipero-5-ml` |
-| Óleo Essencial de Laranja 10ml | `oleo-essencial-de-laranja-10-ml` |
-| Óleo Essencial de Manjerona 5ml | `oleo-essencial-de-manjerona-5-ml` |
-| Óleo Essencial de Olíbano/Incenso 5ml | `oleo-essencial-de-olibano-incenso-5-ml` |
-| Óleo Essencial de Palmarosa 5ml | `oleo-essencial-de-palmarosa-5-ml` |
-| Óleo Essencial de Petitgrain 10ml | `oleo-essencial-de-petitgrain-10-ml` |
-| Óleo Essencial de Sândalo 5ml | `oleo-essencial-de-sandalo-5-ml` |
-| Óleo Essencial de Tangerina 10ml | `oleo-essencial-de-tangerina-10-ml` |
-| Óleo Essencial de Tea Tree 10ml | `oleo-essencial-de-tea-tree-melaleuca-10ml` |
-| Óleo Essencial de Tomilho 10ml | `oleo-essencial-de-tomilho-10-ml` |
-| Óleo Essencial de Vetiver 5ml | `oleo-essencial-de-vetiver-5-ml` |
-| Óleo Essencial de Artemisia 5ml | `oleo-essencial-de-artemisia-05ml` |
-| Óleo Essencial de Camomila Romana 5ml | `oleo-essencial-de-camomila-romana-5-ml` |
-| Óleo Essencial de Erva Baleeira 5ml | `oleo-essencial-de-erva-baleeira-05-ml` |
-| Óleo Essencial de Canela Folhas 10ml | `oleo-essencial-de-canela-folhas-10-ml` |
-| Óleo Essencial de Cipreste 5ml | `oleo-essencial-de-cipreste-05ml` |
+Frascos âmbar, 5ml ou 10ml. 100% puros, sem conservantes, parabenos ou essências artificiais. Veganos, cruelty-free. +35 óleos disponíveis (lavanda, alecrim, tea tree, hortelã, lemongrass, limão siciliano, ylang-ylang, bergamota, patchouli, sândalo, copaíba e outros).
 
 **Blends de Óleos Essenciais** (collection: `blends-de-oleos-essenciais`)
-
-| Produto | Handle | Composição |
-|---|---|---|
-| Blend Bem-Estar 15ml | `blend-de-oleos-bem-estar-15ml` | Lemongrass + Lavanda + Laranja |
-| Blend Bem-Estar 50ml | `blend-de-oleos-bem-estar-50ml` | Lemongrass + Lavanda + Laranja |
-| Blend Energizante 15ml | `blend-de-oleos-energizante-15ml` | Alecrim + Tangerina + Hortelã Pimenta + outros |
-| Blend Mulher 15ml | `blend-de-oleos-mulher-15ml` | Gerânio + Patchouli |
-| Blend Refrescante 15ml | `blend-de-oleos-refrescante-bysamia-aromaterapia-15ml` | Hortelã + Laranja + Lemongrass |
-| Blend Refrescante 50ml | `blend-de-oleos-refrescante-50ml` | Hortelã + Laranja + Lemongrass |
-| Blend Relaxante 15ml | `blend-de-oleos-relaxante-15ml` | Lavanda + Laranja + Patchouli + Lemongrass |
-| Blend Sensual 15ml | `blend-de-oleos-sensual-15ml` | [VALIDAR] |
-| Blend Zen 15ml | `blend-de-oleos-zen-15-ml` | Sândalo + Petitgrain + Laranja + Lavanda |
+Combinações sinérgicas por propósito: Bem-Estar, Energizante, Mulher, Refrescante, Relaxante, Sensual, Zen. Disponíveis em 15ml e 50ml.
 
 **Roll-Ons** (collection: `roll-on`)
-> 10ml, frasco com esfera de metal. Aplicação direta em pulsos, nuca, têmporas. Não expor ao sol após aplicação.
+10ml, frasco com esfera de metal. Aplicação direta em pulsos, nuca, têmporas. Pré-diluídos em óleo vegetal — prontos para usar. Linhas: Bem-Estar, Energizante, Mulher, Refrescante, Relaxante, Sensual, Zen.
 
-| Produto | Handle | Composição |
-|---|---|---|
-| Roll On Bem-estar 10ml | `roll-on-bem-estar-10-ml` | Laranja + Lemongrass + Lavanda |
-| Roll On Energizante 10ml | `roll-on-oleos-essencias-energizante` | Alecrim + Tangerina + outros |
-| Roll On Mulher 10ml | `roll-on-mulher-10ml` | [VALIDAR] |
-| Roll On Refrescante 10ml | `roll-on-oleos-essencias-refrescante` | Hortelã + Eucalipto + Lavanda + Jojoba |
-| Roll On Relaxante 10ml | `roll-on-oleos-essencias-relaxante` | Lavanda + Cedro + Manjerona + Jojoba |
-| Roll On Sensual 10ml | `roll-on-sensual-10ml` | [VALIDAR] |
-| Roll On Zen 10ml | `roll-on-zen-10ml` | [VALIDAR] |
-
-**Room Sprays / Águas Termais Bruma** (collections: `aromatizador-spray`, `aguas-termais-bruma`)
-
-| Produto | Handle |
-|---|---|
-| Room Spray Bem Estar 120ml | `room-spray-bem-estar` |
-| Room Spray Mulher 120ml | `room-spray-mulher-120ml` |
-| Room Spray Refrescante 120ml | `room-spray-refrescante-120ml` |
-| Room Spray Relaxante 120ml | `room-spray-relaxante-120-ml` |
-| Room Spray Zen 120ml | `room-spray-zen-120ml` |
-| Água Termal Bruma Mulher 120ml | `agua-termal-bruma-mulher-120ml` |
-| Água Termal Bruma Refrescante 120ml | `agua-termal-bruma-refrescante-120ml` |
-| Água Termal Bruma Relaxante 120ml | `agua-termal-bruma-relaxante-120ml` |
+**Room Sprays e Águas Termais Bruma** (collections: `aromatizador-spray`, `aguas-termais-bruma`)
+120ml. Aromatização de ambientes e corpo — combinam aromaterapia com hidratação leve.
 
 **Óleos para Banho e Massagem**
-
-| Produto | Handle |
-|---|---|
-| Óleo para Banho e Massagem Energizante 110ml | `oleo-para-banho-e-massagem-energizante-110ml` |
-| Óleo para Banho e Massagem Relaxante 110ml | `oleo-para-banho-e-massagem-relaxante-110ml` |
+110ml. Energizante e Relaxante. Para uso profissional e em casa.
 
 **Óleos Vegetais** (collection: `oleos-vegetais`)
-> Usados como óleos-base/carreadores para diluição de óleos essenciais. 100% puros, prensados a frio.
-
-| Produto | Handle |
-|---|---|
-| Óleo Vegetal de Abacate 30ml | `oleo-vegetal-de-abacate-30-ml` |
-| Óleo Vegetal de Abacate 1L | `oleo-vegetal-de-abacate-1lt` |
-| Óleo Vegetal de Açaí 30ml | `oleo-vegetal-de-acai-30-ml` |
-| Óleo Vegetal de Amêndoa Doce 100ml | `oleo-vegetal-de-amendoa-doce-100ml` |
-| Óleo Vegetal de Copaíba 30ml | `oleo-vegetal-de-copaiba-30-ml` |
-| Óleo Vegetal de Gergelim 100ml | `oleo-vegetal-de-gergelim-100ml` |
-| Óleo Vegetal de Girassol 100ml | `oleo-vegetal-de-girassol-100-ml` |
-| Óleo Vegetal de Girassol 1L | `oleo-vegetal-de-girassol-1lt` |
-| Óleo Vegetal de Jojoba 30ml | `oleo-vegetal-de-jojoba-30-ml` |
-| Óleo Vegetal de Rosa Mosqueta 30ml | `oleo-vegetal-de-rosa-mosqueta-30-ml` |
-| Óleo Vegetal de Semente de Uva 100ml | `oleo-vegetal-de-semente-de-uva-100ml` |
-| Óleo Vegetal de Semente de Uva 1L | `oleo-vegetal-de-semente-de-uva-1lt-nacional` |
+Carreadores para diluição de óleos essenciais. 100% puros, prensados a frio. Formatos 30ml, 100ml e 1L. Abacate, Açaí, Amêndoa Doce, Copaíba, Gergelim, Girassol, Jojoba, Rosa Mosqueta, Semente de Uva.
 
 **Linha Spa Basics — Facial** (collection: `facial`)
-
-| Produto | Handle |
-|---|---|
-| Argila Branca Complex Acalma 200g | `argila-complex-acalma-clareadora-branca` |
-| Argila Verde Complex Detox 200g | `argila-verde-complex-detox-oleosidade` |
-| Argila Complex Revitaliza 200g | `argila-complex-revitaliza-200g` |
-| Espuma de Limpeza Facial 150ml | `espuma-de-limpeza-facial` |
-| Gel Esfoliante Facial 100g | `gel-esfoliante-facial-100g` |
-| Loção Tônica Facial 150ml | `locao-tonica-facial-150ml` |
-| Sérum Facial Revitalizante 15ml | `serum-facial-revitalizante-rosas-e-acai-15ml` |
-| Sérum Facial Secativo Equilibrador 30g | `serum-facial-secativo-equilibrador` |
-| Sérum Facial Skin Boost 30g | `serum-facial-skin-boost-30g` |
-| Kit Spa Basics Facial Pele Oleosa | `kit-spa-basics-facial-pele-oleosa-e-secativa` |
+Argilas (Branca, Verde, Complex Revitaliza), Espuma de Limpeza, Gel Esfoliante, Loção Tônica, Séruns (Revitalizante, Secativo, Skin Boost). Para pele oleosa, seca e mista.
 
 **Linha Spa Basics — Corporal** (collection: `corporal`)
-
-| Produto | Handle |
-|---|---|
-| Gel Aloe Vera Neutro 250g | `gel-aloe-vera-neutro-250g` |
-| Creme Esfoliante Neutro Apricot 250g | `creme-esfoliante-neutro-apricot-250g` |
-| Creme Neutro Semente de Uva 250g | `creme-neutro-semente-de-uva-250g` |
-| Creme de Massagem Slim Spa Basics 100g | `creme-slim-emagrecedor` |
-| Creme de Massagem Neutro 1kg | `creme-de-massagem-neutro-1kg` |
-| Ativo Slim Detox 15ml | `sinergia-slim-15ml` |
-| Loção Hidratante Mulher 110ml | `locao-hidratante-mulher-110ml` |
-| Loção Hidratante Relaxante 110ml | `locao-hidratante-relaxante-110ml` |
+Gel Aloe Vera Neutro, Creme Esfoliante Apricot, Creme Neutro Semente de Uva, Creme Slim, Creme de Massagem Neutro 1kg (atacado), Ativo Slim Detox, Loções Hidratantes (Mulher, Relaxante).
 
 **Linha Spa Basics — Capilar** (collection: `capilar`)
-
-| Produto | Handle |
-|---|---|
-| Água Capilar Multifuncional 150ml | `agua-capilar-multifuncional-spa-basics-150ml` |
-| Óleo Capilar Nutritivo e Reparador 30ml | `oleo-capilar-nutritivo-e-reparador-30ml` |
+Água Capilar Multifuncional 150ml, Óleo Capilar Nutritivo e Reparador 30ml.
 
 **Linha Spa Basics — Pés e Mãos** (collection: `uso-pes-e-maos`)
-
-| Produto | Handle |
-|---|---|
-| Anex Emoliente Natural 15ml | `anex-anestesico-natural-podologia` |
-| Esfoliante Renovador para os Pés 70g | `esfoliante-renovador-para-os-pes-70g` |
-| Manteiga Hidratante para os Pés 70g | `feet-manteiga-para-os-pes-70g` |
+Anex Emoliente Natural, Esfoliante Renovador para os Pés, Manteiga Hidratante para os Pés.
 
 **Sabonetes**
-
-| Produto | Handle |
-|---|---|
-| Sabonete em Barra Vegetal Bem Estar 100g | `sabonete-em-barra-vegetal-bem-estar-100g` |
-| Sabonete em Barra Vegetal Mulher 100g | `sabonete-em-barra-vegetal-mulher-100g` |
-| Sabonete em Barra Vegetal Relaxante 100g | `sabonete-em-barra-vegetal-relaxante-100g` |
-| Sabonete Esfoliante Refrescante 100g | `sabonete-esfoliante-refrescante-100g` |
-| Sabonete Líquido Mulher 100g | `sabonete-liquido-mulher-100g` |
-| Sabonete Líquido Relaxante 100g | `sabonete-liquido-relaxante-100g` |
-| Sabonete Espuma Deep Calm | `sabonete-espuma-deep-calm` |
-| Sabonete Espuma Fresh Energy | `sabonete-espuma-fresh-energy` |
-| Sabonete Espuma Pure Balance | `sabonete-espuma-pure-balance` |
-| Sabonete Espuma Stress Free | `sabonete-espuma-stress-free` |
+Barras vegetais (Bem-Estar, Mulher, Relaxante), Esfoliante Refrescante, Líquidos (Mulher, Relaxante), Linha Espuma (Deep Calm, Fresh Energy, Pure Balance, Stress Free).
 
 **Kits** (collection: `kits`)
-
-| Produto | Handle |
-|---|---|
-| Kit Trilogia Essencial | `kit-trilogia-essencial` |
-| Kit 3 Óleos Essenciais Trio Básico | `kit-3-oleos-essenciais-trio-basico-by-samia` |
-| Kit Alegria e Bem-estar | `kit-alegria-e-bem-estar` |
-| Kit Casa Viva | `kit-casa-viva` |
-| Kit Corpo & Mente | `kit-corpo-mente` |
-| Kit Corpo Leve | `kit-corpo-leve` |
-| Kit Energia & Foco | `kit-energia-foco` |
-| Kit Equilíbrio Total | `kit-equilibrio-total` |
-| Kit Harmonia Interior | `kit-harmonia-interior` |
-| Kit Ícones Essenciais | `kit-icones-essenciais` |
-| Kit Mente Ativa | `kit-mente-ativa` |
-| Kit Noite Perfeita | `kit-noite-perfeita` |
-| Kit Noite Serena | `kit-noite-serena` |
-| Kit Performance Botânica (Premium) | `kit-performance-botanica-premium` |
-| Kit Primeira Experiência | `kit-primeira-experiencia` |
-| Kit Proteção Natural | `kit-protecao-natural` |
-| Kit Purificação Absoluta | `kit-purificacao-absoluta` |
-| Kit Respira+ | `kit-respira` |
-| Kit Rotina Equilibrada | `kit-rotina-equilibrada` |
-| Kit Sensualidade & Autoestima | `kit-sensualidade-autoestima` |
-| Kit Spa Basics Facial Pele Oleosa | `kit-spa-basics-facial-pele-oleosa-e-secativa` |
-| Duo Ar Puro | `duo-ar-puro` |
-| Duo Energia Solar | `duo-energia-solar` |
-| Duo Foco Inteligente | `duo-foco-inteligente` |
++23 kits curados por propósito: Kit Trilogia Essencial, Alegria e Bem-estar, Casa Viva, Corpo & Mente, Energia & Foco, Noite Serena, Primeira Experiência, Sensualidade & Autoestima, Spa Basics Facial, entre outros.
 
 **Chás e Infusões** (collection: `chas-infusoes`)
-
-| Produto | Handle |
-|---|---|
-| Chá Infusão Detox | `cha-infusao-detox-by-samia` |
-| Chá Infusão Energizante | `cha-infusao-energizante-by-samia` |
-| Chá Infusão Relaxante | `cha-infusao-relaxante-by-samia` |
+Chá Detox, Energizante e Relaxante.
 
 **Bases Neutras** (collection: `bases-neutras`)
-
-| Produto | Handle |
-|---|---|
-| Gel Aloe Vera Neutro 250g | `gel-aloe-vera-neutro-250g` |
-| Creme Esfoliante Neutro Apricot 250g | `creme-esfoliante-neutro-apricot-250g` |
-| Creme Neutro Semente de Uva 250g | `creme-neutro-semente-de-uva-250g` |
-| Creme de Massagem Neutro 1kg | `creme-de-massagem-neutro-1kg` |
+Para profissionais e DIY — Gel Aloe Vera, Creme Esfoliante, Creme Neutro, Creme de Massagem 1kg.
 
 **Acessórios**
+Aromatizador Elétrico Plug.
 
-| Produto | Handle |
-|---|---|
-| Aromatizador Elétrico Plug | `aromatizador-eletrico-plug` |
+### 6.3 Produtos-âncora (priorizar em conteúdo, kits e PDP)
 
-### 5.3 Collections completas (56 — atualizado 2026-05-27)
+- **Blend Relaxante 15ml** — hero da linha Relaxante, mais buscado
+- **Roll On Relaxante 10ml** — formato de maior conveniência, mais vendido da linha roll-on
+- **Óleo Essencial de Lavanda 10ml** — âncora de toda a aromaterapia, porta de entrada universal
+- **Kit Trilogia Essencial** — hero de aquisição para iniciantes
+- **Ativo Slim Detox 15ml** — âncora da coleção Lipedema, público muito fiel
+- **Argila Verde Complex Detox 200g** — âncora facial
 
-Collections editoriais / de marketing:
+### 6.4 Garantias e selos universais da marca
 
-| Handle | Título |
-|---|---|
-| `mais-vendidos` | Mais Vendidos (33 produtos) |
-| `mais-vendidos-do-site` | Mais vendidos do site |
-| `mais-vendidos-e-lancamentos` | Mais Vendidos e Lançamentos |
-| `favoritos-do-site` | Favoritos do site |
-| `favoritos-em-promocao` | Favoritos em promoção |
-| `os-queridinhos` | Os queridinhos |
-| `outlet-da-by-samia` | Outlet da By Samia |
-| `boas-vindas` | Boas Vindas |
-| `frontpage` | Página inicial |
-| `kits` | Kits |
-| `spa-basics` | Spa Basics (22 produtos) |
-
-Collections por linha de produto:
-
-| Handle | Título |
-|---|---|
-| `oleos-essenciais-puros` | Óleos Essenciais Puros |
-| `oleos-vegetais` | Óleos Vegetais |
-| `blends-de-oleos-essenciais` | Blends de Óleos Essenciais |
-| `blends-e-roll-ons` | Blends e Roll Ons |
-| `roll-on` | Roll On |
-| `aguas-termais-bruma` | Águas Termais Bruma |
-| `aromatizador-spray` | Aromatizador Spray |
-| `bases-neutras` | Bases Neutras |
-| `chas-infusoes` | Chás Infusões |
-
-Collections por uso:
-
-| Handle | Título |
-|---|---|
-| `facial` | Uso Facial |
-| `corporal` | Uso Corporal |
-| `capilar` | Uso Capilar |
-| `uso-pes-e-maos` | Uso Pés e Mãos |
-| `cuidados-com-o-corpo` | Cuidados com o corpo |
-| `vitaminas` | Vitaminas |
-
-Collections por linha de aroma/propósito:
-
-| Handle | Título |
-|---|---|
-| `aromas-bem-estar` | Aromas Bem Estar |
-| `aromas-energizante` | Aromas Energizante |
-| `aromas-para-mulher` | Aromas para Mulher |
-| `aromas-refrescante` | Aromas Refrescante |
-| `aromas-relaxante` | Aromas Relaxante |
-| `aromas-sensual` | Aromas Sensual |
-| `aromas-zen` | Aromas Zen |
-| `nossas-linhas-by-samia` | Nossas Linhas By Samia |
-
-Collections por necessidade/problema:
-
-| Handle | Título |
-|---|---|
-| `3-oleos-essenciais-para-a-ansiedade` | 3 Óleos Essenciais para a Ansiedade |
-| `aromaterapia-para-criancas` | Aromaterapia para Crianças |
-| `aromaterapia-para-estresse-e-ansiedade` | Aromaterapia para Estresse e Ansiedade |
-| `cheiro-de-casa-limpa` | Cheiro de Casa Limpa |
-| `especial-mulheres` | Especial Mulheres |
-| `memoria-e-foco` | Memória e Foco |
-| `mente-ativa` | Mente Ativa |
-| `produtos-para-lipedema` | Produtos para Lipedema |
-| `spa-em-casa` | Spa em Casa |
-| `pra-complementar-seu-ritual` | Pra complementar seu ritual |
-
-### 5.4 Diferenciais comunicados
-
-- Forte tradição em aromaterapia desde 2000
-- Produtos 100% naturais, veganos, cruelty-free
-- Sem parabenos, sulfatos, corantes, silicone, conservantes artificiais
-- 100% puros (óleos essenciais) — sem essências artificiais
-- Práticas sustentáveis: Carbon Free, IBD Orgânico, embalagens recicláveis, coleta reversa
-- Comprometimento social: Women's Empowerment Principles + Movimento Mente em Foco (ONU)
-- Acessível
-
-### 5.5 Selos e certificações
-
-- Carbon Free Brasil (ID 10016400)
-- Women's Empowerment Principles (Pacto Global ONU)
-- Movimento Mente em Foco
-- Vegan Society / Veganismo Brasil
-- BY SAMIA GREEN (selo próprio — produtos vegetais)
-- Orgânico IBD
-- Pionerismo Qualidade (desde 2001)
-- Embalagens Recicláveis / Compensação Ambiental
-- Coleta Reversa de Embalagens (Beleza Verde)
+Aplicáveis a **100% do catálogo:**
+- ✅ **100% naturais** — sem conservantes, parabenos, sulfatos, silicone artificiais
+- ✅ **Vegano e cruelty-free**
+- ✅ **Óleos essenciais 100% puros** (linha de OEs puros)
+- ✅ **Carbon Free Brasil** (compensação de carbono certificada)
+- ✅ **Embalagens recicláveis**
+- ✅ **Coleta reversa** (Programa Beleza Verde)
+- ✅ **Certificação Orgânico IBD** (linhas aplicáveis)
+- ✅ **Tradição desde 2000** — mais de 25 anos de expertise em aromaterapia
 
 ---
 
-## 6. Ingredientes-âncora da marca
+## 7. Ingredientes-âncora da marca
 
-### 6.1 Óleos essenciais (núcleo)
+### 7.1 Óleos essenciais (núcleo)
 
 | Ingrediente | Nome científico | O que comunica |
 |---|---|---|
-| **Lavanda** | Lavandula angustifolia | Calma, relaxamento, sono tranquilo — o mais versátil |
-| **Lemongrass** | Cymbopogon citratus | Frescor, vitalidade, equilíbrio emocional |
-| **Tea Tree / Melaleuca** | Melaleuca alternifolia | Pureza, limpeza, proteção natural |
-| **Alecrim** | Rosmarinus officinalis | Foco, memória, energia mental |
-| **Laranja** | Citrus sinensis | Alegria, leveza, otimismo |
-| **Litsea Cubeba** | Litsea cubeba | Aroma cítrico-herbal sofisticado (Linha Bem-Estar) |
-| **Gerânio Bourbon** | Pelargonium graveolens | Equilíbrio feminino, floral |
-| **Patchouli** | Pogostemon cablin | Terroso, aterrador, sensual |
-| **Sândalo** | Santalum album | Meditação, Zen, profundidade |
-| **Ylang-Ylang** | Cananga odorata | Sensualidade, romance, alegria |
-| **Petitgrain** | Citrus aurantium | Equilíbrio, elegância, calma zen |
-| **Bergamota** | Citrus bergamia | Equilíbrio emocional, frescor cítrico |
-| **Hortelã Pimenta** | Mentha piperita | Frescor intenso, energia, clareza |
-| **Copaíba** | Copaifera spp. | Origem brasileira, cuidado natural |
+| **Lavanda** | *Lavandula angustifolia* | Calma, relaxamento, sono tranquilo — o mais versátil e amado |
+| **Lemongrass** | *Cymbopogon citratus* | Frescor, vitalidade, equilíbrio emocional |
+| **Tea Tree / Melaleuca** | *Melaleuca alternifolia* | Pureza, limpeza, proteção natural |
+| **Alecrim** | *Rosmarinus officinalis* | Foco, memória, energia mental |
+| **Laranja** | *Citrus sinensis* | Alegria, leveza, otimismo |
+| **Litsea Cubeba** | *Litsea cubeba* | Aroma cítrico-herbal sofisticado (Linha Bem-Estar) |
+| **Gerânio Bourbon** | *Pelargonium graveolens* | Equilíbrio feminino, floral |
+| **Patchouli** | *Pogostemon cablin* | Terroso, aterrante, sensual |
+| **Sândalo** | *Santalum album* | Meditação, Zen, profundidade |
+| **Ylang-Ylang** | *Cananga odorata* | Sensualidade, romance, alegria |
+| **Petitgrain** | *Citrus aurantium* | Equilíbrio, elegância, calma zen |
+| **Bergamota** | *Citrus bergamia* | Equilíbrio emocional, frescor cítrico |
+| **Hortelã Pimenta** | *Mentha piperita* | Frescor intenso, energia, clareza mental |
+| **Copaíba** | *Copaifera spp.* | Origem brasileira, cuidado natural, raízes nacionais |
 
-### 6.2 Óleos vegetais (base/carreadores)
+### 7.2 Óleos vegetais (bases/carreadores)
 
 | Ingrediente | Benefício principal |
 |---|---|
-| Jojoba | Equilíbrio sebáceo, textura leve |
-| Rosa Mosqueta | Nutrição, anti-idade, regeneração |
-| Amêndoa Doce | Hidratação suave e nutritiva |
-| Semente de Uva | Antioxidante, leveza |
-| Aloe Vera | Hidratação profunda, calmante |
-| Copaíba | Cicatrizante, anti-inflamatório (uso cosmético) |
+| Jojoba | Equilíbrio sebáceo, textura leve e não gordurosa |
+| Rosa Mosqueta | Nutrição, anti-idade, regeneração celular |
+| Amêndoa Doce | Hidratação suave e nutritiva, boa para pele sensível |
+| Semente de Uva | Antioxidante, textura levíssima |
+| Aloe Vera | Hidratação profunda, calmante, refrescante |
+| Copaíba | Calmante cosmético, cicatrizante, origem brasileira |
 
-### 6.3 Ativos cosméticos (Spa Basics)
+### 7.3 Ativos cosméticos (Spa Basics)
 
 | Ingrediente | Produto | Função |
 |---|---|---|
-| Argila Branca + Dolomita | Argila Branca Complex Acalma | Calmante, clareadora |
-| Argila Verde | Argila Verde Complex Detox | Purificação, oleosidade |
-| Argila Rosa + Açaí + Hibisco | Argila Complex Revitaliza | Anti-envelhecimento |
-| Óleos Rosas + Camomila + Olíbano | Sérum Facial Revitalizante | Rejuvenescimento |
-| Melaleuca + Copaíba + Gerânio | Sérum Secativo Equilibrador | Acne, oleosidade |
-| Café Verde + Semente de Uva | Creme Slim | Drenagem, firmeza |
-| Karité + Coco + Aloe | Manteiga Pés | Hidratação intensa |
-| Alga Marinha + Óleo de Coco | Água Capilar | Fortalecimento capilar |
+| Argila Branca + Dolomita | Argila Branca Complex Acalma | Calmante, clareadora, pele sensível |
+| Argila Verde | Argila Verde Complex Detox | Purificação, controle de oleosidade |
+| Argila Rosa + Açaí + Hibisco | Argila Complex Revitaliza | Anti-envelhecimento, luminosidade |
+| Óleos de Rosas + Camomila + Olíbano | Sérum Facial Revitalizante | Rejuvenescimento suave |
+| Melaleuca + Copaíba + Gerânio | Sérum Secativo Equilibrador | Acne, oleosidade, pele mista |
+| Café Verde + Semente de Uva | Creme Slim | Drenagem, firmeza aparente |
+| Karité + Coco + Aloe | Manteiga para os Pés | Hidratação intensiva, ressecamento |
+| Alga Marinha + Óleo de Coco | Água Capilar | Fortalecimento capilar, brilho |
 
 ---
 
-## 7. Claims aprovados (com nota regulatória)
+## 8. Claims aprovados
 
-> ⚠️ Claims abaixo são os usados atualmente nas descrições de produto do site bysamia.com.br. Alguns têm risco regulatório ANVISA e estão sinalizados.
+> ⚠️ Sempre confirmar valores atualizados com o time comercial. Cruzar obrigatoriamente com `_shared/compliance-anvisa.md` antes de publicar qualquer peça.
 
-| Claim | Produto exemplo | Status ANVISA |
+| Claim | Produto exemplo | Status |
 |---|---|---|
 | "100% puro, sem conservantes, parabenos ou essências artificiais" | Óleos essenciais | ✅ OK |
 | "Vegano, cruelty-free" | Todos | ✅ OK |
@@ -558,109 +472,213 @@ Collections por necessidade/problema:
 | "Promove sensação de calma" | Lavanda, Relaxante | ✅ OK |
 | "Favorece um ambiente propício ao relaxamento" | Room Sprays | ✅ OK |
 | "Proporciona aroma refrescante e energizante" | Blend Refrescante | ✅ OK |
-| "Auxilia na concentração" | Blend Energizante | ⚠️ Borderline — manter como sensorial |
-| "Auxilia no combate à insônia" | Lavanda (site atual) | ⚠️ Risco — reformular: "favorece ambiente propício ao sono" |
-| "Ação antisséptica e antibacteriana" | Tea Tree (site atual) | ⚠️ Risco — para cosmético requer comprovação. OK se claim de "limpeza" |
-| "Alivia dores musculares" | Hortelã (site atual) | 🚨 Proibido para cosmético sem registro farmacêutico |
-| "Tratamento de queimaduras leves" | Lavanda (site atual) | 🚨 Proibido — exige registro |
-| "Combate à ansiedade" | Lemongrass, Ylang (site atual) | 🚨 Proibido — claim terapêutico |
-| "Redução de estresse" | Blends (site atual) | ⚠️ Borderline — "convida à pausa" é mais seguro |
-| "Elimina edemas" | Ativo Slim (site atual) | 🚨 Proibido — claim terapêutico |
-| "Redução de medidas" | Creme Slim (site atual) | 🚨 Proibido sem estudo + registro |
-| "Anti-inflamatório" | Patchouli, Copaíba (site) | 🚨 Proibido para cosmético |
+| "Favorece um ambiente propício ao sono" | Lavanda, Relaxante | ✅ OK (reformulação segura) |
+| "Auxilia na concentração" | Blend Energizante | ⚠️ Manter como sensorial — não quantificar |
+| "Bem estar em gotas" | Marca | ✅ OK |
+| "A pausa que ativa o bem-estar" | Marca | ✅ OK |
+| "Desde 2000, tradição em aromaterapia" | Marca | ✅ OK |
+| "Produtos naturais com rigoroso controle de qualidade" | Marca | ✅ OK |
+| "Tonifica e promove sensação de firmeza aparente" | Creme Slim | ✅ OK (reformulação) |
+| "Auxilia na sensação de leveza" | Ativo Slim Detox | ✅ OK (reformulação) |
 
-**Taglines aprovadas**:
-- "Bem estar em gotas" ✅
-- "A pausa que ativa o bem-estar" ✅
-- "Desde 2000, tradição em aromaterapia" ✅
-- "Produtos naturais com rigoroso controle de qualidade" ✅
+**Claims problemáticos no site atual — reformular antes de replicar:**
+
+| Claim atual (site) | Problema | Reformulação segura |
+|---|---|---|
+| "Auxilia no combate à insônia" | Claim terapêutico | "Favorece um ambiente propício ao sono" |
+| "Combate ansiedade" | Claim terapêutico | "Promove sensação de calma" / "Convida à reconexão" |
+| "Anti-inflamatório" | Exige registro farmacêutico | "Calmante" / "Suavizante" |
+| "Elimina edemas" | Proibido para cosmético | "Auxilia na sensação de leveza" |
+| "Redução de medidas" | Proibido sem estudo registrado | "Tonifica e promove sensação de firmeza aparente" |
+| "Alivia dores musculares" | Proibido para cosmético | "Proporciona sensação de relaxamento muscular" |
+| "Ação antisséptica e antibacteriana" | Exige comprovação para cosmético | "Purifica e limpa naturalmente" |
+
+**Disclaimer recomendado para claims de bem-estar:**
+> *"Este produto não é medicamento e não substitui orientação médica. Aromaterapia é prática complementar de bem-estar."*
+
+**Disclaimer para óleos essenciais:**
+> *"Não utilizar por via oral. Diluir em óleo vegetal antes do uso tópico. Não expor ao sol após aplicação de óleos fotossensibilizantes. Consulte um aromaterapeuta habilitado."*
 
 ---
 
-## 8. Compliance específico
+## 9. Compliance específico
+
+> Diretrizes próprias da By Samia. Sempre cruzar com `_shared/compliance-anvisa.md`.
 
 **Termos proibidos** (cosméticos — ANVISA RDC 07/2015 + RDC 530/2021):
-- "Cura", "trata doença", "elimina doença", "substitui medicamento"
-- "Ansiolítico", "antidepressivo" natural
-- "Elimina edemas", "reduz medidas em X cm"
+- "Cura" / "trata doença" / "elimina doença" / "substitui medicamento"
+- "Ansiolítico natural" / "antidepressivo natural"
+- "Elimina edemas" / "reduz medidas em X cm"
 - "Anti-inflamatório" como claim principal isolado
-- "Emagrece X kg"
-- Promessas com % de resultado sem estudo registrado
+- "Emagrece X kg" — promessa quantificada de perda de peso
+- Qualquer claim com % de resultado sem estudo registrado e aprovado pela ANVISA
 
-**Reformulações seguras para o território da marca**:
+**Termos sensíveis (precisam de ajuste ou disclaimer):**
+- "Auxilia na concentração" → ok, mas nunca quantificar nem prometer efeito garantido
+- "Favorece o sono" → ok, mas nunca "combate insônia" ou "trata distúrbios do sono"
+- "Calmante" em cosméticos → ok para sensação, não para efeito terapêutico
+- "Purifica o ambiente" → ok para room sprays, não como claim antibacteriano sem laudo
+- "Proporciona sensação de relaxamento muscular" → ok; "alivia dores musculares" → proibido
 
-| Claim arriscado (site atual) | Reformulação segura |
-|---|---|
-| "Auxilia no combate à insônia" | "Favorece um ambiente propício ao sono" / "Convida à pausa noturna" |
-| "Combate ansiedade" | "Promove sensação de calma" / "Convida à reconexão" |
-| "Anti-inflamatório" | "Calmante" / "Suavizante" (para cosméticos) |
-| "Elimina edemas" | "Auxilia na sensação de leveza" |
-| "Redução de medidas" | "Tonifica e promove sensação de firmeza aparente" |
-| "Alivia dores musculares" | "Proporciona sensação de relaxamento muscular" |
-| "Bactericida / antisséptico" | "Purifica e limpa naturalmente" (para produtos de limpeza) |
+**Sobre óleos essenciais (específico da categoria):**
+- Sempre indicar que **não são para uso por via oral**
+- Sempre recomendar **diluição em óleo vegetal** antes do uso tópico
+- Sempre alertar sobre **fotossensibilidade** (cítricos: limão, bergamota, laranja)
+- Sempre recomendar **consulta a aromaterapeuta habilitado** para usos terapêuticos
 
-**Disclaimers obrigatórios**:
+**Disclaimers obrigatórios:**
 - Cosméticos: *"Resultados podem variar conforme tipo de pele e uso correto do produto."*
 - Aromaterapia: *"Este produto não é medicamento e não substitui orientação médica. Aromaterapia é prática complementar."*
-- Roll-ons / produtos fotossensibilizantes: *"Não expor ao sol após a aplicação."*
-- Óleos essenciais: *"Não utilizar por via oral. Diluir em óleo vegetal antes do uso tópico. Consulte um aromaterapeuta habilitado."*
+- Óleos fotossensibilizantes: *"Não expor ao sol após a aplicação."*
+- Óleos essenciais: *"Não utilizar por via oral. Diluir em óleo vegetal antes do uso tópico."*
+
+**Aprovação necessária antes de publicar:**
+- Qualquer claim com %, horas ou efeito mensurável — confirmar laudo com time comercial
+- Conteúdo sobre saúde mental (ansiedade, insônia, estresse) — sempre com disclaimer
+- Before/after com transformações físicas — só com aprovação de regulatório
 
 ---
 
-## 9. Temas autorizados pra blog
+## 10. Temas autorizados pro blog
 
-**Aromaterapia / óleos essenciais (núcleo editorial)**:
-- Guia dos óleos mais vendidos: lavanda, alecrim, tea tree, laranja, lemongrass
-- Como usar óleos essenciais em casa (difusores, colares, inalação, banho)
-- Óleos essenciais vs. essências artificiais: a diferença que importa
-- Como diluir óleos essenciais corretamente (tabela de diluição)
-- Blends para diferentes momentos do dia
-- Aromaterapia para crianças: o que é seguro?
-- Óleos essenciais para o ambiente do trabalho (foco, produtividade)
-- Os 3 óleos para ansiedade (tema de collection ativa)
-- Memória e foco com aromaterapia (tema de collection ativa)
+**Linha editorial By Samia** — sempre alinhada ao DNA "pausa ativa e bem-estar integral por meio da aromaterapia":
 
-**Bem-estar / lifestyle (expansão)**:
-- A pausa ativa: o que é e como praticar no dia a dia
-- Rituais de autocuidado com aromaterapia
-- Banho aromático: como transformar o banho em ritual
-- Aromaterapia e meditação / yoga
-- Como criar um spa em casa (tema de collection ativa)
-- Cheiros que transformam o ambiente doméstico (tema: "Cheiro de Casa Limpa")
-- Aromaterapia e sono: rotina noturna completa
+### Pilares editoriais
 
-**Cosméticos naturais / pele (Spa Basics)**:
-- Guia de argilas faciais (branca vs. verde vs. rosa)
-- Sérum facial: como escolher o certo para seu tipo de pele
-- Esfoliação suave e renovação: o ritual semanal
-- Cuidado com os pés: rotina completa com aromaterapia
-- Cabelos saudáveis com óleos essenciais
+1. **Aromaterapia e óleos essenciais (núcleo editorial)**
+   - Guia dos óleos mais vendidos: lavanda, alecrim, tea tree, laranja, lemongrass
+   - Como usar óleos essenciais em casa (difusores, inalação, banho, roll-on)
+   - Óleos essenciais vs. essências artificiais: a diferença que importa
+   - Como diluir corretamente (tabela de diluição por idade e uso)
+   - Blends para diferentes momentos do dia
+   - Aromaterapia para crianças: o que é seguro, o que evitar
+   - Os 3 óleos para ansiedade (tema de collection ativa)
+   - Memória e foco com aromaterapia
 
-**Sustentabilidade e marca**:
-- Por que somos Carbon Free
-- Produção vegana e cruelty-free: o compromisso By Samia
-- Women's Empowerment: empoderamento feminino na By Samia
+2. **Bem-estar e rituais (expansão)**
+   - A pausa ativa: o que é e como praticar no dia a dia
+   - Rituais de autocuidado com aromaterapia
+   - Banho aromático: como transformar o banho em ritual completo
+   - Aromaterapia e meditação / yoga / respiração consciente
+   - Como criar um spa em casa
+   - Cheiros que transformam o ambiente doméstico
+   - Aromaterapia e sono: rotina noturna completa
 
-**Educação / aromacologia**:
-- O que é aromacologia e como ela difere da aromaterapia
-- A ciência por trás dos aromas e bem-estar
+3. **Ciência e educação (aromacologia)**
+   - O que é aromacologia e como ela difere da aromaterapia
+   - A ciência por trás dos aromas e o bem-estar
+   - Nome científico vs. nome popular: por que importa conhecer os dois
+   - Como ler o rótulo de um óleo essencial (pureza, adulterantes, origem)
+   - pH, segurança e contraindicações em aromaterapia
 
-**Restrições editoriais ABSOLUTAS**:
-- ❌ Claim terapêutico ("trata", "cura", "elimina doença")
-- ❌ Promessa de perda de peso quantificada
-- ❌ Sugestão de substituir tratamento médico por aromaterapia
-- ❌ Comparações com remédios ou suplementos farmacêuticos
-- ✅ Sempre incluir disclaimer em temas próximos a saúde mental ou física
+4. **Cosméticos naturais / pele (Spa Basics)**
+   - Guia de argilas faciais (branca vs. verde vs. rosa — qual é a sua?)
+   - Sérum facial: como escolher o certo para seu tipo de pele
+   - Cuidado com os pés: rotina completa com aromaterapia
+   - Cabelos saudáveis com óleos essenciais
+   - Esfoliação suave: o ritual semanal que transforma a pele
+
+5. **Sustentabilidade e propósito**
+   - Por que a By Samia é Carbon Free
+   - Produção vegana e cruelty-free: o compromisso que não é marketing
+   - Women's Empowerment: empoderamento feminino na By Samia
+   - Coleta reversa e embalagens recicláveis: o que você faz com seu frasco vazio
+
+### ⚠️ Restrições editoriais (inegociáveis)
+
+- ❌ Nunca fazer claim terapêutico ("trata", "cura", "elimina doença")
+- ❌ Nunca prometer perda de peso, redução de medidas quantificada
+- ❌ Nunca sugerir que aromaterapia substitui tratamento médico — sempre incluir disclaimer
+- ❌ Nunca comparar com remédios ou suplementos farmacêuticos
+- ❌ Nunca comparar com marcas concorrentes diretas pelo nome
+- ✅ Sempre incluir disclaimer de bem-estar quando o tema tocar saúde mental ou física
 
 ---
 
-## 10. Anti-exemplos
+## 11. Anti-exemplos
 
-- **Marcas similares cuja comunicação evitamos**: marcas que prometem efeito terapêutico/medicinal direto; pseudo-ciência de "óleo mágico"; farmacêuticas frias e clínicas; wellness internacionais sem brasilidade
-- **Tipos de conteúdo proibidos**: Promessa de cura, antes/depois com transformações irreais, conteúdo que romantiza substituir tratamento médico, claims de emagrecimento, % sem fonte
-- **Estética visual rejeitada**: Clínica/hospitalar fria, cores saturadas desconectadas da paleta, agitação visual, modelos genéricos, ausência de elementos botânicos
+### Aplicações visuais rejeitadas
+- ❌ Logo com efeitos (drop shadow, gradiente, brilho)
+- ❌ Logo escalonado, distorcido ou girado
+- ❌ Logo em cores fora da paleta oficial
+- ❌ Logo com área de respiro invadida
+- ❌ Misturar símbolo refresh com tipografia clássica
+- ❌ Cor criada fora da paleta oficial
+- ❌ Amarelo dourado sobre branco sem verificar contraste de acessibilidade
+
+### Comunicação verbal rejeitada
+- ❌ Tom clínico/farmacêutico frio ("o tratamento aromático do desequilíbrio emocional")
+- ❌ Promessa de cura ou efeito terapêutico quantificado
+- ❌ Linguagem de urgência e escassez agressiva ("só hoje!", "CORRA!")
+- ❌ Qualquer texto que infantilize a cliente ou que soe condescendente
+- ❌ Pseudo-ciência sem embasamento ("óleo mágico que resolve tudo")
+- ❌ Tom aspiracional de luxo distante — By Samia é acessível e próxima
+
+### Marcas / categorias cuja comunicação evitamos
+- Marcas que prometem efeito terapêutico/medicinal direto sem registro
+- Wellness com apelo de pseudo-ciência sem fundamento aromacológico
+- Marcas farmacêuticas com linguagem clínica fria
+- Wellness internacionais sem brasilidade ou conexão com a realidade do consumidor brasileiro
+
+### Tipos de conteúdo proibidos
+- ❌ Promessa de cura, before/after com transformações físicas irreais
+- ❌ Conteúdo que romantize substituir tratamento médico por aromaterapia
+- ❌ Claims de emagrecimento ou redução de medidas quantificados
+- ❌ % de resultado sem laudo registrado
+- ❌ Depoimentos de clientes com claims terapêuticos não editados
+
+### Estética visual rejeitada
+- ❌ Estética clínica/hospitalar fria — labs, bisturis, jaleco branco
+- ❌ Cores saturadas desconectadas da paleta (neon, roxo, azul elétrico)
+- ❌ Agitação visual — layouts cheios, tipografia gritante, múltiplas fontes
+- ❌ Modelos genéricos de banco de imagem sem autenticidade
+- ❌ Ausência de elementos botânicos, orgânicos ou naturais
 
 ---
 
-📝 **Última atualização**: 2026-05-27 — complementado com scraping completo de bysamia.com.br: 137 produtos catalogados, 56 collections mapeadas, handles confirmados, claims reais do site auditados contra ANVISA.
-📝 **Status**: ✅ Brandbook completo com dados reais do site. ⚠️ **Pendências**: (1) decidir identidade clássica vs. refresh (logo, tipografia, paleta HEX exatos), (2) capturar HEX exatos da paleta refresh no Figma/AI original, (3) revisar claims problemáticos no site ao vivo (insônia, ansiedade, anti-inflamatório, dores musculares, edemas), (4) popular fichas individuais de produto em `produtos/[slug].md` para produtos principais, (5) [VALIDAR] persona detalhada com dados reais de CRM.
+## 12. Presença digital
+
+| Canal | Handle / URL |
+|---|---|
+| Site | bysamia.com.br |
+| Instagram | `[VALIDAR handle oficial]` |
+| Outros canais | `[VALIDAR com time de marketing]` |
+| Atendimento | Help Center integrado ao site |
+| Rastreamento | Central de rastreamento no site |
+
+### Estrutura de navegação do site
+
+| Seção | Sub-seções |
+|---|---|
+| Óleos Essenciais | Puros / Blends / Vegetais |
+| Roll-Ons | Por linha de aroma |
+| Spa Basics | Facial / Corporal / Capilar / Pés e Mãos |
+| Kits | Por propósito |
+| Por necessidade | Ansiedade / Foco / Sono / Mulher / Crianças / Lipedema |
+| Outlet | Favoritos em promoção |
+| Educação | Cursos de aromaterapia |
+
+### Seções de conteúdo no site
+- **"Mais Vendidos"** — curadoria dos produtos com maior saída
+- **"Boas Vindas"** — collection de entrada para iniciantes em aromaterapia
+- **"Os Queridinhos"** — seleção editorial curada pela marca
+- **Collections por necessidade** — Memória e Foco, Ansiedade, Crianças, Lipedema, Spa em Casa, Cheiro de Casa Limpa
+
+---
+
+## 13. Visão de longo prazo
+
+A By Samia nasceu no universo dos óleos essenciais puros e construiu ao longo de mais de 25 anos uma autoridade sólida em aromaterapia no Brasil. Sua visão estratégica é **tornar-se a referência nacional em bem-estar baseado em aromacologia** — expandindo da aromaterapia para um ecossistema completo de bem-estar.
+
+**Pilares dessa evolução:**
+- **Educação como diferencial** — a By Samia Educação (cursos de formação) transforma clientes em embaixadoras e consolida autoridade técnica da marca
+- **Cosméticos com propósito** (Spa Basics) — expansão natural da aromaterapia para cuidado da pele e do corpo, com a mesma filosofia de pureza e naturalidade
+- **Compromisso ESG real** — Carbon Free, Women's Empowerment, Coleta Reversa, Orgânico IBD — a sustentabilidade não é posicionamento de marketing, é operação
+
+A trajetória: **óleos essenciais puros → ecossistema de bem-estar → referência nacional em aromacologia**.
+
+---
+
+📝 **Última atualização:** 2026-05-28 — reestruturado no padrão Ápice/Lescent com base em: `Guia de Marca BY SAMIA 2024` + `Estética da marca - BY SAMIA` (Lureness) + scraping completo de bysamia.com.br (137 produtos, 56 collections) + `one page by samia.pdf` (onepager estratégico oficial — lido e incorporado em 2026-05-28).
+
+📝 **Status:** ✅ Brandbook reestruturado e completo com todas as fontes disponíveis incorporadas. ⚠️ **Pendências:** (1) decidir identidade clássica vs. refresh por touchpoint `[VALIDAR com time de marca]`, (2) capturar HEX exatos da paleta refresh no Figma/AI original, (3) validar handle Instagram e outros canais digitais `[VALIDAR com time de marketing]`, (4) revisar claims problemáticos no site ao vivo (insônia, ansiedade, anti-inflamatório, dores musculares, edemas), (5) validar persona com dados reais de CRM.

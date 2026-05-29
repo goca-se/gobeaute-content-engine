@@ -1,0 +1,61 @@
+slug,nome,numero,genero,linha,tipo,volumes-disponiveis,familia-olfativa,inspiracao,marca-referencia,status,handle-shopify
+no-2-delicate-londres,Délicate Londres,2,feminino,classica,fragrancias,25ml;100ml,Floral Verde,English Pear & Freesia,Jo Malone,ativo,
+no-4-festive-miami,Festive Miami,4,feminino,classica,fragrancias,25ml,Floral Frutal,212 VIP Rosé,Carolina Herrera,ativo,nº-4-festive-miami-copy-copy
+no-5,,,feminino,classica,fragrancias,25ml,Floral,Chloé,Chloé,ativo,
+no-6-gracieuse-cannes,Gracieuse Cannes,6,feminino,classica,fragrancias,25ml;100ml,Floral Oriental,Coco Mademoiselle,Chanel,ativo,
+no-7-sublime-versailles,Sublime Versailles,7,feminino,classica,fragrancias,25ml,Floral,J'adore,Dior,ativo,nº-7-sublime-versailles-copy-copy
+no-8-intense-toulouse,Intense Toulouse,8,feminino,classica,fragrancias,25ml,Floral,L'Interdit,Givenchy,ativo,nº-8-intense-toulouse-copia
+no-9,,,feminino,classica,fragrancias,25ml,Gourmand Floral,Good Girl,Carolina Herrera,ativo,
+no-10-belle-grasse,Belle Grasse,10,feminino,classica,fragrancias,25ml;100ml,Floral,Delina,Parfums de Marly,ativo,
+no-11,,,feminino,classica,fragrancias,25ml,Floral Aromático,Libre,YSL,ativo,
+no-22-mystique-veneza,Mystique Veneza,22,feminino,classica,fragrancias,25ml,Floral Almiscarado,Paradoxe,Prada,ativo,
+no-26,,,feminino,classica,fragrancias,25ml,Floral,Miss Dior,Dior,ativo,
+no-28-icon-copenhague,Icon Copenhague,28,feminino,classica,fragrancias,25ml,Floral,Idôle,Lancôme,ativo,
+no-30,,,feminino,classica,fragrancias,25ml,Floral Frutal,Scandal,JP Gautier,ativo,
+no-12,,,masculino,classica,fragrancias,25ml;100ml,Aromático Amadeirado,Bleu de Chanel,Chanel,ativo,
+no-13-feroce-provence,Féroce Provence,13,masculino,classica,fragrancias,25ml;100ml,Aromático Fresco,Sauvage,Dior,ativo,
+no-14-brave-manhattan,Brave Manhattan,14,masculino,classica,fragrancias,25ml,Aromático,212 VIP Black,Carolina Herrera,ativo,nº-14-brave-manhattan-copy
+no-16,,,masculino,classica,fragrancias,25ml,Fresco Aquático,Homme Sport,Dior,ativo,
+no-17,,,masculino,classica,fragrancias,25ml,Aromático Fresco,Allure Homme Édition Blanche,Chanel,ativo,
+no-18,,,masculino,classica,fragrancias,25ml,Aquático,L'Eau d'Issey,Issey Miyake,ativo,
+no-19,,,masculino,classica,fragrancias,25ml,Aromático Amadeirado,Réplica Jazz Club,Maison Margiela,ativo,
+no-20-brise-amalfi,Brise Amalfi,20,masculino,classica,fragrancias,25ml;100ml,Aquático,Acqua di Giò,Giorgio Armani,ativo,
+no-23-legacy-lisboa,Legacy Lisboa,23,masculino,classica,fragrancias,25ml,Gourmand Almiscarado,Erba Pura,Xerjoff,ativo,nº-23-legacy-lisboa-25ml
+no-25,,,masculino,classica,fragrancias,25ml,Aromático Fresco,Allure Homme Sport,Chanel,ativo,
+no-27-golden-dubai,Golden Dubai,27,masculino,classica,fragrancias,25ml,Floral Amadeirado,Baccarat Rouge 540,Maison Francis Kurkdjian,ativo,
+no-29,,,masculino,classica,fragrancias,25ml,Fougère Amadeirado,Aventus,Creed,ativo,
+no-31-authentic-milano,Authentic Milano,31,masculino,classica,fragrancias,25ml,Aromático,My Self,YSL,ativo,nº-31-authentic-milano-25ml
+no-33,,,masculino,classica,fragrancias,25ml,Aromático,Ambassador,Gisada,ativo,
+no-35-valiant-roma,Valiant Roma,35,masculino,classica,fragrancias,25ml,Oriental Amadeirado,Le Male,JP Gautier,ativo,nº-35-valiant-roma-25-ml
+midnight-manhattan,Midnight Manhattan,,unissex,elixir,fragrancias,25ml;100ml,Amadeirado,,Lescent Autoral,waitlist,midnight-manhattan-linha-elixir
+rose-monaco,Rosé Monaco,,feminino,elixir,fragrancias,25ml;100ml,Floral,,Lescent Autoral,waitlist,rose-monaco-linha-elixir-25ml
+essenza-portofino,Essenza Portofino,,unissex,elixir,fragrancias,25ml;100ml,Amadeirado,,Lescent Autoral,waitlist,essenza-portofino-linha-elixir-25ml
+blush-grasse,Blush Grasse,,feminino,elixir,fragrancias,25ml;100ml,Floral,,Lescent Autoral,waitlist,blush-grasse-linha-elixir-25ml
+noir-mojave,Noir Mojave,,masculino,elixir,fragrancias,25ml;100ml,Aromático Amadeirado,,Lescent Autoral,waitlist,noir-mojave-linha-elixir-25ml
+ivory-muscat,Ivory Muscat,,unissex,arabe,fragrancias,25ml;100ml,Oriental Almiscarado,,Lescent Árabe,waitlist,ivory-muscat-linha-arabe
+creamy-dubai,Creamy Dubai,,unissex,arabe,fragrancias,25ml;100ml,Oriental Gourmand,,Lescent Árabe,waitlist,creamy-dubai-linha-arabe
+energy-of-istambul,Energy of Istambul,,masculino,arabe,fragrancias,25ml;100ml,Aromático Oriental,,Lescent Árabe,waitlist,energy-of-istambul-linha-arabe
+oud-sahara,Oud Sahara,,masculino,arabe,fragrancias,25ml;100ml,Oriental Amadeirado Oud,,Lescent Árabe,waitlist,oud-sahara-linha-arabe
+midnight-abu-dhabi,Midnight Abu Dhabi,,unissex,arabe,fragrancias,25ml;100ml,Oriental Amadeirado,,Lescent Árabe,waitlist,midnight-abu-dhabi-linha-arabe
+tender-anatolia,Tender Anatolia,,feminino,arabe,fragrancias,25ml;100ml,Floral Oriental,,Lescent Árabe,waitlist,tender-anatolia-linha-arabe
+halo-of-oman,Halo of Oman,,masculino,arabe,fragrancias,25ml;100ml,Oriental Amadeirado,,Lescent Árabe,waitlist,halo-of-oman-arabes
+body-splash-glow-no-1,Body Splash Glow Nº 1,1,feminino,corpo,acessorio,200ml,Gourmand Floral,La Vie Est Belle,Lancôme,esgotado,
+creme-maos-no-1-jolie-provence,Creme Desodorante para Mãos Nº 1 Jolie Provence,1,feminino,corpo,acessorio,brinde,Gourmand Floral,La Vie Est Belle,Lancôme,ativo,creme-desodorante-para-maos-nº-1-jolie-provence-brinde
+caixa-de-presente,Caixa de Presente,,unissex,acessorio,acessorio,,,,,ativo,
+kit-trilogia-essencial-feminino-25ml,Kit Trilogia Essencial Feminino,2+6+10,feminino,kit,kit,25ml,Variado — Floral,,Lescent,ativo,kit-nº-2-nº-6-nº-10-25ml
+kit-trilogia-essencial-masculino-25ml,Kit Trilogia Essencial Masculino,12+13+20,masculino,kit,kit,25ml,Variado — Aromático/Aquático,,Lescent,ativo,
+kit-trilogia-essencial-feminino-100ml,Kit Trilogia Essencial Feminino,2+6+10,feminino,kit,kit,100ml,Variado — Floral,,Lescent,ativo,
+kit-trilogia-essencial-masculino-100ml,Kit Trilogia Essencial Masculino,12+13+20,masculino,kit,kit,100ml,Variado — Aromático/Aquático,,Lescent,ativo,
+kit-trilogia-gold,Kit Trilogia Gold,23+25+27,masculino,kit,kit,25ml,Variado — Oriental/Aromático,,Lescent,ativo,kit-trilogia-gold-n-23-n-25-n-27-25ml
+kit-quarteto-hits-femininos,Kit Quarteto Hits Femininos,2+6+7+8,feminino,kit,kit,25ml,Variado — Floral,,Lescent,ativo,kit-trilogia-essencial-nº-2-nº-6-nº-10-25ml-copy
+kit-quarteto-hits-masculinos,Kit Quarteto Hits Masculinos,12+13+19+20,masculino,kit,kit,25ml,Variado — Aromático/Aquático,,Lescent,ativo,kit-trilogia-essencial-masculina-nº-12-nº-13-nº-20-25ml-copy-3
+kit-quarteto-classico-masculino,Kit Quarteto Clássico Masculino,13+17+18+20,masculino,kit,kit,25ml,Variado — Aromático/Aquático,,Lescent,ativo,
+kit-sexteto-feminino,Kit Sexteto Feminino,2+5+9+11+26+30,feminino,kit,kit,25ml,Variado — Floral/Gourmand,,Lescent,ativo,kit-sexteto-feminino-nº-1-nº-5-nº-9-nº-11-nº-26-nº-30-25ml
+kit-sexteto-masculino,Kit Sexteto Masculino,12+13+19+20+29+33,masculino,kit,kit,25ml,Variado — Aromático/Aquático/Amadeirado,,Lescent,ativo,kit-sexteto-masculino-nº-12-nº-13-nº-14-nº-20-nº-27-nº-33-25ml
+kit-dueto-delicate-londres-100ml,Kit Dueto Délicate Londres,2+2,feminino,kit,kit,100ml+25ml,Floral Verde,English Pear & Freesia,Jo Malone,ativo,
+kit-dueto-gracieuse-cannes-100ml,Kit Dueto Gracieuse Cannes,6+6,feminino,kit,kit,100ml+25ml,Floral Oriental,Coco Mademoiselle,Chanel,ativo,
+kit-dueto-brise-amalfi-100ml,Kit Dueto Brise Amalfi,20+20,masculino,kit,kit,100ml+25ml,Aquático,Acqua di Giò,Giorgio Armani,ativo,
+kit-dueto-feroce-provence-100ml,Kit Dueto Féroce Provence,13+13,masculino,kit,kit,100ml+25ml,Aromático Fresco,Sauvage,Dior,ativo,
+kit-dueto-hit-no-26-no-28,Kit Dueto Hit Exclusivo Nº 26 + Nº 28,26+28,feminino,kit,kit,25ml,Variado — Floral,,Lescent,ativo,
+kit-dueto-essencial-no-2-no-13,Kit Dueto Essencial,2+13,unissex,kit,kit,25ml,Variado — Floral/Aromático,,Lescent,ativo,
+kit-dueto-elegancia-no-2-no-20,Kit Dueto Elegância,2+20,unissex,kit,kit,25ml,Variado — Floral/Aquático,,Lescent,ativo,presente-pra-ela-nº-2-nº-20-25ml-copia
