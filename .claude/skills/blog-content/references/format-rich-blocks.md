@@ -12,8 +12,12 @@ Blocos visuais ricos que enriquecem o blog post além de parágrafo + imagem. **
 | `pill-list` | Persona-fit ("isso é pra você se…") / checklist leve | 0-1 |
 | `callout-soft` | Disclaimer, aviso ANVISA, dica leve | 1-2 |
 | `comparison-table` | Diferencial do produto vs. concorrentes/alternativas | 0-1 |
+| `direct-answer` | Resposta direta extraível pela IA (AI SEO) — após o lead | 1 (obrigatório em blogs novos) |
+| `faq-block` | Seção FAQ do tema (AI SEO + FAQPage schema) — antes da conclusão | 1 (obrigatório em blogs novos) |
 
 **Regra de ouro**: alternar parágrafo → bloco rico → parágrafo → bloco rico. Nunca empilhar 3 blocos ricos seguidos.
+
+> 🤖 `direct-answer` e `faq-block` vêm do **AI SEO Playbook** (`ai-seo-playbook.md`) — obrigatórios em blogs **novos**; não aplicar retroativamente sem pedido explícito.
 
 ---
 
@@ -460,6 +464,108 @@ Para mostrar o **diferencial do produto vs. concorrentes** (sem citar marca espe
 
 ---
 
+## 7️⃣ `direct-answer` — Resposta direta extraível (AI SEO)
+
+Bloco answer-first logo **após o lead**: 2-4 frases factuais que respondem a pergunta central do artigo por completo. É o trecho que AI Overviews, ChatGPT e Gemini extraem e citam.
+
+### Anatomia
+
+- Label pequeno "Resposta rápida" (eyebrow)
+- Body em destaque (1 parágrafo, bold ou fundo suave)
+- Autocontido: quem ler só isso já tem a resposta
+
+### JSON
+
+```json
+{
+  "type": "direct-answer",
+  "props": {
+    "question": "Como cuidar de cachos no verão sem ressecar?",
+    "answer": "Cachos ressecam no verão pela combinação de raios UV, cloro e sal, que removem a camada lipídica do fio. A solução é hidratação contínua (2-3x por semana), proteção UV via leave-in e enxágue imediato após mar ou piscina. Com esses três gestos, é possível manter definição e brilho a estação inteira."
+  }
+}
+```
+
+### HTML
+
+```html
+<section class="rb rb-direct-answer">
+  <p class="rb-direct-answer__label" aria-hidden="true">Resposta rápida</p>
+  <p class="rb-direct-answer__body"><strong>Cachos ressecam no verão pela combinação de raios UV, cloro e sal, que removem a camada lipídica do fio. A solução é hidratação contínua (2-3x por semana), proteção UV via leave-in e enxágue imediato após mar ou piscina.</strong></p>
+</section>
+```
+
+### Regras
+
+- ✅ Posição fixa: imediatamente após o lead, antes do primeiro H2
+- ✅ 2-4 frases, linguagem factual simples (padrão Wikipedia), autocontidas
+- ✅ A `question` deve refletir o prompt que um usuário faria a uma IA (prompt research)
+- ❌ Sem links de produto, sem CTA, sem nome de produto (educacional puro)
+- ❌ Não duplicar o lead — o lead engata, o `direct-answer` responde
+
+---
+
+## 8️⃣ `faq-block` — Perguntas frequentes (AI SEO + FAQPage schema)
+
+Seção FAQ no fim do artigo (antes da conclusão). Formato nativo da IA: pergunta entra, resposta sai. Sempre acompanha JSON-LD `FAQPage` (ver `format-seo-meta.md`).
+
+### Anatomia
+
+- H2 "Perguntas frequentes sobre [tema]"
+- 4-6 pares pergunta (H3) + resposta (1 parágrafo, 40-80 palavras)
+- Respostas autocontidas (fazem sentido extraídas do contexto)
+- Visual: lista vertical com separadores suaves, sem accordion/collapse (texto visível = texto indexável)
+
+### JSON
+
+```json
+{
+  "type": "faq-block",
+  "props": {
+    "heading": "Perguntas frequentes sobre cachos no verão",
+    "items": [
+      {
+        "question": "Posso molhar o cabelo no mar todos os dias?",
+        "answer": "Pode, desde que enxágue com água doce logo depois e mantenha hidratação 2-3x por semana. O sal em contato prolongado desidrata o fio, mas o enxágue imediato remove a maior parte do resíduo antes que isso aconteça."
+      },
+      {
+        "question": "Leave-in com proteção UV substitui a máscara de hidratação?",
+        "answer": "Não. O leave-in protege o fio da agressão externa (UV, calor), enquanto a máscara repõe água e nutrientes já perdidos. No verão, os dois são complementares: máscara 2-3x por semana e leave-in diariamente antes da exposição ao sol."
+      }
+    ]
+  }
+}
+```
+
+### HTML
+
+```html
+<section class="rb rb-faq">
+  <h2 class="rb-faq__heading">Perguntas frequentes sobre cachos no verão</h2>
+  <div class="rb-faq__item">
+    <h3 class="rb-faq__question">Posso molhar o cabelo no mar todos os dias?</h3>
+    <p class="rb-faq__answer">Pode, desde que enxágue com água doce logo depois e mantenha hidratação 2-3x por semana. O sal em contato prolongado desidrata o fio, mas o enxágue imediato remove a maior parte do resíduo antes que isso aconteça.</p>
+  </div>
+  <div class="rb-faq__item">
+    <h3 class="rb-faq__question">Leave-in com proteção UV substitui a máscara de hidratação?</h3>
+    <p class="rb-faq__answer">Não. O leave-in protege o fio da agressão externa (UV, calor), enquanto a máscara repõe água e nutrientes já perdidos. No verão, os dois são complementares: máscara 2-3x por semana e leave-in diariamente antes da exposição ao sol.</p>
+  </div>
+</section>
+```
+
+### Regras
+
+- ✅ 4-6 perguntas derivadas de prompt research (perguntas reais que usuário faria a uma IA)
+- ✅ Resposta 40-80 palavras, autocontida, factual, **começa respondendo** (Sim/Não/Direto)
+- ✅ Posição: depois da última seção de conteúdo, antes da conclusão
+- ✅ Gerar JSON-LD `FAQPage` com as MESMAS strings (pergunta e resposta idênticas ao HTML)
+- ✅ Compliance ANVISA em cada resposta (são as mais extraídas/citadas)
+- ❌ Accordion/collapse via JS — texto deve ser visível e estático
+- ❌ Respostas com referência interna ("como vimos acima", "neste artigo")
+- ❌ Pergunta promocional ("Por que a [Marca] é a melhor?") — FAQ é informacional
+
+---
+
 ## 🎨 Estilo visual — paleta por marca
 
 Os blocos devem **adaptar cores ao DNA da marca**. Consultar `brandbook.md` da marca pra:
@@ -490,6 +596,8 @@ Padrão recomendado para artigo com `n_sections=5`:
 [H1]
 [Lead]
 
+🔹 [direct-answer]   ← resposta extraível pela IA (blogs novos — obrigatório)
+
 [H2 — Seção 1: Definição/Contexto]
 [Parágrafo]
 
@@ -519,12 +627,14 @@ Padrão recomendado para artigo com `n_sections=5`:
 
 🔹 [comparison-table]   ← reforço final
 
+🔹 [faq-block]   ← FAQ do tema + FAQPage JSON-LD (blogs novos — obrigatório)
+
 [Conclusão]
 
 🔹 [product-cta-card]   ← CTA fechamento (pode repetir ou usar outro produto)
 ```
 
-**Mínimo absoluto** por post: 1 `product-cta-card` + 2 outros blocos ricos.
+**Mínimo absoluto** por post: 1 `product-cta-card` + 2 outros blocos ricos. **Blogs novos**: + `direct-answer` + `faq-block` (AI SEO).
 
 ---
 
@@ -580,3 +690,5 @@ O renderizador HTML lê o array em ordem e emite o HTML correspondente a cada bl
 - [ ] Disclaimer ANVISA presente se tema toca saúde?
 - [ ] Todos os CTAs apontam pra produto/collection real?
 - [ ] JSON do article tem `body` em array (não objeto)?
+- [ ] [Blogs novos] `direct-answer` após o lead?
+- [ ] [Blogs novos] `faq-block` com 4-6 Q&As + JSON-LD `FAQPage` correspondente?

@@ -95,6 +95,8 @@ Cada item de `body[]` no `article.json` é renderizado conforme seu `type`:
 | `pill-list` | `<section class="rb rb-pill-list">` |
 | `callout-soft` | `<aside class="rb rb-callout-soft">` |
 | `comparison-table` | `<section class="rb rb-comparison">` |
+| `direct-answer` | `<section class="rb rb-direct-answer">` |
+| `faq-block` | `<section class="rb rb-faq">` |
 
 Para os HTMLs detalhados de cada bloco rico, ver `format-rich-blocks.md`.
 
@@ -221,6 +223,18 @@ O `<style>` usa CSS variables com fallback para cores neutras. **Antes de emitir
   .rb-comparison__item { padding: 0.4rem 0; font-size: 0.92rem; color: var(--brand-text); display: flex; align-items: flex-start; gap: 0.5rem; }
   .rb-comparison__check { color: var(--brand-primary); font-weight: 700; flex-shrink: 0; }
   .rb-comparison__x { color: var(--brand-warn); font-weight: 700; flex-shrink: 0; }
+
+  /* 7. DIRECT ANSWER (AI SEO — blogs novos) */
+  .rb-direct-answer { background: var(--brand-bg-soft); border: 1px solid #ece6d8; border-radius: var(--rb-radius); padding: 1.4rem 1.6rem; }
+  .rb-direct-answer__label { font-size: 0.75rem; letter-spacing: 0.08em; font-weight: 700; color: var(--brand-primary); text-transform: uppercase; margin: 0 0 0.5rem; }
+  .rb-direct-answer__body { margin: 0; font-size: 1.05rem; line-height: 1.6; }
+
+  /* 8. FAQ BLOCK (AI SEO — blogs novos) */
+  .rb-faq__heading { font-family: Georgia, serif; font-size: 1.6rem; margin: 0 0 1rem; }
+  .rb-faq__item { border-top: 1px solid #ece6d8; padding: 1rem 0; }
+  .rb-faq__item:last-child { border-bottom: 1px solid #ece6d8; }
+  .rb-faq__question { font-family: Georgia, serif; font-size: 1.15rem; margin: 0 0 0.5rem; color: var(--brand-text); }
+  .rb-faq__answer { margin: 0; font-size: 0.95rem; color: var(--brand-text); line-height: 1.6; }
 </style>
 ```
 

@@ -3,6 +3,8 @@
 Padrão editorial pra blog Gobeaute. Funciona em todas as marcas (ajustando tom).
 
 > 🚨 **SEO técnico:** este arquivo cobre estrutura editorial. Pra checklist SEO completo (estrutura HTML, headings, schema markup, performance/CWV, alt text, links, conteúdo E-E-A-T), ver **[`seo-playbook.md`](./seo-playbook.md)** — é mandatório seguir antes de publicar.
+>
+> 🤖 **AI SEO (blogs novos):** todo blog NOVO segue também o **[`ai-seo-playbook.md`](./ai-seo-playbook.md)** — H2s em formato de pergunta (≥50%), bloco `direct-answer` após o lead, `faq-block` + `FAQPage` JSON-LD antes da conclusão, fontes citadas, linguagem factual. NÃO aplicar retroativamente em blogs já publicados sem pedido explícito.
 
 > 🚨 **Princípio editorial #1 — Lead-first, sempre.**
 > O blog é uma peça **editorial**, não um catálogo. Primeira coisa visível ao leitor é **texto** (H1 + lead engatando o problema). NUNCA: imagem, CTA-box, lista de produtos, galeria, banner. O leitor precisa **se reconhecer no problema** antes de ver qualquer produto.
@@ -41,12 +43,16 @@ Padrão editorial pra blog Gobeaute. Funciona em todas as marcas (ajustando tom)
 - "[Pergunta da persona]?"
 - "Por que [insight inesperado]"
 
+**🤖 AI SEO (blogs novos)**: preferir títulos nos 5 formatos que a IA mais cita — guia de compra ("Como escolher..."), guia de custo ("Quanto custa... em 2026"), roundup ("Top 5..."), comparativo de categorias, glossário. Derivar o título do **prompt research** (a pergunta que o usuário faria a uma IA). Ver `ai-seo-playbook.md`.
+
 ### 2. Lead (1 parágrafo, 50-80 palavras)
 
 - Engata o leitor em 2-3 frases
 - Reforça o problema/contexto
 - Promete o que o artigo entrega
 - Inclui keyword-foco no primeiro parágrafo
+
+**🤖 AI SEO (blogs novos)**: logo após o lead, inserir bloco `direct-answer` (2-4 frases factuais que respondem a pergunta central do artigo por completo, sem produto/CTA). É o trecho que AI Overviews e LLMs extraem. Schema em `format-rich-blocks.md` (7️⃣).
 
 ### 3. Body (4-6 seções com H2/H3) + blocos ricos
 
@@ -57,6 +63,12 @@ Cada seção:
 - Bullets/listas SÓ quando agregam — não trocar prosa por bulletismo
 - Posicionar ilustrações entre seções (uma a cada 2-3 seções)
 
+**🤖 AI SEO (blogs novos) — estrutura FAQ nos subheadings**:
+- **≥ 50% dos H2 em formato de pergunta** ("Por que os cachos ressecam no verão?" em vez de "Ressecamento no verão"), sem forçar onde ficar artificial
+- Abaixo de cada H2-pergunta, a **primeira frase responde direto** (1-2 frases factuais e autocontidas), depois desenvolve
+- Linguagem simples e factual (padrão Wikipedia): especificar concentrações, frequências, tempos, tipos de cabelo/pele. A voz da marca vive nos exemplos e no ritmo — os fatos, em frases declarativas
+- **2-3 dados concretos com fonte citada** por artigo (link externo autoritativo) — artigos que citam fontes têm +30% de chance de serem citados pela IA
+
 **🚨 Princípio editorial #2 — Contexto antes de produto.**
 
 A **primeira metade do artigo** (até 50% do word count) é **EDUCACIONAL puro**: explicar o problema, a ciência, o porquê. Sem links de produto, sem CTAs hard-sell. O leitor precisa **confiar na profundidade** antes de receber recomendação comercial.
@@ -65,13 +77,15 @@ Produtos aparecem **a partir da metade do artigo**, **integrados ao narrative** 
 
 **Estrutura preferida (não rígida)**:
 1. Lead engatando o problema (sem produto)
-2. H2: O que é / por que acontece (educacional puro, com data/science)
-3. H2: Quem sofre mais (persona fit, ainda sem produto)
-4. H2: Como resolver (entra o primeiro produto, inline no texto)
-5. H2: Ingredientes / mecanismo (mais ciência, mais 1-2 produtos inline)
-6. H2: Rotina prática (menciona produtos no contexto da ação)
-7. Galeria final ("Os produtos deste guia") — opcional, ao FIM
-8. Conclusão + CTA soft inline
+2. `direct-answer` — resposta extraível pela IA (blogs novos)
+3. H2: O que é / por que acontece (educacional puro, com data/science)
+4. H2: Quem sofre mais (persona fit, ainda sem produto)
+5. H2: Como resolver (entra o primeiro produto, inline no texto)
+6. H2: Ingredientes / mecanismo (mais ciência, mais 1-2 produtos inline)
+7. H2: Rotina prática (menciona produtos no contexto da ação)
+8. Galeria final ("Os produtos deste guia") — opcional, ao FIM
+9. `faq-block`: H2 "Perguntas frequentes sobre [tema]" com 4-6 Q&As autocontidas (blogs novos) + `FAQPage` JSON-LD
+10. Conclusão + CTA soft inline
 
 **🚨 Obrigatório — blocos ricos**: o body **DEVE** intercalar seções com pelo menos **3-4 blocos ricos** (ver `format-rich-blocks.md`):
 
@@ -82,6 +96,9 @@ Produtos aparecem **a partir da metade do artigo**, **integrados ao narrative** 
 - 1+ `callout-soft` (disclaimer ANVISA quando tema toca saúde)
 - 0-1 `comparison-table` (diferencial vs. concorrentes sem nomear)
 - 0-1 `product-gallery` (grid de 3-5 produtos com imagens reais Shopify CDN) — **AO FIM, antes da conclusão**
+- 1 `direct-answer` (após o lead) — **obrigatório em blogs novos** (AI SEO)
+- 1 `faq-block` (antes da conclusão, com `FAQPage` JSON-LD) — **obrigatório em blogs novos** (AI SEO)
+- `pill-list` passa a ser **obrigatório em blogs novos** (casos de uso explícitos = long-tail pra IA)
 
 Regra: alternar **parágrafo de seção → bloco rico → parágrafo de seção → bloco rico**.
 
@@ -396,3 +413,4 @@ O `body` é um **array ordenado** que mistura `section` (texto comum) com blocos
 - [ ] CTA com produto/linha real?
 - [ ] Compliance ANVISA em todas as seções?
 - [ ] Ilustrações posicionadas?
+- [ ] [Blogs novos] Checklist AI SEO completo (`ai-seo-playbook.md`): ≥50% H2-pergunta, `direct-answer`, `faq-block` + `FAQPage`, fontes citadas, `pill-list`?

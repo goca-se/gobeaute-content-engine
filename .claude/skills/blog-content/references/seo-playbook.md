@@ -1,6 +1,8 @@
 # SEO Playbook — Blog Posts Gobeaute
 
 > **Source of truth de SEO técnico pra todos os blog posts das marcas Gobeaute.** Toda skill que gera conteúdo de blog (single, batch, retroativo) deve seguir os 20 pontos abaixo. Validação obrigatória antes de publicar.
+>
+> 🤖 **Blogs NOVOS seguem também o [`ai-seo-playbook.md`](./ai-seo-playbook.md)** (AEO/GEO — ChatGPT, Gemini, AI Overviews): H2s como perguntas, `direct-answer`, `faq-block` + `FAQPage` JSON-LD, fontes citadas, linguagem factual, formatos preferidos pela IA. Não se aplica retroativamente a posts já publicados sem pedido explícito.
 
 ---
 
@@ -161,7 +163,10 @@ Quando aplicável, adicionar:
 ### 6.3 Product schema (quando o post menciona produtos específicos)
 Para posts product-heavy, anexar `Product` schema com `aggregateRating` se houver reviews.
 
-### 6.4 Validação
+### 6.4 FAQPage schema (blogs novos — obrigatório)
+Todo blog novo carrega um `faq-block` (4-6 Q&As) e o JSON-LD `FAQPage` correspondente, com strings idênticas ao HTML. Exemplo completo em `format-seo-meta.md`; racional e regras em `ai-seo-playbook.md`.
+
+### 6.5 Validação
 Validar em [search.google.com/test/rich-results](https://search.google.com/test/rich-results) antes de publicar (mínimo: 1 post por marca por trimestre).
 
 ---
@@ -287,7 +292,15 @@ Imagens:
 Schema:
 - [ ] `<script type="application/ld+json">` com `BlogPosting` no final do body
 - [ ] Headline, description, image, datePublished, author, publisher, mainEntityOfPage
+- [ ] [Blogs novos] `FAQPage` JSON-LD espelhando o `faq-block`
 - [ ] Validado em rich-results test
+
+AI SEO (blogs novos — ver `ai-seo-playbook.md`):
+- [ ] ≥50% dos H2 em formato de pergunta, com resposta direta na 1ª frase
+- [ ] `direct-answer` após o lead
+- [ ] `faq-block` com 4-6 Q&As autocontidas antes da conclusão
+- [ ] 2-3 dados concretos com fonte citada (link externo autoritativo)
+- [ ] Tema em 1 dos 5 formatos preferidos pela IA (ou flag justificando)
 
 Performance:
 - [ ] `@media (min-width:992px)` constraint na cover (≤900px desktop)

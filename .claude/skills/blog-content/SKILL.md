@@ -1,6 +1,6 @@
 ---
 name: blog-content
-description: Generate rich, visually engaging blog content for Gobeaute brands — single posts OR batch of N posts at once. Produces SEO-optimized articles with title, lead, body interleaving prose and rich editorial blocks (product CTA cards driven by real Shopify product handles with real CDN images + real prices, dark highlight pull-quotes, benefit grids, persona-fit pill lists, soft callouts with ANVISA disclaimers, comparison tables vs. unnamed competitors), conclusion, and CTA. Resolves all product/collection data from Shopify Admin GraphQL via handle — never invents image, price, title or description. Generates cover (16:9) and supporting illustrations (4:5) via piapp-image-gen (NOT product card images — those come from Shopify CDN). Produces SEO meta (slug, meta description, og tags, Schema.org Article JSON-LD) and exports Shopify-ready HTML with a scoped <style> block carrying brand colors. Auto-publishes to Shopify as UNPUBLISHED by default for human review. Built-in retries for PiApp (failed jobs → regenerate) and Shopify (file failed → re-upload via staged) with exponential backoff. Batch mode supports N posts with fail-soft (1 fails, rest continue) and only 2 approval gates total (validation + execution). Always consults brand-context first and validates theme against brand-context/[brand]/blog-themes.md. Saves output to conteudos/[marca]/blogs/[slug]/{textos,imagens,conteudo-html,prompts}/. Triggers when user asks for blog post, article, content marketing, editorial piece, calendário de blogs, or any long-form content for a Gobeaute brand.
+description: Generate rich, visually engaging blog content for Gobeaute brands — single posts OR batch of N posts at once. Produces SEO-optimized articles with title, lead, body interleaving prose and rich editorial blocks (product CTA cards driven by real Shopify product handles with real CDN images + real prices, dark highlight pull-quotes, benefit grids, persona-fit pill lists, soft callouts with ANVISA disclaimers, comparison tables vs. unnamed competitors), conclusion, and CTA. NEW posts also follow the AI SEO playbook (AEO/GEO for ChatGPT/Gemini/AI Overviews): question-style H2s with answer-first sentences, direct-answer block after the lead, FAQ section with FAQPage JSON-LD mirroring it, cited sources, factual language, and themes biased toward AI-preferred formats (buying guides, cost guides, roundups, category comparisons, glossaries) — never applied retroactively to published posts without explicit request. Resolves all product/collection data from Shopify Admin GraphQL via handle — never invents image, price, title or description. Generates cover (16:9) and supporting illustrations (4:5) via piapp-image-gen (NOT product card images — those come from Shopify CDN). Produces SEO meta (slug, meta description, og tags, Schema.org Article JSON-LD) and exports Shopify-ready HTML with a scoped <style> block carrying brand colors. Auto-publishes to Shopify as UNPUBLISHED by default for human review. Built-in retries for PiApp (failed jobs → regenerate) and Shopify (file failed → re-upload via staged) with exponential backoff. Batch mode supports N posts with fail-soft (1 fails, rest continue) and only 2 approval gates total (validation + execution). Always consults brand-context first and validates theme against brand-context/[brand]/blog-themes.md. Saves output to conteudos/[marca]/blogs/[slug]/{textos,imagens,conteudo-html,prompts}/. Triggers when user asks for blog post, article, content marketing, editorial piece, calendário de blogs, or any long-form content for a Gobeaute brand.
 ---
 
 # Blog Content — Artigos Editoriais
@@ -102,6 +102,7 @@ Se algum check falhar → listar erros e perguntar 1 vez como resolver (skipar /
 |---|---|
 | Estrutura do artigo | `references/format-article.md` |
 | **SEO Playbook (20 pontos — OBRIGATÓRIO)** | **`references/seo-playbook.md`** |
+| **AI SEO Playbook (AEO/GEO — OBRIGATÓRIO em blogs NOVOS)** | **`references/ai-seo-playbook.md`** |
 | **Blocos ricos editoriais** | `references/format-rich-blocks.md` |
 | **Resolver Shopify (produto/collection)** | `references/format-product-resolver.md` |
 | **Batch mode** (se N ≥ 2) | `references/format-batch-mode.md` |
@@ -113,6 +114,8 @@ Se algum check falhar → listar erros e perguntar 1 vez como resolver (skipar /
 | Output paths | `references/output-paths.md` |
 
 > 🚨 **`seo-playbook.md` é source-of-truth de SEO** — qualquer post gerado **deve** passar pelos 20 checks antes da publicação (estrutura HTML, headings, schema BlogPosting JSON-LD, performance/CWV, cover constraint desktop, CTAs button-style, alt text, internal/external links, conteúdo E-E-A-T).
+>
+> 🤖 **`ai-seo-playbook.md` é source-of-truth de AI SEO (AEO/GEO)** — **todo blog NOVO** deve passar também pelo checklist AI SEO: H2s como perguntas (≥50%), bloco `direct-answer` após o lead, `faq-block` + `FAQPage` JSON-LD antes da conclusão, 2-3 dados com fonte, `pill-list` persona-fit, linguagem factual, tema nos 5 formatos preferidos pela IA. **Escopo: apenas blogs novos** — NÃO refatorar posts já publicados retroativamente sem pedido explícito.
 
 ### Etapa 4 — Resolver produtos/collections (Shopify GraphQL)
 
@@ -138,10 +141,13 @@ Aplicar:
 - Tom de voz da marca
 - Compliance ANVISA em CADA bloco
 - Validação de claims (sem stats sem fonte)
+- **AI SEO (blogs novos)**: prompt research da keyword → H2s como perguntas com resposta direta na 1ª frase, `direct-answer` após o lead, `faq-block` (4-6 Q&As) antes da conclusão, `pill-list` persona-fit, 2-3 dados com fonte (ver `ai-seo-playbook.md`)
 
 ### Etapa 6 — Gerar SEO meta
 
 Slug, meta_title, meta_description, og tags, Schema.org. Ver `format-seo-meta.md`.
+
+**Blogs novos**: além do `BlogPosting`, emitir `FAQPage` JSON-LD (espelho exato do `faq-block`) e preencher `seo.ai_prompts_targeted[]` com as perguntas do prompt research.
 
 ### Etapa 7 — Gerar imagens via piapp-image-gen (sem perguntar)
 
@@ -305,6 +311,9 @@ conteudos/_cache/shopify-resolver/{products,collections}/<handle>.json
 - ❌ Comparações com concorrentes nomeados
 - ❌ Blog com menos de 3 blocos ricos
 - ❌ CTA final como link de texto puro
+- ❌ Blog NOVO sem `direct-answer` + `faq-block` + `FAQPage` JSON-LD (AI SEO)
+- ❌ Aplicar AI SEO retroativamente em blogs já publicados sem pedido explícito
+- ❌ Tema tangencial ao core da marca (dilui autoridade temática — flagar)
 
 ### Sempre
 - ✅ Default `isPublished: false`
@@ -342,7 +351,9 @@ Outros parâmetros têm defaults sensatos (word_count=900, n_illustrations=3, et
 
 ### Core
 - `references/format-article.md` — estrutura do artigo + outline padrão
-- `references/format-rich-blocks.md` — 6 tipos de blocos ricos
+- `references/seo-playbook.md` — SEO técnico (20 pontos, source of truth)
+- `references/ai-seo-playbook.md` — AI SEO / AEO / GEO (blogs novos — ChatGPT, Gemini, AI Overviews)
+- `references/format-rich-blocks.md` — 8 tipos de blocos ricos (inclui `direct-answer` e `faq-block`)
 - `references/format-html-export.md` — HTML Shopify-ready + `<style>` escopo
 - `references/format-seo-meta.md` — SEO meta + Schema.org
 
