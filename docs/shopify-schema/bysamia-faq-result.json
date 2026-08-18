@@ -1,0 +1,86 @@
+{
+  "shop": "www.bysamia.com.br",
+  "executed_at": "2026-07-29",
+  "theme_source_of_truth": "by-samia-theme/develop (gid://shopify/OnlineStoreTheme/198616481873)",
+  "scope": "somente estrutura — nenhum produto tocado, nenhuma instância de metaobjeto criada",
+
+  "created": [
+    {
+      "kind": "MetaobjectDefinition",
+      "gid": "gid://shopify/MetaobjectDefinition/41224765521",
+      "type": "faq_point",
+      "name": "Ponto de FAQ",
+      "displayNameKey": "faq_question",
+      "consumidor": "snippets/jump-info-faq.liquid (bloco Product Info & FAQ, montado na PDP)",
+      "fields": [
+        { "key": "faq_question", "name": "Pergunta", "type": "single_line_text_field", "required": true },
+        { "key": "faq_answer", "name": "Resposta", "type": "multi_line_text_field", "required": true },
+        { "key": "faq_image", "name": "Imagem", "type": "file_reference", "required": false, "file_type_options": ["Image"] }
+      ]
+    },
+    {
+      "kind": "MetafieldDefinition",
+      "gid": "gid://shopify/MetafieldDefinition/481089093713",
+      "ownerType": "PRODUCT",
+      "namespace": "custom",
+      "key": "faq",
+      "name": "[Info] FAQ",
+      "type": "list.metaobject_reference",
+      "metaobject_definition_id": "gid://shopify/MetaobjectDefinition/41224765521",
+      "pinnedPosition": 23
+    },
+    {
+      "kind": "MetaobjectDefinition",
+      "gid": "gid://shopify/MetaobjectDefinition/41225060433",
+      "type": "comparison_item",
+      "name": "Item de comparação",
+      "displayNameKey": "text",
+      "consumidor": "sections/product-comparison.liquid (disponível, ainda não montada no template)",
+      "fields": [
+        { "key": "for_brand", "name": "É da marca?", "type": "boolean", "required": true },
+        { "key": "text", "name": "Texto", "type": "single_line_text_field", "required": true }
+      ]
+    },
+    {
+      "kind": "MetafieldDefinition",
+      "gid": "gid://shopify/MetafieldDefinition/481092304977",
+      "ownerType": "PRODUCT",
+      "namespace": "custom",
+      "key": "brand_comparison",
+      "name": "[Section] Comparação com concorrente",
+      "type": "list.metaobject_reference",
+      "metaobject_definition_id": "gid://shopify/MetaobjectDefinition/41225060433",
+      "pinnedPosition": null
+    },
+    {
+      "kind": "MetafieldDefinition",
+      "gid": "gid://shopify/MetafieldDefinition/481092337745",
+      "ownerType": "PRODUCT",
+      "namespace": "custom",
+      "key": "inspiracao",
+      "name": "[Info] Inspiração olfativa",
+      "type": "rich_text_field",
+      "pinnedPosition": 24,
+      "consumidor": "blocks/product-inspiration.liquid (disponível, ainda não montado no template)"
+    }
+  ],
+
+  "notas": [
+    "access.admin não é aceito como PUBLIC_READ_WRITE no input (só MERCHANT_READ / MERCHANT_READ_WRITE). Omitindo o campo, a Shopify resolve para PUBLIC_READ_WRITE — mesmo valor das outras definições da loja.",
+    "faq_point e comparison_item têm publishable habilitado: ao criar instâncias, passar capabilities.publishable.status = ACTIVE, senão nascem em DRAFT e não renderizam.",
+    "Nenhum produto foi tocado. Nenhuma instância de metaobjeto foi criada."
+  ],
+
+  "nao_executado_aguardando_decisao": {
+    "custom.how_to_use": {
+      "problema": "multi_line_text_field com 58 produtos preenchidos; sections/product-how-to-use.liquid espera metaobject_reference → como_usar (file + steps)",
+      "risco": "corrigir pelo metafield exige delete + recreate, apagando os 58 valores",
+      "recomendacao": "o tema ler custom.como_usar_session_pdp, que já é metaobject_reference → como_usar com 47 produtos preenchidos"
+    },
+    "custom.section_faq": {
+      "problema": "aponta pra faq_item (question/answer); sections/goshop-product-faq.liquid espera titulo/conteudo/state",
+      "risco": "nenhum dado em risco — 0 valores, 0 instâncias",
+      "contexto": "section não está montada no template; o FAQ da PDP roda pelo custom.faq"
+    }
+  }
+}

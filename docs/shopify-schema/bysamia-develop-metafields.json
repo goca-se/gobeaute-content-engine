@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "shop": "www.bysamia.com.br",
+    "date": "2026-07-29",
+    "theme": "by-samia-theme/develop (gid://shopify/OnlineStoreTheme/198616481873)",
+    "template_auditado": "templates/product.json",
+    "scope": "SOMENTE ESTRUTURA — nenhum conteúdo/instância criado"
+  },
+
+  "pdp_montada_no_template_product_json": {
+    "order": ["main (product-information)", "goshop-how-to-use-pdp", "goshop-product-ingredients", "_blocks (judge.me)", "section (FAQ estático do editor)", "product-recommendations"],
+    "metafields_exigidos": [
+      { "metafield": "custom.product_bullet_point_metafield", "consumidor": "blocks/jump-product-tag → snippets/jump-product-tag.liquid", "chaves": ["point_text", "point_color", "point_background_color"], "metaobjeto": "product_pdp_tag (40807432273)", "status": "OK" },
+      { "metafield": "custom.product_info_benefits", "consumidor": "blocks/jump-product-info-benefits → snippets/jump-product-info-benefits.liquid", "chaves": ["descricao", "titulo_destacado", "beneficios", "cor_bullet_point"], "metaobjeto": "product_benefit (36550705233)", "status": "OK" },
+      { "metafield": "custom.trust_icons", "consumidor": "blocks/goshop-icon-with-text → snippets/goshop-icon-with-text.liquid", "chaves": ["icon", "title"], "metaobjeto": "trust_icons (10343317585)", "status": "OK", "produtos_preenchidos": 43 },
+      { "metafield": "custom.composicao", "consumidor": "blocks/jump-info-faq → snippets/jump-info-faq.liquid", "tipo": "rich_text_field", "status": "OK" },
+      { "metafield": "custom['modo-de-uso']", "consumidor": "blocks/jump-info-faq → snippets/jump-info-faq.liquid", "tipo": "rich_text_field", "status": "OK" },
+      { "metafield": "custom.faq", "consumidor": "blocks/jump-info-faq → snippets/jump-info-faq.liquid", "chaves": ["faq_question", "faq_answer", "faq_image"], "metaobjeto": "faq_point (41224765521)", "status": "CRIADO 2026-07-29" },
+      { "metafield": "custom.how_to_use_pdp", "consumidor": "sections/goshop-how-to-use-pdp.liquid", "chaves": ["titulo", "media", "topicos"], "metaobjeto": "video_tutorial_how_to_use (40808284241)", "status": "OK" },
+      { "metafield": "custom.product_ingredients_metafield", "consumidor": "sections/goshop-product-ingredients.liquid", "chaves": ["ingredient_title", "ingredient_image", "ingredient_url", "ingredient_description"], "metaobjeto": "product_ingredients (37269897297)", "status": "OK" }
+    ],
+    "veredito": "Todo metafield que a PDP montada lê já existe com o shape correto."
+  },
+
+  "sections_disponiveis_mas_nao_montadas": [
+    {
+      "section": "blocks/product-inspiration.liquid",
+      "metafield": "custom.inspiracao",
+      "leitura": "product.metafields.custom.inspiracao | metafield_tag",
+      "status": "FALTAVA — criado nesta sessão",
+      "payload": {
+        "ownerType": "PRODUCT",
+        "namespace": "custom",
+        "key": "inspiracao",
+        "name": "[Info] Inspiração olfativa",
+        "description": "Texto \"inspirado em\" exibido no bloco Product Inspiration da PDP, seguido do disclaimer de não-afiliação. Lido por blocks/product-inspiration.liquid.",
+        "type": "rich_text_field",
+        "pin": true,
+        "access": { "storefront": "PUBLIC_READ" }
+      }
+    },
+    {
+      "section": "sections/product-comparison.liquid",
+      "metafield": "custom.brand_comparison",
+      "leitura": "for item in product.metafields.custom.brand_comparison.value → item.for_brand, item.text",
+      "status": "FALTAVA — criado nesta sessão",
+      "metaobject_payload": {
+        "type": "comparison_item",
+        "name": "Item de comparação",
+        "description": "Linha da tabela \"marca vs concorrente\" da PDP. for_brand = true renderiza na coluna da marca; false, na do concorrente. Lido por sections/product-comparison.liquid.",
+        "displayNameKey": "text",
+        "access": { "storefront": "PUBLIC_READ" },
+        "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+        "fieldDefinitions": [
+          { "key": "for_brand", "name": "É da marca?", "description": "Marcado = coluna da marca. Desmarcado = coluna do concorrente.", "required": true, "type": "boolean" },
+          { "key": "text", "name": "Texto", "description": "Frase curta da linha de comparação.", "required": true, "type": "single_line_text_field" }
+        ]
+      },
+      "metafield_payload": {
+        "ownerType": "PRODUCT",
+        "namespace": "custom",
+        "key": "brand_comparison",
+        "name": "[Section] Comparação com concorrente",
+        "description": "Linhas da section Product Comparison da PDP. Lido por sections/product-comparison.liquid.",
+        "type": "list.metaobject_reference",
+        "validations": [{ "name": "metaobject_definition_id", "value": "{{MOD:comparison_item}}" }],
+        "pin": false,
+        "access": { "storefront": "PUBLIC_READ" }
+      },
+      "nota": "A loja já tem custom.rituaria_vs_concorrentes → rituaria_vs_concorrente (content + rituaria_or_concorrente), mesmo conceito com nomes de outra marca. O tema develop não lê essa chave."
+    },
+    {
+      "section": "sections/product-how-to-use.liquid",
+      "metafield": "custom.how_to_use",
+      "leitura": "product.metafields.custom.how_to_use.value → .file, .steps",
+      "status": "NÃO CORRIGIDO — bloqueado por risco de perda de dado",
+      "problema": "Existe como multi_line_text_field com 58 produtos preenchidos. O tema espera metaobject_reference → como_usar (file + steps). Type de metafield é imutável: corrigir exige metafieldDefinitionDelete + recriar, o que apaga os 58 valores.",
+      "opcoes": [
+        "(a) apagar e recriar como metaobject_reference → como_usar — perde os 58 textos curtos",
+        "(b) o tema passar a ler custom.como_usar_session_pdp, que já é metaobject_reference → como_usar e tem 47 produtos preenchidos"
+      ],
+      "recomendacao": "(b) — não destrói dado e o campo já está populado"
+    },
+    {
+      "section": "sections/goshop-product-faq.liquid",
+      "metafield": "custom.section_faq",
+      "leitura": "for item in product.metafields.custom.section_faq.value → item.titulo, item.conteudo, item.state",
+      "status": "NÃO CORRIGIDO — aguardando decisão",
+      "problema": "custom.section_faq aponta pra faq_item (36911349841), que tem question/answer. O tema pede titulo/conteudo/state (shape do faq_item da Ápice). Renderizaria vazio.",
+      "dado_em_risco": "nenhum — 0 valores no metafield, 0 instâncias no metaobjeto",
+      "opcoes": [
+        "(a) adicionar titulo/conteudo/state ao faq_item existente (aditivo, deixa 5 campos)",
+        "(b) apagar faq_item + custom.section_faq e recriar com o shape da Ápice",
+        "(c) não fazer nada — a section não está montada no template e o FAQ da PDP já roda pelo custom.faq"
+      ]
+    }
+  ],
+
+  "nao_auditado": [
+    "sections/goshop-product-efficacy.liquid — não montada no template de produto",
+    "sections/goshop-product-blog.liquid — não montada",
+    "blocks/product-custom-property.liquid — não montada",
+    "sections/product-features.liquid, active-ingredients.liquid, product-highlight.liquid — não montadas, mas os metafields que leem (custom.trust_icons, custom.ativo, custom.highlight_section) já existem"
+  ]
+}

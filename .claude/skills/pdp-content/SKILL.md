@@ -151,13 +151,25 @@ Aplicar SEMPRE em **qualquer** metaobjeto criado pra qualquer produto/marca:
 
 ### 1. Status default: **ACTIVE** (nunca DRAFT)
 
-Pra metaobjetos com capability `publishable` (`eficiencia_item`, `como_usar`, etc.), sempre criar com:
+**TODOS** os 4 tipos de metaobjeto PDP têm `publishable` capability habilitada — confirmado via query: `eficiencia_item`, `como_usar`, `faq_item`, `product_benefit`, `product_ingredients`, `product_icon`. Sempre criar com:
 
 ```json
 "capabilities": { "publishable": { "status": "ACTIVE" } }
 ```
 
-Tema só renderiza ACTIVE — DRAFT exige aprovação manual no admin. Antes de fechar tarefa, **auditar** via query e dar `metaobjectUpdate` se restar algum DRAFT.
+Tema só renderiza ACTIVE — DRAFT exige aprovação manual no admin. Antes de fechar tarefa, **auditar** via query e dar `metaobjectUpdate` se restar algum DRAFT:
+
+```graphql
+query AuditAll {
+  faqs: metaobjects(type: "faq_item", first: 50) { edges { node { id capabilities { publishable { status } } } } }
+  efficacy: metaobjects(type: "eficiencia_item", first: 50) { edges { node { id capabilities { publishable { status } } } } }
+  benefits: metaobjects(type: "product_benefit", first: 50) { edges { node { id capabilities { publishable { status } } } } }
+  ingredients: metaobjects(type: "product_ingredients", first: 50) { edges { node { id capabilities { publishable { status } } } } }
+  como: metaobjects(type: "como_usar", first: 50) { edges { node { id capabilities { publishable { status } } } } }
+}
+```
+
+Se restar DRAFT → `metaobjectUpdate(capabilities: {publishable: {status: "ACTIVE"}})`.
 
 ### 2. Handle naming: `<product-slug>-<purpose>`
 
@@ -187,7 +199,11 @@ query CheckReusable {
 
 Se `text` ou `ingredient_title` ou `question` bate semanticamente → REUSAR.
 
-#### Universais Kokeshi (catálogo de reuso — 2026-05-27)
+#### 🌐 Brand-agnostic
+
+Catálogos são **por marca** (cada loja Shopify tem seu set de metaobjetos). O **procedimento** é o mesmo pra todas as 7 marcas: query primeiro, match semântico, reusar antes de criar. Pra trust seals cf/vegano, ver regra universal em `references/format-icones.md` e `references/format-section-efficacy.md`.
+
+#### Universais Kokeshi (catálogo de reuso — 2026-05-27, exemplo de uma marca)
 
 **Eficiencia (`eficiencia_item`):**
 

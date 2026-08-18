@@ -1,0 +1,118 @@
+{
+  "_meta": {
+    "shop": "www.bysamia.com.br",
+    "date": "2026-07-29",
+    "theme": "by-samia-theme/develop (gid://shopify/OnlineStoreTheme/198616481873)",
+    "operacao": "metafieldDefinitionUpdate — nome, descrição e pin. NÃO destrutivo: nenhum delete, nenhum type alterado, os 52 valores nos produtos permanecem.",
+    "convencao": "[Info] = renderiza dentro da coluna de informação do produto (blocos do product-details). [Section] = section independente na PDP. Descrição sempre cita o metaobjeto (com as chaves) e o arquivo do tema que lê.",
+    "pin": "Os 7 são despinados e repinados na ordem em que aparecem na PDP, para ficarem agrupados no admin."
+  },
+
+  "updates": [
+    {
+      "ordem_pdp": 1,
+      "ownerType": "PRODUCT",
+      "namespace": "custom",
+      "key": "product_info_benefits",
+      "type_atual": "metaobject_reference",
+      "name_antigo": "[Gogroup] [PDP] [Info] Short Description + Bullet Points",
+      "name": "[Info] Descrição curta + Bullet Points",
+      "description": "Bloco de descrição curta + bullets acima do preço. Lê metaobjeto product_benefit (descricao, titulo_destacado, beneficios, cor_bullet_point). Tema: snippets/jump-product-info-benefits.liquid",
+      "validations": [{ "name": "metaobject_definition_id", "value": "gid://shopify/MetaobjectDefinition/36550705233" }],
+      "produtos_preenchidos": 3
+    },
+    {
+      "ordem_pdp": 2,
+      "ownerType": "PRODUCT",
+      "namespace": "custom",
+      "key": "trust_icons",
+      "type_atual": "list.metaobject_reference",
+      "name_antigo": "[Gogroup] [PDP] [Section] Trust Icons",
+      "name": "[Info] Ícones de confiança",
+      "description": "Ícones com texto na PDP. Lê metaobjeto trust_icons (icon, title). Tema: snippets/goshop-icon-with-text.liquid. A section product-features.liquid também usa esta chave e lê description.",
+      "validations": [{ "name": "metaobject_definition_id", "value": "gid://shopify/MetaobjectDefinition/10343317585" }],
+      "produtos_preenchidos": 43
+    },
+    {
+      "ordem_pdp": 3,
+      "ownerType": "PRODUCT",
+      "namespace": "custom",
+      "key": "composicao",
+      "type_atual": "rich_text_field",
+      "name_antigo": "[Info] Composição",
+      "name": "[Info] Composição",
+      "description": "Aba/acordeão Composição na PDP. Rich text renderizado via metafield_tag. Tema: snippets/jump-info-faq.liquid (bloco Product Info & FAQ).",
+      "produtos_preenchidos": 2
+    },
+    {
+      "ordem_pdp": 4,
+      "ownerType": "PRODUCT",
+      "namespace": "custom",
+      "key": "modo-de-uso",
+      "type_atual": "rich_text_field",
+      "name_antigo": "[Info] Modo de Uso",
+      "name": "[Info] Modo de Uso",
+      "description": "Aba/acordeão Modo de uso na PDP. O tema faz strip_html e quebra em passos por ponto final — evite abreviações com ponto. Tema: snippets/jump-info-faq.liquid",
+      "produtos_preenchidos": 2
+    },
+    {
+      "ordem_pdp": 5,
+      "ownerType": "PRODUCT",
+      "namespace": "custom",
+      "key": "faq",
+      "type_atual": "list.metaobject_reference",
+      "name_antigo": "[Info] FAQ",
+      "name": "[Info] FAQ",
+      "description": "Perguntas e respostas do bloco Product Info & FAQ. Lê metaobjeto faq_point (faq_question, faq_answer, faq_image). Tema: snippets/jump-info-faq.liquid",
+      "validations": [{ "name": "metaobject_definition_id", "value": "gid://shopify/MetaobjectDefinition/41224765521" }],
+      "produtos_preenchidos": 0
+    },
+    {
+      "ordem_pdp": 6,
+      "ownerType": "PRODUCT",
+      "namespace": "custom",
+      "key": "how_to_use_pdp",
+      "type_atual": "metaobject_reference",
+      "name_antigo": "[Gogroup] [PDP] [Section] Como Usar - PDP",
+      "name": "[Section] Como Usar",
+      "description": "Section Goshop How to Use PDP. Lê metaobjeto video_tutorial_how_to_use (titulo, media, topicos). Tema: sections/goshop-how-to-use-pdp.liquid",
+      "validations": [{ "name": "metaobject_definition_id", "value": "gid://shopify/MetaobjectDefinition/40808284241" }],
+      "produtos_preenchidos": 1
+    },
+    {
+      "ordem_pdp": 7,
+      "ownerType": "PRODUCT",
+      "namespace": "custom",
+      "key": "product_ingredients_metafield",
+      "type_atual": "list.metaobject_reference",
+      "name_antigo": "[Gogroup] [Section] [PDP] Ingredientes",
+      "name": "[Section] Ingredientes",
+      "description": "Section Goshop Ingredients. Lê metaobjeto product_ingredients (ingredient_title, ingredient_image, ingredient_url, ingredient_description). Tema: sections/goshop-product-ingredients.liquid",
+      "validations": [{ "name": "metaobject_definition_id", "value": "gid://shopify/MetaobjectDefinition/37269897297" }],
+      "produtos_preenchidos": 1
+    }
+  ],
+
+  "nao_alterado": {
+    "type": "nenhum type foi tocado — todos já são compatíveis com o Liquid do develop",
+    "access.storefront": "os 7 já estão em PUBLIC_READ",
+    "valores": "52 valores nos produtos preservados"
+  },
+
+  "resultado_verificado": {
+    "executado_em": "2026-07-29",
+    "conferido_por": "metafieldDefinitions query pós-update",
+    "linhas": [
+      { "key": "product_info_benefits", "name": "[Info] Descrição curta + Bullet Points", "type": "metaobject_reference", "pin": 22, "valores": 3, "storefront": "PUBLIC_READ" },
+      { "key": "trust_icons", "name": "[Info] Ícones de confiança", "type": "list.metaobject_reference", "pin": 23, "valores": 43, "storefront": "PUBLIC_READ" },
+      { "key": "composicao", "name": "[Info] Composição", "type": "rich_text_field", "pin": 24, "valores": 2, "storefront": "PUBLIC_READ" },
+      { "key": "modo-de-uso", "name": "[Info] Modo de Uso", "type": "rich_text_field", "pin": 25, "valores": 2, "storefront": "PUBLIC_READ" },
+      { "key": "faq", "name": "[Info] FAQ", "type": "list.metaobject_reference", "pin": 26, "valores": 0, "storefront": "PUBLIC_READ" },
+      { "key": "how_to_use_pdp", "name": "[Section] Como Usar", "type": "metaobject_reference", "pin": 27, "valores": 1, "storefront": "PUBLIC_READ" },
+      { "key": "product_ingredients_metafield", "name": "[Section] Ingredientes", "type": "list.metaobject_reference", "pin": 28, "valores": 1, "storefront": "PUBLIC_READ" }
+    ],
+    "total_valores": 52,
+    "perda": 0,
+    "validations_metaobject_definition_id": "todas preservadas e apontando pros mesmos metaobjetos"
+  }
+}

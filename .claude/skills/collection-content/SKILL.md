@@ -28,6 +28,7 @@ Skill especializada em conteúdo de páginas de collection (agrupamentos/categor
 - Usuário pede conteúdo de collection/categoria
 - Orchestrator delega depois de identificar intent=collection
 - Formatos: hero banner, description, SEO meta, thumbnail
+- Tags/pills de navegação → delegar pra skill `collection-tags`
 
 ## 🚦 Workflow
 
@@ -56,6 +57,7 @@ Se faltar:
 | Description | `references/format-description.md` |
 | SEO meta | `references/format-seo-meta.md` |
 | Thumbnail | `references/format-thumbnail.md` |
+| Tags (pills/chips) | **delegar pra skill `collection-tags`** (metafield `custom.tags_collection`) |
 
 Carregar também `references/output-paths.md`.
 

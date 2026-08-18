@@ -82,5 +82,15 @@
 | `guia-umectacao-capilar` | Guia da umectação: para que serve e como fazer | 2026-05-25 |
 | `como-fazer-umectacao-cabelo` | Umectação passo a passo (úmida e seca) | 2026-05-25 |
 | `o-que-e-leave-in-como-usar` | O que é leave-in e como usar | 2026-05-25 |
+| `cronograma-capilar-reconstrucao-hidratacao-nutricao` | Cronograma capilar: reconstrução × hidratação × nutrição | 2026-07-24 (publicado) |
+| `tipos-de-cacho-2a-4c-como-descobrir` | Glossário 2A–4C: como descobrir o tipo de cacho | 2026-07-24 (publicado) |
+| `kit-completo-ou-produto-individual` | Kit completo vs produto individual (comparativo) | 2026-07-24 (publicado) |
+| `manteigas-vegetais-para-cabelo` | Manteigas vegetais (Karité, Murumuru, Cacau) | 2026-07-24 (publicado) |
+| `oleos-vegetais-capilares-guia` | Guia de óleos vegetais capilares | 2026-07-24 (publicado) |
+| `como-preservar-cacho-para-dormir` | Preservar o cacho pra dormir (pineapple, cetim) | 2026-07-24 (publicado) |
+| `como-evitar-efeito-durinho-gelatina` | Como evitar o efeito durinho da gelatina | 2026-07-24 (publicado) |
+| `cuidados-capilares-praia-piscina-sol` | Cuidados pré e pós praia/piscina/sol | 2026-07-24 (publicado) |
+| `rotina-capilar-infantil-cabelo-cacheado` | Rotina capilar infantil (cachos 3+) | 2026-07-24 (publicado) |
+| `ativos-apice-proteina-arroz-superwave` | Ativos Ápice: Proteína do Arroz, SuperWave, Active Shine | 2026-07-24 (publicado) |
 
-📝 **Última atualização**: 2026-05-25
+📝 **Última atualização**: 2026-07-24 — +10 blogs novos (batch AI SEO), PUBLICADOS 2026-07-24T19:22Z

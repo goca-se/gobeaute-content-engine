@@ -27,6 +27,7 @@ Identifique qual TIPO de conteúdo o usuário quer:
 |---|---|
 | "FAQ", "descrição", "ingredientes", "antes/depois", "modo de uso", "ícones", "bullets", "PDP" | `pdp-content` |
 | "collection", "coleção", "categoria", "hero banner", "linha de produtos" | `collection-content` |
+| "tags da collection", "pills", "chips de navegação", "tags_collection" | `collection-tags` |
 | "blog", "artigo", "post", "matéria" | `blog-content` |
 | "home", "banner", "depoimento", "componente", "USP", "newsletter CTA" | `component-content` |
 
@@ -109,6 +110,7 @@ output_paths:
 | `brand-context` | Consultoria central de contexto de marca |
 | `pdp-content` | Conteúdo de PDP (7 formatos) |
 | `collection-content` | Conteúdo de coleções |
+| `collection-tags` | Pills/tags de collection (metafield `custom.tags_collection`) |
 | `blog-content` | Blogs (texto + HTML + imagens) |
 | `component-content` | Componentes do site |
 | `piapp-image-gen` | Wrapper do MCP PiApp para imagens |

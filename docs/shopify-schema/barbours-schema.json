@@ -1,0 +1,383 @@
+{
+  "_meta": {
+    "source_shop": "www.thebarboursbeauty.com.br",
+    "source_shop_name": "Barbour's Beauty",
+    "extracted_at": "2026-07-29",
+    "api": "Shopify Admin GraphQL",
+    "purpose": "Replicar o schema Goshop (metaobjetos + metafields) em outra loja",
+    "target_shop": "By Samia (brand-context/bysamia) — planejado, ainda não executado",
+    "scope": "SOMENTE ESTRUTURA (type, key, name, description, required, validations, capabilities, pin). Nenhuma instância/conteúdo incluída — o conteúdo da loja destino será criado depois.",
+    "replication_order": [
+      "1. Rodar phase1_metaobject_definitions (metaobjectDefinitionCreate) — capturar o GID novo de cada type",
+      "2. Substituir os placeholders {{MOD:<type>}} de phase2 pelos GIDs capturados",
+      "3. Rodar phase2_metafield_definitions (metafieldDefinitionCreate)",
+      "4. phase3_plain_metafield_definitions é independente e pode rodar a qualquer momento"
+    ],
+    "notes": [
+      "As 8 definições com prefixo 'shopify--' (taxonomia nativa: fragrance, season, occasion, color-pattern, suitable-for-skin-type, bag-case-material, bag-case-storage-features, marker-text-color) NÃO devem ser criadas manualmente — a Shopify as cria sozinha quando você ativa os metafields padrão de taxonomia no produto. Estão fora deste payload de propósito.",
+      "metaobjectDefinitionCreate com capability publishable habilitada cria instâncias em DRAFT por padrão — ao criar metaobjetos depois, passar capabilities.publishable.status = ACTIVE, senão não renderiza no storefront.",
+      "MetafieldAdminAccessInput não aceita PUBLIC_READ_WRITE. Na origem todos os metafields estão em PUBLIC_READ_WRITE (default) — por isso o campo access.admin foi omitido no payload. Só o storefront é declarado.",
+      "pin: true corresponde a pinnedPosition não-nulo na origem. A ordem exata do pin é reproduzida em pin_order (menor = mais acima)."
+    ]
+  },
+
+  "phase1_metaobject_definitions": [
+    {
+      "type": "upsell_banner",
+      "name": "Upsell Banner",
+      "description": "",
+      "displayNameKey": "bullet_points_title",
+      "source_instances": 44,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "product", "name": "Product", "description": "", "required": false, "type": "product_reference", "validations": [] },
+        { "key": "bullet_points_title", "name": "Bullet Points Title", "description": "", "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "bullet_points", "name": "Bullet Points", "description": "", "required": false, "type": "list.single_line_text_field", "validations": [] },
+        { "key": "background_color", "name": "Background Color", "description": "", "required": false, "type": "color", "validations": [] },
+        { "key": "button_color", "name": "Button Color", "description": "", "required": false, "type": "color", "validations": [] },
+        { "key": "texto_acima_do_banner", "name": "Texto acima do Banner", "description": "", "required": false, "type": "single_line_text_field", "validations": [] }
+      ]
+    },
+    {
+      "type": "upsell_vertical_list",
+      "name": "Upsell em lista vertical",
+      "description": "",
+      "displayNameKey": null,
+      "source_instances": 121,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "index", "name": "Index", "description": "Campo para nomear o metaobjeto", "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "quantity", "name": "Quantity", "description": "Quantidade de potes", "required": false, "type": "number_integer", "validations": [] },
+        { "key": "product", "name": "Product", "description": "", "required": false, "type": "product_reference", "validations": [] }
+      ]
+    },
+    {
+      "type": "barra_de_estoque",
+      "name": "Barra de Estoque",
+      "description": "",
+      "displayNameKey": "texto_de_economia",
+      "source_instances": 2,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "real", "name": "Real", "description": " Se verdadeiro, usa o estoque real do produto no Shopify. Se não, usa o valor do campo \"porcentagem\"", "required": false, "type": "boolean", "validations": [] },
+        { "key": "estoque_maximo", "name": "Estoque Máximo", "description": "Valor máximo para comparação quando \"real\" for verdadeiro. Usado para calcular a porcentagem", "required": false, "type": "number_integer", "validations": [] },
+        { "key": "porcentagem", "name": "Porcentagem", "description": "Porcentagem de estoque a exibir quando \"real\" for falso", "required": false, "type": "number_integer", "validations": [ { "name": "min", "value": "0" }, { "name": "max", "value": "100" } ] },
+        { "key": "texto_de_economia", "name": "Texto de Economia", "description": "Texto exibido à esquerda mostrando a economia. O valor é calculado automaticamente", "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "texto_de_estoque", "name": "Texto de Estoque", "description": " Texto exibido à direita acima da barra de estoque (ex: \"Estoque disponível\")", "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "porcentagem_no_texto", "name": "Porcentagem no Texto", "description": "Define se usa o valor da porcentagem do início do \"Texto de Estoque\"", "required": false, "type": "boolean", "validations": [] }
+      ]
+    },
+    {
+      "type": "temporizador_promocional",
+      "name": "Temporizador Promocional",
+      "description": "",
+      "displayNameKey": "titulo",
+      "source_instances": 1,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "titulo", "name": "Título", "description": " Texto exibido à esquerda do contador (ex: \"Promoção\", \"Oferta Especial\")", "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "final", "name": "Final", "description": " Data e hora de término da promoção. O contador só será exibido se esta data estiver no futuro", "required": false, "type": "date", "validations": [] }
+      ]
+    },
+    {
+      "type": "notify_me_request",
+      "name": "Mini Coming Soon Waitlist",
+      "description": null,
+      "displayNameKey": null,
+      "source_instances": 1,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": {
+        "publishable": { "enabled": false },
+        "translatable": { "enabled": true },
+        "renderable": { "enabled": true, "data": { "metaTitleKey": null, "metaDescriptionKey": null } },
+        "onlineStore": { "enabled": true, "data": { "urlHandle": "notify_me_request", "createRedirects": true } }
+      },
+      "fieldDefinitions": [
+        { "key": "title", "name": "Title", "description": null, "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "message", "name": "Message", "description": null, "required": true, "type": "single_line_text_field", "validations": [] },
+        { "key": "placeholder", "name": "Placeholder", "description": null, "required": true, "type": "single_line_text_field", "validations": [] },
+        { "key": "button_text", "name": "Button Text", "description": null, "required": true, "type": "single_line_text_field", "validations": [] },
+        { "key": "consent_message", "name": "Consent Message", "description": null, "required": false, "type": "single_line_text_field", "validations": [] }
+      ]
+    },
+    {
+      "type": "tag_customizada",
+      "name": "Tag Customizada",
+      "description": "",
+      "displayNameKey": "texto",
+      "source_instances": 16,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "texto", "name": "Texto", "description": "", "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "cor_do_texto", "name": "Cor do Texto", "description": "", "required": false, "type": "color", "validations": [] },
+        { "key": "cor_de_fundo", "name": "Cor de Fundo", "description": "", "required": false, "type": "color", "validations": [] }
+      ]
+    },
+    {
+      "type": "kit_or_single",
+      "name": "Kit ou unitário",
+      "description": "",
+      "displayNameKey": "label",
+      "source_instances": 1,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "label", "name": "Label", "description": "", "required": false, "type": "single_line_text_field", "validations": [] }
+      ]
+    },
+    {
+      "type": "product_category_type",
+      "name": "Categoria/Tipo de produto",
+      "description": "",
+      "displayNameKey": "categoria",
+      "source_instances": 5,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "categoria", "name": "Categoria", "description": "", "required": false, "type": "single_line_text_field", "validations": [] }
+      ]
+    },
+    {
+      "type": "kit_builder",
+      "name": "Kit builder",
+      "description": "",
+      "displayNameKey": "title",
+      "source_instances": 10,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "title", "name": "Title", "description": "", "required": true, "type": "single_line_text_field", "validations": [] },
+        { "key": "quantity_required", "name": "Quantity required", "description": "Quantity of steps.", "required": true, "type": "number_integer", "validations": [ { "name": "max", "value": "5" } ] },
+        { "key": "products_allowed", "name": "Products allowed", "description": "List of products that will be displayed.", "required": true, "type": "list.product_reference", "validations": [] },
+        { "key": "default_product", "name": "Default product", "description": "Product that will be selected by default.", "required": true, "type": "product_reference", "validations": [] },
+        { "key": "discount_code", "name": "Discount percentage", "description": "In percents (%).", "required": true, "type": "number_integer", "validations": [] },
+        { "key": "title_sanitizer", "name": "Title sanitizer", "description": "Text field to add a string that will be removed from the products' titles. \"Body splash XYZ -> XYZ\"", "required": false, "type": "single_line_text_field", "validations": [] }
+      ]
+    },
+    {
+      "type": "product_benefit",
+      "name": "Benefício de produto",
+      "description": "",
+      "displayNameKey": "cor_bullet_point",
+      "source_instances": 31,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "descricao", "name": "Descrição", "description": "", "required": false, "type": "rich_text_field", "validations": [] },
+        { "key": "titulo_destacado", "name": "Título destacado", "description": "", "required": false, "type": "rich_text_field", "validations": [] },
+        { "key": "beneficios", "name": "Benefícios", "description": "", "required": false, "type": "list.single_line_text_field", "validations": [] },
+        { "key": "cor_bullet_point", "name": "Cor Bullet Point", "description": "Imagem > Cor. Caso imagem esteja preenchido, sua exibição será prioritária.", "required": false, "type": "color", "validations": [] }
+      ]
+    },
+    {
+      "type": "product_icon",
+      "name": "Ícone de produto",
+      "description": "",
+      "displayNameKey": "texto",
+      "source_instances": 1,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "imagem", "name": "Imagem", "description": "", "required": false, "type": "file_reference", "validations": [ { "name": "file_type_options", "value": "[\"Image\"]" } ] },
+        { "key": "texto", "name": "Texto", "description": "", "required": false, "type": "single_line_text_field", "validations": [] }
+      ]
+    },
+    {
+      "type": "faq_item",
+      "name": "Item de FAQ",
+      "description": "",
+      "displayNameKey": "question",
+      "source_instances": 36,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "question", "name": "Pergunta", "description": "", "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "answer", "name": "Resposta", "description": "", "required": false, "type": "rich_text_field", "validations": [] }
+      ]
+    },
+    {
+      "type": "eficiencia_do_produto",
+      "name": "Eficiência do Produto",
+      "description": "",
+      "displayNameKey": "number_1",
+      "source_instances": 1,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "image_before", "name": "Imagem (Antes)", "description": "", "required": false, "type": "file_reference", "validations": [ { "name": "file_type_options", "value": "[\"Image\"]" } ] },
+        { "key": "image_after", "name": "Imagem (Depois)", "description": "", "required": false, "type": "file_reference", "validations": [ { "name": "file_type_options", "value": "[\"Image\"]" } ] },
+        { "key": "number_1", "name": "Número 1", "description": "", "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "number_2", "name": "Número 2", "description": "", "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "number_3", "name": "Número 3", "description": "", "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "text_1", "name": "Texto 1", "description": "", "required": false, "type": "rich_text_field", "validations": [] },
+        { "key": "text_2", "name": "Texto 2", "description": "", "required": false, "type": "rich_text_field", "validations": [] },
+        { "key": "text_3", "name": "Texto 3", "description": "", "required": false, "type": "rich_text_field", "validations": [] }
+      ]
+    },
+    {
+      "type": "como_usar",
+      "name": "Como usar",
+      "description": "Conteúdo que será utilizado no metafield \"Como usar (session)\" e que será renderizado na section Goshop How to Use PDP",
+      "displayNameKey": null,
+      "source_instances": 2,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "file", "name": "File", "description": "", "required": false, "type": "file_reference", "validations": [] },
+        { "key": "steps", "name": "Steps", "description": "", "required": false, "type": "list.single_line_text_field", "validations": [] }
+      ]
+    },
+    {
+      "type": "product_ingredients",
+      "name": "Product Ingredients",
+      "description": "",
+      "displayNameKey": "ingredient_title",
+      "source_instances": 1,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "ingredient_title", "name": "Ingredient Title", "description": "", "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "ingredient_image", "name": "Ingredient Image", "description": "", "required": false, "type": "file_reference", "validations": [ { "name": "file_type_options", "value": "[\"Image\"]" } ] },
+        { "key": "ingredient_url", "name": "Ingredient URL", "description": "", "required": false, "type": "url", "validations": [] },
+        { "key": "ingredient_description", "name": "Ingredient Description", "description": "", "required": false, "type": "rich_text_field", "validations": [] }
+      ]
+    },
+    {
+      "type": "video_tutorial_how_to_use",
+      "name": "Vídeo e tutorial - Como usar",
+      "description": "",
+      "displayNameKey": "titulo",
+      "source_instances": 4,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": true } },
+      "fieldDefinitions": [
+        { "key": "titulo", "name": "Título", "description": "", "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "media", "name": "Media", "description": "", "required": false, "type": "file_reference", "validations": [] },
+        { "key": "topicos", "name": "Tópicos", "description": "", "required": false, "type": "list.single_line_text_field", "validations": [] }
+      ]
+    },
+    {
+      "type": "section_efficacy_item",
+      "name": "Section Efficacy Item",
+      "description": "",
+      "displayNameKey": "state",
+      "source_instances": 96,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "PUBLIC_READ" },
+      "capabilities": { "publishable": { "enabled": false }, "translatable": { "enabled": false } },
+      "fieldDefinitions": [
+        { "key": "state", "name": "State", "description": "", "required": true, "type": "single_line_text_field", "validations": [ { "name": "choices", "value": "[\"Active\",\"Inactive\"]" } ] },
+        { "key": "background_image", "name": "Background image", "description": "", "required": false, "type": "file_reference", "validations": [ { "name": "file_type_options", "value": "[\"Image\"]" } ] },
+        { "key": "icon", "name": "Icon", "description": "", "required": false, "type": "file_reference", "validations": [ { "name": "file_type_options", "value": "[\"Image\"]" } ] },
+        { "key": "number", "name": "Number", "description": "", "required": false, "type": "single_line_text_field", "validations": [] },
+        { "key": "text", "name": "Text", "description": "", "required": true, "type": "single_line_text_field", "validations": [] },
+        { "key": "footnote", "name": "Footnote", "description": "", "required": false, "type": "single_line_text_field", "validations": [] }
+      ]
+    },
+    {
+      "type": "collection_tags",
+      "name": "Collection Tags",
+      "description": null,
+      "displayNameKey": "label",
+      "source_instances": 21,
+      "access": { "admin": "PUBLIC_READ_WRITE", "storefront": "NONE" },
+      "capabilities": { "publishable": { "enabled": true }, "translatable": { "enabled": false } },
+      "fieldDefinitions": [
+        { "key": "label", "name": "Label", "description": null, "required": true, "type": "single_line_text_field", "validations": [] },
+        { "key": "text_color", "name": "Text Color", "description": null, "required": false, "type": "color", "validations": [] },
+        { "key": "tag_background_color", "name": "Tag Background Color", "description": null, "required": false, "type": "color", "validations": [] },
+        { "key": "tags", "name": "Tags", "description": null, "required": true, "type": "list.single_line_text_field", "validations": [] }
+      ]
+    }
+  ],
+
+  "phase2_metafield_definitions": [
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "_all_fields_upsell_banner_", "name": "[All Fields] Upsell Banner ", "description": "", "type": "metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:upsell_banner}}" } ], "pin": true, "pin_order": 16, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "info_lista_vertical_de_upsell", "name": "[Info] Lista vertical de upsell ", "description": "", "type": "list.metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:upsell_vertical_list}}" } ], "pin": true, "pin_order": 17, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "temporizador_promocional", "name": "Temporizador Promocional", "description": "", "type": "metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:temporizador_promocional}}" } ], "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "barra_de_estoque", "name": "Barra de Estoque", "description": "", "type": "metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:barra_de_estoque}}" } ], "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "tag_customizada", "name": "[Card] Tag Customizada", "description": "", "type": "list.metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:tag_customizada}}" } ], "pin": true, "pin_order": 18, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "kit_or_single", "name": "[FILTRO] Kit ou unitário", "description": "", "type": "metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:kit_or_single}}" } ], "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "product_category_type", "name": "[FILTRO] Categoria/Tipo de produto", "description": "", "type": "list.metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:product_category_type}}" } ], "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "kit_builder", "name": "Monte seu kit", "description": "", "type": "metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:kit_builder}}" } ], "pin": true, "pin_order": 19, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "product_info_benefits", "name": "[Info] Short Description + Bullet Points", "description": "", "type": "metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:product_benefit}}" } ], "pin": true, "pin_order": 20, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "product_icons", "name": "[Product Info] Ícones de produto", "description": "Quantidade sugerida: máximo 3", "type": "list.metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:product_icon}}" }, { "name": "list.max", "value": "3" } ], "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "section_faq", "name": "[Gogroup] [Section] [PDP] FAQ", "description": "", "type": "list.metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:faq_item}}" } ], "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "eficiencia_do_produto", "name": "[Section] Eficiência do Produto", "description": "", "type": "metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:eficiencia_do_produto}}" } ], "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "como_usar_session_pdp", "name": "[Section] Como usar", "description": "Conteúdo que será renderizado na section Goshop How to Use PDP", "type": "metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:como_usar}}" } ], "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "product_ingredients_metafield", "name": "[Gogroup] [Section] [PDP] Ingredientes", "description": "", "type": "list.metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:product_ingredients}}" } ], "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "how_to_use_pdp", "name": "[Gogroup] [PDP] [Section] Como Usar - PDP", "description": "", "type": "metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:video_tutorial_how_to_use}}" } ], "pin": true, "pin_order": 21, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "section_efficacy", "name": "[Gogroup] [PDP] [Section] Eficácia — PDP", "description": "", "type": "list.metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:section_efficacy_item}}" } ], "pin": true, "pin_order": 22, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "COLLECTION", "namespace": "custom", "key": "tags_collection", "name": "Tags Collection", "description": null, "type": "metaobject_reference", "validations": [ { "name": "metaobject_definition_id", "value": "{{MOD:collection_tags}}" } ], "pin": true, "pin_order": 2, "access": { "storefront": "PUBLIC_READ" } }
+  ],
+
+  "phase3_plain_metafield_definitions": [
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "isen_o_de_direitos_autorais", "name": "Isenção de direitos autorais", "description": "", "type": "multi_line_text_field", "pin": true, "pin_order": 1, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "composi_o", "name": "Composição", "description": "Composição", "type": "multi_line_text_field", "pin": true, "pin_order": 2, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "notas_da_fragr_ncia", "name": "Notas da Fragrância", "description": "", "type": "multi_line_text_field", "pin": true, "pin_order": 3, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "modo_de_uso", "name": "Modo de Uso", "description": "Modo de Uso", "type": "multi_line_text_field", "pin": true, "pin_order": 4, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "sobre_o_produto", "name": "Sobre o produto", "description": "Sobre o produto", "type": "multi_line_text_field", "pin": true, "pin_order": 5, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "ocultar_para_brinde_", "name": "Ocultar para Brinde ", "description": "Ocultar para Brinde ", "type": "number_integer", "validations": [ { "name": "min", "value": "1" } ], "pin": true, "pin_order": 6, "access": { "storefront": "NONE" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "_v2_descri_o_curta", "name": "[v2] Descrição curta", "description": "", "type": "rich_text_field", "pin": true, "pin_order": 7, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "_v2_descri_o", "name": "[v2] Descrição", "description": "", "type": "rich_text_field", "pin": true, "pin_order": 8, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "_v2_indica_o", "name": "[v2] Indicação", "description": "", "type": "rich_text_field", "pin": true, "pin_order": 9, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "_v2_tecnologia", "name": "[v2] Tecnologia", "description": "", "type": "rich_text_field", "pin": true, "pin_order": 10, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "_v2_benef_cios", "name": "[v2] Benefícios", "description": "", "type": "rich_text_field", "pin": true, "pin_order": 11, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "_v2_modo_de_uso", "name": "[v2] Modo de Uso", "description": "", "type": "rich_text_field", "pin": true, "pin_order": 12, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "_v2_resultado", "name": "[v2] Resultado", "description": "", "type": "rich_text_field", "pin": true, "pin_order": 13, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "_v2_itens_inclusos", "name": "[v2] Itens Inclusos", "description": "", "type": "rich_text_field", "pin": true, "pin_order": 14, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "cheiro_inspirado", "name": "Cheiro Inspirado", "description": "", "type": "single_line_text_field", "pin": true, "pin_order": 15, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "badges", "name": "Badges", "description": "", "type": "list.single_line_text_field", "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "composicao", "name": "[Info] Composição", "description": "", "type": "rich_text_field", "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "ingredients", "name": "[Info] Ingredientes", "description": "", "type": "rich_text_field", "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "estoque_minimo", "name": "Estoque Mínimo", "description": "", "type": "number_integer", "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "was_restocked", "name": "[STOCK] Estoque reposto", "description": "", "type": "boolean", "pin": false, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "PRODUCT", "namespace": "custom", "key": "compras_no_mes", "name": "Compras no mês", "description": "", "type": "number_integer", "pin": true, "pin_order": 23, "access": { "storefront": "PUBLIC_READ" } },
+    { "ownerType": "COLLECTION", "namespace": "custom", "key": "banner_cole_o", "name": "BANNER COLEÇÃO ", "description": "", "type": "file_reference", "validations": [ { "name": "file_type_options", "value": "[\"Image\",\"Video\"]" } ], "pin": true, "pin_order": 1, "access": { "storefront": "PUBLIC_READ" } }
+  ],
+
+  "excluded_native_taxonomy": [
+    { "type": "shopify--fragrance", "product_metafield": "shopify.scent" },
+    { "type": "shopify--season", "product_metafield": "shopify.season" },
+    { "type": "shopify--occasion", "product_metafield": "shopify.occasion" },
+    { "type": "shopify--color-pattern", "product_metafield": "shopify.color-pattern" },
+    { "type": "shopify--suitable-for-skin-type", "product_metafield": "shopify.suitable-for-skin-type" },
+    { "type": "shopify--bag-case-material", "product_metafield": "shopify.bag-case-material" },
+    { "type": "shopify--bag-case-storage-features", "product_metafield": "shopify.bag-case-storage-features" },
+    { "type": "shopify--marker-text-color", "product_metafield": null }
+  ],
+
+  "excluded_third_party": [
+    "mm-google-shopping.custom_product (app Google & YouTube)",
+    "mm_google_shopping_extension.* (SHOP)",
+    "rbrfb.fastbundleconf (SHOP — app Fast Bundle)",
+    "intelipost.largura / altura / comprimento (app Intelipost)",
+    "reviews.rating / reviews.rating_count (app de avaliações)",
+    "shopify--discovery--* (Search & Discovery)"
+  ],
+
+  "source_gids_barbours": {
+    "upsell_banner": "gid://shopify/MetaobjectDefinition/9260925219",
+    "upsell_vertical_list": "gid://shopify/MetaobjectDefinition/11614716195",
+    "barra_de_estoque": "gid://shopify/MetaobjectDefinition/14522482979",
+    "temporizador_promocional": "gid://shopify/MetaobjectDefinition/14522515747",
+    "notify_me_request": "gid://shopify/MetaobjectDefinition/15334441251",
+    "tag_customizada": "gid://shopify/MetaobjectDefinition/16218521891",
+    "kit_or_single": "gid://shopify/MetaobjectDefinition/16951116067",
+    "product_category_type": "gid://shopify/MetaobjectDefinition/16951181603",
+    "kit_builder": "gid://shopify/MetaobjectDefinition/16955801891",
+    "product_benefit": "gid://shopify/MetaobjectDefinition/17684365603",
+    "product_icon": "gid://shopify/MetaobjectDefinition/17708646691",
+    "faq_item": "gid://shopify/MetaobjectDefinition/17886937379",
+    "eficiencia_do_produto": "gid://shopify/MetaobjectDefinition/18066473251",
+    "como_usar": "gid://shopify/MetaobjectDefinition/18068078883",
+    "product_ingredients": "gid://shopify/MetaobjectDefinition/18081612067",
+    "video_tutorial_how_to_use": "gid://shopify/MetaobjectDefinition/19386990883",
+    "section_efficacy_item": "gid://shopify/MetaobjectDefinition/19387416867",
+    "collection_tags": "gid://shopify/MetaobjectDefinition/20271530275"
+  }
+}

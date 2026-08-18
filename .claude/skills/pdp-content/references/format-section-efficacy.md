@@ -367,3 +367,45 @@ query { metaobjects(type: "eficiencia_item", first: 50) {
   edges { node { id handle capabilities { publishable { status } } } } } }
 ```
 Se aparecer algum DRAFT que deveria estar ACTIVE → `metaobjectUpdate` com `capabilities.publishable.status: "ACTIVE"`.
+
+---
+
+## 🌐 Padrão brand-agnostic: Trust seals em section_efficacy
+
+> **REGRA UNIVERSAL — vale pra TODAS as marcas Gobeauté** (Apice, Barbour's, Rituária, Kokeshi, Lescent, By Samia, Auá).
+
+Toda PDP deve incluir **um trust seal** entre os 6 cards de Efficacy. A regra é:
+
+| Produto contém ingrediente animal (mel, cera, leite, etc.)? | Use efficacy badge |
+|---|---|
+| ❌ Não — produto 100% vegano | `eficiencia_item` com `text: "vegano e cruelty-free"` + ícone leaf+bunny |
+| ✅ Sim (ex: Olhos de Gueixa tem mel) | `eficiencia_item` com `text: "cruelty-free"` + ícone bunny-only |
+
+### Procedure (executar SEMPRE antes de criar):
+
+1. **Confirmar composição** do produto via metafield `custom.caracteristicas` (INCI) — buscar palavras: `mel`, `honey`, `lac`, `lanolin`, `cera`, `beeswax`, `keratin`, `colágeno hidrolisado animal`, etc.
+2. **Query existing efficacy badges** da loja:
+```graphql
+query CheckCfBadges {
+  badges: metaobjects(type: "eficiencia_item", first: 50, query: "cruelty") {
+    edges { node { id handle fields { key value } } }
+  }
+}
+```
+3. **Match semântico**:
+   - Vegano → reusar handle `vegano-e-cruelty-free` (ou equivalente da marca)
+   - Não-vegano (com ingrediente animal) → reusar handle `cruelty-free` (ou equivalente)
+4. **Se NÃO existir** o badge correto na loja → criar (uma vez, universal) + reusar daí em diante
+5. **Adicionar GID** na lista do `custom.section_efficacy` do produto
+
+### Consistência visual com `product_icons`
+
+O ícone do efficacy badge **DEVE bater visualmente** com o `product_icon` de cruelty-free da loja:
+- Vegano: mesma imagem leaf+bunny usada em ambos `product_icon` e `eficiencia_item`
+- Cruelty-free puro: mesma imagem bunny-only
+
+Isso garante coerência entre `[Product Info] Trust Icons` (topo da PDP) e `[Section] Efficacy` (corpo).
+
+### 🚨 Anti-pattern: criar duplicatas
+
+Se 4 produtos não-veganos têm 4 metaobjetos `eficiencia_item` separados com mesmo texto "cruelty-free" → ERRADO. Consolidar em **1 universal** e reusar GID. Mesmo princípio pra `vegano-e-cruelty-free`.

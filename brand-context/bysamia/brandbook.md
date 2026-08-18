@@ -417,22 +417,51 @@ Aplicáveis a **100% do catálogo:**
 
 ### 7.1 Óleos essenciais (núcleo)
 
-| Ingrediente | Nome científico | O que comunica |
-|---|---|---|
-| **Lavanda** | *Lavandula angustifolia* | Calma, relaxamento, sono tranquilo — o mais versátil e amado |
-| **Lemongrass** | *Cymbopogon citratus* | Frescor, vitalidade, equilíbrio emocional |
-| **Tea Tree / Melaleuca** | *Melaleuca alternifolia* | Pureza, limpeza, proteção natural |
-| **Alecrim** | *Rosmarinus officinalis* | Foco, memória, energia mental |
-| **Laranja** | *Citrus sinensis* | Alegria, leveza, otimismo |
-| **Litsea Cubeba** | *Litsea cubeba* | Aroma cítrico-herbal sofisticado (Linha Bem-Estar) |
-| **Gerânio Bourbon** | *Pelargonium graveolens* | Equilíbrio feminino, floral |
-| **Patchouli** | *Pogostemon cablin* | Terroso, aterrante, sensual |
-| **Sândalo** | *Santalum album* | Meditação, Zen, profundidade |
-| **Ylang-Ylang** | *Cananga odorata* | Sensualidade, romance, alegria |
-| **Petitgrain** | *Citrus aurantium* | Equilíbrio, elegância, calma zen |
-| **Bergamota** | *Citrus bergamia* | Equilíbrio emocional, frescor cítrico |
-| **Hortelã Pimenta** | *Mentha piperita* | Frescor intenso, energia, clareza mental |
-| **Copaíba** | *Copaifera spp.* | Origem brasileira, cuidado natural, raízes nacionais |
+> ✅ **Corrigido em 2026-07-29 contra o RÓTULO FÍSICO** de cada produto (imagem no CDN da loja). O rótulo é a fonte regulatória e prevalece sobre qualquer outra. A versão anterior desta tabela tinha **6 nomes científicos errados**. Tabela completa dos 23 SKUs auditados, com método de extração, em [`docs/bysamia-inci-rotulos.md`](../../docs/bysamia-inci-rotulos.md).
+
+| Ingrediente | Nome INCI (rótulo) | Extração | O que comunica |
+|---|---|---|---|
+| **Lavanda** | *Lavandula angustifolia* | Destilado de flores | Calma, relaxamento, sono tranquilo — o mais versátil e amado |
+| **Lemongrass** | *Cymbopogon schoenanthus* ⚠️ | Destilado de folhas | Frescor, vitalidade, equilíbrio emocional |
+| **Tea Tree / Melaleuca** | *Melaleuca alternifolia* leaf oil | Destilado de folhas | Pureza, limpeza, proteção natural |
+| **Alecrim** | *Rosmarinus officinalis* leaf oil (QT1 Cânfora) | Destilado de folhas | Foco, memória, energia mental |
+| **Laranja** | *Citrus aurantium dulcis* ⚠️ | Prensado a frio da casca | Alegria, leveza, otimismo |
+| **Litsea Cubeba** | *Litsea cubeba* `[VALIDAR no rótulo]` | — | Aroma cítrico-herbal sofisticado (Linha Bem-Estar) |
+| **Gerânio Bourbon** | *Pelargonium graveolens* flower oil | Destilado de flores | Equilíbrio feminino, floral |
+| **Patchouli** | *Pogostemon cablin* oil | Destilado de folhas | Terroso, aterrante, sensual |
+| **Sândalo Amyris** | *Amyris balsamifera* bark oil 🔴 | Destilado da casca | Meditação, Zen, profundidade |
+| **Ylang-Ylang** | *Cananga odorata* flower oil | Destilado de flores | Sensualidade, romance, alegria |
+| **Petitgrain** | *Citrus aurantium amara* ⚠️ | Destilado de folhas | Equilíbrio, elegância, calma zen |
+| **Bergamota** | *Citrus aurantium bergamia* ⚠️ | Prensado a frio da casca | Equilíbrio emocional, frescor cítrico |
+| **Hortelã Pimenta** | *Mentha piperita* oil | Destilado de folhas | Frescor intenso, energia, clareza mental |
+| **Copaíba** | *Copaifera officinalis* resin oil ⚠️ | Destilado da resina | Origem brasileira, cuidado natural, raízes nacionais |
+| **Cedro** | *Juniperus virginiana* oil 🔴 | Destilado dos frutos e folhas | Calma amadeirada, aterramento |
+| **Cravo** | *Eugenia caryophyllus* leaf oil 🔴 | Destilado de folhas | Aroma quente, acolhedor, especiado |
+| **Limão Siciliano** | *Citrus limon* peel oil | Destilado da casca ⚠️ | Clareza mental, leveza cítrica |
+| **Citronela** | *Cymbopogon nardus* oil | Destilado da erva | Frescor herbal, aroma que afasta insetos |
+| **Vetiver** | *Vetiveria zizanoides* root oil | Destilado da raiz | Aterramento profundo, foco |
+| **Tangerina** | *Citrus tangerina* peel oil 🔴 | Destilado da casca | Doce, alegre, cítrico suave |
+| **Manjerona** | *Origanum majorana* leaf oil | Destilado de folhas | Calma, equilíbrio, alívio de tensões |
+| **Eucalipto Globulus** | *Eucalyptus globulus* leaf oil | Destilado de folhas | Sensação de respiração ampla |
+| **Hortelã do Brasil** | *Mentha arvensis* leaf oil | Destilado de folhas | Frescor suave, de cultivo nacional |
+
+🔴 = espécie/gênero **diferente** do que constava antes · ⚠️ = nome ou método refinado para a forma do rótulo
+
+#### 🔴 Atenção — o Sândalo da By Samia não é *Santalum album*
+
+O produto se chama **"Sândalo Amyris"** e o rótulo declara ***Amyris balsamifera* bark oil**. A versão anterior deste brandbook afirmava *Santalum album*.
+
+Não são sinônimos: *Amyris balsamifera* (Rutaceae, "sândalo das Índias Ocidentais") e *Santalum album* (Santalaceae, sândalo indiano verdadeiro) são **famílias botânicas diferentes**, com perfil aromático e faixa de preço muito distintos. O rótulo está correto e transparente — era o material de marca que estava desalinhado.
+
+**Nunca** descrever este produto como sândalo indiano, *Santalum album*, ou sugerir a raridade/valor associados a essa espécie.
+
+#### Regra prática sobre método de extração
+
+**Cítricos não seguem padrão** e não é dedutível:
+- Prensado a frio da casca → **Laranja, Bergamota**
+- Destilado da casca → **Limão Siciliano, Tangerina**
+
+Nunca afirmar "prensado a frio" para um cítrico sem checar o rótulo — a chance de errar é de aproximadamente 50%.
 
 ### 7.2 Óleos vegetais (bases/carreadores)
 
@@ -679,6 +708,8 @@ A trajetória: **óleos essenciais puros → ecossistema de bem-estar → refer�
 
 ---
 
-📝 **Última atualização:** 2026-05-28 — reestruturado no padrão Ápice/Lescent com base em: `Guia de Marca BY SAMIA 2024` + `Estética da marca - BY SAMIA` (Lureness) + scraping completo de bysamia.com.br (137 produtos, 56 collections) + `one page by samia.pdf` (onepager estratégico oficial — lido e incorporado em 2026-05-28).
+📝 **Última atualização:** **2026-07-29** — §7.1 (óleos essenciais) corrigida e expandida contra o **rótulo físico** de 23 SKUs. 6 nomes científicos estavam errados, incluindo o Sândalo, e o método de extração foi adicionado. Ver [`docs/bysamia-inci-rotulos.md`](../../docs/bysamia-inci-rotulos.md).
 
-📝 **Status:** ✅ Brandbook reestruturado e completo com todas as fontes disponíveis incorporadas. ⚠️ **Pendências:** (1) decidir identidade clássica vs. refresh por touchpoint `[VALIDAR com time de marca]`, (2) capturar HEX exatos da paleta refresh no Figma/AI original, (3) validar handle Instagram e outros canais digitais `[VALIDAR com time de marketing]`, (4) revisar claims problemáticos no site ao vivo (insônia, ansiedade, anti-inflamatório, dores musculares, edemas), (5) validar persona com dados reais de CRM.
+📝 Atualização anterior: 2026-05-28 — reestruturado no padrão Ápice/Lescent com base em: `Guia de Marca BY SAMIA 2024` + `Estética da marca - BY SAMIA` (Lureness) + scraping completo de bysamia.com.br (137 produtos, 56 collections) + `one page by samia.pdf` (onepager estratégico oficial).
+
+📝 **Status:** ✅ Brandbook reestruturado e completo com todas as fontes disponíveis incorporadas. ⚠️ **Pendências:** (1) decidir identidade clássica vs. refresh por touchpoint `[VALIDAR com time de marca]`, (2) capturar HEX exatos da paleta refresh no Figma/AI original, (3) validar handle Instagram e outros canais digitais `[VALIDAR com time de marketing]`, (4) revisar claims problemáticos no site ao vivo (insônia, ansiedade, anti-inflamatório, dores musculares, edemas) — inclui as `product.description` dos top sellers, ver §"Claims problemáticos", (5) validar persona com dados reais de CRM, (6) **auditar peças de marketing já publicadas que citem *Santalum album* / sândalo indiano** — o produto é *Amyris balsamifera*, ver §7.1, (7) confirmar o INCI da Litsea Cubeba no rótulo (único da §7.1 ainda não verificado).

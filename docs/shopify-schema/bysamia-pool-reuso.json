@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "shop": "www.bysamia.com.br",
+    "proposito": "Catálogo VIVO de metaobjetos reusáveis de PDP da By Samia. CONSULTE ESTE ARQUIVO ANTES de criar qualquer metaobjeto novo (regra anti-duplicata do plano §7.1).",
+    "atualizado_em": "2026-07-29",
+    "ondas_executadas": ["Onda 0 — pool dimensionado pelo piloto", "Onda 1 — top 5 produtos"],
+    "plano": "docs/bysamia-plano-editorial-top40.md",
+    "auditoria_draft": "todos ACTIVE, verificado por query pós-criação em 2026-07-29"
+  },
+
+  "trust_icons": {
+    "_regra": "4 por produto = 3 específicos + vegano-e-livre-de-conservantes. Máx 1 seal por produto.",
+    "universal": {
+      "vegano-e-livre-de-conservantes": { "gid": "gid://shopify/Metaobject/487714488401", "title": "Vegano e Livre de Conservantes", "description": "cruelty-free e 100% puro", "origem": "pré-existente", "uso": "TODOS os produtos" }
+    },
+    "criados_2026_07_29": {
+      "calma-e-sono-tranquilo": { "gid": "gid://shopify/Metaobject/1759321456721", "title": "Calma e sono tranquilo", "description": "Favorece um ambiente propício ao descanso", "icon": "gid://shopify/MediaImage/67792605282385", "substitui_nao_compliant": ["natal", "promove-sono-leve-e-relaxamento", "calmante-profundo", "estabilizador-emocional-profundo"], "aplicar_em": ["Lavanda", "Lavanda Bulgária", "Blend Relaxante", "Roll On Relaxante", "Kit Noite Perfeita", "Cedro", "Manjerona", "Room Spray Relaxante"] },
+      "equilibrio-emocional-seguro": { "gid": "gid://shopify/Metaobject/1759321489489", "title": "Equilíbrio emocional", "description": "Auxilia a atravessar dias de rotina intensa", "icon": "gid://shopify/MediaImage/67777154056273", "substitui_nao_compliant": ["equilibrio-emocional", "equilibrio-emocional-1", "reducao-de-estresse-ansiedade-e-depressao-leve"], "aplicar_em": ["Lavanda", "Laranja", "Bergamota", "Lemongrass", "Blend Bem Estar", "Litsea Cubeba"] },
+      "alegria-e-leveza": { "gid": "gid://shopify/Metaobject/1759321522257", "title": "Alegria e leveza", "description": "Aroma cítrico que ilumina o ambiente", "icon": "gid://shopify/MediaImage/67789065650257", "aplicar_em": ["Laranja", "Limão Siciliano", "Bergamota", "Tangerina", "Grapefruit"] },
+      "pureza-da-pele": { "gid": "gid://shopify/Metaobject/1759321555025", "title": "Pureza da pele", "description": "Purifica e auxilia na limpeza natural", "icon": "gid://shopify/MediaImage/67792566419537", "substitui_nao_compliant": ["antifungico-e-antibacteriano-potente", "cicatrizante-e-antisseptico-de-feridas", "acao-antibacteriana-e-cicatrizante", "estimula-o-tecido", "regeneracao-cicatrizacao"], "aplicar_em": ["Tea Tree", "Cravo", "Citronela", "Anex Emoliente"] },
+      "curadoria-de-ritual": { "gid": "gid://shopify/Metaobject/1759321587793", "title": "Curadoria de ritual", "description": "Óleos escolhidos para funcionarem juntos", "icon": "gid://shopify/MediaImage/67789004734545", "aplicar_em": ["os 5 kits", "os 6 blends"] },
+      "porta-de-entrada": { "gid": "gid://shopify/Metaobject/1759321620561", "title": "Porta de entrada", "description": "Ideal para quem está começando na aromaterapia", "icon": "gid://shopify/MediaImage/67789722386513", "aplicar_em": ["Kit Trilogia Essencial", "Kit Trio Básico", "Kit Primeira Experiência", "Lavanda"] }
+    },
+    "corrigidos_2026_07_29": {
+      "livre-respiracao": { "gid": "gid://shopify/Metaobject/491683217489", "antes": "Livre Respiração / Auxilia no Descongestionar das Vias", "depois": "Livre respiração / Frescor que abre o ambiente e o peito", "motivo": "descongestionar = claim terapêutico" },
+      "massagens-para-relaxamento": { "gid": "gid://shopify/Metaobject/491016257617", "antes": "Massagens para relaxamento / e melhora da circulação sanguínea", "depois": "Massagens para relaxamento / Base ideal para massagens de relaxamento", "motivo": "circulação sanguínea = claim terapêutico" },
+      "sensacao-de-resfrescancia": { "gid": "gid://shopify/Metaobject/488697462865", "antes": "Sensação de Resfrescância (typo)", "depois": "Sensação de refrescância", "motivo": "erro de grafia" }
+    },
+    "reusaveis_ja_compliant": {
+      "facilita-a-concentracao": { "gid": "gid://shopify/Metaobject/491118461009", "aplicar_em": ["Alecrim", "Kit Trilogia", "Blend Energizante", "Roll On Energizante", "Kit Energia & Foco"] },
+      "promove-disposicao-imediata": { "gid": "gid://shopify/Metaobject/491118428241", "aplicar_em": ["Alecrim", "Hortelã Pimenta", "Hortelã do Brasil", "Blend Energizante"] },
+      "estimulacao-suave-da-mente": { "gid": "gid://shopify/Metaobject/487736541265", "aplicar_em": ["Alecrim", "Bergamota", "Litsea Cubeba"] },
+      "ambiente-relaxante": { "gid": "gid://shopify/Metaobject/487736639569", "aplicar_em": ["Lavanda", "Laranja", "Room Sprays"] },
+      "relaxante-ambiental": { "gid": "gid://shopify/Metaobject/488726036561", "aplicar_em": ["Room Spray Bem Estar", "Blend Relaxante"] },
+      "pausa-consciente": { "gid": "gid://shopify/Metaobject/491111317585", "aplicar_em": ["Roll On Zen", "Blend Zen", "Sândalo", "Cedro"] },
+      "alivia-tensoes-emocionais-e-fisicas": { "gid": "gid://shopify/Metaobject/491111252049", "aplicar_em": ["Roll On Relaxante", "Blend Relaxante", "Manjerona"] },
+      "apoio-emocional": { "gid": "gid://shopify/Metaobject/488729444433", "aplicar_em": ["Patchouli", "Gerânio Bourbon", "Blend Mulher"] },
+      "aplicacao-pratica": { "gid": "gid://shopify/Metaobject/491112038481", "aplicar_em": ["os 4 roll-ons"] },
+      "facilita-o-autocuidado": { "gid": "gid://shopify/Metaobject/491679383633", "aplicar_em": ["Ylang-Ylang", "Roll On Sensual", "Kit Sensualidade"] },
+      "intensifica-o-magnetismo": { "gid": "gid://shopify/Metaobject/491679547473", "aplicar_em": ["Ylang-Ylang", "Roll On Sensual", "Kit Sensualidade"] },
+      "ajuda-a-aliviar-o-cansaco": { "gid": "gid://shopify/Metaobject/491683020881", "aplicar_em": ["Blend Refrescante", "Roll On Refrescante", "Limão Siciliano"] },
+      "pele-radiante": { "gid": "gid://shopify/Metaobject/491021533265", "aplicar_em": ["Tea Tree", "Rosa Mosqueta", "Semente de Uva"] },
+      "controle-de-oleosidade": { "gid": "gid://shopify/Metaobject/491020091473", "aplicar_em": ["Tea Tree", "Semente de Uva", "Jojoba"] },
+      "nutricao-capilar": { "gid": "gid://shopify/Metaobject/491021500497", "aplicar_em": ["Amêndoa Doce", "Semente de Uva"] },
+      "saude-capilar": { "gid": "gid://shopify/Metaobject/491019534417", "aplicar_em": ["Amêndoa Doce", "Rosa Mosqueta"] },
+      "sensacao-de-resfrescancia": { "gid": "gid://shopify/Metaobject/488697462865", "aplicar_em": ["Hortelã Pimenta", "Hortelã do Brasil", "Blend Refrescante", "Eucalipto"] }
+    },
+    "seals_do_refresh_nao_usar_junto_do_universal": {
+      "100-puro": "gid://shopify/Metaobject/1755521712209",
+      "vegano": "gid://shopify/Metaobject/1755525349457",
+      "cruelty-free": "gid://shopify/Metaobject/1755529969745"
+    },
+    "PENDENTES_ONDAS_2_3": [
+      "conforto-muscular — substitui acao-anti-inflamatoria, relaxante-muscular, alivio-de-dores-musculares-e-tonturas, util-em-dores-cronicas-e-fibromialgia",
+      "respiracao-ampla — substitui suporte-ao-sistema-respiratorio, alivio-de-congestionamento, conforto-respiratorio, suporte-respiratorio",
+      "pele-renovada — substitui regenerador-celular, reduzir-inflamacoes-cutaneas, apoia-a-regeneracao-da-pele",
+      "acolhimento-no-ciclo — substitui equilibrio-hormonal-feminino",
+      "aterramento — substitui equilibrio-nervoso",
+      "aroma-quente-e-acolhedor — substitui analgesico-dor-de-dente",
+      "aroma-que-afasta-insetos — substitui repelente-natural (dengue), barreira-natural",
+      "sensacao-de-leveza — substitui acao-drenante-e-desintoxicante, fortalecedor-do-sistema-circulatorio-e-linfatico, acao-diuretica-e-urinaria",
+      "nutricao-profunda — substitui hidrata-e-regenera",
+      "toque-seco",
+      "carreador-ideal",
+      "pronto-para-usar"
+    ]
+  },
+
+  "video_tutorial_how_to_use": {
+    "_regra": "1 metaobjeto por ARQUÉTIPO, referenciado por todos os produtos dele. Maior fator de reuso do batch.",
+    "seu-ritual-em-3-passos": { "gid": "gid://shopify/Metaobject/1754862878801", "titulo": "Como usar seu óleo essencial", "acao": "ATUALIZADO em 2026-07-29 (era um how-to genérico de 3 passos)", "serve": "os 17 óleos essenciais puros do top 40", "referenciado_por": ["Lavanda", "Alecrim", "Laranja", "Tea Tree"] },
+    "como-usar-kit-aromaterapia": { "gid": "gid://shopify/Metaobject/1759321686097", "titulo": "Como usar seu kit", "serve": "os 5 kits do top 40", "referenciado_por": ["Kit Trilogia Essencial"] },
+    "PENDENTES_ONDAS_2_3": ["como-usar-blend", "como-usar-roll-on", "como-usar-oleo-vegetal", "como-usar-room-spray", "como-usar-anex-unhas"]
+  },
+
+  "product_ingredients": {
+    "_regra": "1 card por BOTÂNICO, reusado em todo produto que o contenha. pureza-garantida fecha todos.",
+    "pureza-garantida": { "gid": "gid://shopify/Metaobject/1755825569873", "tem_imagem": true, "uso": "card de fechamento de TODOS os produtos" },
+    "lavandula-angustifolia": { "gid": "gid://shopify/Metaobject/1755825438801", "tem_imagem": true, "uso": ["Lavanda", "Lavanda Bulgária", "Kit Trilogia", "Kit Trio Básico", "Kit Noite Perfeita", "Blend Bem Estar", "Blend Relaxante", "Blend Energizante", "Roll On Relaxante"] },
+    "rosmarinus-officinalis": { "gid": "gid://shopify/Metaobject/1759321718865", "tem_imagem": false, "uso": ["Alecrim", "Kit Trilogia", "Kit Trio Básico", "Blend Energizante", "Roll On Energizante"] },
+    "citrus-sinensis": { "gid": "gid://shopify/Metaobject/1759321751633", "tem_imagem": false, "uso": ["Laranja", "Kit Trilogia", "Blend Bem Estar", "Blend Relaxante", "Blend Refrescante", "Blend Energizante", "Blend Zen", "Room Spray Bem Estar"] },
+    "melaleuca-alternifolia": { "gid": "gid://shopify/Metaobject/1759321784401", "tem_imagem": false, "uso": ["Tea Tree", "Kit Trio Básico", "Anex Emoliente"] },
+    "PENDENTES_ONDAS_2_3": ["Mentha piperita", "Eucalyptus globulus", "Cananga odorata", "Citrus limon", "Copaifera spp.", "Cymbopogon citratus", "Pogostemon cablin", "Mentha arvensis", "Pelargonium graveolens", "Citrus bergamia", "Syzygium aromaticum", "Cedrus atlantica", "Cymbopogon nardus", "Vetiveria zizanioides", "Santalum album", "Citrus aurantium", "Origanum majorana", "Citrus reticulata", "Salvia sclarea", "Cymbopogon martinii", "Rosa rubiginosa", "Vitis vinifera", "Prunus amygdalus dulcis", "Simmondsia chinensis", "Citrus latifolia", "Cinnamomum verum", "Myristica fragrans", "Azadirachta indica", "Calendula officinalis"],
+    "PENDENTE_IMAGENS": "29 dos 34 cards estão sem ingredient_image — sessão PiApp separada (Onda 4)"
+  },
+
+  "faq_point": {
+    "_regra": "MÁX 2 POR PRODUTO — cada item vira uma ABA na PDP, ao lado de Descrição/Composição/Modo de uso. faq_question é rótulo de aba: 2 a 4 palavras.",
+    "pool": {
+      "e-100-puro": { "gid": "gid://shopify/Metaobject/1759321817169", "pergunta": "É 100% puro?", "uso": "OE, blends, óleos vegetais" },
+      "pode-usar-na-pele": { "gid": "gid://shopify/Metaobject/1759321849937", "pergunta": "Pode usar na pele?", "uso": "OE, blends", "referenciado_por": ["Lavanda", "Laranja", "Tea Tree"] },
+      "vegano-e-cruelty-free": { "gid": "gid://shopify/Metaobject/1759321882705", "pergunta": "Vegano e cruelty-free?", "uso": "universal", "referenciado_por": [] },
+      "o-que-vem-no-kit": { "gid": "gid://shopify/Metaobject/1759321915473", "pergunta": "O que vem no kit?", "uso": "kits", "referenciado_por": ["Kit Trilogia"] }
+    },
+    "especificos": {
+      "lavanda-qual-especie": { "gid": "gid://shopify/Metaobject/1759322079313", "pergunta": "Qual lavanda é?" },
+      "kit-trilogia-por-onde-comecar": { "gid": "gid://shopify/Metaobject/1759322112081", "pergunta": "Por onde começar?" },
+      "alecrim-qual-quimiotipo": { "gid": "gid://shopify/Metaobject/1759322144849", "pergunta": "Que quimiotipo?" },
+      "laranja-e-fotossensivel": { "gid": "gid://shopify/Metaobject/1759322177617", "pergunta": "É fotossensível?" },
+      "tea-tree-pode-no-rosto": { "gid": "gid://shopify/Metaobject/1759322210385", "pergunta": "Pode no rosto?" }
+    },
+    "PENDENTES_ONDAS_2_3": ["ja-vem-diluido (RO)", "serve-para-diluir (OV)", "como-guardar (universal)", "pode-em-criancas (OE/BL/RS)", "onde-borrifar (RS)", "qual-a-validade (universal — bloqueado por falta do dado)"]
+  },
+
+  "product_benefit": {
+    "_regra": "SEMPRE 1:1 com o produto — nunca reusar. cor_bullet_point = #F6DF88 em todos.",
+    "criados": {
+      "oleo-essencial-de-lavanda-10-ml-benefits": { "gid": "gid://shopify/Metaobject/1754957381713", "acao": "ATUALIZADO — era product-benefit-8hw8q8wj com copy da Ápice" },
+      "kit-trilogia-essencial-benefits": "gid://shopify/Metaobject/1759321948241",
+      "oleo-essencial-alecrim-10-ml-benefits": "gid://shopify/Metaobject/1759321981009",
+      "oleo-essencial-de-laranja-10-ml-benefits": "gid://shopify/Metaobject/1759322013777",
+      "oleo-essencial-de-tea-tree-melaleuca-10ml-benefits": "gid://shopify/Metaobject/1759322046545"
+    },
+    "ORFAO_A_LIMPAR": {
+      "gid": "gid://shopify/Metaobject/1720905007185",
+      "handle": "oleo-de-coco-excelente-poder-umectante...super-wave",
+      "problema": "copy da Ápice (cachos, Tecnologia SuperWave) — está referenciado pelo produto Duo Ar Puro, que não é By Samia nesse conteúdo",
+      "acao_sugerida": "reescrever quando o Duo Ar Puro entrar numa onda, ou desreferenciar"
+    }
+  }
+}

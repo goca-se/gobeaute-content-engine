@@ -101,6 +101,7 @@ Limite: 3 perguntas por turno, no máximo.
 | `brand-context` | Consulta fontes oficiais (não gera) |
 | `pdp-content` | Gera conteúdo de PDP (7 formatos) — *será criado no Prompt 2* |
 | `collection-content` | Gera conteúdo de collection — *Prompt 3* |
+| `collection-tags` | Preenche pills/tags de collection (`custom.tags_collection`) com cores da paleta da marca |
 | `blog-content` | Gera blogs (texto + HTML + imagens) — *Prompt 4* |
 | `component-content` | Gera componentes (banners, etc.) — *Prompt 5* |
 | `piapp-image-gen` | Gera imagens via MCP PiApp |

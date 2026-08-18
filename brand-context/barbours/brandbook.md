@@ -151,134 +151,183 @@
 | **Óleo de Banho** | Frasco | Divine Bath — óleo perfumado para o banho |
 | **Kits** | Combinações | Duos, Trios, Quartetos, Kits Presenteáveis |
 
-### 5.2 Subfamílias olfativas (linhas)
+### 5.2 Subfamílias olfativas (linhas) — ATIVAS
 
-| Linha | Perfil sensorial | Produtos |
+| Linha | Perfil sensorial | Produtos ativos |
 |---|---|---|
-| **Oriental Sweetness** | Doce, cremosa, aconchegante. Inspirada na luxúria das fragrâncias árabes. | Caramel Kiss, Vanilla Rum, Pink Chantilly, Soft Bloom, Pure Vanilla |
-| **Tropical Glow** | Vibrante, tropical, com brilho shimmer. Para quem quer brilhar. | Golden Tropic Glow, Pink Sunset Shine, Blue Ocean Glow, Moonlight Shimmer |
-| **Quiet Notes** | Sofisticada, intensa, nicho. Amadeirada e especiada. | Amber & Breeze, Neroli & Cedar, Sandal Wood & Cashmere |
-| **Fruity Jams** | Frutal fresco, jovem, vibrante. | Amora e Ameixa, Pêssego e Mel |
-| **Ligne Homme** | Masculino — fougère, amadeirado aquático. | Bold Homme, Ocean Homme, Seduction Homme |
-| **Core / Clássicos** | Bestsellers com perfis variados — floral, gourmand, frutal, amadeirado | Good Graces, My Sweet Delight, Very Sexy, Alter Ego, Soft Breeze, Living Grace, Roses, Senseless, Rose Fresh, Pure Grace, Fine Touch, Kiss in Paradise, Solar Citrus, Affair, Celestial Glow |
+| **Core / Clássicos** | Bestsellers com perfis variados — floral, gourmand, frutal, amadeirado | Good Graces, My Sweet Delight, Very Sexy, Alter Ego, Soft Breeze, Living Grace, Roses, Senseless, Rose Fresh, Pure Grace, Fine Touch, Kiss in Paradise, Solar Citrus, Affair, Celestial Glow, **Flowers**, **Icon**, **Rich**, **Endless Soul**, **Sienna Glow** |
+| **Oriental Sweetness** | Doce, cremosa, aconchegante. Inspirada na luxúria das fragrâncias árabes. | Caramel Kiss, Vanilla Rum, Pink Chantilly |
+| **Tropical Glow** | Vibrante, tropical, com brilho shimmer. Para quem quer brilhar. | Golden Tropic Glow, Pink Sunset Shine, Moonlight Shimmer |
+| **Ligne Homme** | Masculino — fougère, amadeirado aquático. **Maior linha em receita da marca.** | Bold Homme, Ocean Homme, Seduction Homme |
+| **Petal** | Floral suave, preço de entrada (R$ 34,90). | Lilac Petal, Rose Petal |
+| **Winter Comfort** | Gourmand quente para o frio. *Estoque 0 — validar relançamento.* | Caramel Macchiato, Cocoa Dream |
 
-### 5.3 Catálogo de produtos (handles Shopify)
+> ⚠️ **Linhas DESCONTINUADAS / inativas** (não usar em conteúdo — não são compráveis):
+> **Quiet Notes** (Amber & Breeze, Neroli & Cedar, Sandal Wood & Cashmere) · **Fruity Jams** (Amora e Ameixa, Pêssego e Mel) · Pure Vanilla · Soft Bloom · Blue Ocean Glow (shimmer) · Divine Bath (óleo de banho) · Esfoliantes Sugar Cloud / Vanilla Cream / Vitamina C · Kits Cabelo Brilhante / Perfumado / Radiante · Kit 3 "Monte seu Kit" · Body Cream Good Graces 300g · Body Cream Very Sexy 300g.
+> Também com estoque 0: Cherry Kiss, Midnight Desire, Linha Moods, Body Splash Layering Kit com 3, Cashmere Petal kit.
 
-**Body Splash — Linha Core/Clássicos**
+### 5.3 Catálogo de produtos ATIVOS (handles + preços Shopify)
 
-| Produto | Handle | Inspiração |
-|---|---|---|
-| Body Splash Good Graces 200ml | `body-splash-good-graces-desodorante-colonia-200ml` | English Pear & Freesia – Jo Malone |
-| Body Splash My Sweet Delight 200ml | `body-splash-delight-deo-colonia-6947ecad195b8` | Delina – Parfums de Marly |
-| Body Splash Very Sexy 200ml | `body-splash-very-sexy-deo-colonia` | J'adore – Dior |
-| Body Splash Alter Ego 200ml | `body-splash-alter-ego-deo-colonia-6947ceb34346f` | Good Girl – Carolina Herrera |
-| Body Splash Soft Breeze 200ml | `body-splash-soft-breeze-desodorante-colonia-200ml` | Light Blue – Dolce & Gabbana |
-| Body Splash Living Grace 200ml | `body-splash-living-grace-desodorante-colonia-200ml` | — |
-| Body Splash Roses 200ml | `body-splash-roses-deo-col-6947ef11ed6cb` | 212 VIP Rosé – Carolina Herrera |
-| Body Splash Rose Fresh 200ml | `body-splash-rose-fresh-desodorante-colonia-200ml` | — |
-| Body Splash Pure Grace 200ml | `body-splash-pure-grace-desodorante-colonia-200ml` | Palatine – Parfums de Marly |
-| Body Splash Fine Touch 200ml | `body-splash-fine-touch-desodorante-colonia-200ml` | Valaya – Parfums de Marly |
-| Body Splash Kiss in Paradise 200ml | `body-splash-kiss-in-paradise-desodorante-colonia-200ml` | Love Don't Be Shy – Killian |
-| Body Splash Solar Citrus 200ml | `body-splash-solar-citrus-desodorante-colonia-200ml` | — |
-| Body Splash Affair 200ml | `body-splash-affair-deo-colonia-6947ebb08b116` | Scandal – Jean-Paul Gaultier |
-| Body Splash Celestial Glow 200ml | `body-splash-angelical-deo-colonia-6948c96697fbc` | Angel – Thierry Mugler |
-| Body Splash Senseless 200ml | `body-splash-senseless-deo-colonia-ref-olfativa-paradoxe-6948252f250f4` | Paradoxe – Prada |
+> ✅ **Auditado no Admin Shopify em 2026-07-24** (`742eae-3.myshopify.com`): 135 produtos ACTIVE de 729 totais. Handles e preços abaixo são os reais da loja.
+> 🚨 **Sempre resolver o handle via `productByHandle()` antes de usar em conteúdo.** Handles da Barbour's frequentemente têm sufixo hash.
 
-**Body Splash — Oriental Sweetness**
+**Body Splash — Core / Clássicos** (200ml, Desodorante Colônia)
 
-| Produto | Handle | Inspiração |
-|---|---|---|
-| Body Splash Caramel Kiss 200ml | `bodysplash-vanilla-kiss-oriental-sweetness-69482e59ed2cb` | Eclaire – Lattafa |
-| Body Splash Vanilla Rum 200ml | `bodysplash-vanilla-rum-oriental-sweetness-69482d78224d4` | Khamrah – Lattafa |
-| Body Splash Pink Chantilly 200ml | `bodysplash-pink-chantilly-oriental-sweetness-69482b6da81dc` | Yara – Lattafa |
-| Body Splash Pure Vanilla 200ml | `body-splash-pure-vanilla-oriental-sweetness` | — |
-| Soft Bloom — Oriental Sweetness | `soft-bloom-oriental-sweetness` | — |
+| Produto | Handle | Preço | De | Referência olfativa |
+|---|---|---|---|---|
+| Good Graces | `body-splash-good-graces-desodorante-colonia-200ml-69482a05844a2` | R$ 54,90 | 99,90 | English Pear & Freesia – Jo Malone |
+| My Sweet Delight | `body-splash-delight-deo-colonia-6947ecad195b8` | R$ 49,90 | 99,90 | Delina – Parfums de Marly |
+| Very Sexy | `body-splash-very-sexy-deo-colonia` | R$ 49,90 | 99,00 | J'adore – Dior |
+| Alter Ego | `body-splash-alter-ego-deo-colonia-6947ceb34346f` | R$ 54,90 | 99,00 | Good Girl – Carolina Herrera |
+| Roses | `body-splash-roses-deo-col-6947ef11ed6cb` | R$ 59,90 | 99,90 | 212 VIP Rosé – Carolina Herrera |
+| Living Grace | `body-splash-la-vie-deo-colonia-69480977f018b` | R$ 59,90 | 99,90 | — |
+| Soft Breeze | `body-splash-soft-breeze-desodorante-colonia-200ml-694828df72f1c` | R$ 59,90 | 99,90 | Light Blue – Dolce & Gabbana |
+| Celestial Glow | `body-splash-angelical-deo-colonia-6948c96697fbc` | R$ 54,90 | 99,90 | Angel – Thierry Mugler |
+| Affair | `body-splash-affair-deo-colonia-6947ebb08b116` | R$ 59,90 | 99,90 | Scandal – Jean-Paul Gaultier |
+| Kiss in Paradise | `body-splash-kiss-in-paradise-desodorante-colonia-200ml` | R$ 49,90 | 99,90 | Love Don't Be Shy – Killian |
+| Fine Touch | `body-splash-fine-touch-desodorante-colonia-200ml` | R$ 49,90 | 99,90 | Valaya – Parfums de Marly |
+| Pure Grace | `body-splash-pure-grace-desodorante-colonia-200ml` | R$ 49,90 | 99,90 | Palatine – Parfums de Marly |
+| Senseless ⚠️ | `body-splash-senseless-deo-colonia-ref-olfativa-paradoxe-6948252f250f4` | R$ 54,90 | 99,90 | Paradoxe – Prada |
+| Rose Fresh | `body-splash-rose-fresh-desodorante-colonia-200ml` | R$ 39,90 | 99,90 | — |
+| Solar Citrus | `body-splash-solar-citrus-desodorante-colonia-200ml` | R$ 39,90 | 99,90 | — |
+| **Flowers** 🆕 | `body-splash-flowers-deo-colonia-6947efaa19678` | R$ 49,90 | 99,90 | — |
+| **Icon** 🆕 | `body-splash-icon-deo-colonia-ref-idole-69482064afdc6` | R$ 49,90 | 99,90 | Idôle – Lancôme *(a confirmar)* |
+| **Rich** 🆕 | `body-splash-rich-deo-colonia-ref-olfativa-chloe-694824730f322` | R$ 59,90 | 99,90 | Chloé *(a confirmar)* |
+| **Endless Soul** 🆕 | `body-splash-endless-soul-69481e18de96f` | R$ 49,90 | 99,90 | — |
+| **Sienna Glow** 🆕 | `body-splash-sienna-glow-694825eb0737a` | R$ 49,90 | 99,90 | Coco Mademoiselle – Chanel *(a confirmar)* |
 
-**Body Splash — Quiet Notes**
+⚠️ Senseless com `totalInventory` negativo (−255) — validar disponibilidade antes de ancorar CTA.
 
-| Produto | Handle |
-|---|---|
-| Body Splash Amber & Breeze 200ml | `body-splash-amber-breeze-quiet-notes` |
-| Body Splash Neroli & Cedar 200ml | `body-splash-neroli-cedar-quiet-notes` |
-| Body Splash Sandal Wood & Cashmere 200ml | `body-splash-sandal-wood-cashmere-quiet-notes` |
+**Body Splash — Oriental Sweetness (árabes)**
 
-**Body Splash — Tropical Glow (Shimmer)**
+| Produto | Handle | Preço | De | Referência |
+|---|---|---|---|---|
+| Caramel Kiss | `bodysplash-vanilla-kiss-oriental-sweetness-69482e59ed2cb` | R$ 44,90 | 99,90 | Eclaire – Lattafa |
+| Vanilla Rum | `bodysplash-vanilla-rum-oriental-sweetness-69482d78224d4` | R$ 59,90 | 99,90 | Khamrah – Lattafa |
+| Pink Chantilly | `bodysplash-pink-chantilly-oriental-sweetness-69482b6da81dc` | R$ 44,90 | 99,90 | Yara – Lattafa |
 
-| Produto | Handle |
-|---|---|
-| Shimmer Body Splash Golden Tropic Glow 200ml | `body-splash-golden-tropic-glow-desodorante-colonia-200ml` |
-| Shimmer Body Splash Pink Sunset Shine 200ml | `body-splash-pink-sunset-shine-desodorante-colonia-200ml` |
-| Shimmer Body Splash Blue Ocean Glow 200ml | `body-splash-blue-ocean-glow-desodorante-colonia-200ml` |
-| Shimmer Body Splash Moonlight Shimmer 200ml | `body-splash-moonlight-shimmer-desodorante-colonia-200ml` |
+**Body Splash — Petal** 🆕 (preço de entrada da marca)
 
-**Body Splash — Fruity Jams**
+| Produto | Handle | Preço | De |
+|---|---|---|---|
+| Lilac Petal | `body-splash-desodorante-corporal-lilac-petal-200ml` | R$ 34,90 | 99,90 |
+| Rose Petal | `body-splash-desodorante-corporal-rose-petal-200ml` | R$ 34,90 | 99,90 |
 
-| Produto | Handle |
-|---|---|
-| Body Splash Amora e Ameixa 200ml | `body-splash-amora-e-ameixa-fruity-jams` |
-| Body Splash Pêssego e Mel 200ml | `body-splash-pessego-e-mel-fruity-jams` |
+**Shimmer Body Splash — Tropical Glow**
 
-**Ligne Homme**
+| Produto | Handle | Preço | De |
+|---|---|---|---|
+| Golden Tropic Glow | `body-splash-golden-tropic-glow-desodorante-colonia-200ml` | R$ 49,90 | 99,90 |
+| Pink Sunset Shine | `body-splash-pink-sunset-shine-desodorante-colonia-200ml` | R$ 49,90 | 99,90 |
+| Moonlight Shimmer | `body-splash-moonlight-shimmer-desodorante-colonia-200ml` | R$ 49,90 | 99,90 |
 
-| Produto | Handle | Inspiração |
-|---|---|---|
-| Body Splash Bold Homme 200ml | `body-splash-bold-homme-desodorante-colonia-200ml` | Sauvage – Dior |
-| Body Splash Ocean Homme 200ml | `body-splash-ocean-homme-desodorante-colonia-200ml` | Acqua di Giò Elixir – Giorgio Armani |
-| Body Splash Seduction Homme 200ml | `body-splash-seduction-homme-desodorante-colonia-200ml` | Bleu de Chanel – Chanel |
+**Ligne Homme** — ⭐ maior linha em receita (~R$ 8,9M/90d)
 
-**Body Cream / Loção Corporal**
+| Produto | Handle | Preço | De | Referência |
+|---|---|---|---|---|
+| Bold Homme | `body-splash-bold-homme-desodorante-colonia-200ml` | R$ 49,90 | 99,90 | Sauvage – Dior |
+| Ocean Homme | `body-splash-ocean-homme-desodorante-colonia-200ml` | R$ 59,90 | 99,90 | Acqua di Giò Elixir – Giorgio Armani |
+| Seduction Homme | `body-splash-seduction-homme-desodorante-colonia-200ml` | R$ 69,90 | 99,90 | Bleu de Chanel – Chanel |
 
-| Produto | Handle |
-|---|---|
-| Body Cream Alter Ego 300g | `body-cream-alter-ego-locao-hidratante-corporal-ref-olfativa-good-girl-6947fae080173` |
-| Body Cream Good Graces 300g | `body-cream-good-graces-locao-desodorante-hidratante-corporal-300g-69482c84392bc` |
-| Body Cream Very Sexy 300g | `body-cream-very-sexy-locao-hidratante-corporal-ref-olfativa-jadore-6947f8a2159bf` |
-| Essential Body Cream Good Graces 230g | `essential-body-cream-good-graces-hidratante-desodorante-corporal-230g` |
+**Body Cream / Essential Body Cream** 🆕 (linha Essential toda nova no brandbook)
 
-**Perfume Capilar**
+| Produto | Handle | Preço | De |
+|---|---|---|---|
+| Body Cream Alter Ego 300g ⚠️ | `body-cream-alter-ego-locao-hidratante-corporal-ref-olfativa-good-girl-6947fae080173` | R$ 49,90 | 49,90 |
+| Essential Body Cream Good Graces 230g | `essential-body-cream-good-graces-hidratante-desodorante-corporal-230g` | R$ 39,90 | 99,90 |
+| Essential Body Cream My Sweet Delight 230g | `essential-body-cream-my-sweet-delight-hidratante-desodorante-corporal-230g` | R$ 39,90 | 99,90 |
+| Essential Body Cream Roses 230g | `essential-body-cream-roses-hidratante-desodorante-corporal-230g` | R$ 39,90 | 99,90 |
+| Essential Body Cream Very Sexy 230g | `essential-body-cream-very-sexy-hid-desod-corporal-230g` | R$ 39,90 | 99,90 |
+| Essential Body Cream Lilac Petal 230g | `essential-body-cream-hidratante-desodorante-corporal-lilac-petal-230g` | R$ 39,90 | 99,90 |
+| Essential Body Cream Rose Petal 230g | `essential-body-cream-hidratante-desodorante-corporal-rose-petal-230g` | R$ 39,90 | 99,90 |
 
-| Produto | Handle |
-|---|---|
-| Kit Cabelo Brilhante (3 Perfumes Capilares) | `kit-cabelo-brilhoso` |
-| Kit Cabelo Perfumado (3 Perfumes Capilares) | `copia-alter-ego-perfume-para-cabelo-good-girl-6942910961813` |
-| Kit Cabelo Radiante (3 Perfumes Capilares) | `kit-cabelo-radiante-3-perfumes-capilares` |
+**Geleia Hidratante Desodorante Corporal 200g**
+
+| Produto | Handle | Preço | De |
+|---|---|---|---|
+| Geleia Celestial Glow | `geleia-hidratante-corporal-celestial-glow-6948195b1d3c1` | R$ 29,90 | 99,90 |
+| Geleia Living Grace | `geleia-hidratante-corporal-living-grace-694818c803518` | R$ 49,90 | 99,90 |
+
+**Corpo — outros** 🆕
+
+| Produto | Handle | Preço | De |
+|---|---|---|---|
+| Golden Glow Iluminador Corporal 115ml | `golden-glow-iluminador-hidratante-desodorante-corporal-115ml` | R$ 49,90 | 99,90 |
+| Hidratante para Mãos Living Grace 30ml | `hidratante-para-maos-living-grace-30ml` | R$ 9,90 | 29,90 |
+
+**Perfume Capilar / Finalizador Termoativo** 🆕 (unitários — os kits antigos saíram do ar)
+
+| Produto | Handle | Preço | De |
+|---|---|---|---|
+| Perfume Capilar Very Sexy | `very-sexy-perfume-para-cabelo-694274543d28d` | R$ 49,90 | 119,00 |
+| Perfume Capilar My Sweet Delight | `perfume-para-cabelo-delight-finalizador-termoativo-ref-olfativa-delina-694803dd48bd6` | R$ 49,90 | 119,00 |
+| Perfume Capilar Celestial Glow | `perfume-para-cabelo-angelical-finalizador-termoativo-ref-olfativa-angel-69480185443bb` | R$ 39,90 | 119,00 |
+| Perfume Capilar Tropic Sun | `perfume-para-cabelo-tropic-sun` | R$ 39,90 | 119,00 |
+| Perfume Capilar Sienna Glow | `perfume-para-cabelo-sienna-glow-finalizador-termoativo-ref-olfativa-coco-mademoiselle` | R$ 49,90 | 119,00 |
+| Kit 2 Perfumes Capilares (Alter Ego + Very Sexy) | `kit-2-perfumes-de-cabelo-alter-ego-e-very-sexy` | R$ 79,00 | 218,00 |
+| Kit 2 Perfumes Capilares (Alter Ego + Living Grace) | `kit-2-perfumes-de-cabelo-alter-ego-e-la-vie` | R$ 79,00 | 218,00 |
 
 **Esfoliantes**
 
-| Produto | Handle |
-|---|---|
-| Esfoliante Corporal Coconut Sugar Body Scrub | `coconut-sugar-body-scrub-esfoliante-corporal-de-coco-6947f33e7fb25` |
-| Esfoliante Sugar Cloud — Linha Gourmand | `esfoliante-sugar-cloud-linha-gourmand` |
-| Esfoliante Vanilla Cream — Linha Gourmand | `esfoliante-vanilla-cream-linha-gourmand` |
-| Esfoliante de Melancia para Rosto e Lábios 100g | `esfoliante-de-melancia-para-rosto-e-labios-100g-69480b8dce101` |
-| Esfoliante Facial e Labial — Vitamina C | `esfoliante-facial-e-labial-de-vitamina-c-6948c87545e3a` |
+| Produto | Handle | Preço | De |
+|---|---|---|---|
+| Esfoliante Corporal Coconut Sugar ⚠️ estoque 49 | `coconut-sugar-body-scrub-esfoliante-corporal-de-coco-6947f33e7fb25` | R$ 39,90 | 79,90 |
+| Esfoliante de Melancia Rosto e Lábios 100g | `esfoliante-de-melancia-para-rosto-e-labios-100g-69480b8dce101` | R$ 19,90 | 44,90 |
 
-**Roll-Ons Antitranspirantes**
+**Roll-Ons Antitranspirantes** (R$ 14,90 · de R$ 39,90)
 
 | Produto | Handle |
 |---|---|
-| Desodorante Antitranspirante Roll-On Living Grace | `desodorante-antitranspirante-roll-on-living-grace` |
-| Desodorante Antitranspirante Roll-On My Sweet Delight | `desodorante-antitranspirante-roll-on-my-sweet-delight` |
-| Desodorante Antitranspirante Roll-On Tropic Sun | `desodorante-antitranspirante-roll-on-tropic-sun` |
+| Roll-On Living Grace | `desodorante-antitranspirante-roll-on-living-grace` |
+| Roll-On My Sweet Delight | `desodorante-antitranspirante-roll-on-my-sweet-delight` |
+| Roll-On Tropic Sun | `desodorante-antitranspirante-roll-on-tropic-sun` |
 
-**Outros**
+**Trios e Kits — os que mais vendem**
 
-| Produto | Handle |
-|---|---|
-| Geleia Hidratante Desodorante Celestial Glow | `kit-geleia-hidratante-body-splash-corporal-celestial-glow-6943cfb147d8e` |
-| Divine Bath — Óleo de Banho Perfumado | `divine-bath-oleo-de-banho-perfumado` |
+| Produto | Handle | Preço | De |
+|---|---|---|---|
+| ⭐ Kit Clássicos Masculinos (Bold + Seduction + Ocean) | `kit-classicos-masculinos-bold-homme-seduction-homme-e-ocean-homme` | R$ 129,90 | 299,90 |
+| ⭐ Trio Favoritos (Good Graces + Very Sexy + MSD) | `kit-3-body-splash-desodorante-colonia-200ml-good-graces-my-sweet-delight-e-very-sexy-69456fdca0517-6947f59d6db84` | R$ 129,90 | 297,00 |
+| Trio Viral (MSD + Very Sexy + Roses) | `trio-viral-my-sweet-delight-very-sexy-e-roses` | R$ 139,90 | 299,90 |
+| Trio Essencial (MSD + Good Graces + Living Grace) | `trio-essencial-my-sweet-delight-good-graces-e-living-grace-6947f6bfbe29a` | R$ 129,90 | 297,00 |
+| Trio de Luxo (Pure Grace + Fine Touch + Kiss in Paradise) | `kit-os-mais-virais-pure-grace-fine-touch-e-kiss-in-paradise` | R$ 119,90 | 299,90 |
+| Trio de Nicho (Fine Touch + Pure Grace + MSD) | `kit-3-body-splash-fine-touch-pure-grace-e-my-sweet-delight` | R$ 119,90 | 299,90 |
+| Kit Trio Árabes (Caramel Kiss + Vanilla Rum + Pink Chantilly) | `kit-trio-arabes-caramel-kiss-vanilla-rum-e-pink-chantilly` | R$ 129,90 | 299,70 |
+| Kit Mini Body Splash Trio Viral 55ml 🆕 | `kit-mini-body-splash-trio-viral-55ml` | R$ 99,90 | 129,90 |
+| Kit 2 (MSD + Very Sexy) | `kit-2-body-splash-desodorante-colonia-200ml-my-sweet-delight-e-very-sexy-6947f98b392ef` | R$ 89,90 | 198,00 |
+| Presente para Ela (MSD + Very Sexy) | `presente-para-ela-2-body-splash-my-sweet-delight-e-very-sexy` | R$ 89,90 | 198,00 |
+| Dupla Dia e Noite (Roses + Very Sexy) 🆕 | `dupla-dia-e-noite-body-splash-roses-e-very-sexy` | R$ 109,90 | 198,00 |
+| Kit O Frescor do Verão (Rose Fresh + Solar Citrus) | `kit-o-frescor-do-verao-chegou-rose-fresh-e-solar-citrus` | R$ 89,90 | 199,90 |
+| Kit Layering Shimmer (Pink Sunset + Golden Tropic + Moonlight) | `kit-layering-pink-sunset-shine-golden-tropic-glow-e-moonlight-shimmer` | R$ 139,90 | 298,00 |
+| Kit Good Graces (Body Splash + Body Cream) | `kit-good-graces-body-splash-e-body-cream` | R$ 99,90 | 199,90 |
+| Kit My Sweet Delight (Body Splash + Body Cream) | `kit-my-sweet-delight-body-splash-e-body-cream` | R$ 99,90 | 199,90 |
+| Kit Very Sexy (Body Splash + Body Cream) | `kit-very-sexy-body-splash-e-body-cream` | R$ 99,90 | 199,90 |
+| Kit Roses (Body Splash + Body Cream) | `kit-roses-body-splash-e-body-cream` | R$ 99,90 | 199,90 |
+| Kit Celestial Glow (Geleia + Body Splash + Perfume Capilar) ⚠️ | `kit-celestial-glow-geleia-hidratante-body-splash-e-perfume-de-cabelo-6947ededa07c7` | R$ 129,90 | 299,90 |
+| Kit Geleia + Body Splash Celestial Glow | `kit-geleia-hidratante-body-splash-corporal-celestial-glow-6943cfb147d8e` | R$ 79,90 | 209,80 |
+| Kit 5 Body Splash (Good Graces, Soft Breeze, MSD, Very Sexy, Roses) | `kit-5-body-splash-desodorante-colonia-200ml-good-graces-soft-breeze-my-sweet-delight-very-sexy-e-roses-6943d8d8cd9e8` | R$ 209,90 | 497,00 |
+| Kit 6 Body Splash (MSD, Very Sexy, Good Graces, Kiss in Paradise, Pure Grace, Fine Touch) | `kit-6-body-splash-desodorante-colonia-200ml-my-sweet-delight-very-sexy-good-graces-kiss-in-paradise-pure-grace-fine-touch` | R$ 239,90 | 599,90 |
 
-**Kits selecionados (best sellers)**
+> ⚠️ **Linhas legacy off-core ainda ativas na loja** (skincare facial, gel clareador de olheiras, gel antissinais, demaquilante, máscara capilar, escova progressiva, cresce-cabelo). **Não usar em conteúdo editorial** — diluem a autoridade temática da marca em perfumaria.
 
-| Produto | Handle |
-|---|---|
-| Kit 3 Body Splash — Monte seu Kit | `kit-3-body-splash-monte-seu-kit` |
-| Kit Trio Árabes (Caramel Kiss, Vanilla Rum, Pink Chantilly) | `kit-trio-arabes-caramel-kiss-vanilla-rum-e-pink-chantilly` |
-| Kit Clássicos Masculinos (Bold, Ocean, Seduction) | `kit-classicos-masculinos-bold-homme-seduction-homme-e-ocean-homme` |
-| Kit Celestial Glow (Geleia + Body Splash + Perfume Capilar) | `kit-celestial-glow-geleia-hidratante-body-splash-e-perfume-de-cabelo-6947ededa07c7` |
-| Kit Very Sexy (Body Splash + Body Cream) | `kit-very-sexy-body-splash-e-body-cream-ref-olfativa-jadore-copia` |
-| Trio Viral (My Sweet Delight, Very Sexy, Roses) | `trio-viral-my-sweet-delight-very-sexy-e-roses` |
-| Trio de Nicho (Fine Touch, Pure Grace, My Sweet Delight) | `kit-3-body-splash-fine-touch-pure-grace-e-my-sweet-delight` |
+### 5.3.1 Receita real por produto (ShopifyQL, 90 dias até 2026-07-24 · R$ 32,6M total)
+
+| # | Produto | Receita | Unidades |
+|---|---|---|---|
+| 1 | Kit Clássicos Masculinos | R$ 6.280.148 | 47.538 |
+| 2 | Trio Favoritos | R$ 4.965.717 | 36.544 |
+| 3 | Kit 2 MSD + Very Sexy | R$ 3.401.269 | 37.164 |
+| 4 | Body Splash My Sweet Delight | R$ 3.187.806 | 63.350 |
+| 5 | Body Splash Bold Homme | R$ 1.359.364 | 25.764 |
+| 6 | Kit Trio Árabes | R$ 1.352.475 | 12.423 |
+| 7 | Body Splash Very Sexy | R$ 1.200.315 | 24.092 |
+| 8 | Body Splash Good Graces | R$ 939.185 | 18.728 |
+| 9 | Trio Viral | R$ 858.950 | 6.093 |
+| 10 | Kit 2 Bold + Seduction | R$ 679.346 | 7.048 |
+
+**Duas leituras estratégicas**:
+1. **Ligne Homme é o maior negócio da marca** (~R$ 8,9M somando kit + unitários) — historicamente sub-representada em conteúdo.
+2. **Kits e trios dominam** (7 dos 10 top). Conteúdo de "qual trio escolher / montar kit / presentear" converte melhor que spotlight de unitário.
 
 ### 5.4 Referências olfativas — tabela completa
 
@@ -308,25 +357,60 @@
 
 > ⚠️ Referências não confirmadas: Soft Breeze, Living Grace, Rose Fresh, Solar Citrus, Golden Tropic Glow, Pink Sunset Shine, Blue Ocean Glow, Moonlight Shimmer, Amber & Breeze, Neroli & Cedar, Sandal Wood & Cashmere, Pure Vanilla, Soft Bloom, Amora e Ameixa, Pêssego e Mel. Confirmar nas páginas de produto.
 
-### 5.5 Collections ativas (Shopify) — seleção principal
+### 5.5 Collections — as EDITORIALMENTE utilizáveis
 
-| Handle | Título |
-|---|---|
-| `best-body-splash` | BEST SELLERS |
-| `body-splash-corporal` | BODY SPLASH |
-| `body-cream` | BODY CREAM |
-| `body-shining` | BODY SHINING |
-| `arabes` | Árabes — Oriental Sweetness |
-| `amadeirados` | Amadeirados — Quiet Notes |
-| `abaunilhadas` | Abaunilhadas |
-| `axila-e-virilha` | AXILA E VIRILHA (Roll-Ons) |
-| `blindagem-e-antifrizz` | BLINDAGEM E ANTIFRIZZ (Perfume Capilar) |
-| `kits` | Kits |
-| `acessorio` | ACESSÓRIOS |
-| `abaixo-de-50-reais` | Abaixo de R$50 |
-| `a-partir-de-14` | A partir de R$14 |
+> A loja tem **265 collections**, mas a grande maioria é de CRM/campanha/carrinho (`cart-*`, `todos-os-produtos-*`, `necessaire-*`, `welcome*`, `pos-*`, `crm-*`). **Nunca linkar essas em conteúdo editorial.** Abaixo só as que fazem sentido em blog/PDP.
 
-> ⚠️ Confirmar lista completa de collections via Admin Shopify — scraping capturou seleção parcial.
+**Por categoria de produto**
+
+| Handle | Título | Produtos |
+|---|---|---|
+| `body-splash-corporal` | BODY SPLASH | 156 |
+| `best-body-splash` | BEST SELLERS | 10 |
+| `body-splash-shimmer` | Body Splash Shimmer | 9 |
+| `body-splash-homme` | Body Splash Homme | 9 |
+| `body-splash-fragrancias-virais` | Body Splash Fragrâncias Virais | 9 |
+| `body-splash-fresh` | Body Splash Fresh | 8 |
+| `body-cream` | BODY CREAM | 12 |
+| `geleia-hidratante-corporal` | Geleia Hidratante Corporal | 9 |
+| `esfoliante-corporal` | ESFOLIANTE CORPORAL | 51 |
+| `desodorantes-roll-ons` | Desodorantes Roll-ons | 12 |
+| `perfume-de-cabelo` | PERFUME DE CABELO | 50 |
+| `perfumes-capilares-unitarios` | Perfumes capilares unitários | 37 |
+| `sabonete-corporal` | Sabonete Corporal | 10 |
+| `colonias-1` | Colônias | 28 |
+| `deo-parfum` | Deo Parfum | 21 |
+
+**Por família olfativa** (ótimas para link interno em conteúdo educativo)
+
+| Handle | Título | Produtos |
+|---|---|---|
+| `florais` | Florais | 52 |
+| `frutados` | Frutados | 17 |
+| `abaunilhadas` | Abaunilhadas | 15 |
+| `doces` | Doces | 14 |
+| `amadeirados` | Amadeirados | 13 |
+| `citricos` | Cítricos | 11 |
+| `arabes` | Árabes | 10 |
+| `linha-oriental-sweetness` | Linha Oriental Sweetness | 10 |
+
+**Por linha de fragrância** (spokes de conteúdo por produto)
+
+`linha-my-sweet-delight` (23) · `linha-alter-ego` (21) · `linha-living-grace` (18) · `linha-very-sexy` (17) · `linha-celestial-glow` (10) · `linha-roses` (7) · `linha-affair` (4) · `linha-flowers` (4) · `linha-rich` (2) · `linha-senseless` (2) · `linha-my-journey` (2) · `linha-supreme` (2) · `linha-tropic-sun` (1)
+
+**Por preço / ocasião**
+
+| Handle | Título | Produtos |
+|---|---|---|
+| `abaixo-de-50-reais` | Abaixo de R$50 | 76 |
+| `ate-39-00` | Até 39,00 | 49 |
+| `kits-body-splash` | Kits Body Splash | 75 |
+| `presenteie-com-barbours` | Presenteie com Barbour's | 75 |
+| `edicoes-limitadas` | Edições Limitadas | 24 |
+| `lancamento` | LANÇAMENTOS | 32 |
+| `outlet-barbours` | Outlet Barbour's | 33 |
+
+> ⚠️ Collections vazias (0 produtos) — não linkar: `acessorio`, `body-shining`, `ate-r-99`, `colonias`, `kits-dia-das-maes`, `kits-colonia-perfume-capilar`, `limpeza-facial`, `novidades-esfoliantes`.
 
 ---
 
@@ -495,7 +579,55 @@
 
 ---
 
-## 9. Temas autorizados pra blog
+## 9. Termos de busca & posicionamento editorial
+
+### 9.0 ⭐ O ativo editorial mais subutilizado: "Desodorante Colônia"
+
+Os produtos da Barbour's são registrados e vendidos como **Desodorante Colônia 200ml**, não como body splash puro. Isso importa muito:
+
+| Categoria | Concentração de óleos essenciais |
+|---|---|
+| Body splash | 1–3% |
+| **Deo colônia** | **3–5%** |
+| Eau de toilette | 5–15% |
+| Eau de parfum | 15–20% |
+| Perfume/extrait | 20–30%+ |
+
+*Fontes: [O Boticário](https://www.boticario.com.br/dicas-de-beleza/diferencas-entre-eau-de-parfum-perfume-splash-e-desodorante-colonia/), [Ciclo Cosméticos](https://ciclocosmeticos.com.br/blogs/novidades/deo-colonia-ou-body-splash-entenda-a-diferenca), [Água de Cheiro](https://sejafranqueado.aguadecheiro.com.br/qual-e-a-diferenca-entre-colonia-eau-de-parfum-e-body-splash/).*
+
+O mercado inteiro (Boticário, Natura, Eudora, Giovanna Baby) publica "body splash tem 1-3% e dura ~3h". A Barbour's pode reivindicar a **faixa intermediária com fato verificável**, não com claim inventado. É o diferencial de comunicação mais forte e mais seguro da marca.
+
+⚠️ Cuidado: isso **não** autoriza dizer "dura X horas". Concentração de categoria (com fonte) é fato; duração do produto exige teste.
+
+### 9.1 Mapa de termos de busca
+
+| Vetor | Termos |
+|---|---|
+| Categoria | body splash · body splash feminino · melhor body splash · o que é body splash · body splash mais vendido |
+| Comparativo de categoria | diferença body splash e perfume · body splash ou perfume · deo colônia o que é · concentração de perfume |
+| Masculino | body splash masculino · perfume masculino barato · deo colônia masculina · rotina masculina cuidado corporal |
+| Referência olfativa | referência olfativa · perfume inspirado em importado · contratipo perfume · body splash inspirado delina / good girl / jo malone / sauvage / khamrah / yara / j'adore |
+| Educação olfativa | famílias olfativas · pirâmide olfativa · perfume gourmand o que é · perfume floral frutal · perfume amadeirado · perfume fougère |
+| Árabes | fragrâncias árabes · perfume árabe feminino · body splash árabe |
+| Fixação (alto volume) | como fazer body splash durar mais · body splash não fixa · onde aplicar body splash · fixação de perfume na pele · perfume para durar a noite toda |
+| Preço | quanto custa body splash · body splash barato · body splash abaixo de 50 · vale a pena comprar kit |
+| Kit / presente | kit body splash trio · presente perfumaria · presente até 100 reais beleza · amiga secreta presente |
+| Ritual | camadas olfativas · layering de perfume · ritual de banho perfumado · esfoliante corporal perfumado |
+| Capilar | perfume capilar · perfume para cabelo · perfume capilar faz mal ao cabelo |
+| Corpo | body splash com shimmer · brilho corporal · geleia hidratante corporal · body cream perfumado |
+| Sazonal | body splash verão · body splash inverno · perfume para o frio · perfume fresco verão |
+
+**Termos de marca (branded)**: my sweet delight · good graces · alter ego · very sexy · roses · bold homme · ocean homme · seduction homme · caramel kiss · vanilla rum · pink chantilly · celestial glow · kiss in paradise · fine touch · pure grace · trio favoritos · trio viral · trio de luxo · oriental sweetness · kit clássicos masculinos.
+
+### 9.2 Claims não verificados — NÃO usar
+
+| Claim | Problema |
+|---|---|
+| "O cheiro favorito da Princesa Kate" (Good Graces) | Não verificável. O Jo Malone documentado como favorito de Kate Middleton é **Orange Blossom** (casamento, 2011). English Pear & Freesia é o bestseller da Jo Malone, mas nada credível o liga a ela. → Ancorar em "pera e frésia" / "bestseller da Jo Malone". |
+| "97% maior fixação" | Aparece nas páginas de produto mas **não há estudo em mão**. Não usar em blog até o teste ser localizado. |
+| "Dura 24h" / "dura X horas" | Exige teste de fixação real. |
+
+## 9.3 Temas autorizados pra blog
 
 **Perfumaria & fragrâncias**:
 - Famílias olfativas: floral, frutal, amadeirado, oriental, gourmand — guia completo
@@ -550,5 +682,16 @@
 
 ---
 
-📝 **Última atualização**: 2026-05-27 — reescrita completa com dados de produto das páginas do site: 18 referências olfativas confirmadas, pirâmides olfativas de 20 produtos, linguagem de claims e compliance alinhada ao posicionamento real da marca (perfumaria, não skincare ou farmácia).
-📝 **Pendências**: (1) HEX do Gold — capturar no arquivo original; (2) referências olfativas dos produtos sem dado: Soft Breeze, Living Grace, Rose Fresh, Solar Citrus, Shimmer line, Quiet Notes, Fruity Jams; (3) popular `produtos.csv` com catálogo completo; (4) confirmar lista completa de collections no Admin Shopify.
+📝 **Última atualização**: 2026-07-24 — **sincronização com o Admin Shopify** (`742eae-3.myshopify.com`). Mudanças: (1) seção 5.2 reescrita — linhas Quiet Notes, Fruity Jams e outras marcadas como descontinuadas; linhas Petal e Winter Comfort adicionadas; (2) seção 5.3 substituída pelo catálogo ATIVO real com handles e preços verificados via `productByHandle()`; 3 handles estavam errados (Living Grace, Soft Breeze, Kit Very Sexy) e ~17 produtos ativos estavam ausentes (Flowers, Icon, Rich, Endless Soul, Sienna Glow, Petal, linha Essential Body Cream, Golden Glow, perfumes capilares unitários, Trio de Luxo/Essencial/Favoritos, Dupla Dia e Noite); (3) seção 5.3.1 nova — receita real por produto (ShopifyQL 90d) revelando Ligne Homme como maior linha da marca; (4) seção 5.5 reescrita separando collections editoriais das de CRM; (5) seção 9 nova — posicionamento "Desodorante Colônia" com fontes, mapa de termos de busca e claims não verificados.
+
+📝 **Anterior**: 2026-05-27 — reescrita com dados de produto das páginas do site: 18 referências olfativas confirmadas, pirâmides olfativas de 20 produtos, linguagem de claims e compliance alinhada ao posicionamento real da marca.
+
+📝 **Pendências**:
+1. HEX do **Gold** — capturar via eyedrop no PDF original (ainda `[VALIDAR]`)
+2. Confirmar referências olfativas dos produtos novos: **Icon** (Idôle – Lancôme?), **Rich** (Chloé?), **Sienna Glow** (Coco Mademoiselle?) — inferidas dos handles, não confirmadas em página
+3. Referências ainda sem dado: Living Grace, Rose Fresh, Solar Citrus, Flowers, Endless Soul, linha shimmer, linha Petal
+4. Pirâmides olfativas dos produtos novos (Flowers, Icon, Rich, Endless Soul, Sienna Glow, Lilac/Rose Petal)
+5. Localizar o **estudo do claim "97% maior fixação"** — sem ele o claim está bloqueado para conteúdo
+6. Validar disponibilidade real dos produtos com `totalInventory` negativo (Senseless, Body Cream Alter Ego, Kit Celestial Glow)
+7. Definir se **Winter Comfort** (Caramel Macchiato, Cocoa Dream) volta ao estoque antes de virar pauta
+8. Kit Clássicos Masculinos usa **banner promocional como `featuredImage`** — subir pack shot real dos 3 frascos (afeta card de produto em blog)
