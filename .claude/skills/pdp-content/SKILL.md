@@ -267,6 +267,7 @@ Se você está criando 4+ metaobjetos com mesmo `text` ou mesma `question`, **PA
 | `references/format-ingredientes.md` | `custom.product_ingredients_metafield` → metaobjeto `product_ingredients` |
 | `references/output-paths.md` | (utility — sem metafield) |
 | `references/output-formats.md` | (utility — sem metafield) |
+| `references/shopify-payload-schema.md` | (utility — schema `pdp-payload/v1` do `shopify-payload.json`, obrigatório no pipeline headless) |
 
 ## 🔒 Shopify safety (INVIOLÁVEL)
 

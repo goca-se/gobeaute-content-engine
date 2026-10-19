@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Content Pipeline</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Content Pipeline · <span id="loja">—</span></h1>
+        <div class="sub" id="run-info">Carregando…</div>
+      </div>
+      <div>
+        <label class="sub" for="run-select">Foto da loja</label>
+        <select id="run-select"></select>
+      </div>
+    </header>
+
+    <section class="card estado" id="estado"><span class="sub">Carregando estado do robô…</span></section>
+
+    <details class="card guia" id="guia">
+      <summary><b>Como ler este painel</b> <span class="sub">— guia rápido, sem jargão</span></summary>
+      <div class="guia-corpo">
+        <section>
+          <h3>O que acontece aqui</h3>
+          <p>Todo dia às 06:00 um robô olha os produtos da loja, encontra os que estão <b>sem conteúdo na página do produto</b> (descrição curta, perguntas frequentes etc.), escreve esse conteúdo a partir das informações oficiais da marca e <b>publica direto na loja</b>, no máximo 10 produtos por dia. Ele roda sozinho na nuvem (GoDeploy + AI Proxy), sem depender do computador de ninguém.</p>
+          <p>Antes de publicar, um verificador automático confere as regras da ANVISA, se nenhum número ou ingrediente foi inventado e se o texto bate com a ficha do produto. O que não passa é reescrito uma vez com o motivo; se falhar de novo, <b>não é publicado</b>.</p>
+        </section>
+
+        <section>
+          <h3>A faixa do robô (topo)</h3>
+          <dl>
+            <dt>Trabalhando / Ocioso / Pausado</dt><dd>O que o robô está fazendo agora. "Motor verificado há…" mostra a última vez que ele acordou (a cada minuto). Se passar de 5 minutos com o robô ligado, aparece um alerta.</dd>
+            <dt>Pausar robô</dt><dd>Freio de emergência: ele termina o passo atual e para de gerar e publicar até alguém retomar.</dd>
+            <dt>Rodar lote agora</dt><dd>Não precisa esperar as 06:00: escaneia a loja e começa o lote do dia na hora.</dd>
+            <dt>Atualizar foto da loja</dt><dd>Só lê o Shopify e atualiza os números. Não escreve nada.</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h3>Os números e a cobertura</h3>
+          <p>Vêm da última <b>foto da loja</b> (leitura do Shopify) <b>somada</b> a tudo o que o robô publicou depois dela. Por isso refletem a loja de agora, e não a de quando a foto foi tirada.</p>
+          <ul>
+            <li><span class="cor ok">Verde</span>: já tem conteúdo.</li>
+            <li><span class="cor warn">Amarelo</span>: está faltando e o robô vai escrever (ou está escrevendo).</li>
+            <li><span class="cor bad">Vermelho</span>: está faltando e o robô não consegue escrever ainda.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>As abas</h3>
+          <dl>
+            <dt>Lote</dt><dd>Os produtos do lote desta execução e a situação de cada conteúdo, ao vivo (atualiza sozinho a cada 15 s enquanto o robô trabalha).</dd>
+            <dt>Alterações</dt><dd><b>Tudo o que o robô já mudou na loja</b>, do mais recente para o mais antigo: o que estava vazio e passou a ter conteúdo, e quando.</dd>
+            <dt>Fila / Bloqueados / Kits</dt><dd>Quem vem nos próximos dias, quem está parado (e por quê) e os kits em que alguém precisa confirmar quais produtos vêm dentro.</dd>
+            <dt>Execuções</dt><dd>Histórico de cada vez que o robô rodou: agendado ou manual, quem disparou e quantos tokens usou.</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h3>Clique no nome de um produto</h3>
+          <dl>
+            <dt>Na loja agora</dt><dd>O robô lê o Shopify na hora e mostra, por campo, se está igual ao que ele publicou, se alguém editou depois ou se está vazio.</dd>
+            <dt>O que o robô escreveu</dt><dd>O texto exato de cada conteúdo, com as observações do verificador.</dd>
+            <dt>Linha do tempo</dt><dd>Cada passo: escreveu, verificador aprovou ou reprovou, publicou, desfez.</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h3>E se algo saiu errado?</h3>
+          <ul>
+            <li><b>Quer mudar um texto:</b> use <b>Editar no Shopify</b> e ajuste lá. O robô nunca sobrescreve o que já está preenchido.</li>
+            <li><b>Algo foi publicado e não deveria:</b> abra o produto e clique em <b>Desfazer</b>. Toda publicação guarda uma foto de como o produto estava antes. Se alguém já editou no Shopify depois, o robô não mexe.</li>
+            <li><b>Quer parar tudo:</b> <b>Pausar robô</b>.</li>
+            <li><b>Produto bloqueado por falta de ficha:</b> as informações dele precisam entrar na base de conhecimento da marca. Depois disso ele entra na fila sozinho.</li>
+          </ul>
+        </section>
+      </div>
+    </details>
+
+    <div id="erro"></div>
+    <section class="kpis" id="kpis"></section>
+
+    <section class="grid2">
+      <div class="card">
+        <h2>Cobertura por formato <span class="sub">(produtos ativos na loja, sem excluídos)</span></h2>
+        <div id="cobertura"></div>
+        <div class="legenda">
+          <span><i class="c-ok"></i>preenchido</span>
+          <span><i class="c-warn"></i>na fila / em andamento</span>
+          <span><i class="c-bad"></i>bloqueado</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Por que está bloqueado</h2>
+        <div id="motivos"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div class="tabela"><table><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+    </section>
+  </main>
+  <dialog id="produto">
+    <button id="produto-fechar" class="fechar" aria-label="Fechar">✕</button>
+    <div id="produto-corpo"></div>
+  </dialog>
+  <script src="/app.js"></script>
+</body>
+</html>

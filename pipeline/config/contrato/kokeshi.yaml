@@ -1,0 +1,81 @@
+# Contrato de conteúdo de PDP da Kokeshi.
+# Cada formato mapeia 1:1 a um metafield do tema (ver .claude/skills/pdp-content/SKILL.md).
+# renderizado_no_tema: a_confirmar até validar no tema da Kokeshi (decisão em aberto #3).
+# gerar: false = formato fora do piloto (depende de imagem); entra só no relatório de cobertura.
+pdp:
+  - formato: descricao-curta
+    metafield: custom.product_info_benefits
+    tipo: metaobject_reference
+    metaobject_type: product_benefit
+    obrigatorio: true
+    gerar: true
+    renderizado_no_tema: a_confirmar
+
+  - formato: faq
+    metafield: custom.section_faq
+    tipo: list.metaobject_reference
+    metaobject_type: faq_item
+    obrigatorio: true
+    gerar: true
+    min_itens: 4
+    max_itens: 8
+    renderizado_no_tema: a_confirmar
+
+  - formato: section-efficacy
+    metafield: custom.section_efficacy
+    tipo: list.metaobject_reference
+    metaobject_type: eficiencia_item
+    obrigatorio: true
+    gerar: true
+    # Card numérico só com fonte; sem fonte, só badges reaproveitados.
+    renderizado_no_tema: a_confirmar
+
+  - formato: como-usar
+    metafield: custom.como_usar_session_pdp
+    tipo: metaobject_reference
+    metaobject_type: como_usar
+    obrigatorio: true
+    gerar: true
+    min_itens: 5
+    max_itens: 8
+    renderizado_no_tema: a_confirmar
+
+  - formato: modo-de-uso
+    metafield: custom.how_to_use
+    tipo: rich_text_field
+    obrigatorio: true
+    gerar: true
+    min_chars: 60
+    renderizado_no_tema: a_confirmar
+
+  - formato: precaucoes
+    metafield: custom.como_usar        # legado: guarda advertências
+    tipo: rich_text_field
+    obrigatorio: true
+    gerar: true
+    min_chars: 60
+    renderizado_no_tema: a_confirmar
+
+  - formato: composicao
+    metafield: custom.caracteristicas
+    tipo: rich_text_field
+    obrigatorio: true
+    gerar: true
+    requer_inci: true                  # sem INCI completo na fonte → bloqueado: falta_inci
+    renderizado_no_tema: a_confirmar
+
+  - formato: icones
+    metafield: custom.product_icons
+    tipo: list.metaobject_reference
+    metaobject_type: product_icon
+    obrigatorio: false
+    gerar: false
+    renderizado_no_tema: a_confirmar
+
+  - formato: ingredientes
+    metafield: custom.product_ingredients_metafield
+    tipo: list.metaobject_reference
+    metaobject_type: product_ingredients
+    obrigatorio: false
+    gerar: false
+    renderizado_no_tema: a_confirmar
