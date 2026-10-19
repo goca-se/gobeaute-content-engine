@@ -1,0 +1,60 @@
+# Config global do content pipeline.
+# Kill switch: enabled=false interrompe qualquer run antes de tocar Shopify ou LLM.
+enabled: true
+
+# Dry-run global. Na nuvem (painel), o motor publica sozinho quando dry_run=false (decisão de 19/10:
+# publica direto o que passar no validator; o freio é o botão "Pausar" do painel).
+# Na CLI local o publisher continua exigindo também a flag --apply.
+dry_run: false
+
+shopify_api_version: "2026-07"
+
+# Teto de itens em revisão: acima disso o run diário não gera nada novo.
+max_backlog_em_revisao: 20
+
+# LLM via Gogroup AI Proxy (API compatível com OpenAI chat/completions). Token em AI_PROXY_TOKEN
+# (secret do app no GoDeploy; .env na CLI local). Modelos fixos para o resultado não mudar sozinho.
+llm:
+  base_url: https://ai-proxy.gogroupbr.com/v1
+  token_env: AI_PROXY_TOKEN
+  modelo_geracao: gpt-6-astra
+  modelo_validacao: gpt-6-astra
+  max_tentativas_geracao: 2
+
+lojas:
+  - marca: kokeshi
+    shop_domain: kokeshi-loja.myshopify.com
+    storefront_domain: kokeshi.com.br
+    # Prefixo das variáveis de ambiente. Aceita <PREFIXO>_TOKEN (token fixo shpat_)
+    # ou <PREFIXO>_CLIENT_ID + <PREFIXO>_CLIENT_SECRET (app do Dev Dashboard, client credentials).
+    credenciais_env_leitura: SHOPIFY_KOKESHI
+    credenciais_env_escrita: SHOPIFY_KOKESHI_WRITE
+    # Fontes de ficha, em ordem de prioridade. A primeira que tiver o produto ganha.
+    fontes_produto:
+      - tipo: kb_csv
+        path: brand-context/kokeshi/Gobeaute - Base de Conhecimento de Produtos - Kokeshi.csv
+      - tipo: kit                     # kit herda das fichas dos componentes
+        path: brand-context/kokeshi/kits.yaml
+      - tipo: shopify                 # descrição + metafields de texto já publicados
+        min_chars: 300                # abaixo disso a fonte é pobre demais → bloqueado: falta_ficha
+    max_produtos_por_run: 10
+    max_custo_usd_por_run: 15
+    max_tokens_por_run: 3000000
+    exclusoes:
+      # Produto só é elegível se ACTIVE e publicado no Online Store.
+      exigir_status_active: true
+      exigir_publicado_online_store: true
+      # Gift: match case-insensitive em handle, título, tags e productType.
+      # "presente" fica de fora: "Kit Presente Kokeshi" é produto vendável (R$ 104,90).
+      gift_regex: "brinde|gift"
+      # Brindes da Kokeshi custam R$ 0,02, não zero.
+      gift_preco_max: 1
+      tags_excluir: [waitlist, gowaitlist]   # v1: fora até voltar estoque
+      handles: []                       # exclusões manuais (ex.: produtos em teste A/B de PDP)
+
+notificacao:
+  google_chat_webhook_env: GCHAT_WEBHOOK_URL
+
+painel:
+  url_env: PAINEL_URL
+  api_key_env: PAINEL_API_KEY

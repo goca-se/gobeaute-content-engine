@@ -1,0 +1,6 @@
+{
+  "name": "content-pipeline-painel",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js"
+}

@@ -54,6 +54,8 @@ Hierarquia:
 - O disco local em `conteudos/` é a ÚNICA cópia recuperável
 - Em mai/2026 perdemos 12+ blogs da Kokeshi por refactor em batch que pulou esse passo
 
+**Content pipeline na nuvem (`painel/` no GoDeploy)**: o motor grava textos + payload na tabela `conteudos` e o snapshot do Shopify em `publicacoes` ANTES de qualquer mutation; esse SQLite é a cópia recuperável. `pipeline/scripts/sync-conteudos.ts` traz tudo para `conteudos/[marca]/...` (rodar periodicamente e versionar com `scripts/commit-conteudos.sh`).
+
 **Sub-agents (Agent tool)**: ao delegar trabalho que envolva Shopify, o prompt **DEVE** repetir essa ordem explicitamente. Não delegue "atualiza no Shopify" sem mandar "salva em `conteudos/` primeiro".
 
 **Verificação obrigatória antes da mutation**: usar `Read`/`Glob` pra confirmar que `conteudos/[marca]/[tipo]/[entidade]/textos/` existe e está populado. Se não existe → STOP, salve antes.

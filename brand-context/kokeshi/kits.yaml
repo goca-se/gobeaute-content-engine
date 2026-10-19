@@ -1,0 +1,504 @@
+# Composição dos kits da Kokeshi (não são bundles nativos no Shopify).
+# Fonte da composição: descrição do kit na loja. Só kits com `confirmado: true` geram ficha.
+# O scanner do content pipeline propõe entradas novas com `confirmado: false` para revisão.
+kits:
+  kit-colageno-antissinais:
+    componentes:
+      - pele-de-porcelana-antissinais
+      - creme-gel-facial-gota-de-colageno-kokeshi
+    confirmado: false
+    nota: "descrição: 'combina o Pele de Porcelana Antissinais com a Gota de Colágeno'"
+  kit-5-passos-antioleosidade:
+    componentes:
+      - bastao-multifuncional-sunshine-fps-60-11g
+      - creme-facial-vitamina-c-antioxidante
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: bastao-multifuncional-sunshine-fps-60-11g ← "fps 60"; creme-facial-vitamina-c-antioxidante ← "vitamina c"; serum-roll-on-adeus-olheiras-10ml ← "roll on"'
+  kit-5-passos-antissinais:
+    componentes:
+      - oleo-de-rosa-mosqueta-100
+      - serum-de-arroz-pele-de-porcelana-30ml
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"; serum-de-arroz-pele-de-porcelana-30ml ← "serum arroz"'
+  kit-5-passos-peles-sensiveis:
+    componentes:
+      - bastao-multifuncional-sunshine-fps-60-11g
+      - pele-de-porcelana-peles-sensiveis-1
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: bastao-multifuncional-sunshine-fps-60-11g ← "fps 60"; pele-de-porcelana-peles-sensiveis-1 ← "peles sensiveis"; serum-roll-on-adeus-olheiras-10ml ← "roll on"'
+  kit-antioleosidade-adeus-olheiras:
+    componentes:
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: serum-roll-on-adeus-olheiras-10ml ← "adeus olheiras"'
+  kit-antissinais-1:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+      - pele-de-porcelana-antissinais
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"; pele-de-porcelana-antissinais ← "pele porcelana antissinais"'
+  kit-antissinais-oleo-de-rosa-mosqueta:
+    componentes:
+      - hidratante-facial-pele-de-porcelana
+      - oleo-de-rosa-mosqueta-100
+      - pele-de-porcelana-antissinais
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-facial-pele-de-porcelana ← "hidratante facial"; oleo-de-rosa-mosqueta-100 ← "oleo rosa mosqueta 100"; pele-de-porcelana-antissinais ← "pele porcelana antissinais"'
+  kit-beleza-total-com-fps-60:
+    componentes:
+      - bastao-multifuncional-sunshine-fps-60-11g
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: bastao-multifuncional-sunshine-fps-60-11g ← "bastao multifuncional fps 60"; hidratante-facial-pele-de-porcelana ← "hidratante facial pele porcelana"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"'
+  kit-cheiro-de-rica-basico:
+    componentes:
+      - hidratante-corporal-cheiro-de-rica-200ml
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-corporal-cheiro-de-rica-200ml ← "hidratante corporal cheiro rica"'
+  kit-colageno-peles-sensiveis:
+    componentes:
+      - pele-de-porcelana-peles-sensiveis-1
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: pele-de-porcelana-peles-sensiveis-1 ← "peles sensiveis"'
+  kit-cuidado-antissinais-com-fps-60:
+    componentes:
+      - bastao-multifuncional-sunshine-fps-60-11g
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: bastao-multifuncional-sunshine-fps-60-11g ← "fps 60"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"'
+  kit-cuidado-sensiveis-com-fps-60:
+    componentes:
+      - bastao-multifuncional-sunshine-fps-60-11g
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: bastao-multifuncional-sunshine-fps-60-11g ← "fps 60"; oleo-de-rosa-mosqueta-100 ← "rosa mosqueta 100"'
+  kit-cuidados-completos-maos-glow:
+    componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - creme-hidratante-para-o-corpo-kokeshi
+      - serum-booster-facial-kokeshi
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-gel-facial-gota-de-colageno-kokeshi ← "gel facial gota colageno"; creme-hidratante-para-o-corpo-kokeshi ← "creme hidratante"; serum-booster-facial-kokeshi ← "serum booster"'
+  kit-cuidados-basicos:
+    componentes:
+      - creme-gel-facial-pele-plena-kokeshi
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - rice-agua-micelar-de-arroz-kokeshi
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-gel-facial-pele-plena-kokeshi ← "pele plena"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; rice-agua-micelar-de-arroz-kokeshi ← "agua micelar"'
+  kit-equilibrio-olhos-de-gueixa:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"'
+  kit-essencial-kokeshi:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+      - rice-agua-micelar-de-arroz-kokeshi
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "oleo rosa mosqueta"; rice-agua-micelar-de-arroz-kokeshi ← "agua micelar arroz"'
+  kit-facial-pele-de-porcelana:
+    componentes:
+      - hidratante-facial-pele-de-porcelana
+      - sabonete-liquido-pele-de-porcelana-facial-kokeshi
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-facial-pele-de-porcelana ← "hidratante facial pele porcelana"; sabonete-liquido-pele-de-porcelana-facial-kokeshi ← "sabonete liquido"'
+  kit-frescor-e-hidratacao-kokeshi:
+    componentes:
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-facial-pele-de-porcelana ← "hidratante facial"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"'
+  kit-glow-olhos-de-gueixa:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-de-arroz-pele-de-porcelana-30ml
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; serum-de-arroz-pele-de-porcelana-30ml ← "serum arroz"'
+  kit-hidratacao-colageno:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"'
+  kit-hidratacao-pele-plena:
+    componentes:
+      - creme-facial-vitamina-c-antioxidante
+      - creme-gel-facial-pele-plena-kokeshi
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-facial-vitamina-c-antioxidante ← "creme facial"; creme-gel-facial-pele-plena-kokeshi ← "pele plena"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "oleo rosa mosqueta"'
+  kit-hidratacao-uniformizacao:
+    componentes:
+      - geleia-facial-niacinamida-100g
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: geleia-facial-niacinamida-100g ← "geleia facial niacinamida"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"'
+  kit-hidratacao-uniformizacao-iluminacao:
+    componentes:
+      - geleia-facial-niacinamida-100g
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-booster-facial-kokeshi
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: geleia-facial-niacinamida-100g ← "geleia facial niacinamida"; hidratante-facial-pele-de-porcelana ← "hidratante facial pele porcelana"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos olhos gueixa"; serum-booster-facial-kokeshi ← "serum booster facial"'
+  kit-renovadores-serum-vit-c:
+    componentes:
+      - creme-facial-vitamina-c-antioxidante
+      - serum-booster-facial-kokeshi
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-facial-vitamina-c-antioxidante ← "vitamina c"; serum-booster-facial-kokeshi ← "serum booster"'
+  kit-hidratacao-corporal-intensa-kokeshi:
+    componentes:
+      - creme-hidratante-para-o-corpo-kokeshi
+      - hidratante-corporal-cheiro-de-rica-200ml
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-hidratante-para-o-corpo-kokeshi ← "creme hidratante"; hidratante-corporal-cheiro-de-rica-200ml ← "hidratante corporal"; oleo-de-rosa-mosqueta-100 ← "oleo rosa mosqueta"'
+  kit-hidratacao-essencial:
+    componentes:
+      - creme-hidratante-para-o-corpo-kokeshi
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-hidratante-para-o-corpo-kokeshi ← "creme hidratante"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "oleo rosa mosqueta"'
+  kit-hidratante-facial-pele-de-porcelana-antissinais:
+    componentes:
+      - hidratante-facial-pele-de-porcelana
+      - pele-de-porcelana-antissinais
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-facial-pele-de-porcelana ← "hidratante facial pele porcelana"; pele-de-porcelana-antissinais ← "pele porcelana antissinais"'
+  kit-hidratante-facial-pele-de-porcelana-antissinais-fps20:
+    componentes:
+      - hidratante-facial-pele-de-porcelana
+      - pele-de-porcelana-antissinais
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-facial-pele-de-porcelana ← "hidratante facial pele porcelana"; pele-de-porcelana-antissinais ← "pele porcelana antissinais"'
+  kit-olhar-de-gueixa:
+    componentes:
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"'
+  kit-olhar-perfeito:
+    componentes:
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: serum-roll-on-adeus-olheiras-10ml ← "roll on"'
+  kit-olhos-de-gueixa-oleo-de-rosa-mosqueta:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "hidratante renovador area olhos"; oleo-de-rosa-mosqueta-100 ← "oleo rosa mosqueta"'
+  kit-pele-calma-hidratada:
+    componentes:
+      - oleo-de-rosa-mosqueta-100
+      - hidratante-facial-pele-de-porcelana-copia
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: oleo-de-rosa-mosqueta-100 ← "rosa mosqueta 100"; hidratante-facial-pele-de-porcelana-copia ← "kit pele"'
+  kit-pele-de-porcelana-adeus-linhas:
+    componentes:
+      - oleo-de-rosa-mosqueta-100
+      - hidratante-facial-pele-de-porcelana-copia
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"; hidratante-facial-pele-de-porcelana-copia ← "kit pele porcelana"'
+  kit-pele-de-porcelana-oleo-de-rosa-mosqueta:
+    componentes:
+      - creme-facial-vitamina-c-antioxidante
+      - oleo-de-rosa-mosqueta-100
+      - hidratante-facial-pele-de-porcelana-copia
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-facial-vitamina-c-antioxidante ← "creme facial"; oleo-de-rosa-mosqueta-100 ← "oleo rosa mosqueta"; hidratante-facial-pele-de-porcelana-copia ← "kit pele porcelana"'
+  kit-pele-firme-hidratada:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - hidratante-facial-pele-de-porcelana-copia
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; hidratante-facial-pele-de-porcelana-copia ← "kit pele"'
+  kit-pele-firme-hidratada-iluminada:
+    componentes:
+      - creme-facial-vitamina-c-antioxidante
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-booster-facial-kokeshi
+      - hidratante-facial-pele-de-porcelana-copia
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-facial-vitamina-c-antioxidante ← "vitamina c"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "area olhos olhos gueixa"; serum-booster-facial-kokeshi ← "serum booster"; hidratante-facial-pele-de-porcelana-copia ← "kit pele"'
+  kit-pele-impecavel-e-protegida:
+    componentes:
+      - bastao-multifuncional-sunshine-fps-60-11g
+      - creme-gel-facial-pele-plena-kokeshi
+      - serum-booster-facial-kokeshi
+      - hidratante-facial-pele-de-porcelana-copia
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: bastao-multifuncional-sunshine-fps-60-11g ← "bastao multifuncional fps 60"; creme-gel-facial-pele-plena-kokeshi ← "creme gel facial pele"; serum-booster-facial-kokeshi ← "serum booster facial"; hidratante-facial-pele-de-porcelana-copia ← "kit pele"'
+  kit-pele-nutritiva-hidratacao:
+    componentes:
+      - bastao-multifuncional-sunshine-fps-60-11g
+      - hidratante-corporal-cheiro-de-rica-200ml
+      - hidratante-facial-pele-de-porcelana-copia
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: bastao-multifuncional-sunshine-fps-60-11g ← "bastao multifuncional fps 60"; hidratante-corporal-cheiro-de-rica-200ml ← "hidratante corporal cheiro rica"; hidratante-facial-pele-de-porcelana-copia ← "kit pele"'
+  kit-pele-radiante-e-renovadora:
+    componentes:
+      - creme-facial-vitamina-c-antioxidante
+      - creme-gel-facial-pele-plena-kokeshi
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+      - serum-tudo-em-1-30ml-1
+      - hidratante-facial-pele-de-porcelana-copia
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-facial-vitamina-c-antioxidante ← "creme facial"; creme-gel-facial-pele-plena-kokeshi ← "pele plena"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "oleo rosa mosqueta"; serum-tudo-em-1-30ml-1 ← "serum tudo 1"; hidratante-facial-pele-de-porcelana-copia ← "kit pele"'
+  kit-pele-radiante-kokeshi-kit-6-em-1:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - rice-agua-micelar-de-arroz-kokeshi
+      - serum-booster-facial-kokeshi
+      - hidratante-facial-pele-de-porcelana-copia
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; rice-agua-micelar-de-arroz-kokeshi ← "agua micelar"; serum-booster-facial-kokeshi ← "serum booster"; hidratante-facial-pele-de-porcelana-copia ← "kit pele"'
+  kit-pele-radiante-kokeshi:
+    componentes:
+      - creme-gel-facial-pele-plena-kokeshi
+      - oleo-de-rosa-mosqueta-100
+      - hidratante-facial-pele-de-porcelana-copia
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-gel-facial-pele-plena-kokeshi ← "pele plena"; oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"; hidratante-facial-pele-de-porcelana-copia ← "kit pele"'
+  kit-peles-sensivel-e-plena:
+    componentes:
+      - creme-gel-facial-pele-plena-kokeshi
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-gel-facial-pele-plena-kokeshi ← "pele plena"; oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"'
+  kit-presente-kokeshi:
+    componentes:
+      - creme-hidratante-para-o-corpo-kokeshi
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-hidratante-para-o-corpo-kokeshi ← "creme hidratante"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "oleo rosa mosqueta"'
+  kit-protecao-glow-diaria:
+    componentes:
+      - bastao-multifuncional-sunshine-fps-60-11g
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-tudo-em-1-30ml-1
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: bastao-multifuncional-sunshine-fps-60-11g ← "bastao multifuncional fps 60"; hidratante-facial-pele-de-porcelana ← "hidratante facial pele porcelana"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; serum-tudo-em-1-30ml-1 ← "serum tudo 1"'
+  kit-ritual-completo-pele-de-porcelana-antissinais:
+    componentes:
+      - pele-de-porcelana-antissinais
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: pele-de-porcelana-antissinais ← "pele porcelana antissinais"'
+  kit-ritual-completo-pele-de-porcelana-sensivel:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; serum-roll-on-adeus-olheiras-10ml ← "roll on adeus olheiras"'
+  kit-ritual-de-hidratacao-firmeza-glow:
+    componentes:
+      - creme-facial-vitamina-c-antioxidante
+      - jelly-glow
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-facial-vitamina-c-antioxidante ← "vitamina c"; jelly-glow ← "jelly glow"'
+  kit-ritual-gueixa-adeus-linhas:
+    componentes:
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"'
+  kit-ritual-gueixa-antissinais:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+      - pele-de-porcelana-antissinais
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"; pele-de-porcelana-antissinais ← "pele porcelana antissinais"'
+  kit-ritual-gueixa-sensivel:
+    componentes:
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"'
+  kit-renovadores-faciais-kokeshi:
+    componentes:
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-facial-pele-de-porcelana ← "hidratante facial pele porcelana"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"'
+  kit-ritual-hidratacao-gueixas:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"'
+  kit-ritual-hidratacao-das-gueixas-pele-radiante:
+    componentes:
+      - creme-facial-vitamina-c-antioxidante
+      - creme-gel-facial-pele-plena-kokeshi
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-facial-vitamina-c-antioxidante ← "creme facial"; creme-gel-facial-pele-plena-kokeshi ← "pele plena"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "oleo rosa mosqueta"'
+  kit-renovadores-oleo-de-rosa-mosqueta:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "oleo rosa mosqueta"'
+  kit-renovadores-serum-tudo-em-1:
+    componentes:
+      - creme-noturno-hialuronico
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-tudo-em-1-30ml-1
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-noturno-hialuronico ← "creme noturno"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; serum-tudo-em-1-30ml-1 ← "serum tudo 1"'
+  kit-ritual-imperial-das-gueixas:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-booster-facial-kokeshi
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; serum-booster-facial-kokeshi ← "serum booster"'
+  kit-ritual-pele-de-porcelana-adeus-linhas:
+    componentes:
+      - hidratacao-completa-dia-e-noite
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratacao-completa-dia-e-noite ← "dia noite"; oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"'
+  kit-ritual-pele-de-porcelana-antioleosidade:
+    componentes:
+      - pele-de-porcelana-antioleosidade
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: pele-de-porcelana-antioleosidade ← "pele porcelana antioleosidade"'
+  kit-ritual-pele-de-porcelana-antissinais:
+    componentes:
+      - pele-de-porcelana-antissinais
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: pele-de-porcelana-antissinais ← "pele porcelana antissinais"'
+  kit-ritual-pele-de-porcelana-peles-sensiveis:
+    componentes:
+      - pele-de-porcelana-peles-sensiveis-1
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: pele-de-porcelana-peles-sensiveis-1 ← "pele porcelana peles sensiveis"'
+  kit-ritual-relax-revive:
+    componentes:
+      - creme-facial-vitamina-c-antioxidante
+      - creme-hidratante-para-o-corpo-kokeshi
+      - serum-booster-facial-kokeshi
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-facial-vitamina-c-antioxidante ← "creme facial"; creme-hidratante-para-o-corpo-kokeshi ← "creme hidratante"; serum-booster-facial-kokeshi ← "serum booster"'
+  kit-ritual-sensivel-das-gueixas:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "rosa mosqueta 100"'
+  kit-ritual-suave-das-gueixas:
+    componentes:
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: oleo-de-rosa-mosqueta-100 ← "rosa mosqueta 100"'
+  kit-rotina-renovadora-tudo-em-1:
+    componentes:
+      - serum-tudo-em-1-30ml-1
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: serum-tudo-em-1-30ml-1 ← "serum tudo 1"'
+  kit-rotina-adeus-linhas-5-passos-dia:
+    componentes:
+      - hidratacao-completa-dia-e-noite
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratacao-completa-dia-e-noite ← "completa dia"'
+  kit-rotina-adeus-linhas-5-passos-noite:
+    componentes:
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"'
+  kit-sensivel-serum-de-arroz:
+    componentes:
+      - serum-de-arroz-pele-de-porcelana-30ml
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: serum-de-arroz-pele-de-porcelana-30ml ← "serum arroz"'
+  kit-sensivel-dia-e-noite:
+    componentes:
+      - hidratacao-completa-dia-e-noite
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratacao-completa-dia-e-noite ← "dia noite"'
+  kit-cheiro-de-rica:
+    componentes:
+      - cheiro-de-rica-body-splash-200ml
+      - body-splash-cheiro-de-rica-n-2-200ml
+      - body-splash-cheiro-de-rica-n-3-200ml
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: cheiro-de-rica-body-splash-200ml ← "cheiro rica floral frutado"; body-splash-cheiro-de-rica-n-2-200ml ← "rica floral fresco frutado"; body-splash-cheiro-de-rica-n-3-200ml ← "rica floral intenso adocicado"'
+  kit-linha-ozonio-kokeshi:
+    componentes:
+      - creme-gel-facial-chuva-de-ozonio-kokeshi
+      - creme-gel-facial-pele-plena-kokeshi
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: creme-gel-facial-chuva-de-ozonio-kokeshi ← "chuva ozonio"; creme-gel-facial-pele-plena-kokeshi ← "pele plena"'
+  quarteto-pele-de-porcelana:
+    componentes:
+      - oleo-de-rosa-mosqueta-100
+      - pele-de-porcelana-peles-sensiveis-1
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"; pele-de-porcelana-peles-sensiveis-1 ← "peles sensiveis"'
+  ritual-basico-pro:
+    componentes:
+      - geleia-facial-colageno-100g
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: geleia-facial-colageno-100g ← "geleia facial colageno"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "oleo rosa mosqueta"'
+  kit-melixir-shampoo-condicionador-serum-mascara:
+    componentes:
+      - mascara-nutritiva-melixir
+      - serum-capilar-melixir
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: mascara-nutritiva-melixir ← "mascara nutritiva"; serum-capilar-melixir ← "serum capilar"'
+  ritual-olhar-descansado:
+    componentes:
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: serum-roll-on-adeus-olheiras-10ml ← "roll on"'
+  ritual-porcelana-e-olhos-de-gueixa:
+    componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
+      - serum-booster-facial-kokeshi
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"; oleo-de-rosa-mosqueta-100 ← "oleo rosa mosqueta"; serum-booster-facial-kokeshi ← "serum booster"; serum-roll-on-adeus-olheiras-10ml ← "roll on"'
+  ritual-protecao-colageno:
+    componentes:
+      - bastao-multifuncional-sunshine-fps-60-11g
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: bastao-multifuncional-sunshine-fps-60-11g ← "bastao multifuncional fps 60"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"'
+  ritual-renovador-protecao:
+    componentes:
+      - bastao-multifuncional-sunshine-fps-60-11g
+      - creme-noturno-hialuronico
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: bastao-multifuncional-sunshine-fps-60-11g ← "bastao multifuncional fps 60"; creme-noturno-hialuronico ← "creme noturno"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ← "olhos gueixa"'
+  kit-melixir-shampoo-condicionador-serum:
+    componentes:
+      - serum-capilar-melixir
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: serum-capilar-melixir ← "serum capilar"'
+  trio-sos-olhos:
+    componentes:
+      - oleo-de-rosa-mosqueta-100
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184229: oleo-de-rosa-mosqueta-100 ← "rosa mosqueta"; serum-roll-on-adeus-olheiras-10ml ← "roll on"'
+  hidratante-facial-pele-de-porcelana-copia:
+    componentes:
+      - creme-noturno-hialuronico
+      - hidratante-facial-pele-de-porcelana
+    confirmado: false
+    nota: 'proposta automática kokeshi-20261019-184509: creme-noturno-hialuronico ← "creme noturno"; hidratante-facial-pele-de-porcelana ← "hidratante facial"'
