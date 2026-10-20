@@ -56,6 +56,8 @@ export type PublicacaoProduto = {
   criados: Record<string, string>;
   reaproveitados: { handle: string; gid: string }[];
   snapshot_path: string | null;
+  /** formato com destino descricao_html: descrição antes e depois (a lida de volta do Shopify) */
+  descricao?: { formato: string; antes: string; depois: string };
   erro?: string;
 };
 
@@ -87,6 +89,8 @@ export type KitProposto = {
   handle: string;
   title: string;
   componentes: string[];
+  /** kit de quantidade: N unidades do único componente */
+  quantidade?: number;
   evidencias: string[];
 };
 

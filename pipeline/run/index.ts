@@ -83,6 +83,7 @@ function registrarPropostas(path: string, propostas: KitProposto[]): void {
     if (doc.hasIn(["kits", k.handle])) continue;
     doc.setIn(["kits", k.handle], {
       componentes: k.componentes,
+      ...(k.quantidade ? { quantidade: k.quantidade } : {}),
       confirmado: false,
       nota: `proposta automática ${runId}: ${k.evidencias.join("; ")}`,
     });

@@ -13,7 +13,7 @@ export function fichaDoShopify(produto: ProdutoShopify, minChars: number): Resol
   const beneficios = texto("custom.benefits");
   const modoUso = texto("custom.how_to_use");
   const advertencias = texto("custom.como_usar");
-  const inci = texto("custom.caracteristicas_plain") || texto("custom.caracteristicas");
+  const inci = inciDoShopify(produto);
 
   const total = [descricao, ativos, beneficios, modoUso].join("").length;
   if (total < minChars) return { ok: false, motivo: `falta_ficha:shopify_${total}_chars` };
@@ -40,6 +40,12 @@ export function fichaDoShopify(produto: ProdutoShopify, minChars: number): Resol
       raw: JSON.stringify({ descricao, ativos, beneficios, modoUso, advertencias, inci }),
     },
   };
+}
+
+/** Composição (INCI) já publicada no produto, como texto. "" quando não há. */
+export function inciDoShopify(produto: ProdutoShopify): string {
+  const texto = (key: string) => valorTexto(produto.metafields[key]?.value ?? produto.textosFonte[key] ?? null);
+  return texto("custom.caracteristicas_plain") || texto("custom.caracteristicas");
 }
 
 function valorTexto(value: string | null): string {

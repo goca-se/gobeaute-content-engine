@@ -33,7 +33,13 @@ for (;;) {
     mkdirSync(dir, { recursive: true });
     writeFileSync(resolve(dir, "content.md"), String(c.content_md));
     writeFileSync(resolve(dir, "content.json"), JSON.stringify(JSON.parse(String(c.content_json)), null, 2));
-    writeFileSync(resolve(dir, "shopify-payload.json"), JSON.stringify(JSON.parse(String(c.payload_json)), null, 2));
+    const payload = JSON.parse(String(c.payload_json)) as { descricao_html?: string };
+    writeFileSync(resolve(dir, "shopify-payload.json"), JSON.stringify(payload, null, 2));
+    // Regra #0: conteúdo que vai como HTML também fica em conteudo-html/.
+    if (payload.descricao_html) {
+      mkdirSync(resolve(dir, "..", "conteudo-html"), { recursive: true });
+      writeFileSync(resolve(dir, "..", "conteudo-html", "descricao.html"), payload.descricao_html);
+    }
     cursor.conteudo = Math.max(cursor.conteudo, Number(c.id));
     conteudos++;
   }

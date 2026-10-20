@@ -378,8 +378,8 @@ function renderKits() {
         .map(
           (k) => `<tr>
           <td>${celulaProduto(k)}</td>
-          <td>${k.proposta ? k.proposta.componentes.map((c) => `<div class="h">${esc(c)}</div>`).join("") : `<span class="sub">nenhum item identificado na descrição</span>`}</td>
-          <td>${esc(rotuloMotivo(k.motivo))}${k.proposta && k.proposta.componentes.length < 2 ? `<div class="tag">proposta parcial: só 1 item achado</div>` : ""}</td>
+          <td>${k.proposta ? k.proposta.componentes.map((c) => `<div class="h">${k.proposta.quantidade ? `${k.proposta.quantidade}× ` : ""}${esc(c)}</div>`).join("") : `<span class="sub">nenhum item identificado na descrição</span>`}</td>
+          <td>${esc(rotuloMotivo(k.motivo))}${k.proposta && k.proposta.componentes.length < 2 && !k.proposta.quantidade ? `<div class="tag">proposta parcial: só 1 item achado</div>` : ""}</td>
         </tr>`,
         )
         .join("") +

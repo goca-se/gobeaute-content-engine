@@ -50,7 +50,13 @@ export async function escanear(opts: {
   const kitsPropostos: KitProposto[] = [
     ...Object.entries(kitsMapeados)
       .filter(([, k]) => !k.confirmado)
-      .map(([handle, k]) => ({ handle, title: titulos.get(handle) ?? handle, componentes: k.componentes, evidencias: k.nota ? [k.nota] : [] })),
+      .map(([handle, k]) => ({
+        handle,
+        title: titulos.get(handle) ?? handle,
+        componentes: k.componentes,
+        ...(k.quantidade ? { quantidade: k.quantidade } : {}),
+        evidencias: k.nota ? [k.nota] : [],
+      })),
     ...kitsNovos,
   ];
 

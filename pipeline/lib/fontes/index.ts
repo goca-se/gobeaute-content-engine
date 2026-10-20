@@ -1,7 +1,7 @@
 import type { FonteProdutoConfig, LojaConfig } from "../../core/config.js";
 import type { ProdutoShopify } from "../shopify/queries.js";
 import { ehKit, fichaDeKit, type KitsConfig } from "./kit.js";
-import { fichaDoShopify } from "./shopify.js";
+import { fichaDoShopify, inciDoShopify } from "./shopify.js";
 
 export type OrigemFicha = "kb_csv" | "kit" | "shopify";
 
@@ -28,6 +28,12 @@ export type Ficha = {
   doNotSay: string;
   /** só em kits: handles dos componentes, na ordem do kits.yaml */
   componentes?: string[];
+  /** só em kit de quantidade: unidades do único componente */
+  quantidade?: number;
+  /** só em kits: INCI literal de cada item, na ordem do kits.yaml (composição do kit = lista destes) */
+  inciComponentes?: { nome: string; inci: string }[];
+  /** só em kits: preço do kit e soma dos avulsos (fora do raw: preço muda sem a ficha mudar) */
+  precos?: { kit: number; soma_avulsos: number };
   /** texto bruto de origem, entra no input_hash */
   raw: string;
 };
@@ -87,12 +93,23 @@ export class ResolvedorFichas {
     switch (fonte.tipo) {
       case "kb_csv": {
         const ficha = this.kbCsv.get(handle);
-        return ficha ? { ok: true, ficha } : null;
+        if (!ficha) return null;
+        // A base CSV não tem INCI: usa a composição já publicada no produto, se houver.
+        const produto = this.produtos.get(handle);
+        const inci = ficha.inci ?? (produto ? inciDoShopify(produto) || null : null);
+        return { ok: true, ficha: inci === ficha.inci ? ficha : { ...ficha, inci } };
       }
       case "kit": {
         const kit = this.kits?.kits[handle];
         if (!kit) return null;
-        return fichaDeKit(handle, kit, this.produtos.get(handle), (h) => this.resolver(h));
+        const r = fichaDeKit(handle, kit, this.produtos.get(handle), (h) => this.resolver(h));
+        const precoKit = this.produtos.get(handle)?.precoMin;
+        const avulsos = kit.componentes.map((h) => this.produtos.get(h)?.precoMin);
+        if (r.ok && precoKit && avulsos.every((p) => p)) {
+          const soma = avulsos.reduce((s, p) => s! + p! * (kit.quantidade ?? 1), 0)!;
+          r.ficha = { ...r.ficha, precos: { kit: precoKit, soma_avulsos: Math.round(soma * 100) / 100 } };
+        }
+        return r;
       }
       case "shopify": {
         const produto = this.produtos.get(handle);

@@ -16,6 +16,7 @@ import {
   metaobjetosExistentes,
   setMetafields,
   upsertMetaobjeto,
+  atualizarDescricao,
   type MetafieldAtual,
 } from "../publisher/shopify.js";
 
@@ -26,6 +27,8 @@ export type Snapshot = {
   product_gid: string;
   product_updated_at: string;
   metafields: Record<string, MetafieldAtual>;
+  /** descrição do produto antes da publicação (sempre capturada: é o que o rollback restaura) */
+  descricao_html?: string;
 };
 
 export type PlanoFormato = { formato: string; payload: PayloadV1 };
@@ -99,6 +102,10 @@ export async function publicarProduto(opts: {
     log(`${aplicaveis.map((p) => p.formato).join(", ")} → ${opts.aplicar ? "aplicando" : "dry-run"}`);
     if (!opts.aplicar) return pub;
 
+    // Descrição do produto: no máximo um formato por produto escreve nela.
+    const comDescricao = aplicaveis.filter((p) => p.payload.descricao_html !== undefined);
+    if (comDescricao.length > 1) throw new Error(`mais de um formato reescreve a descrição: ${comDescricao.map((p) => p.formato).join(", ")}`);
+
     // 2) Snapshot ANTES de qualquer mutation (princípio 4). Sem snapshot persistido, não escreve.
     const snapshot: Snapshot = {
       capturado_em: new Date().toISOString(),
@@ -107,6 +114,7 @@ export async function publicarProduto(opts: {
       product_gid: opts.productGid,
       product_updated_at: atual.updatedAt,
       metafields: atual.valores,
+      descricao_html: atual.descriptionHtml,
     };
     pub.snapshot_path = await opts.antesDeEscrever(snapshot);
     pub.snapshot = snapshot;
@@ -136,12 +144,29 @@ export async function publicarProduto(opts: {
         compareDigest: atual.valores[mf]?.compareDigest ?? null,
       };
     });
+    // Descrição antes do marcador: se a descrição falhar, o marcador não fica dizendo que foi reescrita.
+    const [desc] = comDescricao;
+    if (desc) {
+      const agora = await lerMetafields(client, opts.productGid, []);
+      if (agora.descriptionHtml !== atual.descriptionHtml) throw new Error("descrição mudou no admin durante a publicação");
+      await atualizarDescricao(client, opts.productGid, desc.payload.descricao_html!);
+      // Registra já: se algo falhar daqui em diante, o log sabe que a descrição mudou e o que havia antes.
+      pub.descricao = { formato: desc.formato, antes: atual.descriptionHtml, depois: desc.payload.descricao_html! };
+    }
     await setMetafields(client, sets);
 
     // 5) Conferência: relê e compara.
     const depois = await lerMetafields(client, opts.productGid, alvos);
     const divergentes = pub.metafields.filter((m) => depois.valores[m.metafield]?.value !== m.depois);
     if (divergentes.length) throw new Error(`conferência falhou: ${divergentes.map((d) => d.metafield).join(", ")}`);
+    if (desc) {
+      // O Shopify pode normalizar o HTML: guarda o que ficou na loja, que é o que o rollback compara.
+      if (normalizarHtml(depois.descriptionHtml) !== normalizarHtml(desc.payload.descricao_html!)) {
+        log(`aviso: descrição relida difere do enviado só na normalização do Shopify`);
+      }
+      if (!depois.descriptionHtml.trim()) throw new Error("conferência falhou: descrição vazia após a publicação");
+      pub.descricao = { formato: desc.formato, antes: atual.descriptionHtml, depois: depois.descriptionHtml };
+    }
 
     pub.formatos_publicados = [...jaFeitos, ...aplicaveis.map((p) => p.formato)];
     pub.status = pub.formatos_pulados.length ? "parcial" : "publicado";
@@ -151,6 +176,10 @@ export async function publicarProduto(opts: {
     pub.erro = String(err);
   }
   return pub;
+}
+
+function normalizarHtml(html: string): string {
+  return html.replace(/\s+/g, " ").replace(/>\s+</g, "><").trim();
 }
 
 /** Valor final do metafield: rich_text literal ou refs resolvidas. null se alguma ref não resolve. */
@@ -181,9 +210,12 @@ export async function reverterPublicacao(opts: {
   const mfs = pub.metafields.map((m) => m.metafield);
   const atual = await lerMetafields(client, snapshot.product_gid, mfs);
   const editados = pub.metafields.filter((m) => atual.valores[m.metafield]?.value !== m.depois).map((m) => m.metafield);
+  if (pub.descricao && normalizarHtml(atual.descriptionHtml) !== normalizarHtml(pub.descricao.depois)) editados.push("descricao_html");
+  if (pub.descricao && snapshot.descricao_html === undefined) return { ok: false, editados: [], erro: "snapshot_sem_descricao" };
   if (editados.length) return { ok: false, editados, erro: "editado_no_admin_depois_da_publicacao" };
   if (!opts.aplicar) return { ok: true, editados: [] };
 
+  if (pub.descricao) await atualizarDescricao(client, snapshot.product_gid, snapshot.descricao_html!);
   const restaurar = pub.metafields.filter((m) => snapshot.metafields[m.metafield]?.value);
   const apagar = pub.metafields.filter((m) => !snapshot.metafields[m.metafield]?.value);
   if (restaurar.length) {
@@ -203,6 +235,7 @@ export async function reverterPublicacao(opts: {
 
   const depois = await lerMetafields(client, snapshot.product_gid, mfs);
   const divergentes = mfs.filter((m) => (depois.valores[m]?.value ?? null) !== (snapshot.metafields[m]?.value ?? null));
+  if (pub.descricao && normalizarHtml(depois.descriptionHtml) !== normalizarHtml(snapshot.descricao_html!)) divergentes.push("descricao_html");
   if (divergentes.length) return { ok: false, editados: [], erro: `conferência do rollback falhou: ${divergentes.join(", ")}` };
   return { ok: true, editados: [] };
 }

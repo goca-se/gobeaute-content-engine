@@ -61,6 +61,7 @@ ${opts.itens.map((i) => `## ${i.formato}\n### content.md\n${i.content_md}\n### s
 Aponte SOMENTE problemas reais no que vai para a loja (ignore a seção "Notas para revisão" do content.md):
 - "erro": claim proibido pela ANVISA; fato, ingrediente, número, selo ou claim que NÃO está na ficha (alucinação); violação do "do not say" da ficha; conteúdo de outro produto.
 - "aviso": tom fora do brandbook; repetição entre formatos; texto confuso ou com erro de português.
+- Kits: tom de venda (rotina completa, por que os itens funcionam juntos, presente) é esperado e não é problema. É "erro" dizer que o kit sai mais em conta que comprar separado quando ficha.precos não mostra o kit mais barato que soma_avulsos, e citar valor em R$ ou percentual de desconto.
 
 Responda APENAS com JSON, sem markdown:
 {"problemas":[{"formato":"<nome do formato>","severidade":"erro|aviso","codigo":"<snake_case curto>","detalhe":"<trecho + por quê, 1 frase>"}]}

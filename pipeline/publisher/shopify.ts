@@ -7,15 +7,15 @@ export async function lerMetafields(
   client: ShopifyReadClient,
   productGid: string,
   metafields: string[],
-): Promise<{ updatedAt: string; title: string; valores: Record<string, MetafieldAtual> }> {
+): Promise<{ updatedAt: string; title: string; descriptionHtml: string; valores: Record<string, MetafieldAtual> }> {
   const aliases = metafields
     .map((m, i) => {
       const [namespace, key] = m.split(".");
       return `m${i}: metafield(namespace: ${JSON.stringify(namespace)}, key: ${JSON.stringify(key)}) { id type value compareDigest }`;
     })
     .join("\n      ");
-  const data = await client.query<{ product: ({ updatedAt: string; title: string } & Record<string, MetafieldAtual>) | null }>(
-    `query Atual($id: ID!) { product(id: $id) { updatedAt title
+  const data = await client.query<{ product: ({ updatedAt: string; title: string; descriptionHtml: string } & Record<string, MetafieldAtual>) | null }>(
+    `query Atual($id: ID!) { product(id: $id) { updatedAt title descriptionHtml
       ${aliases}
     } }`,
     { id: productGid },
@@ -24,6 +24,7 @@ export async function lerMetafields(
   return {
     updatedAt: data.product.updatedAt,
     title: data.product.title,
+    descriptionHtml: data.product.descriptionHtml,
     valores: Object.fromEntries(metafields.map((m, i) => [m, data.product![`m${i}`] ?? null])),
   };
 }
@@ -86,5 +87,16 @@ export async function deleteMetaobjeto(client: ShopifyWriteClient, id: string): 
     `mutation DelMo($id: ID!) { metaobjectDelete(id: $id) { deletedId userErrors { field message code } } }`,
     { id },
     "metaobjectDelete",
+  );
+}
+
+/** Substitui a descrição do produto (descriptionHtml). Só depois do snapshot da descrição anterior. */
+export async function atualizarDescricao(client: ShopifyWriteClient, productGid: string, html: string): Promise<void> {
+  await client.mutate(
+    `mutation Desc($product: ProductUpdateInput!) {
+      productUpdate(product: $product) { product { id } userErrors { field message } }
+    }`,
+    { product: { id: productGid, descriptionHtml: html } },
+    "productUpdate",
   );
 }

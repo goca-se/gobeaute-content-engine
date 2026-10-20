@@ -77,10 +77,18 @@ export const FormatoContrato = z
     max_itens: z.number().int().positive().optional(),
     requer_inci: z.boolean().optional(),
     renderizado_no_tema: z.union([z.boolean(), z.literal("a_confirmar")]),
+    /**
+     * Onde o conteúdo vai. `descricao_html` reescreve a descrição do produto (descriptionHtml);
+     * aí o metafield do formato é só o marcador "já reescrito pelo pipeline" (json), que o gate lê.
+     */
+    destino: z.enum(["metafield", "descricao_html"]).default("metafield"),
+    /** formato só para kits (nos outros produtos fica fora_piloto) */
+    so_kits: z.boolean().default(false),
   })
   .refine((f) => !f.tipo.includes("metaobject_reference") || !!f.metaobject_type, {
     message: "formatos metaobject_reference precisam de metaobject_type",
-  });
+  })
+  .refine((f) => f.destino !== "descricao_html" || f.tipo === "json", { message: "destino descricao_html usa metafield marcador do tipo json" });
 
 export const Contrato = z.object({ pdp: z.array(FormatoContrato).min(1) }).superRefine((c, ctx) => {
   const dup = c.pdp.map((f) => f.metafield).filter((m, i, all) => all.indexOf(m) !== i);

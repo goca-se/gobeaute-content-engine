@@ -106,8 +106,10 @@ export function metafieldVazio(value: string | null | undefined): boolean {
   return false;
 }
 
-export function textoRichText(node: { value?: string; children?: unknown[] }): string {
-  return (node.value ?? "") + (node.children ?? []).map((c) => textoRichText(c as typeof node)).join("");
+/** Texto de um rich_text. Blocos (parágrafos, títulos, itens de lista) ficam em linhas separadas. */
+export function textoRichText(node: { type?: string; value?: string; children?: unknown[] }): string {
+  const sep = node.type === "root" || node.type === "list" ? "\n" : "";
+  return (node.value ?? "") + (node.children ?? []).map((c) => textoRichText(c as typeof node)).join(sep);
 }
 
 export type MetaobjetoReuso = { id: string; handle: string; type: string; fields: Record<string, string | null> };

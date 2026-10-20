@@ -25,6 +25,8 @@ export const PayloadV1 = z
       value: z.string().optional(),
       value_refs: z.array(z.string()).optional(),
     }),
+    /** formatos com destino descricao_html: o HTML que substitui a descrição do produto */
+    descricao_html: z.string().optional(),
   })
   .refine((p) => !!p.metafield.value !== !!p.metafield.value_refs, { message: "metafield precisa de value OU value_refs" });
 export type PayloadV1 = z.infer<typeof PayloadV1>;
@@ -54,6 +56,8 @@ const EXIGEM_LAUDO: { re: RegExp; codigo: string }[] = [
 ];
 
 const MARCADORES = /\[(VALIDAR|REGULAT[ÓO]RIO)[^\]]*\]/i;
+/** Descrição de produto: só marcação de texto, sem atributo (nada de style, script, link ou imagem). */
+const TAGS_DESCRICAO = new Set(["p", "h2", "h3", "ul", "ol", "li", "strong", "em", "br"]);
 const NUMERO_CLAIM = /(\d+(?:[.,]\d+)?)\s*(%|h\b|horas?\b|dias?\b|x\b|vezes\b)/gi;
 
 export type ContextoValidacao = {
@@ -113,6 +117,17 @@ export function validarRegras(payload: unknown, contentMd: string, ctx: Contexto
     if (f.min_itens && refs.length < f.min_itens) erro("itens_poucos", `${refs.length} < ${f.min_itens}`);
     if (f.max_itens && refs.length > f.max_itens) erro("itens_demais", `${refs.length} > ${f.max_itens}`);
   }
+  if (f.destino === "descricao_html") {
+    const html = p.descricao_html ?? "";
+    if (!html.trim()) erro("descricao_ausente", "payload.descricao_html vazio");
+    for (const m of html.matchAll(/<\/?\s*([a-z0-9]+)([^>]*)>/gi)) {
+      if (!TAGS_DESCRICAO.has(m[1].toLowerCase())) erro("html_tag", `<${m[1]}> não é permitida na descrição`);
+      else if (m[2].trim() && m[2].trim() !== "/") erro("html_atributo", `<${m[1]}${m[2]}>: sem atributos na descrição`);
+    }
+    const chars = htmlTexto(html).length;
+    if (f.min_chars && chars < f.min_chars) erro("texto_curto", `descrição com ${chars} < ${f.min_chars} chars`);
+    if (f.max_chars && chars > f.max_chars) erro("texto_longo", `descrição com ${chars} > ${f.max_chars} chars`);
+  }
   if (f.tipo === "rich_text_field") {
     if (!richTextValido(p.metafield.value)) erro("rich_text_invalido", "metafield.value não é rich_text root");
     else if (f.min_chars && textoDe(p.metafield.value!).length < f.min_chars) erro("texto_curto", `< ${f.min_chars} chars`);
@@ -162,7 +177,7 @@ export function validarRegras(payload: unknown, contentMd: string, ctx: Contexto
     .split(/^(?=## )/m)
     .filter((s) => !/^## *(notas|fontes?)\b/i.test(s))
     .join("");
-  const textos = [mdVisivel, ...p.metaobjects.flatMap((m) => m.fields.filter((c) => c.key !== "footnote").map((c) => textoDe(c.value))), textoDe(p.metafield.value ?? "")];
+  const textos = [mdVisivel, ...p.metaobjects.flatMap((m) => m.fields.filter((c) => c.key !== "footnote").map((c) => textoDe(c.value))), f.destino === "descricao_html" ? htmlTexto(p.descricao_html ?? "") : textoDe(p.metafield.value ?? "")];
   const tudo = textos.join("\n");
   if (MARCADORES.test(tudo)) erro("marcador_pendente", tudo.match(MARCADORES)![0]);
   for (const { re, codigo, sev } of PROIBIDOS) {
@@ -177,6 +192,10 @@ export function validarRegras(payload: unknown, contentMd: string, ctx: Contexto
     if (!numeroTemFonte(m[1], ctx)) erro("numero_sem_fonte", trecho(tudo, m.index!));
   }
   return flags;
+}
+
+function htmlTexto(html: string): string {
+  return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 }
 
 function numeroTemFonte(n: string, ctx: ContextoValidacao): boolean {

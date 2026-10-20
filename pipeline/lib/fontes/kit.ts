@@ -12,10 +12,15 @@ const Kit = z
   .object({
     // Proposta automática pode achar só 1 componente; confirmar exige a composição completa.
     componentes: z.array(z.string()).min(1),
+    // Kit de quantidade: N unidades do mesmo produto (1 componente só). Herda a ficha inteira do unitário.
+    quantidade: z.number().int().min(2).optional(),
     confirmado: z.boolean(),
     nota: z.string().optional(),
   })
-  .refine((k) => !k.confirmado || k.componentes.length >= 2, { message: "kit confirmado precisa de 2+ componentes" });
+  .refine((k) => k.quantidade === undefined || k.componentes.length === 1, { message: "kit com quantidade tem 1 componente só" })
+  .refine((k) => !k.confirmado || k.componentes.length >= 2 || k.quantidade !== undefined, {
+    message: "kit confirmado precisa de 2+ componentes ou de quantidade",
+  });
 const KitsConfig = z.object({ kits: z.record(Kit).default({}) });
 
 export type Kit = z.infer<typeof Kit>;
@@ -49,6 +54,25 @@ export function fichaDeKit(
     componentes.push(r.ficha);
   }
 
+  // Mesmo produto em quantidade: a fórmula é a mesma, então herda tudo do unitário (INCI incluso).
+  if (kit.quantidade) {
+    const [unitario] = componentes;
+    return {
+      ok: true,
+      ficha: {
+        ...unitario,
+        handle,
+        nome: produto?.title ?? handle,
+        origem: "kit",
+        descricao: produto ? htmlParaTexto(produto.descriptionHtml) || unitario.descricao : unitario.descricao,
+        componentes: kit.componentes,
+        quantidade: kit.quantidade,
+        inciComponentes: unitario.inci ? [{ nome: unitario.nome, inci: unitario.inci }] : undefined,
+        raw: JSON.stringify({ kit, componentes: [unitario.raw] }),
+      },
+    };
+  }
+
   // Cada campo vira uma lista rotulada por componente: o generator vê de onde veio cada claim.
   const porComponente = (campo: keyof Ficha) =>
     componentes
@@ -66,8 +90,10 @@ export function fichaDeKit(
       categoria: "Kit",
       descricao: produto ? htmlParaTexto(produto.descriptionHtml) : "",
       ativos: porComponente("ativos"),
-      // INCI de kit não se compõe: cada item tem sua fórmula, e composicao de kit fica bloqueada.
-      inci: null,
+      // INCI não se mistura: cada item tem sua fórmula. A composição do kit é a lista do INCI de cada
+      // item, e só existe se todos tiverem INCI (senão composicao fica bloqueada por falta_inci).
+      inci: componentes.every((c) => c.inci) ? componentes.map((c) => `[${c.nome}]\n${c.inci}`).join("\n\n") : null,
+      inciComponentes: componentes.every((c) => c.inci) ? componentes.map((c) => ({ nome: c.nome, inci: c.inci! })) : undefined,
       paraQuem: porComponente("paraQuem"),
       beneficios: porComponente("beneficios"),
       provaEficacia: porComponente("provaEficacia"),

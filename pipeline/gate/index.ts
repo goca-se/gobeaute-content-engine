@@ -78,7 +78,7 @@ export async function gate(
   for (const p of produtos) {
     const formatos: Record<string, EstadoFormato> = {};
     for (const f of contrato.pdp) {
-      formatos[f.formato] = p.metafields[f.metafield] ? "preenchido" : f.gerar ? "gap" : "fora_piloto";
+      formatos[f.formato] = p.metafields[f.metafield] ? "preenchido" : f.gerar && (!f.so_kits || ehKit(p)) ? "gap" : "fora_piloto";
     }
 
     const base: ProdutoRun = {

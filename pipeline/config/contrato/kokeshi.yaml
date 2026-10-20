@@ -56,6 +56,19 @@ pdp:
     min_chars: 60
     renderizado_no_tema: a_confirmar
 
+  - formato: descricao-produto
+    # Reescreve a descrição principal do kit (descriptionHtml) com texto de venda.
+    # O metafield é só o marcador de "já reescrita pelo pipeline": vazio = gap.
+    metafield: pipeline.descricao_gerada
+    tipo: json
+    destino: descricao_html
+    so_kits: true
+    obrigatorio: false
+    gerar: true
+    min_chars: 400
+    max_chars: 2500
+    renderizado_no_tema: true
+
   - formato: composicao
     metafield: custom.caracteristicas
     tipo: rich_text_field

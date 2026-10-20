@@ -5,18 +5,17 @@
  *   npx tsx publisher/index.ts --run <run_id> [--handle <h>...]           # dry-run: mostra o plano
  *   npx tsx publisher/index.ts --run <run_id> [--handle <h>...] --apply   # escreve no Shopify
  *
- * Ordem (regra #0 + princípio 4): arquivos locais conferidos → snapshot salvo → metaobjectUpsert →
- * metafieldsSet atômico com compareDigest → releitura de conferência → log por produto.
+ * Ordem (regra #0 + princípio 4): arquivos locais conferidos → core/publicar.ts (snapshot salvo →
+ * metaobjectUpsert → descrição → metafieldsSet atômico com compareDigest → releitura) → log por produto.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { relative, resolve } from "node:path";
 import { parseArgs } from "node:util";
 import { assertEnabled, getLoja, loadContrato, loadPipelineConfig, PIPELINE_DIR, REPO_ROOT } from "../lib/config.js";
 import { ShopifyWriteClient } from "../lib/shopify/client.js";
-import { metafieldVazio } from "../lib/shopify/queries.js";
 import type { ItemRun, PublicacaoProduto, RunPayload } from "../lib/types.js";
 import { PayloadV1 } from "../validator/regras.js";
-import { lerMetafields, metaobjetosExistentes, setMetafields, upsertMetaobjeto } from "./shopify.js";
+import { publicarProduto } from "../core/publicar.js";
 
 const { values } = parseArgs({
   options: {
@@ -81,96 +80,43 @@ for (const handle of handles) {
         pub.formatos_pulados.push({ formato: item.formato, motivo: "payload_invalido" });
         continue;
       }
+      // Regra #0: HTML que vai para a descrição também fica salvo como .html antes da mutation.
+      if (parsed.data.descricao_html) {
+        mkdirSync(resolve(dirProduto, item.formato, "conteudo-html"), { recursive: true });
+        writeFileSync(resolve(dirProduto, item.formato, "conteudo-html", "descricao.html"), parsed.data.descricao_html);
+      }
       planos.push({ item, payload: parsed.data });
     }
 
-    // 2) Estado atual no Shopify: alvo precisa continuar vazio (não sobrescreve edição feita no admin).
-    const alvos = planos.map((p) => `${p.payload.metafield.namespace}.${p.payload.metafield.key}`);
-    const atual = alvos.length ? await lerMetafields(client, produto.product_gid, alvos) : null;
-    const jaPublicados = handlesPublicadosPeloPipeline(dirProduto);
-    const existentes = await metaobjetosExistentes(client, planos.flatMap((p) => p.payload.metaobjects));
-    const aplicaveis = planos.filter(({ item, payload }) => {
-      const mf = `${payload.metafield.namespace}.${payload.metafield.key}`;
-      if (atual && !metafieldVazio(atual.valores[mf]?.value)) {
-        pub.formatos_pulados.push({ formato: item.formato, motivo: "preenchido_fora_do_pipeline" });
-        return false;
-      }
-      const alheio = payload.metaobjects.find((m) => existentes.has(`${m.type}/${m.handle}`) && !jaPublicados.has(m.handle));
-      if (alheio) {
-        pub.formatos_pulados.push({ formato: item.formato, motivo: `handle_existente:${alheio.handle}` });
-        return false;
-      }
-      return true;
+    // 2) Núcleo compartilhado com o painel: estado atual → snapshot em disco → metaobjetos →
+    //    descrição (se houver) → metafieldsSet → conferência.
+    const r = await publicarProduto({
+      client,
+      runId: run.run_id,
+      shopDomain: loja.shop_domain,
+      productGid: produto.product_gid,
+      planos: planos.map((p) => ({ formato: p.item.formato, payload: p.payload })),
+      pulados: pub.formatos_pulados,
+      jaPublicados: handlesPublicadosPeloPipeline(dirProduto),
+      aplicar: values.apply,
+      log: (m) => console.error(`[publisher] ${handle}: ${m}`),
+      antesDeEscrever: async (snapshot) => {
+        const snapDir = resolve(dirProduto, "snapshots");
+        mkdirSync(snapDir, { recursive: true });
+        const snapPath = resolve(snapDir, `${run.run_id}-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
+        writeFileSync(snapPath, JSON.stringify(snapshot, null, 2));
+        return relative(REPO_ROOT, snapPath);
+      },
     });
-
-    if (!aplicaveis.length) {
-      pub.status = "nao_publicado";
-      console.error(`[publisher] ${handle}: nada a publicar (${pub.formatos_pulados.map((f) => `${f.formato}=${f.motivo}`).join(", ")})`);
-      registrar(produto.handle, pub, itens);
-      continue;
-    }
-
-    console.error(`[publisher] ${handle}: ${aplicaveis.map((p) => p.item.formato).join(", ")} → ${values.apply ? "APLICANDO" : "dry-run"}`);
-    for (const { payload } of aplicaveis) {
-      console.error(`    ${payload.metafield.namespace}.${payload.metafield.key}: ${payload.metaobjects.length} novos, ${payload.reuse.length} reaproveitados`);
-    }
+    const { snapshot: _, ...resultado } = r;
+    Object.assign(pub, resultado);
     if (!values.apply) continue;
-
-    // 3) Snapshot ANTES de qualquer mutation (princípio 4).
-    const snapDir = resolve(dirProduto, "snapshots");
-    mkdirSync(snapDir, { recursive: true });
-    const snapPath = resolve(snapDir, `${run.run_id}-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
-    writeFileSync(
-      snapPath,
-      JSON.stringify(
-        { capturado_em: new Date().toISOString(), run_id: run.run_id, shop: loja.shop_domain, product_gid: produto.product_gid, product_updated_at: atual!.updatedAt, metafields: atual!.valores },
-        null,
-        2,
-      ),
-    );
-    pub.snapshot_path = relative(REPO_ROOT, snapPath);
-
-
-    // 4) Metaobjetos (upsert por handle: idempotente em retry).
-    const gidPorHandle = new Map<string, string>();
-    for (const { payload } of aplicaveis) {
-      for (const m of payload.metaobjects) {
-        const gid = await upsertMetaobjeto(client, m);
-        gidPorHandle.set(m.handle, gid);
-        pub.criados[m.handle] = gid;
-      }
-      pub.reaproveitados.push(...payload.reuse.map((r) => ({ handle: r.handle, gid: r.gid })));
+    if (pub.status === "erro") throw new Error(pub.erro);
+    if (pub.status === "nao_publicado") {
+      console.error(`[publisher] ${handle}: nada a publicar (${pub.formatos_pulados.map((f) => `${f.formato}=${f.motivo}`).join(", ")})`);
+    } else {
+      console.error(`[publisher] ${handle}: ✓ ${pub.status} (${pub.formatos_publicados.join(", ")}) · ${Object.keys(pub.criados).length} metaobjetos · admin: ${adminUrl}`);
     }
-
-    // 5) Metafields num único metafieldsSet (atômico), com compareDigest do snapshot.
-    const sets = aplicaveis.map(({ item, payload }) => {
-      const mf = `${payload.metafield.namespace}.${payload.metafield.key}`;
-      const refs = (payload.metafield.value_refs ?? []).map((r) => {
-        const m = r.match(/^<GID:(.+)>$/);
-        return m ? gidPorHandle.get(m[1])! : r;
-      });
-      const value = payload.metafield.value ?? (payload.metafield.type.startsWith("list.") ? JSON.stringify(refs) : refs[0]);
-      pub.metafields.push({ metafield: mf, formato: item.formato, antes: atual!.valores[mf]?.value ?? null, depois: value });
-      return {
-        ownerId: produto.product_gid,
-        namespace: payload.metafield.namespace,
-        key: payload.metafield.key,
-        type: payload.metafield.type,
-        value,
-        compareDigest: atual!.valores[mf]?.compareDigest ?? null,
-      };
-    });
-    await setMetafields(client, sets);
-
-    // 6) Conferência: relê e compara.
-    const depois = await lerMetafields(client, produto.product_gid, alvos);
-    const divergentes = pub.metafields.filter((m) => depois.valores[m.metafield]?.value !== m.depois);
-    if (divergentes.length) throw new Error(`conferência falhou: ${divergentes.map((d) => d.metafield).join(", ")}`);
-
-    pub.status = pub.formatos_pulados.length ? "parcial" : "publicado";
-    pub.publicado_em = new Date().toISOString();
-    pub.formatos_publicados = aplicaveis.map((p) => p.item.formato);
-    console.error(`[publisher] ${handle}: ✓ ${pub.status} (${pub.formatos_publicados.join(", ")}) · ${Object.keys(pub.criados).length} metaobjetos · admin: ${adminUrl}`);
   } catch (err) {
     pub.status = "erro";
     pub.erro = String(err);
