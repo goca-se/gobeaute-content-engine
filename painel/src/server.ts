@@ -24,7 +24,8 @@ export default {
     const usuario = request.headers.get("x-godeploy-user-email");
     const cron = request.headers.get("x-godeploy-cron");
     const db = env.DB;
-    if (url.pathname === "/favicon.ico") return new Response(null, { status: 204 });
+    // Navegador que pede o .ico por conta própria recebe o SVG dos assets.
+    if (url.pathname === "/favicon.ico") return Response.redirect(new URL("/favicon.svg", url).toString(), 301);
 
     try {
       await migrar(db);
