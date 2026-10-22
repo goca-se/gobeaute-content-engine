@@ -2,6 +2,7 @@ const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const utc = (iso) => (iso && !/[zZ]|[+-]\d\d:?\d\d$/.test(iso) ? `${iso.replace(" ", "T")}Z` : iso); // datetime('now') do SQLite é UTC sem fuso
 const fmtData = (iso) => (iso ? new Date(utc(iso)).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" }) : "");
+const fmtReais = (n) => (n == null ? "—" : n.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 }));
 const fmtTokens = (n) => (n >= 1e6 ? `${(n / 1e6).toFixed(1)} M` : n >= 1e3 ? `${Math.round(n / 1e3)} mil` : String(n ?? 0));
 function haQuanto(iso) {
   if (!iso) return "nunca";
@@ -328,15 +329,18 @@ function renderTabela() {
   else if (tab.id === "kits") renderKits();
   else if (tab.id === "runs") renderRuns();
   else {
-    const lista = filtrarBusca(visao.run.produtos.filter(tab.filtro));
     const comFila = tab.id === "fila";
-    $("thead").innerHTML = `<tr>${comFila ? "<th>#</th>" : ""}<th>Produto</th><th>Ficha</th><th>Formatos</th>${comFila ? "" : "<th>Motivo</th>"}</tr>`;
+    const lista = filtrarBusca(visao.run.produtos.filter(tab.filtro));
+    // Fila na ordem em que o robô vai pegar (receita 30d > Mais Vendido > ficha > formatos faltando).
+    if (comFila) lista.sort((a, b) => (a.prioridade ?? Infinity) - (b.prioridade ?? Infinity));
+    $("thead").innerHTML = `<tr>${comFila ? "<th>#</th>" : ""}<th>Produto</th>${comFila ? "<th>Receita 30d</th>" : ""}<th>Ficha</th><th>Formatos</th>${comFila ? "" : "<th>Motivo</th>"}</tr>`;
     $("tbody").innerHTML = lista.length
       ? lista
           .map(
             (p) => `<tr>
             ${comFila ? `<td class="n">${p.prioridade ?? ""}</td>` : ""}
             <td>${celulaProduto(p)}</td>
+            ${comFila ? `<td class="n">${fmtReais(p.receita_30d)}</td>` : ""}
             <td>${esc(ORIGEM[p.ficha_origem] ?? "—")}</td>
             <td>${chips(p)}</td>
             ${comFila ? "" : `<td>${esc(rotuloMotivo(p.motivo))}${p.motivo?.includes(":") ? `<div class="h">${esc(p.motivo.split(":").slice(1).join(":"))}</div>` : ""}</td>`}
