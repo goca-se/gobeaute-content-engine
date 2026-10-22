@@ -142,7 +142,7 @@ function renderEstado() {
   const botoes = `
     <button id="b-pausa" class="${e.pausado ? "primario" : ""}">${e.pausado ? "▶ Retomar robô" : "⏸ Pausar robô"}</button>
     <button id="b-lote" ${e.pausado || e.run_ativo ? "disabled" : ""} title="${e.pausado ? "Retome o robô primeiro" : e.run_ativo ? "Já existe um run em andamento" : "Escaneia a loja e gera/publica o lote de hoje"}">Rodar lote agora</button>
-    <button id="b-scan" ${e.run_ativo ? "disabled" : ""} title="Só lê o Shopify e atualiza os números; não gera nada">Atualizar foto da loja</button>`;
+    <button id="b-scan" ${e.run_ativo ? "disabled" : ""} title="Só lê o Shopify e atualiza os números; não gera nada">Rodar scanner</button>`;
   $("estado").innerHTML = `<div class="estado-linha">${linha}</div><div class="estado-acoes">${batimento}${botoes}</div>`;
   $("b-pausa").onclick = async () => {
     if (!e.pausado && !confirm("Pausar o robô? Ele termina o passo atual e para de gerar e publicar.")) return;
