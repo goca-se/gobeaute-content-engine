@@ -48,6 +48,7 @@ export function exclusao(p: ProdutoShopify, loja: LojaConfig): Exclusao {
   const ex = loja.exclusoes;
   if (ex.exigir_status_active && p.status !== "ACTIVE") return { motivo: `status_${p.status.toLowerCase()}` };
   if (ex.exigir_publicado_online_store && !p.onlineStoreUrl) return { motivo: "fora_loja_online" };
+  if (ex.exigir_sku && !p.temSku) return { motivo: "sem_sku" };
   const gift = new RegExp(ex.gift_regex, "i");
   if ([p.handle, p.title, p.productType, ...p.tags].some((t) => gift.test(t))) return { motivo: "gift" };
   if (p.precoMin <= ex.gift_preco_max) return { motivo: "gift_preco" };

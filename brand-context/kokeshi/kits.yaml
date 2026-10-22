@@ -10,22 +10,31 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; pele-de-porcelana-antissinais ×1 ← "O Kit Colágeno Antissinais combina o cuidado antissinais do Pele de Porcelana Antissinais com a ação firmadora da Gota de Colágeno"; creme-gel-facial-gota-de-colageno-kokeshi ×1 ← "A Gota de Colágeno possui textura gel leve, absorção rápida e pode ser utilizada de manhã e à noite."; confirmado na revisão de 20/10/2026
   kit-5-passos-antioleosidade:
     componentes:
-      - serum-roll-on-adeus-olheiras-10ml
       - bastao-multifuncional-sunshine-fps-60-11g
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; serum-roll-on-adeus-olheiras-10ml ×1 ← "Óleo de Café, Chá Verde e Pantenol com Roll-on de metal para desinchar e iluminar a área dos olhos"; bastao-multifuncional-sunshine-fps-60-11g ×1 ← "Vitamina E e FPS 60 resistente à água para proteção completa dos raios UVA/UVB o dia todo"; não identificados: Limpeza: “Fórmula delicada que limpa sem agredir e prepara a pele para absorver melhor todos os ativos da rotina”. Há vários produtos de limpeza no catálogo, sem informação suficiente para identificar um único handle. | Tratamento: “Vitamina C + Ácido Hialurônico para pele radiante, firme e uniforme desde as primeiras aplicações”. O trecho não especifica o produto, e o catálogo não informa as composições para distinguir com segurança entre as opções. | Hidratação antioleosidade: “Aloe Vera, Extrato de Pepino e Pó da Casca de Arroz que hidratam, refrescam e controlam o brilho excessivo”. Não é possível vincular essa composição a um único handle com segurança apenas pelos títulos do catálogo.; obs: O kit anuncia 5 passos, mas apenas 2 produtos foram identificados com segurança. Os outros 3 passos permanecem não identificados.'
+      - pele-de-porcelana-antioleosidade
+      - sabonete-liquido-pele-de-porcelana-facial-kokeshi
+      - serum-booster-facial-kokeshi
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; bastao-multifuncional-sunshine-fps-60-11g ×1; pele-de-porcelana-antioleosidade ×1; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1; serum-booster-facial-kokeshi ×1; serum-roll-on-adeus-olheiras-10ml ×1"
   kit-5-passos-antissinais:
     componentes:
-      - serum-de-arroz-pele-de-porcelana-30ml
+      - bastao-multifuncional-sunshine-fps-60-11g
       - oleo-de-rosa-mosqueta-100
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; serum-de-arroz-pele-de-porcelana-30ml ×1 ← "sérum de arroz"; oleo-de-rosa-mosqueta-100 ×1 ← "rosa mosqueta"; não identificados: sabonete — há mais de um sabonete no catálogo, sem indicação do tipo. | antissinais — há mais de um produto com essa indicação no catálogo. | bastã — trecho truncado, sem informação suficiente para distinguir entre os bastões do catálogo.; obs: O título indica 5 passos, mas apenas 2 itens foram identificados com segurança; os outros 3 permanecem não identificados.'
+      - pele-de-porcelana-antissinais
+      - sabonete-liquido-pele-de-porcelana-facial-kokeshi
+      - serum-de-arroz-pele-de-porcelana-30ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; bastao-multifuncional-sunshine-fps-60-11g ×1; oleo-de-rosa-mosqueta-100 ×1; pele-de-porcelana-antissinais ×1; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1; serum-de-arroz-pele-de-porcelana-30ml ×1"
   kit-5-passos-peles-sensiveis:
     componentes:
-      - serum-roll-on-adeus-olheiras-10ml
       - bastao-multifuncional-sunshine-fps-60-11g
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; serum-roll-on-adeus-olheiras-10ml ×1 ← "Roll-on de metal com Cafeína e Chá Verde desincha e ilumina o olhar na hora"; bastao-multifuncional-sunshine-fps-60-11g ×1 ← "Bastão FPS 60 com Vitamina E para proteção real no dia a dia"; não identificados: Sabonete delicado prepara a pele para absorver todos os ativos da rotina — a descrição não permite determinar com segurança qual sabonete do catálogo. | Centella Asiática + D-Pantenol acalmam vermelhidão e reforçam a barreira cutânea — os títulos do catálogo não confirmam qual produto contém essa combinação. | Niacinamida + Ácido Hialurônico uniformizam e entregam efeito glass skin — não é possível associar essa combinação a um único produto do catálogo com segurança.; obs: O kit anuncia 5 passos, mas apenas 2 produtos foram identificados com segurança; os outros 3 passos permanecem não identificados.'
+      - pele-de-porcelana-peles-sensiveis-1
+      - sabonete-liquido-pele-de-porcelana-facial-kokeshi
+      - serum-de-arroz-pele-de-porcelana-30ml
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; bastao-multifuncional-sunshine-fps-60-11g ×1; pele-de-porcelana-peles-sensiveis-1 ×1; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1; serum-de-arroz-pele-de-porcelana-30ml ×1; serum-roll-on-adeus-olheiras-10ml ×1"
   kit-antioleosidade-adeus-olheiras:
     componentes:
       - pele-de-porcelana-antioleosidade
@@ -54,9 +63,10 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM concordam; bastao-multifuncional-sunshine-fps-60-11g ×1 ← "1 unid do Bastão Multifuncional FPS 60;"; oleo-de-rosa-mosqueta-100 ×1 ← "1 unid do Rosa mosqueta;"; hidratante-facial-pele-de-porcelana ×1 ← "1 unid do Hidratante Facial Pele de Porcelana;"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unid do Olhos de Gueixa."; confirmado na revisão de 20/10/2026
   kit-cheiro-de-rica-basico:
     componentes:
+      - cheiro-de-rica-body-splash-200ml
       - hidratante-corporal-cheiro-de-rica-200ml
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM DIVERGEM; hidratante-corporal-cheiro-de-rica-200ml ×1 ← "1 Hidratante Corporal Cheiro de Rica 200mL"; lista: hidratante-corporal-cheiro-de-rica-200ml; não identificados: 1 Body Splash Cheiro de Rica 200mL; obs: O catálogo contém três versões de Body Splash Cheiro de Rica 200mL. A descrição não informa a fragrância ou o número da versão, impedindo a identificação de um único handle com segurança.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; cheiro-de-rica-body-splash-200ml ×1; hidratante-corporal-cheiro-de-rica-200ml ×1"
   kit-colageno-peles-sensiveis:
     componentes:
       - pele-de-porcelana-peles-sensiveis-1
@@ -66,10 +76,11 @@ kits:
   kit-cuidado-antissinais-com-fps-60:
     componentes:
       - bastao-multifuncional-sunshine-fps-60-11g
-      - oleo-de-rosa-mosqueta-100
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
-    confirmado: false
-    nota: "revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; bastao-multifuncional-sunshine-fps-60-11g ×1 ← \"Kit cuidado antissinais com FPS 60 - bastão\"; oleo-de-rosa-mosqueta-100 ×1 ← \"rosa mosqueta\"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← \"olhos de gueixa\"; não identificados: antissinais; obs: O termo 'antissinais' não permite identificar um único produto com segurança, pois há mais de um produto com essa indicação no catálogo."
+      - oleo-de-rosa-mosqueta-100
+      - pele-de-porcelana-antissinais
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; bastao-multifuncional-sunshine-fps-60-11g ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; oleo-de-rosa-mosqueta-100 ×1; pele-de-porcelana-antissinais ×1"
   kit-cuidado-sensiveis-com-fps-60:
     componentes:
       - pele-de-porcelana-peles-sensiveis-1
@@ -81,28 +92,34 @@ kits:
   kit-cuidados-completos-maos-glow:
     componentes:
       - creme-gel-facial-gota-de-colageno-kokeshi
+      - creme-hidratante-para-as-maos-kokeshi
       - serum-booster-facial-kokeshi
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM DIVERGEM; creme-gel-facial-gota-de-colageno-kokeshi ×1 ← "1 unid do Creme Gel Facial Gota de Colágeno;"; serum-booster-facial-kokeshi ×1 ← "1 unid do Sérum Booster."; lista: creme-gel-facial-gota-de-colageno-kokeshi, serum-booster-facial-kokeshi; não identificados: 1 unid do Creme hidratante para mãos; obs: O creme hidratante para mãos não possui correspondência no catálogo fornecido.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; creme-hidratante-para-as-maos-kokeshi ×1; serum-booster-facial-kokeshi ×1"
   kit-cuidados-basicos:
     componentes:
-      - rice-agua-micelar-de-arroz-kokeshi
-      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - creme-gel-facial-pele-plena-kokeshi
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM DIVERGEM; rice-agua-micelar-de-arroz-kokeshi ×1 ← "1 unidade da Água Micelar"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unidade do Olhos de Gueixa"; creme-gel-facial-pele-plena-kokeshi ×1 ← "1 unidade do Pele Plena"; lista: rice-agua-micelar-de-arroz-kokeshi, hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa, creme-gel-facial-pele-plena-kokeshi; não identificados: 1 unidade do Sabonete Facial | 1 unidade do Pele Porcelana; obs: Sabonete Facial não especifica se é o sabonete líquido ou o esfoliante. Pele Porcelana não especifica qual produto ou variante da linha Pele de Porcelana.'
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - rice-agua-micelar-de-arroz-kokeshi
+      - sabonete-liquido-pele-de-porcelana-facial-kokeshi
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-pele-plena-kokeshi ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; rice-agua-micelar-de-arroz-kokeshi ×1; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1"
   kit-equilibrio-olhos-de-gueixa:
     componentes:
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "Olhos de Gueixa"; não identificados: Equilíbrio; obs: Descrição vazia; identificação baseada no título. Não foi possível associar Equilíbrio a um único handle do catálogo com segurança.'
+      - pele-de-porcelana-antioleosidade
+      - sabonete-liquido-pele-de-porcelana-facial-kokeshi
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; pele-de-porcelana-antioleosidade ×1; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1"
   kit-essencial-kokeshi:
     componentes:
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - oleo-de-rosa-mosqueta-100
       - rice-agua-micelar-de-arroz-kokeshi
-      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM DIVERGEM; oleo-de-rosa-mosqueta-100 ×1 ← "1 unidade do Óleo de Rosa Mosqueta"; rice-agua-micelar-de-arroz-kokeshi ×1 ← "1 unidade do Água Micelar de Arroz"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unidade do Olhos de Gueixa"; lista: oleo-de-rosa-mosqueta-100, rice-agua-micelar-de-arroz-kokeshi, hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa; não identificados: 1 unidade do Pele de Porcelana; obs: Há vários produtos Pele de Porcelana no catálogo. A descrição não especifica qual deles compõe o kit, e a indicação para pele madura ou com primeiros sinais de envelhecimento não permite identificar um único handle com segurança.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; oleo-de-rosa-mosqueta-100 ×1; rice-agua-micelar-de-arroz-kokeshi ×1"
   kit-facial-pele-de-porcelana:
     componentes:
       - hidratante-facial-pele-de-porcelana
@@ -111,10 +128,11 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM concordam; hidratante-facial-pele-de-porcelana ×1 ← "1 unidade do Hidratante Facial Pele de Porcelana"; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1 ← "1 unidade do Sabonete Facial Pele de Porcelana"; confirmado na revisão de 20/10/2026
   kit-frescor-e-hidratacao-kokeshi:
     componentes:
-      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - cheiro-de-rica-body-splash-200ml
       - hidratante-facial-pele-de-porcelana
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unidade do Olhos de Gueixa"; hidratante-facial-pele-de-porcelana ×1 ← "1 unidade do Hidratante Pele de Porcelana"; não identificados: 1 unidade do Body Splash Cheiro de Rica: o catálogo contém três variantes e não informa suas notas olfativas, impedindo identificar com segurança qual corresponde às notas de pera, groselha preta, íris e jasmim descritas.'
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; cheiro-de-rica-body-splash-200ml ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1"
   kit-glow-olhos-de-gueixa:
     componentes:
       - serum-de-arroz-pele-de-porcelana-30ml
@@ -137,10 +155,11 @@ kits:
     nota: 'revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM concordam; hidratante-facial-pele-de-porcelana ×1 ← "1 unidade do creme facial Pele de Porcelana;"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unidade do creme para região dos olhos Olhos de Gueixa;"; oleo-de-rosa-mosqueta-100 ×1 ← "1 unidade do Óleo de Rosa Mosqueta"; obs: O título menciona Pele Plena, mas a descrição lista o creme facial Pele de Porcelana. Foram considerados os produtos explicitamente listados na descrição.; confirmado na revisão de 20/10/2026'
   kit-hidratacao-uniformizacao:
     componentes:
-      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - geleia-facial-niacinamida-100g
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM DIVERGEM; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unidade do creme Olhos de Gueixa"; geleia-facial-niacinamida-100g ×1 ← "1 unidade da Geleia Facial de Niacinamida"; lista: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa, geleia-facial-niacinamida-100g; não identificados: 1 unidade do creme Pele de Porcelana; obs: O catálogo contém diferentes versões de Pele de Porcelana; a descrição não especifica qual delas compõe o kit.'
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; geleia-facial-niacinamida-100g ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1"
   kit-hidratacao-uniformizacao-iluminacao:
     componentes:
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
@@ -151,9 +170,11 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM concordam; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unidade do creme para região dos olhos, Olhos de Gueixa;"; hidratante-facial-pele-de-porcelana ×1 ← "1 unidade do hidratante facial Pele de Porcelana;"; geleia-facial-niacinamida-100g ×1 ← "1 unidade da Geleia Facial de Niacinamida;"; serum-booster-facial-kokeshi ×1 ← "1 unidade do Sérum Booster Facial Kokeshi;"; confirmado na revisão de 20/10/2026
   kit-renovadores-serum-vit-c:
     componentes:
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - serum-booster-facial-kokeshi
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; serum-booster-facial-kokeshi ×1 ← "☀️ Sérum Booster com vitamina C e ácido hialurônico"; não identificados: Hidratantes: os outros dois produtos não são nomeados e não podem ser associados com segurança a handles únicos do catálogo.; obs: A descrição informa 3 produtos essenciais, mas apenas 1 foi identificado com segurança. Vitamina C e ácido hialurônico são descritos como componentes do Sérum Booster, não como produtos separados.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-booster-facial-kokeshi ×1"
   kit-hidratacao-corporal-intensa-kokeshi:
     componentes:
       - creme-hidratante-para-o-corpo-kokeshi
@@ -161,10 +182,11 @@ kits:
     nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; creme-hidratante-para-o-corpo-kokeshi ×1 ← "1 un do creme hidratante corporal"; não identificados: 1 un de creme hidratante para as mãos | 1 un de creme hidratante para os pés; obs: Os cremes hidratantes para as mãos e para os pés não possuem correspondentes identificáveis no catálogo fornecido.'
   kit-hidratacao-essencial:
     componentes:
+      - creme-hidratante-para-as-maos-kokeshi
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - oleo-de-rosa-mosqueta-100
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM DIVERGEM; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unid do Creme Olhos de Gueixa;"; oleo-de-rosa-mosqueta-100 ×1 ← "1 unid do Óleo de Rosa Mosqueta."; lista: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa, oleo-de-rosa-mosqueta-100; não identificados: 1 unid do Creme hidratante para mãos; obs: O creme hidratante para mãos não possui correspondência segura no catálogo.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-hidratante-para-as-maos-kokeshi ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; oleo-de-rosa-mosqueta-100 ×1"
   kit-hidratante-facial-pele-de-porcelana-antissinais:
     componentes:
       - hidratante-facial-pele-de-porcelana
@@ -175,18 +197,21 @@ kits:
     componentes:
       - hidratante-facial-pele-de-porcelana
       - pele-de-porcelana-antissinais
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; hidratante-facial-pele-de-porcelana ×1 ← "Hidratante Facial Pele de Porcelana"; pele-de-porcelana-antissinais ×1 ← "Pele de Porcelana + Antissinais"; não identificados: FPS20; obs: Identificação baseada apenas no título, pois a descrição está vazia. Não há produto identificado como FPS20 no catálogo; a menção pode ser uma característica, e não um item adicional.'
+      - pele-de-porcelana-fps20
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-facial-pele-de-porcelana ×1; pele-de-porcelana-antissinais ×1; pele-de-porcelana-fps20 ×1"
   kit-olhar-de-gueixa:
     componentes:
+      - adeus-linhas-bastao-para-area-dos-olhos
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "para quem quer o olhar de gueixa com hidratação real"; não identificados: Segundo produto do duo, associado à ação firmadora e aos ativos Niacinamida, Centella Asiática e Ginseng; a descrição não permite vinculá-lo com segurança a um único handle.; obs: A descrição anuncia um duo (2 produtos), mas apenas 1 produto foi identificado com segurança. Os ingredientes citados não foram considerados produtos avulsos.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; adeus-linhas-bastao-para-area-dos-olhos ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1"
   kit-olhar-perfeito:
     componentes:
+      - adeus-linhas-bastao-para-area-dos-olhos
       - serum-roll-on-adeus-olheiras-10ml
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; serum-roll-on-adeus-olheiras-10ml ×1 ← "❄️ Cafeína, Chá Verde e Pantenol com aplicador roll-on de metal que desincham, iluminam e combatem olheiras com frescor imediato"; não identificados: Produto para o contorno dos olhos descrito como: “🌿 Niacinamida, Centella Asiática, Aloe Vera e Ginseng que suavizam linhas finas, firmam e revitalizam o contorno”. A descrição não permite distinguir com segurança entre o Bastão para Área dos Olhos Adeus Linhas e o Hidratante Renovador para Área dos Olhos Olhos de Gueixa.; obs: O kit é descrito como um duo, mas apenas 1 dos 2 produtos foi identificado com segurança.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; adeus-linhas-bastao-para-area-dos-olhos ×1; serum-roll-on-adeus-olheiras-10ml ×1"
   kit-olhos-de-gueixa-oleo-de-rosa-mosqueta:
     componentes:
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
@@ -196,13 +221,15 @@ kits:
   kit-pele-calma-hidratada:
     componentes:
       - oleo-de-rosa-mosqueta-100
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; oleo-de-rosa-mosqueta-100 ×1 ← "🌹 Rosa Mosqueta 100% + Vitamina A regeneram e tratam manchas"; não identificados: Produto com Centella Asiática + Camomila, descrito como calmante para vermelhidão e irritação; não é possível associá-lo com segurança a um único handle do catálogo.; obs: A descrição anuncia uma dupla, mas apenas 1 dos 2 produtos foi identificado com segurança.'
+      - pele-de-porcelana-peles-sensiveis-1
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; oleo-de-rosa-mosqueta-100 ×1; pele-de-porcelana-peles-sensiveis-1 ×1"
   kit-pele-de-porcelana-adeus-linhas:
     componentes:
       - adeus-linhas-bastao-para-area-dos-olhos
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; adeus-linhas-bastao-para-area-dos-olhos ×1 ← "O Kit Pele de Porcelana + Adeus Linhas [...] Niacinamida, Centella Asiática, Aloe Vera e Ginseng que suavizam linhas finas e firmam o contorno dos olhos"; não identificados: Pele de Porcelana: tratamento noturno com Óleo de Arroz, Rosa Mosqueta e Pantenol. A descrição não informa o tipo ou a variante do produto, não permitindo associá-lo com segurança a um único handle do catálogo.; obs: A descrição anuncia um duo, mas apenas 1 dos 2 produtos foi identificado com segurança.'
+      - hidratante-facial-pele-de-porcelana
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; adeus-linhas-bastao-para-area-dos-olhos ×1; hidratante-facial-pele-de-porcelana ×1"
   kit-pele-de-porcelana-oleo-de-rosa-mosqueta:
     componentes:
       - hidratante-facial-pele-de-porcelana
@@ -218,11 +245,12 @@ kits:
     nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; hidratante-facial-pele-de-porcelana ×1 ← "💧 Hidratação intensa do creme Pele de Porcelana"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "👁️ Olhos de Gueixa revitaliza e ilumina a região dos olhos"; geleia-facial-colageno-100g ×1 ← "💎 Trio: Pele de Porcelana + Olhos de Gueixa + Geleia de Colágeno"; confirmado na revisão de 20/10/2026'
   kit-pele-firme-hidratada-iluminada:
     componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - hidratante-facial-pele-de-porcelana
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - serum-booster-facial-kokeshi
-      - creme-gel-facial-gota-de-colageno-kokeshi
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "Cuidado especial para a área dos olhos com Olhos de Gueixa"; serum-booster-facial-kokeshi ×1 ← "4 produtos: Pele de Porcelana, Olhos de Gueixa, Sérum Booster e Gota de Colágeno"; creme-gel-facial-gota-de-colageno-kokeshi ×1 ← "4 produtos: Pele de Porcelana, Olhos de Gueixa, Sérum Booster e Gota de Colágeno"; não identificados: Pele de Porcelana: há vários produtos com esse nome no catálogo, e a descrição não especifica o tipo ou a variante.; obs: O kit anuncia 4 produtos, mas apenas 3 foram identificados com segurança.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-booster-facial-kokeshi ×1"
   kit-pele-impecavel-e-protegida:
     componentes:
       - bastao-multifuncional-sunshine-fps-60-11g
@@ -233,9 +261,10 @@ kits:
   kit-pele-nutritiva-hidratacao:
     componentes:
       - bastao-multifuncional-sunshine-fps-60-11g
+      - creme-hidratante-para-as-maos-kokeshi
       - hidratante-corporal-cheiro-de-rica-200ml
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM DIVERGEM; bastao-multifuncional-sunshine-fps-60-11g ×1 ← "1 unid do Bastão Multifuncional FPS 60 Kokeshi;"; hidratante-corporal-cheiro-de-rica-200ml ×1 ← "1 unid do Hidratante Corporal Cheiro de Rica Kokeshi;"; lista: bastao-multifuncional-sunshine-fps-60-11g, hidratante-corporal-cheiro-de-rica-200ml; não identificados: 1 unid do Creme para as Mãos Kokeshi; obs: O Creme para as Mãos Kokeshi não foi encontrado no catálogo.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; bastao-multifuncional-sunshine-fps-60-11g ×1; creme-hidratante-para-as-maos-kokeshi ×1; hidratante-corporal-cheiro-de-rica-200ml ×1"
   kit-pele-radiante-e-renovadora:
     componentes:
       - hidratante-facial-pele-de-porcelana
@@ -247,11 +276,14 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM concordam; hidratante-facial-pele-de-porcelana ×1 ← "1 unidade do creme facial Pele de Porcelana;"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unidade do creme para região dos olhos Olhos de Gueixa;"; oleo-de-rosa-mosqueta-100 ×1 ← "1 unidade do Óleo de Rosa Mosqueta;"; creme-gel-facial-pele-plena-kokeshi ×1 ← "1 unidade do Creme Gel Pele Plena Facial;"; serum-tudo-em-1-30ml-1 ×1 ← "1 unidade do Sérum Tudo em 1."; confirmado na revisão de 20/10/2026
   kit-pele-radiante-kokeshi-kit-6-em-1:
     componentes:
-      - serum-booster-facial-kokeshi
-      - rice-agua-micelar-de-arroz-kokeshi
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - hidratante-facial-pele-de-porcelana
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; serum-booster-facial-kokeshi ×1 ← "6 produtos: Sérum Booster, Água Micelar, Olhos de Gueixa, Pele de Porcelana e mais"; rice-agua-micelar-de-arroz-kokeshi ×1 ← "6 produtos: Sérum Booster, Água Micelar, Olhos de Gueixa, Pele de Porcelana e mais"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "Olhos de Gueixa para cuidado da área periorbital"; não identificados: Pele de Porcelana: há vários produtos com esse nome no catálogo, sem indicação suficiente para identificar um único handle. | Dois produtos adicionais mencionados apenas como "e mais", sem nomes ou características que permitam identificá-los.; obs: O título anuncia um kit 6 em 1 e a descrição informa 6 produtos, mas apenas 3 foram identificados com segurança. Pele de Porcelana é ambíguo e os outros 2 produtos não são especificados.'
+      - oleo-de-rosa-mosqueta-100
+      - rice-agua-micelar-de-arroz-kokeshi
+      - serum-booster-facial-kokeshi
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; oleo-de-rosa-mosqueta-100 ×1; rice-agua-micelar-de-arroz-kokeshi ×1; serum-booster-facial-kokeshi ×1"
   kit-pele-radiante-kokeshi:
     componentes:
       - hidratante-facial-pele-de-porcelana
@@ -266,10 +298,12 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; pele-de-porcelana-peles-sensiveis-1 ×1 ← "Calma e plenitude em dois cremes de textura leve para quem tem pele sensível e quer regeneração contínua. 🌿 Centella Asiática + Camomila aliviam a sensibilidade e vermelhidão"; creme-gel-facial-pele-plena-kokeshi ×1 ← "❄️ Toque mentolado do Pele Plena para sensação de frescor e bem-estar"; confirmado na revisão de 20/10/2026
   kit-presente-kokeshi:
     componentes:
+      - creme-hidratante-para-as-maos-kokeshi
+      - hidratante-facial-pele-de-porcelana
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - oleo-de-rosa-mosqueta-100
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM DIVERGEM; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unid do Olhos de Gueixa;"; oleo-de-rosa-mosqueta-100 ×1 ← "1 unid do Óleo de Rosa Mosqueta."; lista: hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa, oleo-de-rosa-mosqueta-100; não identificados: Creme hidratante para mãos: não há produto correspondente no catálogo. | Pele de Porcelana: há vários produtos com esse nome no catálogo, e a descrição não especifica qual.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-hidratante-para-as-maos-kokeshi ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; oleo-de-rosa-mosqueta-100 ×1"
   kit-protecao-glow-diaria:
     componentes:
       - bastao-multifuncional-sunshine-fps-60-11g
@@ -280,9 +314,15 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM concordam; bastao-multifuncional-sunshine-fps-60-11g ×1 ← "1 unid do Bastão Multifuncional FPS 60;"; serum-tudo-em-1-30ml-1 ×1 ← "1 unid do Sérum Tudo em 1;"; hidratante-facial-pele-de-porcelana ×1 ← "1 unid do Hidratante Facial Pele de Porcelana;"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unid do Olhos de Gueixa."; confirmado na revisão de 20/10/2026
   kit-ritual-completo-pele-de-porcelana-antissinais:
     componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - geleia-facial-colageno-100g
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - pele-de-porcelana-antissinais
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; pele-de-porcelana-antissinais ×1 ← "Pele de Porcelana Antissinais"; não identificados: Demais produtos do ritual completo; obs: Descrição vazia. O produto identificado está explicitamente citado no título; não é possível determinar os demais componentes nem o total de unidades do kit.'
+      - sabonete-liquido-pele-de-porcelana-facial-kokeshi
+      - serum-de-arroz-pele-de-porcelana-30ml
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; geleia-facial-colageno-100g ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; pele-de-porcelana-antissinais ×1; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1; serum-de-arroz-pele-de-porcelana-30ml ×1; serum-roll-on-adeus-olheiras-10ml ×1"
   kit-ritual-completo-pele-de-porcelana-sensivel:
     componentes:
       - sabonete-liquido-pele-de-porcelana-facial-kokeshi
@@ -296,15 +336,19 @@ kits:
     nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1 ← "Sete produtos para a rotina mais completa da linha Pele de Porcelana — pensado para pele sensível que quer tudo. 🌸 Limpeza suave com sabonete que prepara a pele para absorver os ativos"; pele-de-porcelana-peles-sensiveis-1 ×1 ← "da linha Pele de Porcelana — pensado para pele sensível que quer tudo"; serum-de-arroz-pele-de-porcelana-30ml ×1 ← "da linha Pele de Porcelana [...] 🌿 Calmante + glass skin + firmeza em camadas do sérum ao creme"; creme-gel-facial-gota-de-colageno-kokeshi ×1 ← "💧 Dupla de colágeno — Gota firmadora + Geleia jelly para firmeza em duas texturas"; geleia-facial-colageno-100g ×1 ← "💧 Dupla de colágeno — Gota firmadora + Geleia jelly para firmeza em duas texturas"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "👁️ Olhos de Gueixa + Roll-on Adeus Olheiras para olhar completamente renovado"; serum-roll-on-adeus-olheiras-10ml ×1 ← "👁️ Olhos de Gueixa + Roll-on Adeus Olheiras para olhar completamente renovado"; obs: Identificados sete produtos, conforme o total informado na descrição.; confirmado na revisão de 20/10/2026'
   kit-ritual-de-hidratacao-firmeza-glow:
     componentes:
-      - retinol-firmador-serum
-      - jelly-glow
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; retinol-firmador-serum ×1 ← "Retinol + vitamina C + jelly cream em um ritual completo"; jelly-glow ×1 ← "Ritual trio de transformação total: retinol, vitamina C e textura jelly para glow e firmeza."; não identificados: Vitamina C: a descrição não permite distinguir entre Creme Facial Vitamina C Antioxidante e Vitamina C Iluminador Sérum.; obs: A descrição anuncia um trio, mas apenas 2 produtos foram identificados com segurança.'
+      - geleia-facial-colageno-100g
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-booster-facial-kokeshi
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; geleia-facial-colageno-100g ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-booster-facial-kokeshi ×1"
   kit-ritual-gueixa-adeus-linhas:
     componentes:
+      - adeus-linhas-bastao-para-area-dos-olhos
+      - hidratante-facial-pele-de-porcelana
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "nutrição do contorno dos olhos [...] Inspirado nos rituais de beleza japonesa — para quem acorda com a pele das gueixas e olhar completamente renovado"; não identificados: Tratamento noturno com Óleo de Arroz, Rosa Mosqueta e Pantenol para manchas e hidratação: não há indicação suficiente para vinculá-lo a um único handle do catálogo. | Adeus Linhas: o catálogo contém Bastão Facial Adeus Linhas e Adeus Linhas - Bastão para Área dos Olhos, sem especificação suficiente no kit para distinguir entre eles.; obs: A descrição anuncia um trio, mas apenas 1 produto pôde ser identificado com segurança.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; adeus-linhas-bastao-para-area-dos-olhos ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1"
   kit-ritual-gueixa-antissinais:
     componentes:
       - hidratante-facial-pele-de-porcelana
@@ -314,10 +358,11 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; hidratante-facial-pele-de-porcelana ×1 ← "O Pele de Porcelana proporciona hidratação intensa durante a noite e auxilia na uniformização da aparência da pele"; pele-de-porcelana-antissinais ×1 ← "o Pele de Porcelana Antissinais contribui para uma aparência mais firme, revitalizada e com linhas de expressão suavizadas"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "o Olhos de Gueixa foi desenvolvido especialmente para a região dos olhos, ajudando a hidratar e reduzir o aspecto de cansaço do olhar"; confirmado na revisão de 20/10/2026
   kit-ritual-gueixa-sensivel:
     componentes:
-      - pele-de-porcelana-peles-sensiveis-1
+      - hidratante-facial-pele-de-porcelana
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; pele-de-porcelana-peles-sensiveis-1 ×1 ← "Rotina facial completa para pele sensível; 🌿 Calmante com Centella Asiática para pele que reage com facilidade"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "Kit Ritual Gueixa Sensível; 👁️ Olheiras e cansaço combatidos com Chá Verde e Extrato de Mel"; não identificados: Produto com Óleo de Farelo de Arroz + Rosa Mosqueta para luminosidade e maciez: não é possível associar essa combinação a um único handle com segurança.; obs: A descrição anuncia três produtos, mas apenas dois foram identificados com segurança. A menção à combinação de óleos não basta para identificar o Óleo de Rosa Mosqueta 100%.'
+      - pele-de-porcelana-peles-sensiveis-1
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; pele-de-porcelana-peles-sensiveis-1 ×1"
   kit-renovadores-faciais-kokeshi:
     componentes:
       - hidratante-facial-pele-de-porcelana
@@ -326,9 +371,12 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; hidratante-facial-pele-de-porcelana ×1 ← "Composto pelo hidratante facial Pele de Porcelana e pelo Olhos de Gueixa"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "Composto pelo hidratante facial Pele de Porcelana e pelo Olhos de Gueixa"; confirmado na revisão de 20/10/2026
   kit-ritual-hidratacao-gueixas:
     componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - hidratante-facial-pele-de-porcelana
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "💪 Olhos de Gueixa + Pele de Porcelana + ativos de firmeza"; não identificados: Pele de Porcelana: há vários produtos com esse nome no catálogo, sem indicação de qual compõe o kit. | Ativos de firmeza: a descrição não especifica um produto que possa ser associado com segurança a um único handle.; obs: As referências à hidratação e à rotina diurna e noturna não identificam produtos adicionais com segurança.'
+      - oleo-de-rosa-mosqueta-100
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; oleo-de-rosa-mosqueta-100 ×1"
   kit-ritual-hidratacao-das-gueixas-pele-radiante:
     componentes:
       - hidratante-facial-pele-de-porcelana
@@ -339,10 +387,11 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM concordam; hidratante-facial-pele-de-porcelana ×1 ← "1 unidade do creme facial Pele de Porcelana;"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unidade do creme para região dos olhos Olhos de Gueixa;"; oleo-de-rosa-mosqueta-100 ×1 ← "1 unidade do Óleo de Rosa Mosqueta;"; creme-gel-facial-pele-plena-kokeshi ×1 ← "1 unidade do Creme Gel Pele Plena Facial"; confirmado na revisão de 20/10/2026
   kit-renovadores-oleo-de-rosa-mosqueta:
     componentes:
+      - hidratante-facial-pele-de-porcelana
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - oleo-de-rosa-mosqueta-100
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "👁️ Olhos de Gueixa para a área mais sensível do rosto"; oleo-de-rosa-mosqueta-100 ×1 ← "🌹 Óleo de Rosa Mosqueta potencializa a regeneração"; não identificados: Pele de Porcelana: o nome corresponde a vários produtos do catálogo, sem indicação suficiente para determinar um único handle.; obs: A descrição é contraditória: anuncia 4 best sellers, mas lista 3 produtos. Apenas 2 foram identificados com segurança; Pele de Porcelana é ambíguo e nenhum quarto produto é especificado.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; oleo-de-rosa-mosqueta-100 ×1"
   kit-renovadores-serum-tudo-em-1:
     componentes:
       - serum-tudo-em-1-30ml-1
@@ -352,45 +401,58 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM concordam; serum-tudo-em-1-30ml-1 ×1 ← "1 unid do Sérum Tudo em 1;"; hidratante-facial-pele-de-porcelana ×1 ← "1 unid do Hidratante Pele de Porcelana;"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unid do Hidratante Olhos de Gueixa"; confirmado na revisão de 20/10/2026
   kit-ritual-imperial-das-gueixas:
     componentes:
-      - serum-booster-facial-kokeshi
       - creme-gel-facial-gota-de-colageno-kokeshi
+      - geleia-facial-colageno-100g
+      - geleia-facial-niacinamida-100g
+      - hidratante-facial-pele-de-porcelana
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
-    confirmado: false
-    nota: "revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; serum-booster-facial-kokeshi ×1 ← \"Sérum Booster\"; creme-gel-facial-gota-de-colageno-kokeshi ×1 ← \"Gota de Colágeno\"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← \"Olhos de Gueixa\"; não identificados: Geleia: a descrição não informa se é a Geleia Facial de Colágeno ou a Geleia Facial de Niacinamida. | Quinto produto: mencionado apenas como 'e mais', sem identificação.; obs: O kit anuncia 5 produtos, mas apenas 3 foram identificados com segurança."
+      - serum-booster-facial-kokeshi
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; geleia-facial-colageno-100g ×1; geleia-facial-niacinamida-100g ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-booster-facial-kokeshi ×1"
   kit-ritual-pele-de-porcelana-adeus-linhas:
     componentes:
       - adeus-linhas-bastao-para-area-dos-olhos
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; adeus-linhas-bastao-para-area-dos-olhos ×1 ← "Kit Ritual Pele de Porcelana + Adeus Linhas; nutrem o contorno dos olhos e suavizam linhas finas com delicadeza"; não identificados: Os outros três produtos do quarteto: a referência a Pele de Porcelana e aos ingredientes Arroz, Niacinamida, Ácido Hialurônico e Squalane não permite determinar seus handles com segurança.; obs: A descrição anuncia quatro produtos, mas apenas um foi identificado com segurança. Os ingredientes e benefícios citados não individualizam os demais produtos no catálogo.'
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-de-arroz-pele-de-porcelana-30ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; adeus-linhas-bastao-para-area-dos-olhos ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-de-arroz-pele-de-porcelana-30ml ×1"
   kit-ritual-pele-de-porcelana-antioleosidade:
     componentes:
-      - serum-de-arroz-pele-de-porcelana-30ml
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - pele-de-porcelana-antioleosidade
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; serum-de-arroz-pele-de-porcelana-30ml ×1 ← "sérum luminoso [...] Extrato de Arroz ancestral que potencializa luminosidade, uniformiza o tom e reduz manchas com absorção rápida e toque seco"; pele-de-porcelana-antioleosidade ×1 ← "O Kit Ritual Pele de Porcelana Antioleosidade [...] hidratação antioleosidade [...] Aloe Vera, Extrato de Pepino e Pó da Casca de Arroz que hidratam, refrescam e controlam o brilho excessivo ao longo do dia"; não identificados: Cuidado para a área dos olhos: a descrição menciona ativos que iluminam e hidratam, combatendo olheiras, inchaço e sinais de cansaço, mas não permite distinguir com segurança entre Hidratante Renovador para Área dos Olhos - Olhos de Gueixa Kokeshi e Sérum Roll-on Adeus Olheiras 10mL.; obs: A descrição anuncia um trio; foram identificados com segurança 2 dos 3 produtos.'
+      - serum-de-arroz-pele-de-porcelana-30ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; pele-de-porcelana-antioleosidade ×1; serum-de-arroz-pele-de-porcelana-30ml ×1"
   kit-ritual-pele-de-porcelana-antissinais:
     componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - pele-de-porcelana-antissinais
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; pele-de-porcelana-antissinais ×1 ← "Kit Ritual Pele de Porcelana Antissinais"; obs: Descrição vazia. Apenas Pele de Porcelana Antissinais foi identificado pelo título; não é possível determinar os demais componentes do kit.'
+      - serum-de-arroz-pele-de-porcelana-30ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; pele-de-porcelana-antissinais ×1; serum-de-arroz-pele-de-porcelana-30ml ×1"
   kit-ritual-pele-de-porcelana-peles-sensiveis:
     componentes:
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - pele-de-porcelana-peles-sensiveis-1
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; pele-de-porcelana-peles-sensiveis-1 ×1 ← "Kit Ritual Pele de Porcelana Peles Sensíveis; Rotina de rosto inteira para pele sensível: do cuidado calmante ao sérum glass e ao tratamento dos olhos."; não identificados: Sérum glass com Niacinamida + Squalane: não é possível associar com segurança a um único handle do catálogo. | Tratamento dos olhos com Chá Verde + Extrato de Mel, para olheiras e cansaço: não é possível associar com segurança a um único handle do catálogo.; obs: A descrição anuncia três etapas, mas apenas 1 produto foi identificado com segurança. O catálogo não informa as composições necessárias para distinguir os outros dois produtos.'
+      - serum-de-arroz-pele-de-porcelana-30ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; pele-de-porcelana-peles-sensiveis-1 ×1; serum-de-arroz-pele-de-porcelana-30ml ×1"
   kit-ritual-relax-revive:
     componentes:
-      - serum-booster-facial-kokeshi
+      - creme-hidratante-para-as-maos-kokeshi
       - hidratante-facial-pele-de-porcelana
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM DIVERGEM; serum-booster-facial-kokeshi ×1 ← "1 unid do Sérum Booster;"; hidratante-facial-pele-de-porcelana ×1 ← "1 unid do Creme facial Pele de Porcelana."; lista: serum-booster-facial-kokeshi; não identificados: 1 unid do Creme hidratante para mãos; obs: O creme hidratante para mãos não possui correspondente no catálogo.'
+      - serum-booster-facial-kokeshi
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-hidratante-para-as-maos-kokeshi ×1; hidratante-facial-pele-de-porcelana ×1; serum-booster-facial-kokeshi ×1"
   kit-ritual-sensivel-das-gueixas:
     componentes:
-      - rice-agua-micelar-de-arroz-kokeshi
-      - oleo-de-rosa-mosqueta-100
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; rice-agua-micelar-de-arroz-kokeshi ×1 ← "Extrato de Arroz na micelar limpa e hidrata sem agredir a pele sensível"; oleo-de-rosa-mosqueta-100 ×1 ← "Rosa Mosqueta 100% regenera, trata manchas e uniformiza com toque seco"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "Olhos de Gueixa combate olheiras e revitaliza o olhar cansado"; não identificados: Produto com Centella Asiática + D-Pantenol: o catálogo não informa esses ingredientes, impedindo associá-lo com segurança a um único handle.'
+      - oleo-de-rosa-mosqueta-100
+      - pele-de-porcelana-peles-sensiveis-1
+      - rice-agua-micelar-de-arroz-kokeshi
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; oleo-de-rosa-mosqueta-100 ×1; pele-de-porcelana-peles-sensiveis-1 ×1; rice-agua-micelar-de-arroz-kokeshi ×1"
   kit-ritual-suave-das-gueixas:
     componentes:
       - pele-de-porcelana-peles-sensiveis-1
@@ -400,20 +462,31 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; pele-de-porcelana-peles-sensiveis-1 ×1 ← "Centella Asiática + Camomila acalmam e protegem pele sensível e reativa"; oleo-de-rosa-mosqueta-100 ×1 ← "Rosa Mosqueta 100% + Vitamina A regeneram e uniformizam com toque seco"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "Rosa Mosqueta + Chá Verde renovam a área dos olhos e combatem olheiras"; confirmado na revisão de 20/10/2026
   kit-rotina-renovadora-tudo-em-1:
     componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - oleo-de-rosa-mosqueta-100
       - serum-tudo-em-1-30ml-1
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; serum-tudo-em-1-30ml-1 ×1 ← "✨ Sérum Tudo em 1 + produtos best sellers da linha"; não identificados: Outros 4 produtos best sellers da linha, não especificados na descrição.; obs: A descrição anuncia 5 produtos, mas apenas 1 foi identificado com segurança. Os benefícios e a indicação de rotina diurna e noturna não permitem identificar os outros 4 produtos.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; oleo-de-rosa-mosqueta-100 ×1; serum-tudo-em-1-30ml-1 ×1"
   kit-rotina-adeus-linhas-5-passos-dia:
     componentes:
       - adeus-linhas-bastao-para-area-dos-olhos
       - bastao-multifuncional-sunshine-fps-60-11g
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; adeus-linhas-bastao-para-area-dos-olhos ×1 ← "O Kit Rotina Adeus Linhas 5 Passos Dia é uma combinação inspirada na tradição da skincare japonesa que une limpeza, tratamento, proteção e cuidado completo com a área dos olhos"; bastao-multifuncional-sunshine-fps-60-11g ×1 ← "protegem contra UVA e UVB com FPS60"; não identificados: Produto de limpeza: a descrição menciona limpeza, mas não especifica qual produto. | Tratamento com Cafeína, Chá Verde e Niacinamida para combater olheiras, iluminar e uniformizar: não é possível associar com segurança a um único handle. | Hidratação com Ácido Hialurônico e Squalane: os ingredientes não permitem identificar um produto específico nem confirmar se representam um item separado.; obs: O kit anuncia 5 passos, mas apenas 2 produtos foram identificados com segurança. A descrição não discrimina os cinco itens, e os ingredientes citados podem pertencer aos mesmos produtos.'
+      - sabonete-liquido-pele-de-porcelana-facial-kokeshi
+      - serum-de-arroz-pele-de-porcelana-30ml
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; adeus-linhas-bastao-para-area-dos-olhos ×1; bastao-multifuncional-sunshine-fps-60-11g ×1; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1; serum-de-arroz-pele-de-porcelana-30ml ×1; serum-roll-on-adeus-olheiras-10ml ×1"
   kit-rotina-adeus-linhas-5-passos-noite:
     componentes:
       - adeus-linhas-bastao-para-area-dos-olhos
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; adeus-linhas-bastao-para-area-dos-olhos ×1 ← "Kit Rotina Adeus Linhas 5 Passos Noite [...] nutrição profunda do contorno dos olhos e suavização de linhas finas"; não identificados: Produto de limpeza: a descrição não especifica qual produto do catálogo. | Produto para tratamento do tom e manchas: os ingredientes e benefícios citados não permitem identificar um único handle. | Produto de hidratação noturna com Ácido Hialurônico e Squalane: não há identificação inequívoca do produto. | Demais produtos associados a Arroz, Niacinamida e Rosa Mosqueta: a menção aos ingredientes não permite determinar quais produtos avulsos integram o kit.; obs: O título anuncia 5 passos, mas apenas 1 produto foi identificado com segurança. A descrição não discrimina os cinco componentes; ingredientes e benefícios não foram tratados como produtos separados.'
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - sabonete-liquido-pele-de-porcelana-facial-kokeshi
+      - serum-de-arroz-pele-de-porcelana-30ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; adeus-linhas-bastao-para-area-dos-olhos ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1; serum-de-arroz-pele-de-porcelana-30ml ×1"
   kit-sensivel-serum-de-arroz:
     componentes:
       - pele-de-porcelana-peles-sensiveis-1
@@ -422,9 +495,10 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; pele-de-porcelana-peles-sensiveis-1 ×1 ← "Kit Sensível + Sérum de Arroz; 🌿 Centella Asiática + Camomila reduzem vermelhidão e desconforto"; serum-de-arroz-pele-de-porcelana-30ml ×1 ← "Kit Sensível + Sérum de Arroz; ✨ Efeito glass skin com Squalane e Óleo de Farelo de Arroz"; confirmado na revisão de 20/10/2026
   kit-sensivel-dia-e-noite:
     componentes:
-      - hidratacao-completa-dia-e-noite
-    confirmado: false
-    nota: 'proposta automática kokeshi-20261019-184229: hidratacao-completa-dia-e-noite ← "dia noite"'
+      - hidratante-facial-pele-de-porcelana
+      - pele-de-porcelana-peles-sensiveis-1
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-facial-pele-de-porcelana ×1; pele-de-porcelana-peles-sensiveis-1 ×1"
   kit-cheiro-de-rica:
     componentes:
       - cheiro-de-rica-body-splash-200ml
@@ -467,32 +541,35 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; shampoo-melixir ×1 ← "Completo com shampoo, condicionador, máscara nutritiva e sérum capilar"; condicionador-melixir ×1 ← "Completo com shampoo, condicionador, máscara nutritiva e sérum capilar"; mascara-nutritiva-melixir ×1 ← "Completo com shampoo, condicionador, máscara nutritiva e sérum capilar"; serum-capilar-melixir ×1 ← "Completo com shampoo, condicionador, máscara nutritiva e sérum capilar"; confirmado na revisão de 20/10/2026
   ritual-olhar-descansado:
     componentes:
-      - serum-roll-on-adeus-olheiras-10ml
-    confirmado: false
-    nota: |-
-      revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; serum-roll-on-adeus-olheiras-10ml ×1 ← "❄️ Roll-on de metal com efeito frescor imediato
-      ✨ Olheiras e sinais de cansaço visualmente reduzidos"; não identificados: Possíveis outros componentes do ritual: a descrição menciona hidratação, iluminação, Óleo de Café e Chá Verde, mas não permite associar esses benefícios e ativos a outros handles com segurança.; obs: A descrição não enumera os produtos nem informa a quantidade de itens do kit; apenas o roll-on pôde ser identificado com segurança.
-  ritual-porcelana-e-olhos-de-gueixa:
-    componentes:
-      - serum-booster-facial-kokeshi
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-roll-on-adeus-olheiras-10ml ×1"
+  ritual-porcelana-e-olhos-de-gueixa:
+    componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - oleo-de-rosa-mosqueta-100
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; serum-booster-facial-kokeshi ×1 ← "Potencializa a absorção de todos os ativos com o sérum booster"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "Ritual Porcelana e Olhos de Gueixa; Trata olheiras e área dos olhos com fórmula concentrada e roll-on refrescante"; serum-roll-on-adeus-olheiras-10ml ×1 ← "Trata olheiras e área dos olhos com fórmula concentrada e roll-on refrescante"; oleo-de-rosa-mosqueta-100 ×1 ← "Regenera e revitaliza com óleo de rosa mosqueta de alta pureza"; não identificados: Produto que estimula o colágeno natural e devolve elasticidade à pele: a descrição não permite identificar um único handle com segurança. | Fórmula Pele de Porcelana que suaviza, uniformiza e ilumina: há vários produtos Pele de Porcelana no catálogo, sem indicação suficiente para distinguir qual integra o kit.'
+      - serum-booster-facial-kokeshi
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; oleo-de-rosa-mosqueta-100 ×1; serum-booster-facial-kokeshi ×1; serum-roll-on-adeus-olheiras-10ml ×1"
   ritual-protecao-colageno:
     componentes:
       - bastao-multifuncional-sunshine-fps-60-11g
-      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
       - geleia-facial-colageno-100g
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; lista da descrição e LLM DIVERGEM; bastao-multifuncional-sunshine-fps-60-11g ×1 ← "1 unid Bastão Multifuncional FPS 60"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 unid Olhos de Gueixa"; geleia-facial-colageno-100g ×1 ← "1 unid Colágeno Jelly"; lista: bastao-multifuncional-sunshine-fps-60-11g, hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa; não identificados: 1 unid Pele de Porcelana; obs: Pele de Porcelana corresponde a vários produtos do catálogo; a descrição não especifica qual deles compõe o kit.'
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; bastao-multifuncional-sunshine-fps-60-11g ×1; geleia-facial-colageno-100g ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1"
   ritual-renovador-protecao:
     componentes:
       - bastao-multifuncional-sunshine-fps-60-11g
+      - hidratante-facial-pele-de-porcelana
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; bastao-multifuncional-sunshine-fps-60-11g ×1 ← "1 Bastão Multifuncional FPS 60:  hidrata e protege a pele em um só gesto."; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "1 Olhos de Gueixa: Creme específico para a área dos olhos, com ativos que hidratam e iluminam."; não identificados: 1 Pele de Porcelana: Creme noturno que combate manchas, espinhas, rugas e linhas de expressão.; obs: A descrição de Pele de Porcelana não permite distinguir com segurança entre o Hidratante Facial Pele de Porcelana e as variantes da linha presentes no catálogo.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; bastao-multifuncional-sunshine-fps-60-11g ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1"
   kit-melixir-shampoo-condicionador-serum:
     componentes:
       - shampoo-melixir
@@ -502,10 +579,11 @@ kits:
     nota: revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; shampoo-melixir ×1 ← "Trio com shampoo, condicionador e sérum capilar"; condicionador-melixir ×1 ← "Trio com shampoo, condicionador e sérum capilar"; serum-capilar-melixir ×1 ← "Trio com shampoo, condicionador e sérum capilar"; confirmado na revisão de 20/10/2026
   trio-sos-olhos:
     componentes:
-      - serum-roll-on-adeus-olheiras-10ml
+      - adeus-linhas-bastao-para-area-dos-olhos
       - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; serum-roll-on-adeus-olheiras-10ml ×1 ← "Cafeína, Chá Verde e Pantenol com roll-on de metal que desincham, iluminam e combatem olheiras com frescor imediato"; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1 ← "nutrição profunda do contorno e suavização de linhas finas"; não identificados: Terceiro produto do trio: a descrição não informa nome ou formato que permita associá-lo com segurança a um único handle.; obs: O kit anuncia três etapas, mas apenas dois produtos foram identificados com segurança. A menção à suavização de linhas finas não confirma, por si só, a inclusão de um bastão.'
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; adeus-linhas-bastao-para-area-dos-olhos ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-roll-on-adeus-olheiras-10ml ×1"
   hidratante-facial-pele-de-porcelana-copia:
     componentes:
       - hidratante-facial-pele-de-porcelana
@@ -523,13 +601,15 @@ kits:
   kit-colageno-adeus-linhas:
     componentes:
       - adeus-linhas-bastao-para-area-dos-olhos
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; adeus-linhas-bastao-para-area-dos-olhos ×1 ← "O Kit Colágeno + Adeus Linhas é uma combinação inspirada na tradição da skincare japonesa que une estimulação do colágeno natural e suavização de linhas finas, auxiliando na conquista de pele mais firme e olhar mais descansado com praticidade."; não identificados: Produto de colágeno com Óleo de Girassol Ozonizado e Copaíba: a descrição não informa nome ou apresentação suficientes para associá-lo com segurança a um único handle do catálogo.; obs: A descrição anuncia um duo, mas apenas 1 dos 2 produtos foi identificado com segurança.'
+      - creme-gel-facial-gota-de-colageno-kokeshi
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; adeus-linhas-bastao-para-area-dos-olhos ×1; creme-gel-facial-gota-de-colageno-kokeshi ×1"
   kit-colageno-kokeshi:
     componentes:
       - creme-gel-facial-gota-de-colageno-kokeshi
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; creme-gel-facial-gota-de-colageno-kokeshi ×1 ← "🌿 Gota de Colágeno com óleo de copaíba e girassol ozonizado"; não identificados: Pele de Porcelana: a descrição informa que hidrata e trata manchas e linhas, mas não especifica a versão; há vários produtos com esse nome no catálogo.; obs: A descrição anuncia um duo, mas apenas um dos dois produtos pôde ser ligado a um único handle com segurança.'
+      - hidratante-facial-pele-de-porcelana
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; hidratante-facial-pele-de-porcelana ×1"
   kit-dupla-antioleosidade:
     componentes:
       - pele-de-porcelana-antioleosidade
@@ -557,11 +637,12 @@ kits:
     nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; shampoo-melixir ×1 ← "Limpa suavemente enquanto hidrata"; condicionador-melixir ×1 ← "promovendo brilho, maciez, redução do frizz e fácil desembaraço"; mascara-nutritiva-melixir ×1 ← "nutre e repara intensivamente os fios"; obs: A composição do trio é explicitada pelo handle do kit: kit-melixir-shampoo-condicionador-mascara.; confirmado na revisão de 20/10/2026'
   kit-ritual-completo-antioleosidade:
     componentes:
-      - rice-agua-micelar-de-arroz-kokeshi
       - geleia-facial-niacinamida-100g
       - pele-de-porcelana-antioleosidade
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; rice-agua-micelar-de-arroz-kokeshi ×1 ← "Extrato de Arroz que remove impurezas e maquiagem sem ressecar, adicionando uma camada extra de hidratação durante a limpeza"; geleia-facial-niacinamida-100g ×1 ← "Niacinamida, Vitamina E e Extratos de Arroz, Cereja e Romã em textura jelly que iluminam e uniformizam a aparência da pele"; pele-de-porcelana-antioleosidade ×1 ← "Aloe Vera, Extrato de Pepino e Pó da Casca de Arroz que hidratam, refrescam e controlam o brilho excessivo ao longo do dia"; não identificados: Produto da segunda etapa de limpeza: "Fórmula delicada que limpa sem agredir e prepara a pele para absorver melhor todos os ativos da rotina". A descrição não permite distinguir com segurança entre os produtos de limpeza do catálogo.; obs: A descrição anuncia um quarteto, mas apenas 3 dos 4 produtos foram identificados com segurança.'
+      - rice-agua-micelar-de-arroz-kokeshi
+      - sabonete-liquido-pele-de-porcelana-facial-kokeshi
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; geleia-facial-niacinamida-100g ×1; pele-de-porcelana-antioleosidade ×1; rice-agua-micelar-de-arroz-kokeshi ×1; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1"
   super-kit-de-colageno:
     componentes:
       - creme-gel-facial-gota-de-colageno-kokeshi
@@ -570,7 +651,147 @@ kits:
     nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; creme-gel-facial-gota-de-colageno-kokeshi ×1 ← "Gota de Colágeno + Geleia Facial: dupla de tratamento com textura gel/jelly"; geleia-facial-colageno-100g ×1 ← "Geleia de Colágeno hit no TikTok — firmeza com textura única"; confirmado na revisão de 20/10/2026'
   trio-jelly-cream:
     componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - creme-gel-facial-pele-plena-kokeshi
       - geleia-facial-colageno-100g
-      - geleia-facial-niacinamida-100g
-    confirmado: false
-    nota: 'revisão propor-kits-kokeshi-20261020-202128; sem lista na descrição; geleia-facial-colageno-100g ×1 ← "As duas texturas jelly juntas"; geleia-facial-niacinamida-100g ×1 ← "As duas texturas jelly juntas"; não identificados: Hidratante: a descrição não especifica qual produto do catálogo.; obs: O título indica um trio, mas apenas 2 dos 3 produtos foram identificados; o hidratante permanece sem identificação.'
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; creme-gel-facial-pele-plena-kokeshi ×1; geleia-facial-colageno-100g ×1"
+  kit-ritual-pele-de-porcelana:
+    componentes:
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-de-arroz-pele-de-porcelana-30ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-de-arroz-pele-de-porcelana-30ml ×1"
+  ritual-pele-firme-e-renovada:
+    componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-roll-on-adeus-olheiras-10ml ×1"
+  ritual-glow-intenso-hidratacao:
+    componentes:
+      - geleia-facial-colageno-100g
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; geleia-facial-colageno-100g ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-roll-on-adeus-olheiras-10ml ×1"
+  ritual-pele-de-porcelana-olhar-descansado:
+    componentes:
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-de-arroz-pele-de-porcelana-30ml
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-de-arroz-pele-de-porcelana-30ml ×1; serum-roll-on-adeus-olheiras-10ml ×1"
+  hidratacao-completa-dia-e-noite:
+    componentes:
+      - creme-gel-facial-pele-plena-kokeshi
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-tudo-em-1-30ml-1
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-pele-plena-kokeshi ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-tudo-em-1-30ml-1 ×1"
+  trio-glow-nutritivo:
+    componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - creme-gel-facial-pele-plena-kokeshi
+      - serum-tudo-em-1-30ml-1
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; creme-gel-facial-pele-plena-kokeshi ×1; serum-tudo-em-1-30ml-1 ×1"
+  ritual-completo-das-gueixas:
+    componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-tudo-em-1-30ml-1
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-tudo-em-1-30ml-1 ×1"
+  jelly-glow:
+    componentes:
+      - creme-gel-facial-pele-plena-kokeshi
+      - geleia-facial-colageno-100g
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-pele-plena-kokeshi ×1; geleia-facial-colageno-100g ×1"
+  trio-firmeza-colageno-kokeshi:
+    componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - creme-gel-facial-pele-plena-kokeshi
+      - sabonete-liquido-pele-de-porcelana-facial-kokeshi
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; creme-gel-facial-pele-plena-kokeshi ×1; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1"
+  ritual-ozonio-completo-7-em-1:
+    componentes:
+      - creme-gel-facial-chuva-de-ozonio-kokeshi
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - creme-gel-facial-pele-plena-kokeshi
+      - labios-de-fada-hidratante-labial-incolor-10g
+      - serum-booster-facial-kokeshi
+      - serum-de-arroz-pele-de-porcelana-30ml
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-chuva-de-ozonio-kokeshi ×1; creme-gel-facial-gota-de-colageno-kokeshi ×1; creme-gel-facial-pele-plena-kokeshi ×1; labios-de-fada-hidratante-labial-incolor-10g ×1; serum-booster-facial-kokeshi ×1; serum-de-arroz-pele-de-porcelana-30ml ×1; serum-roll-on-adeus-olheiras-10ml ×1"
+  ritual-ozonio-essencial-6-em-1:
+    componentes:
+      - creme-gel-facial-chuva-de-ozonio-kokeshi
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - creme-gel-facial-pele-plena-kokeshi
+      - labios-de-fada-hidratante-labial-incolor-10g
+      - serum-booster-facial-kokeshi
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-chuva-de-ozonio-kokeshi ×1; creme-gel-facial-gota-de-colageno-kokeshi ×1; creme-gel-facial-pele-plena-kokeshi ×1; labios-de-fada-hidratante-labial-incolor-10g ×1; serum-booster-facial-kokeshi ×1; serum-roll-on-adeus-olheiras-10ml ×1"
+  rotina-super-ritual-das-gueixas:
+    componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - geleia-facial-colageno-100g
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - serum-booster-facial-kokeshi
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; geleia-facial-colageno-100g ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; serum-booster-facial-kokeshi ×1; serum-roll-on-adeus-olheiras-10ml ×1"
+  kit-ritual-completo-de-porcelana:
+    componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - geleia-facial-colageno-100g
+      - hidratante-facial-pele-de-porcelana
+      - hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa
+      - sabonete-liquido-pele-de-porcelana-facial-kokeshi
+      - serum-de-arroz-pele-de-porcelana-30ml
+      - serum-roll-on-adeus-olheiras-10ml
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; geleia-facial-colageno-100g ×1; hidratante-facial-pele-de-porcelana ×1; hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa ×1; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1; serum-de-arroz-pele-de-porcelana-30ml ×1; serum-roll-on-adeus-olheiras-10ml ×1"
+  kit-ritual-equilibrio-basico:
+    componentes:
+      - pele-de-porcelana-antioleosidade
+      - sabonete-liquido-pele-de-porcelana-facial-kokeshi
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; pele-de-porcelana-antioleosidade ×1; sabonete-liquido-pele-de-porcelana-facial-kokeshi ×1"
+  antioleosidade-gota-de-colageno:
+    componentes:
+      - creme-gel-facial-gota-de-colageno-kokeshi
+      - pele-de-porcelana-antioleosidade
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; creme-gel-facial-gota-de-colageno-kokeshi ×1; pele-de-porcelana-antioleosidade ×1"
+  antioleosidade-pele-de-porcelana:
+    componentes:
+      - hidratante-facial-pele-de-porcelana
+      - pele-de-porcelana-antioleosidade
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-facial-pele-de-porcelana ×1; pele-de-porcelana-antioleosidade ×1"
+  trio-pele-de-porcelana:
+    componentes:
+      - hidratante-facial-pele-de-porcelana
+      - pele-de-porcelana-antioleosidade
+      - pele-de-porcelana-antissinais
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; hidratante-facial-pele-de-porcelana ×1; pele-de-porcelana-antioleosidade ×1; pele-de-porcelana-antissinais ×1"
+  kit-adeus-linhas-geleia-de-colageno-serum-tudo-em-1:
+    componentes:
+      - adeus-linhas-bastao-para-area-dos-olhos
+      - geleia-facial-colageno-100g
+      - serum-tudo-em-1-30ml-1
+    confirmado: true
+    nota: "fonte: Protheus via Metabase (silver.bridge_shopify_kit_components), sync 2026-10-22; adeus-linhas-bastao-para-area-dos-olhos ×1; geleia-facial-colageno-100g ×1; serum-tudo-em-1-30ml-1 ×1"

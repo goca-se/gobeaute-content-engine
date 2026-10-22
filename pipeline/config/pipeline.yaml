@@ -37,13 +37,15 @@ lojas:
         path: brand-context/kokeshi/kits.yaml
       - tipo: shopify                 # descrição + metafields de texto já publicados
         min_chars: 300                # abaixo disso a fonte é pobre demais → bloqueado: falta_ficha
-    max_produtos_por_run: 10
-    max_custo_usd_por_run: 15
-    max_tokens_por_run: 3000000
+    max_produtos_por_run: 20
+    max_custo_usd_por_run: 30
+    max_tokens_por_run: 6000000
     exclusoes:
       # Produto só é elegível se ACTIVE e publicado no Online Store.
       exigir_status_active: true
       exigir_publicado_online_store: true
+      # Sem SKU em nenhuma variante = teste de CTR (vitrine sem estoque), não vendável.
+      exigir_sku: true
       # Gift: match case-insensitive em handle, título, tags e productType.
       # "presente" fica de fora: "Kit Presente Kokeshi" é produto vendável (R$ 104,90).
       gift_regex: "brinde|gift"

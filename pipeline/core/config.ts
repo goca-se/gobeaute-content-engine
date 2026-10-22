@@ -29,6 +29,8 @@ const Loja = z.object({
   exclusoes: z.object({
     exigir_status_active: z.boolean(),
     exigir_publicado_online_store: z.boolean(),
+    /** produto sem SKU em nenhuma variante = teste de CTR, não vendável */
+    exigir_sku: z.boolean().default(true),
     gift_regex: z.string(),
     gift_preco_max: z.number().nonnegative(),
     tags_excluir: z.array(z.string()),

@@ -23,6 +23,7 @@ const MOTIVOS = {
   status_unlisted: "Não listado",
   status_archived: "Arquivado",
   fora_loja_online: "Fora da loja online",
+  sem_sku: "Teste de CTR (sem SKU)",
   gift: "Brinde",
   gift_preco: "Brinde (preço ≤ R$ 1)",
   tag_waitlist: "Waitlist",

@@ -11,6 +11,8 @@ export type ProdutoShopify = {
   updatedAt: string;
   onlineStoreUrl: string | null;
   precoMin: number;
+  /** alguma variante tem SKU. Sem SKU = teste de CTR (produto de vitrine, não vendável) */
+  temSku: boolean;
   descriptionHtml: string;
   /** valor atual de cada metafield do contrato (null = vazio), indexado por "namespace.key" */
   metafields: Record<string, { type: string; value: string } | null>;
@@ -28,8 +30,9 @@ export const METAFIELDS_FONTE = [
   "reviews.rating_count",
 ] as const;
 
-type ProdutoNode = Omit<ProdutoShopify, "metafields" | "textosFonte" | "precoMin"> & {
+type ProdutoNode = Omit<ProdutoShopify, "metafields" | "textosFonte" | "precoMin" | "temSku"> & {
   priceRangeV2: { minVariantPrice: { amount: string } };
+  variants: { nodes: { sku: string | null }[] };
   [alias: `mf_${number}` | `src_${number}`]: { type: string; value: string } | null;
 };
 
@@ -53,6 +56,7 @@ function produtosQuery(formatos: FormatoContrato[]): string {
       nodes {
         id handle title status productType tags updatedAt onlineStoreUrl descriptionHtml
         priceRangeV2 { minVariantPrice { amount } }
+        variants(first: 20) { nodes { sku } }
         ${mfs}
         ${fontes}
       }
@@ -65,7 +69,7 @@ function produtosQuery(formatos: FormatoContrato[]): string {
 export async function listarProdutos(client: ShopifyReadClient, formatos: FormatoContrato[]): Promise<ProdutoShopify[]> {
   const produtos: ProdutoShopify[] = [];
   const doc = produtosQuery(formatos);
-  for await (const node of client.paginate<ProductsPage, ProdutoNode>(doc, (d) => d.products, {}, 50 * (2 + formatos.length + METAFIELDS_FONTE.length))) {
+  for await (const node of client.paginate<ProductsPage, ProdutoNode>(doc, (d) => d.products, {}, 50 * (3 + formatos.length + METAFIELDS_FONTE.length))) {
     const metafields: ProdutoShopify["metafields"] = {};
     formatos.forEach((f, i) => {
       const mf = node[`mf_${i}`];
@@ -86,6 +90,7 @@ export async function listarProdutos(client: ShopifyReadClient, formatos: Format
       updatedAt: node.updatedAt,
       onlineStoreUrl: node.onlineStoreUrl,
       precoMin: Number(node.priceRangeV2.minVariantPrice.amount),
+      temSku: node.variants.nodes.some((v) => !!v.sku?.trim()),
       descriptionHtml: node.descriptionHtml,
       metafields,
       textosFonte,
