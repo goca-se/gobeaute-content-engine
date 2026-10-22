@@ -41,7 +41,12 @@ export type Ficha = {
 export type Resolucao = { ok: true; ficha: Ficha } | { ok: false; motivo: string };
 
 /** Dados das fontes já carregados (do disco na CLI, do bundle no worker). */
-export type DadosFontes = { kbCsv: Ficha[]; kits: KitsConfig | null };
+export type DadosFontes = {
+  kbCsv: Ficha[];
+  kits: KitsConfig | null;
+  /** receita recente por handle (vendas_path); null = sem arquivo de vendas */
+  vendas?: Record<string, number> | null;
+};
 
 /**
  * Resolve a ficha de um produto percorrendo as fontes na ordem do pipeline.yaml.

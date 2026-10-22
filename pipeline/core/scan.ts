@@ -62,7 +62,7 @@ export async function escanear(opts: {
 
   log(`gate…`);
   const fichas = ResolvedorFichas.paraLoja(loja, produtos, dados);
-  const resultado = await gate(produtos, loja, contrato, fichas, runId, deps);
+  const resultado = await gate(produtos, loja, contrato, fichas, runId, deps, dados.vendas ?? {});
 
   const conta = (e: string) => resultado.produtos.filter((p) => p.elegibilidade === e).length;
   const run: RunPayload = {

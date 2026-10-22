@@ -1,0 +1,651 @@
+{
+  "gerado_em": "2026-10-22T13:12:17.864Z",
+  "janela_dias": 30,
+  "fonte": "Metabase gold.fct_shopify_order_items (pedidos pagos, sem cancelados)",
+  "produtos": {
+    "kit-hidratacao-colageno": {
+      "receita": 1160140,
+      "unidades": 17900
+    },
+    "ritual-pele-firme-e-renovada": {
+      "receita": 1085212.6,
+      "unidades": 11774
+    },
+    "kit-ritual-hidratacao-gueixas": {
+      "receita": 955524.1,
+      "unidades": 11959
+    },
+    "kit-ritual-imperial-das-gueixas": {
+      "receita": 817670.7,
+      "unidades": 5643
+    },
+    "kit-melixir-shampoo-condicionador-serum-mascara": {
+      "receita": 744282.1,
+      "unidades": 8279
+    },
+    "super-kit-de-colageno": {
+      "receita": 582763.5,
+      "unidades": 10615
+    },
+    "kit-ritual-completo-de-porcelana": {
+      "receita": 524711.8,
+      "unidades": 3182
+    },
+    "geleia-facial-colageno-100g": {
+      "receita": 479226.44,
+      "unidades": 12171
+    },
+    "serum-roll-on-adeus-olheiras-10ml": {
+      "receita": 398880.78,
+      "unidades": 11051
+    },
+    "kit-colageno-kokeshi": {
+      "receita": 302643,
+      "unidades": 6070
+    },
+    "creme-gel-facial-gota-de-colageno-kokeshi": {
+      "receita": 302631.08,
+      "unidades": 6883
+    },
+    "kit-colageno-antissinais": {
+      "receita": 274473.7,
+      "unidades": 6113
+    },
+    "kit-rotina-renovadora-tudo-em-1": {
+      "receita": 211607.1,
+      "unidades": 1629
+    },
+    "kit-renovadores-faciais-kokeshi": {
+      "receita": 209686.8,
+      "unidades": 4722
+    },
+    "ritual-olhar-descansado": {
+      "receita": 207223.8,
+      "unidades": 4562
+    },
+    "adeus-linhas-bastao-para-area-dos-olhos": {
+      "receita": 198222.79,
+      "unidades": 3974
+    },
+    "kit-ritual-completo-pele-de-porcelana-antissinais": {
+      "receita": 194642.5,
+      "unidades": 1225
+    },
+    "geleia-facial-niacinamida-100g": {
+      "receita": 176996.32,
+      "unidades": 6321
+    },
+    "ritual-glow-intenso-hidratacao": {
+      "receita": 155246.9,
+      "unidades": 1531
+    },
+    "pele-de-porcelana-antissinais": {
+      "receita": 130418.42,
+      "unidades": 3746
+    },
+    "ritual-pele-de-porcelana-olhar-descansado": {
+      "receita": 115128.2,
+      "unidades": 1118
+    },
+    "oleo-de-rosa-mosqueta-100": {
+      "receita": 97629.43,
+      "unidades": 2675
+    },
+    "kit-pele-firme-hidratada": {
+      "receita": 81363.6,
+      "unidades": 1164
+    },
+    "sabonete-liquido-pele-de-porcelana-facial-kokeshi": {
+      "receita": 81086.2,
+      "unidades": 1357
+    },
+    "kit-pele-radiante-kokeshi-kit-6-em-1": {
+      "receita": 78238.8,
+      "unidades": 412
+    },
+    "creme-gel-facial-pele-plena-kokeshi": {
+      "receita": 71483.78,
+      "unidades": 1985
+    },
+    "kit-colageno-adeus-linhas": {
+      "receita": 71031.1,
+      "unidades": 889
+    },
+    "cheiro-de-rica-body-splash-200ml": {
+      "receita": 69072.36,
+      "unidades": 2246
+    },
+    "rotina-super-ritual-das-gueixas": {
+      "receita": 66911.8,
+      "unidades": 482
+    },
+    "hidratante-facial-pele-de-porcelana": {
+      "receita": 65744.48,
+      "unidades": 2202
+    },
+    "kit-pele-firme-hidratada-iluminada": {
+      "receita": 62539.1,
+      "unidades": 659
+    },
+    "kit-ritual-de-hidratacao-firmeza-glow": {
+      "receita": 60239.7,
+      "unidades": 603
+    },
+    "kit-hidratacao-pele-plena": {
+      "receita": 55167.9,
+      "unidades": 921
+    },
+    "kit-dupla-jelly-cream": {
+      "receita": 53263.8,
+      "unidades": 612
+    },
+    "kit-ritual-completo-pele-de-porcelana-sensivel": {
+      "receita": 52975.8,
+      "unidades": 342
+    },
+    "bastao-multifuncional-sunshine-fps-60-11g": {
+      "receita": 52500.85,
+      "unidades": 740
+    },
+    "serum-booster-facial-kokeshi": {
+      "receita": 51051.79,
+      "unidades": 1146
+    },
+    "kit-melixir-shampoo-condicionador-mascara": {
+      "receita": 49697.8,
+      "unidades": 622
+    },
+    "kit-adeus-linhas-geleia-de-colageno-serum-tudo-em-1": {
+      "receita": 49350.6,
+      "unidades": 494
+    },
+    "creme-gel-facial-chuva-de-ozonio-kokeshi": {
+      "receita": 47433.44,
+      "unidades": 5030
+    },
+    "serum-tudo-em-1-30ml-1": {
+      "receita": 45619.48,
+      "unidades": 890
+    },
+    "kit-5-passos-antioleosidade": {
+      "receita": 41245.6,
+      "unidades": 344
+    },
+    "kit-olhar-perfeito": {
+      "receita": 40670.7,
+      "unidades": 543
+    },
+    "kit-renovadores-oleo-de-rosa-mosqueta": {
+      "receita": 39982.8,
+      "unidades": 572
+    },
+    "hidratante-renovador-para-area-dos-olhos-olhos-de-gueixa": {
+      "receita": 37646.01,
+      "unidades": 1861
+    },
+    "kit-linha-ozonio-kokeshi": {
+      "receita": 33966,
+      "unidades": 340
+    },
+    "kit-melixir-shampoo-condicionador": {
+      "receita": 32885.1,
+      "unidades": 549
+    },
+    "kit-ritual-pele-de-porcelana": {
+      "receita": 30616.2,
+      "unidades": 438
+    },
+    "kit-pele-radiante-kokeshi": {
+      "receita": 30397.3,
+      "unidades": 677
+    },
+    "kit-pele-de-porcelana-adeus-linhas": {
+      "receita": 29802.7,
+      "unidades": 373
+    },
+    "serum-de-arroz-pele-de-porcelana-30ml": {
+      "receita": 28520.17,
+      "unidades": 959
+    },
+    "kit-antissinais-1": {
+      "receita": 28017.6,
+      "unidades": 624
+    },
+    "labios-de-fada-hidratante-labial-incolor-10g": {
+      "receita": 26980.7,
+      "unidades": 1812
+    },
+    "kit-antissinais-oleo-de-rosa-mosqueta": {
+      "receita": 25748.4,
+      "unidades": 516
+    },
+    "kit-cheiro-de-rica": {
+      "receita": 25621.5,
+      "unidades": 285
+    },
+    "antioleosidade-gota-de-colageno": {
+      "receita": 25570.6,
+      "unidades": 394
+    },
+    "pele-de-porcelana-antioleosidade": {
+      "receita": 25305.45,
+      "unidades": 734
+    },
+    "body-splash-cheiro-de-rica-n-2-200ml": {
+      "receita": 24402.17,
+      "unidades": 996
+    },
+    "kit-pele-radiante-e-renovadora": {
+      "receita": 24291.3,
+      "unidades": 187
+    },
+    "rice-agua-micelar-de-arroz-kokeshi": {
+      "receita": 22833.31,
+      "unidades": 458
+    },
+    "kit-ritual-hidratacao-das-gueixas-pele-radiante": {
+      "receita": 22077.9,
+      "unidades": 221
+    },
+    "hidratante-facial-pele-de-porcelana-copia": {
+      "receita": 21803.6,
+      "unidades": 364
+    },
+    "kit-ritual-gueixa-antissinais": {
+      "receita": 20830.2,
+      "unidades": 298
+    },
+    "kit-hidratante-facial-pele-de-porcelana-antissinais": {
+      "receita": 18821,
+      "unidades": 290
+    },
+    "kit-pele-de-porcelana-oleo-de-rosa-mosqueta": {
+      "receita": 18413.1,
+      "unidades": 369
+    },
+    "trio-sos-olhos": {
+      "receita": 17282.7,
+      "unidades": 173
+    },
+    "kit-hidratante-facial-pele-de-porcelana-antissinais-fps20": {
+      "receita": 17182.8,
+      "unidades": 172
+    },
+    "kit-ritual-pele-de-porcelana-adeus-linhas": {
+      "receita": 17025.8,
+      "unidades": 142
+    },
+    "body-splash-cheiro-de-rica-n-3-200ml": {
+      "receita": 16541.36,
+      "unidades": 639
+    },
+    "ritual-basico-pro": {
+      "receita": 16259.5,
+      "unidades": 155
+    },
+    "quarteto-pele-de-porcelana": {
+      "receita": 16155.3,
+      "unidades": 147
+    },
+    "kit-antioleosidade-adeus-olheiras": {
+      "receita": 15993.3,
+      "unidades": 267
+    },
+    "kit-ritual-gueixa-adeus-linhas": {
+      "receita": 15552.7,
+      "unidades": 173
+    },
+    "pele-de-porcelana-peles-sensiveis-1": {
+      "receita": 15545.6,
+      "unidades": 447
+    },
+    "kit-melixir-shampoo-condicionador-serum": {
+      "receita": 13934.5,
+      "unidades": 155
+    },
+    "trio-jelly-cream": {
+      "receita": 13032.6,
+      "unidades": 174
+    },
+    "mascara-nutritiva-melixir": {
+      "receita": 12804.19,
+      "unidades": 355
+    },
+    "kit-ritual-pele-de-porcelana-antissinais": {
+      "receita": 12372.3,
+      "unidades": 177
+    },
+    "kit-cuidados-completos-maos-glow": {
+      "receita": 12297.6,
+      "unidades": 224
+    },
+    "kit-colageno-peles-sensiveis": {
+      "receita": 12212.8,
+      "unidades": 272
+    },
+    "hidratante-corporal-cheiro-de-rica-200ml": {
+      "receita": 11642.9,
+      "unidades": 490
+    },
+    "dupla-sensivel-e-firmeza": {
+      "receita": 11440.9,
+      "unidades": 191
+    },
+    "kit-dupla-antioleosidade": {
+      "receita": 11201.3,
+      "unidades": 187
+    },
+    "serum-capilar-melixir": {
+      "receita": 11191.91,
+      "unidades": 359
+    },
+    "kit-renovadores-serum-tudo-em-1": {
+      "receita": 10946.3,
+      "unidades": 137
+    },
+    "kit-renovadores-serum-vit-c": {
+      "receita": 10706.6,
+      "unidades": 134
+    },
+    "kit-hidratacao-uniformizacao": {
+      "receita": 9995.7,
+      "unidades": 143
+    },
+    "kit-olhar-de-gueixa": {
+      "receita": 9605.2,
+      "unidades": 148
+    },
+    "trio-firmeza-colageno-kokeshi": {
+      "receita": 9259.7,
+      "unidades": 103
+    },
+    "jelly-glow": {
+      "receita": 9156.9,
+      "unidades": 131
+    },
+    "antioleosidade-pele-de-porcelana": {
+      "receita": 8985,
+      "unidades": 150
+    },
+    "trio-glow-nutritivo": {
+      "receita": 8789,
+      "unidades": 110
+    },
+    "trio-pele-de-porcelana": {
+      "receita": 8360.7,
+      "unidades": 93
+    },
+    "kit-glow-olhos-de-gueixa": {
+      "receita": 8283.4,
+      "unidades": 166
+    },
+    "shampoo-melixir": {
+      "receita": 8210.69,
+      "unidades": 276
+    },
+    "ritual-protecao-colageno": {
+      "receita": 7495,
+      "unidades": 50
+    },
+    "kit-ritual-pele-de-porcelana-antioleosidade": {
+      "receita": 7199.7,
+      "unidades": 103
+    },
+    "ritual-renovador-protecao": {
+      "receita": 6474.6,
+      "unidades": 54
+    },
+    "kit-ritual-equilibrio-basico": {
+      "receita": 6312.1,
+      "unidades": 79
+    },
+    "kit-peles-sensivel-e-plena": {
+      "receita": 5298.2,
+      "unidades": 118
+    },
+    "kit-ritual-completo-antioleosidade": {
+      "receita": 5246.5,
+      "unidades": 35
+    },
+    "kit-frescor-total": {
+      "receita": 4939,
+      "unidades": 110
+    },
+    "kit-essencial-kokeshi": {
+      "receita": 4796,
+      "unidades": 40
+    },
+    "kit-protecao-glow-diaria": {
+      "receita": 4757.2,
+      "unidades": 28
+    },
+    "hidratacao-completa-dia-e-noite": {
+      "receita": 4054.2,
+      "unidades": 58
+    },
+    "kit-cheiro-de-rica-basico": {
+      "receita": 3984.3,
+      "unidades": 57
+    },
+    "kit-pele-calma-hidratada": {
+      "receita": 3742.5,
+      "unidades": 75
+    },
+    "kit-rotina-adeus-linhas-5-passos-dia": {
+      "receita": 3678.4,
+      "unidades": 16
+    },
+    "condicionador-melixir": {
+      "receita": 3642.48,
+      "unidades": 144
+    },
+    "kit-ritual-relax-revive": {
+      "receita": 3534.1,
+      "unidades": 59
+    },
+    "kit-rotina-adeus-linhas-5-passos-noite": {
+      "receita": 3323.1,
+      "unidades": 19
+    },
+    "dupla-ozonizada": {
+      "receita": 3285.3,
+      "unidades": 47
+    },
+    "kit-ritual-glow": {
+      "receita": 3237.3,
+      "unidades": 27
+    },
+    "kit-frescor-e-hidratacao-kokeshi": {
+      "receita": 3005.7,
+      "unidades": 43
+    },
+    "kit-sensivel-dia-e-noite": {
+      "receita": 2985.4,
+      "unidades": 46
+    },
+    "kit-5-passos-antissinais": {
+      "receita": 2858.7,
+      "unidades": 13
+    },
+    "kit-beleza-total-com-fps-60": {
+      "receita": 2803.3,
+      "unidades": 17
+    },
+    "ritual-porcelana-e-olhos-de-gueixa": {
+      "receita": 2798,
+      "unidades": 20
+    },
+    "kit-pele-impecavel-e-protegida": {
+      "receita": 2698.5,
+      "unidades": 15
+    },
+    "serum-antissinais-retinal": {
+      "receita": 2697,
+      "unidades": 30
+    },
+    "espuma-de-chamego-kokeshi": {
+      "receita": 2631.2,
+      "unidades": 88
+    },
+    "ritual-regenerador": {
+      "receita": 2547,
+      "unidades": 30
+    },
+    "kit-hidratacao-uniformizacao-iluminacao": {
+      "receita": 2398,
+      "unidades": 20
+    },
+    "kit-sensivel-serum-de-arroz": {
+      "receita": 2336.1,
+      "unidades": 39
+    },
+    "kit-dupla-hidratacao": {
+      "receita": 2166.9,
+      "unidades": 31
+    },
+    "ritual-completo-das-gueixas": {
+      "receita": 2037.6,
+      "unidades": 24
+    },
+    "kit-equilibrio-olhos-de-gueixa": {
+      "receita": 1898.1,
+      "unidades": 19
+    },
+    "kit-ritual-gueixa-sensivel": {
+      "receita": 1817.4,
+      "unidades": 26
+    },
+    "kit-ritual-pele-de-porcelana-peles-sensiveis": {
+      "receita": 1817.4,
+      "unidades": 26
+    },
+    "kit-olhos-de-gueixa-oleo-de-rosa-mosqueta": {
+      "receita": 1687.4,
+      "unidades": 26
+    },
+    "kit-cuidado-antissinais-com-fps-60": {
+      "receita": 1649,
+      "unidades": 10
+    },
+    "kit-5-passos-peles-sensiveis": {
+      "receita": 1599.2,
+      "unidades": 8
+    },
+    "kit-cuidados-basicos": {
+      "receita": 1499,
+      "unidades": 10
+    },
+    "stick-protetor-solar-translucido-fps50": {
+      "receita": 1377.7,
+      "unidades": 23
+    },
+    "kit-facial-pele-de-porcelana": {
+      "receita": 1278.4,
+      "unidades": 16
+    },
+    "creme-antissinais-retinal-0-03": {
+      "receita": 1278.4,
+      "unidades": 16
+    },
+    "mascara-serum-para-cilios-e-sobrancelhas": {
+      "receita": 1151.7,
+      "unidades": 33
+    },
+    "kit-pele-nutritiva-hidratacao": {
+      "receita": 1039.2,
+      "unidades": 8
+    },
+    "kit-presente-kokeshi": {
+      "receita": 944.1,
+      "unidades": 9
+    },
+    "ritual-ozonio-essencial-6-em-1": {
+      "receita": 899.4,
+      "unidades": 6
+    },
+    "kit-hidratacao-essencial": {
+      "receita": 898.8,
+      "unidades": 12
+    },
+    "kit-ritual-sensivel-das-gueixas": {
+      "receita": 839.3,
+      "unidades": 7
+    },
+    "kit-ritual-suave-das-gueixas": {
+      "receita": 768.9,
+      "unidades": 11
+    },
+    "kit-cuidado-sensiveis-com-fps-60": {
+      "receita": 494.7,
+      "unidades": 3
+    },
+    "ritual-ozonio-completo-7-em-1": {
+      "receita": 359.8,
+      "unidades": 2
+    },
+    "creme-hidratante-para-o-corpo-kokeshi": {
+      "receita": 328.9,
+      "unidades": 11
+    },
+    "hidratante-vitamina-c-antioxidante": {
+      "receita": 299.4,
+      "unidades": 6
+    },
+    "labios-de-fada-hidratante-labial-incolor-10g-1": {
+      "receita": 238.4,
+      "unidades": 16
+    },
+    "mascara-de-colageno-para-os-olhos-copia": {
+      "receita": 222.6,
+      "unidades": 14
+    },
+    "brinde-surpresa-4": {
+      "receita": 204.6,
+      "unidades": 10230
+    },
+    "espelho-de-bolsa-roxo": {
+      "receita": 187.45,
+      "unidades": 8551
+    },
+    "necessaire-de-tela-rosa-brinde": {
+      "receita": 127,
+      "unidades": 3419
+    },
+    "espelho-de-bolsa-kokeshi": {
+      "receita": 23.45,
+      "unidades": 13
+    },
+    "creme-hidratante-para-as-maos-kokeshi": {
+      "receita": 23.26,
+      "unidades": 29
+    },
+    "gua-sha-brinde": {
+      "receita": 20.82,
+      "unidades": 169
+    },
+    "necessaire-rosa": {
+      "receita": 10.18,
+      "unidades": 5
+    },
+    "necessaire": {
+      "receita": 1.04,
+      "unidades": 52
+    },
+    "brinde-supresa-1": {
+      "receita": 0.42,
+      "unidades": 21
+    },
+    "oleo-de-semente-de-uva-12ml-brinde-copia": {
+      "receita": 0.4,
+      "unidades": 20
+    },
+    "oleo-de-semente-de-uva-7ml": {
+      "receita": 0.2,
+      "unidades": 10
+    },
+    "brinde-surpresa-3": {
+      "receita": 0.1,
+      "unidades": 5
+    }
+  }
+}

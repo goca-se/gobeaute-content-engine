@@ -22,6 +22,8 @@ const Loja = z.object({
   credenciais_env_leitura: z.string().regex(/^[A-Z][A-Z0-9_]*$/),
   credenciais_env_escrita: z.string().regex(/^[A-Z][A-Z0-9_]*$/),
   fontes_produto: z.array(FonteProduto).min(1),
+  /** receita recente por produto (scripts/sync-vendas-metabase.ts): 1º critério da fila */
+  vendas_path: z.string().optional(),
   max_produtos_por_run: z.number().int().positive(),
   max_custo_usd_por_run: z.number().positive(),
   /** teto de tokens do AI Proxy por run (geração + validação) */

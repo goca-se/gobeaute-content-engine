@@ -69,6 +69,8 @@ export async function gate(
   fichas: ResolvedorFichas,
   runId: string,
   deps: GateDeps,
+  /** receita recente por handle: 1º critério da fila */
+  vendas: Record<string, number> = {},
 ): Promise<{ produtos: ProdutoRun[]; items: ItemRun[] }> {
   const brandbook = deps.brandbook;
   const brandbookOk = brandbook.length >= MIN_BRANDBOOK_CHARS;
@@ -90,6 +92,7 @@ export async function gate(
       url: p.onlineStoreUrl,
       preco: p.precoMin,
       tags: p.tags,
+      receita_30d: vendas[p.handle] ?? null,
       is_kit: ehKit(p),
       elegibilidade: "excluido",
       motivo: null,
@@ -149,13 +152,15 @@ export async function gate(
 const RANK_ORIGEM = { kb_csv: 0, kit: 1, shopify: 2 } as const;
 
 /**
- * Fila do dia: mais vendidos primeiro, depois fonte mais confiável (CSV > kit > Shopify),
- * depois mais formatos faltando. Os primeiros `max` entram no lote.
+ * Fila do dia: maior receita recente primeiro, depois tag "Mais Vendido", depois fonte mais
+ * confiável (CSV > kit > Shopify), depois mais formatos faltando. Os primeiros `max` entram no lote.
  */
 function priorizar(produtos: ProdutoRun[], max: number): void {
   const fila = produtos
     .filter((p) => p.elegibilidade === "elegivel")
     .sort((a, b) => {
+      const receita = (b.receita_30d ?? 0) - (a.receita_30d ?? 0);
+      if (receita) return receita;
       const mv = Number(!b.tags.includes("Mais Vendido")) - Number(!a.tags.includes("Mais Vendido"));
       if (mv) return -mv;
       const origem = RANK_ORIGEM[a.ficha_origem!] - RANK_ORIGEM[b.ficha_origem!];

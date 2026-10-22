@@ -39,6 +39,8 @@ export type ProdutoRun = {
   rodada_anterior: { formatos: string[]; publicado_em: string | null; fonte: "manual" } | null;
   /** última publicação deste produto pelo pipeline neste run (log por produto) */
   publicacao?: PublicacaoProduto | null;
+  /** receita recente do produto (vendas_path); null = sem dado de vendas */
+  receita_30d?: number | null;
   /** posição na fila (1 = primeiro). null quando não elegível */
   prioridade: number | null;
   /** entrou no lote de hoje (respeitando max_produtos_por_run) */

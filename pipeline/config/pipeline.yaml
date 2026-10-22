@@ -37,6 +37,8 @@ lojas:
         path: brand-context/kokeshi/kits.yaml
       - tipo: shopify                 # descrição + metafields de texto já publicados
         min_chars: 300                # abaixo disso a fonte é pobre demais → bloqueado: falta_ficha
+    # Receita dos últimos 30 dias por produto (scripts/sync-vendas-metabase.ts). Ordena a fila do lote.
+    vendas_path: brand-context/kokeshi/vendas-30d.json
     max_produtos_por_run: 20
     max_custo_usd_por_run: 30
     max_tokens_por_run: 6000000
